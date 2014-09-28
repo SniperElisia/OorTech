@@ -20,15 +20,18 @@ public class OorTech
     @Metadata
     public ModMetadata meta;
     
-    public static Block CopperOre;
+    public static Block CopperOre,Limestone;
     
     int CopperOreID = 1000;
+    int LimestoneID = 1001;
     
     @EventHandler
     public void init(FMLPreInitializationEvent event)
     {
     	CopperOre = new CopperOre(CopperOreID, Material.rock).setHardness(1.5f).setBlockName("CopperOre");
+    	Limestone = new Limestone(LimestoneID, Material.rock).setHardness(1F).setBlockName("Limestone");
     	
     	GameRegistry.registerBlock(CopperOre, "CopperOre");
+    	GameRegistry.registerBlock(Limestone, "Limestone");
     }
 }
