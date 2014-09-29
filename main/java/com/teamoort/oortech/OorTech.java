@@ -22,7 +22,7 @@ public class OorTech
     public static final String MODID = "OorTech";
     public static final String VERSION = "Alpha 0.0.0.1";
     
-    public static final CreativeTabs tabBlock = new CreativeTabs("OorTech")
+    public static final CreativeTabs tabOort = new CreativeTabs("OorTech")
     {
         private static final String __OBFID = "CL_00000080";
         @SideOnly(Side.CLIENT)

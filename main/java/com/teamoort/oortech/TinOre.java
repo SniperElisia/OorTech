@@ -9,7 +9,7 @@ public class TinOre extends Block{
 
 	public TinOre(int id, Material mat){
 		super (mat);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(OorTech.tabOort);
 		this.setHarvestLevel("pickaxe",1);
 	}
 	

@@ -10,7 +10,7 @@ public class Calcite extends Item{
 	
 	public Calcite(int id){
 		super();
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(OorTech.tabOort);
 		this.setMaxStackSize(64);
 	}
 	

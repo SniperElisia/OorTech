@@ -12,7 +12,7 @@ public class Limestone extends Block{
 
 	public Limestone(int id, Material mat){
 		super (mat);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(OorTech.tabOort);
 	}
 	
 	public Item getItemDropped(int metadata, Random random,int fortune){
