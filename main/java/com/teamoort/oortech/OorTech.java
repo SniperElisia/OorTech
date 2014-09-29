@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Metadata;
@@ -43,5 +44,8 @@ public class OorTech
     	GameRegistry.registerBlock(Limestone, "Limestone");
     	GameRegistry.registerBlock(TinOre, "TinOre");
     	GameRegistry.registerItem(Calcite, "Calcite");
+    	
+    	OreDictionary.registerOre("oreCopper", OorTech.CopperOre);
+    	OreDictionary.registerOre("oreTin", OorTech.TinOre);
     }
 }
