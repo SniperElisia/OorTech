@@ -10,6 +10,7 @@ public class CopperOre extends Block{
 	public CopperOre(int id, Material mat){
 		super (mat);
 		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setHarvestLevel("pickaxe",1);
 	}
 	
 	@Override
