@@ -19,6 +19,11 @@ public class Limestone extends Block{
 		return OorTech.Calcite;
 	}
 	
+	public int quantityDropped(Random random)
+    {
+        return 4;
+    }
+	
 	@Override
 	public void registerBlockIcons(IIconRegister icon)
     {
