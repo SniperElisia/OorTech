@@ -21,10 +21,11 @@ public class OorTech
     @Metadata
     public ModMetadata meta;
     
-    public static Block CopperOre,Limestone;
+    public static Block CopperOre,Limestone,TinOre;
     
     int CopperOreID = 1000;
     int LimestoneID = 1001;
+    int TinOreID = 1002;
     
     public static Item Calcite;
     
@@ -34,11 +35,13 @@ public class OorTech
     public void init(FMLPreInitializationEvent event)
     {
     	CopperOre = new CopperOre(CopperOreID, Material.rock).setHardness(2.5F).setResistance(5.0F).setBlockName("CopperOre");
+    	TinOre = new TinOre(TinOreID, Material.rock).setHardness(2.5F).setResistance(5.0F).setBlockName("TinOre");
     	Limestone = new Limestone(LimestoneID, Material.rock).setHardness(2.0F).setResistance(10.0F).setBlockName("Limestone");
     	Calcite = new Calcite(CalciteID).setUnlocalizedName("Calcite");
     	
     	GameRegistry.registerBlock(CopperOre, "CopperOre");
     	GameRegistry.registerBlock(Limestone, "Limestone");
+    	GameRegistry.registerBlock(TinOre, "TinOre");
     	GameRegistry.registerItem(Calcite, "Calcite");
     }
 }
