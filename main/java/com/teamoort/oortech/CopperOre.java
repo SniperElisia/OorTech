@@ -13,9 +13,9 @@ public class CopperOre extends Block{
 	}
 	
 	@Override
-	public void registerBlockIcons(IIconRegister p_149651_1_)
+	public void registerBlockIcons(IIconRegister icon)
     {
-        this.blockIcon = p_149651_1_.registerIcon("oortech:CopperOre");
+        this.blockIcon = icon.registerIcon("oortech:CopperOre");
     }
 	
 }
