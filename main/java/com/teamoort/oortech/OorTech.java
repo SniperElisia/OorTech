@@ -2,6 +2,7 @@ package com.teamoort.oortech;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
@@ -12,12 +13,24 @@ import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = OorTech.MODID, version = OorTech.VERSION)
 public class OorTech
 {
     public static final String MODID = "OorTech";
     public static final String VERSION = "Alpha 0.0.0.1";
+    
+    public static final CreativeTabs tabBlock = new CreativeTabs("OorTech")
+    {
+        private static final String __OBFID = "CL_00000080";
+        @SideOnly(Side.CLIENT)
+        public Item getTabIconItem()
+        {
+            return Item.getItemFromBlock(OorTech.Limestone);
+        }
+    };
     
     @Metadata
     public ModMetadata meta;
