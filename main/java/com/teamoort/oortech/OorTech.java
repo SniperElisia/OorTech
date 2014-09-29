@@ -3,6 +3,7 @@ package com.teamoort.oortech;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Metadata;
@@ -25,13 +26,19 @@ public class OorTech
     int CopperOreID = 1000;
     int LimestoneID = 1001;
     
+    public static Item Calcite;
+    
+    int CalciteID = 10000;
+    
     @EventHandler
     public void init(FMLPreInitializationEvent event)
     {
     	CopperOre = new CopperOre(CopperOreID, Material.rock).setHardness(1.5f).setBlockName("CopperOre");
     	Limestone = new Limestone(LimestoneID, Material.rock).setHardness(1F).setBlockName("Limestone");
+    	Calcite = new Calcite(CalciteID).setUnlocalizedName("Calcite");
     	
     	GameRegistry.registerBlock(CopperOre, "CopperOre");
     	GameRegistry.registerBlock(Limestone, "Limestone");
+    	GameRegistry.registerItem(Calcite, "Calcite");
     }
 }
