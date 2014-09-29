@@ -1,4 +1,6 @@
-tile.CopperOre.name=±¸¸® ±¤¼®
-tile.Limestone.name=¼®È¸¾Ï
-tile.Calcite.name=¹æÇØ¼®
-tile.TinOre.name=ÁÖ¼® ±¤¼®
+tile.CopperOre.name=êµ¬ë¦¬ ê´‘ì„
+tile.Limestone.name=ì„íšŒì•”
+tile.Calcite.name=ë°©í•´ì„
+tile.TinOre.name=ì£¼ì„ ê´‘ì„
+
+itemGroup.OorTech.name=ì˜¤ë¥´íŠ¸í…Œí¬
