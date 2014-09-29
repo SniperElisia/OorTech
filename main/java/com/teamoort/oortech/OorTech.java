@@ -33,8 +33,8 @@ public class OorTech
     @EventHandler
     public void init(FMLPreInitializationEvent event)
     {
-    	CopperOre = new CopperOre(CopperOreID, Material.rock).setHardness(1.5f).setBlockName("CopperOre");
-    	Limestone = new Limestone(LimestoneID, Material.rock).setHardness(1F).setBlockName("Limestone");
+    	CopperOre = new CopperOre(CopperOreID, Material.rock).setHardness(3.0F).setResistance(5.0F).setBlockName("CopperOre");
+    	Limestone = new Limestone(LimestoneID, Material.rock).setHardness(2.0F).setResistance(10.0F).setBlockName("Limestone");
     	Calcite = new Calcite(CalciteID).setUnlocalizedName("Calcite");
     	
     	GameRegistry.registerBlock(CopperOre, "CopperOre");
