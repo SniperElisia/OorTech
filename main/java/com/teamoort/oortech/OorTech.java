@@ -5,6 +5,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -36,13 +38,11 @@ public class OorTech
     public ModMetadata meta;
     
     public static Block CopperOre,Limestone,TinOre;
+    public static Item Calcite;
     
     int CopperOreID = 1000;
     int LimestoneID = 1001;
     int TinOreID = 1002;
-    
-    public static Item Calcite;
-    
     int CalciteID = 10000;
     
     @EventHandler
@@ -60,5 +60,7 @@ public class OorTech
     	
     	OreDictionary.registerOre("oreCopper", OorTech.CopperOre);
     	OreDictionary.registerOre("oreTin", OorTech.TinOre);
+    	OreDictionary.registerOre("Limestone", OorTech.Limestone);
+    	OreDictionary.registerOre("Calcite", OorTech.Calcite);
     }
 }
