@@ -22,7 +22,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class OorTech
 {
     public static final String MODID = "OorTech";
-    public static final String VERSION = "Alpha 0.0.0.1";
+    public static final String VERSION = "Alpha 0.0.0.001";
     
     public static final CreativeTabs tabOort = new CreativeTabs("OorTech")
     {
