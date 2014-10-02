@@ -4,9 +4,20 @@
 tile.CopperOre.name=Copper Ore
 tile.Limestone.name=Limestone
 tile.TinOre.name=Tin Ore
+tile.LeadOre.name=Lead Ore
+tile.SilverOre.name=Silver Ore
+tile.BauxiteOre.name=Bauxite
 
 #OorTech Items
 item.Calcite.name=Calcite
+item.RawBauxite.name=Raw Bauxite
+item.AluminaDust.name=Alumina Dust
+item.CopperIngot.name=Copper Ingot
+item.TinIngot.name=Tin Ingot
+item.LeadIngot.name=Lead Ingot
+item.SilverIngot.name=Silver Ingot
+item.AluminumIngot.name=Aluminum Ingot
+item.SteelIngot.name=Steel Ingot
 
 #OorTech Creative Tabs
 itemGroup.OorTech=OorTech
