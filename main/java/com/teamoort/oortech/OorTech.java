@@ -7,7 +7,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
@@ -36,20 +35,23 @@ public class OorTech
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem()
         {
-            return OorTech.Calcite;
+        	return OorTech.Calcite;
         }
     };
     
     @Metadata
     public ModMetadata meta;
     
-    public static Block CopperOre,Limestone,TinOre;
+    public static Block CopperOre,Limestone,TinOre,SilverOre;
     public static Item Calcite;
 
     int CopperOreID = 1000;
     int LimestoneID = 1001;
     int TinOreID = 1002;
+    int SilverOreID = 1003;
     int CalciteID = 10000;
+    
+    OorEventHandler handler = new OorEventHandler();
     
     @EventHandler
     public void init(FMLPreInitializationEvent event)
@@ -64,10 +66,14 @@ public class OorTech
     	GameRegistry.registerBlock(TinOre, "TinOre");
     	GameRegistry.registerItem(Calcite, "Calcite");
     	
+    	GameRegistry.registerWorldGenerator(handler, 0);
+    	
     	OreDictionary.registerOre("oreCopper", OorTech.CopperOre);
     	OreDictionary.registerOre("oreTin", OorTech.TinOre);
     	OreDictionary.registerOre("Limestone", OorTech.Limestone);
     	OreDictionary.registerOre("Calcite", OorTech.Calcite);
+    	
+
 
     }
 }
