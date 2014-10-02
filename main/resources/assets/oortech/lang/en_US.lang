@@ -1,6 +1,12 @@
+#en_US.lang
+
+#OorTech Blocks
 tile.CopperOre.name=Copper Ore
 tile.Limestone.name=Limestone
-item.Calcite.name=Calcite
 tile.TinOre.name=Tin Ore
 
-itemGroup.OorTech.name=OorTech
+#OorTech Items
+item.Calcite.name=Calcite
+
+#OorTech Creative Tabs
+itemGroup.OorTech=OorTech

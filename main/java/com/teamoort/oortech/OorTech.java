@@ -7,6 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
@@ -35,7 +36,7 @@ public class OorTech
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem()
         {
-            return Item.getItemFromBlock(OorTech.Limestone);
+            return OorTech.Calcite;
         }
     };
     

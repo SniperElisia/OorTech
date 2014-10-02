@@ -1,6 +1,12 @@
+﻿#ko_KR.lang
+
+#오르테크의 블럭들
 tile.CopperOre.name=구리 광석
 tile.Limestone.name=석회암
-tile.Calcite.name=방해석
 tile.TinOre.name=주석 광석
 
-itemGroup.OorTech.name=오르테크
+#오르테크의 아이템들
+item.Calcite.name=방해석
+
+#오르테크의 크리에이티브 탭들
+itemGroup.OorTech=오르테크
