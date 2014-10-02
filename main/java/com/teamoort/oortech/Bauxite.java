@@ -5,12 +5,11 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class Limestone extends Block{
+public class Bauxite extends Block{
 
-	public Limestone(int id, Material mat){
+	public Bauxite(int id, Material mat){
 		super (mat);
 		this.setCreativeTab(OorTech.tabOort);
 		this.setHardness(2.0F);
@@ -18,7 +17,7 @@ public class Limestone extends Block{
 	}
 	
 	public Item getItemDropped(int metadata, Random random,int fortune){
-		return OorTech.Calcite;
+		return OorTech.RawBauxite;
 	}
 	
 	public int quantityDropped(Random random)
@@ -29,7 +28,7 @@ public class Limestone extends Block{
 	@Override
 	public void registerBlockIcons(IIconRegister icon)
     {
-        this.blockIcon = icon.registerIcon("oortech:Limestone");
+        this.blockIcon = icon.registerIcon("oortech:Bauxite");
     }
 	
 }

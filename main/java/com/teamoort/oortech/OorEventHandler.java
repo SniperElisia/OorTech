@@ -42,9 +42,12 @@ public class OorEventHandler implements IWorldGenerator
 	private void generateSurface(World world, Random random, int x, int z)
 	{
 	
-		this.addOreSpawn(OorTech.CopperOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 30, 80);
+		this.addOreSpawn(OorTech.CopperOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 30, 70);
+		this.addOreSpawn(OorTech.TinOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 10, 60);
+		this.addOreSpawn(OorTech.LeadOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 10, 60);
+		this.addOreSpawn(OorTech.SilverOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 5, 45);
 		this.addOreSpawn(OorTech.Limestone, 0, Blocks.stone, world, random, x, z, 16, 16, 16 + random.nextInt(10), 16, 30, 125);
-		this.addOreSpawn(OorTech.TinOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 10, 70);
+		this.addOreSpawn(OorTech.Bauxite, 0, Blocks.stone, world, random, x, z, 16, 16, 16 + random.nextInt(10), 16, 30, 125);
 		
 	}
 

@@ -11,6 +11,8 @@ public class CopperOre extends Block{
 		super (mat);
 		this.setCreativeTab(OorTech.tabOort);
 		this.setHarvestLevel("pickaxe",1);
+		this.setHardness(2.5F);
+		this.setResistance(5.0F);
 	}
 	
 	@Override
