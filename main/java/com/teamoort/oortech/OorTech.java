@@ -2,10 +2,14 @@ package com.teamoort.oortech;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
@@ -15,6 +19,7 @@ import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -39,7 +44,7 @@ public class OorTech
     
     public static Block CopperOre,Limestone,TinOre;
     public static Item Calcite;
-    
+
     int CopperOreID = 1000;
     int LimestoneID = 1001;
     int TinOreID = 1002;
@@ -62,5 +67,6 @@ public class OorTech
     	OreDictionary.registerOre("oreTin", OorTech.TinOre);
     	OreDictionary.registerOre("Limestone", OorTech.Limestone);
     	OreDictionary.registerOre("Calcite", OorTech.Calcite);
+
     }
 }
