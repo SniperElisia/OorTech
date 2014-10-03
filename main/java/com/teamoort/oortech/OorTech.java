@@ -44,11 +44,11 @@ public class OorTech
     
     //Blocks
     
-    public static Block CopperOre, TinOre, LeadOre, SilverOre, Limestone, SaltRock, Bauxite, Rutile, Scheelite;
+    public static Block CopperOre, TinOre, LeadOre, SilverOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, UraniumOre, PlutoniumOre, Limestone, SaltRock, Bauxite, Rutile, SulfurOre;
     
     //Items
     
-    public static Item Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, AluminaDust, CopperIngot, TinIngot, LeadIngot, SilverIngot, AluminumIngot, SteelIngot;
+    public static Item MortarPestle, Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust,  TinDust, LeadDust, SilverDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, CopperIngot, TinIngot, LeadIngot, SilverIngot, PlatinumIngot, ZincIngot, CobaltIngot, ChromiumIngot, UraniumIngot, PlutoniumIngot, SteelIngot, AluminumIngot, TungstenIngot, TitaniumIngot, SulfurChunk, SulfurDust;
 
     //IDs
     
@@ -71,7 +71,7 @@ public class OorTech
     
     int SulfurOreID = 1030;				//Other Materials (Ore) 1030-
 
-    int MortarPestle = 4000;			//Tools 4000-
+    int MortarPestleID = 4000;			//Tools 4000-
     
     int CalciteID = 10000;				//Raw Mineral 10000-10004
     int SaltChunkID = 10001;
@@ -158,7 +158,7 @@ public class OorTech
     OorEventHandler handler = new OorEventHandler();
     
     @EventHandler
-    public void init(FMLPreInitializationEvent event)
+    public void preInit(FMLPreInitializationEvent event)
     {
     	
     	//Blocks
