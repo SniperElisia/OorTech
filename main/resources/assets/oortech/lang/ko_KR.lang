@@ -4,9 +4,20 @@
 tile.CopperOre.name=구리 광석
 tile.Limestone.name=석회암
 tile.TinOre.name=주석 광석
+tile.LeadOre.name=납 광석
+tile.SilverOre.name=은 광석
+tile.BauxiteOre.name=보크사이트
 
 #오르테크의 아이템들
 item.Calcite.name=방해석
+item.RawBauxite.name=보크사이트 원석
+item.AluminaDust.name=산화알루미늄 가루
+item.CopperIngot.name=구리 주괴
+item.TinIngot.name=주석 주괴
+item.LeadIngot.name=납 주괴
+item.SilverIngot.name=은 주괴
+item.AluminumIngot.name=알루미늄 주괴
+item.SteelIngot.name=강철 주괴
 
 #오르테크의 크리에이티브 탭들
 itemGroup.OorTech=오르테크

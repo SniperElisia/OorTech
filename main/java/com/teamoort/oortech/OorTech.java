@@ -125,7 +125,7 @@ public class OorTech
     	OreDictionary.registerOre("oreBauxite", OorTech.Bauxite);
     	OreDictionary.registerOre("materialCalcite", OorTech.Calcite);
     	OreDictionary.registerOre("materialBauxite", OorTech.RawBauxite);
-    	OreDictionary.registerOre("dustAluminium", OorTech.AluminaDust);
+    	OreDictionary.registerOre("dustAlumina", OorTech.AluminaDust);
     	OreDictionary.registerOre("ingotCopper", OorTech.CopperIngot);
     	OreDictionary.registerOre("ingotTin", OorTech.TinIngot);
     	OreDictionary.registerOre("ingotLead", OorTech.LeadIngot);
