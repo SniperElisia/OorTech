@@ -44,115 +44,11 @@ public class OorTech
     
     //Blocks
     
-    public static Block CopperOre, TinOre, LeadOre, SilverOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, UraniumOre, PlutoniumOre, Limestone, SaltRock, Bauxite, Rutile, SulfurOre;
+    public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, UraniumOre, PlutoniumOre, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre;
     
     //Items
     
-    public static Item MortarPestle, Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust,  TinDust, LeadDust, SilverDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, CopperIngot, TinIngot, LeadIngot, SilverIngot, PlatinumIngot, ZincIngot, CobaltIngot, ChromiumIngot, UraniumIngot, PlutoniumIngot, SteelIngot, AluminumIngot, TungstenIngot, TitaniumIngot, SulfurChunk, SulfurDust;
-
-    //IDs
-    
-    int CopperOreID = 1000;				//Ore 1000-1009
-    int TinOreID = 1001;
-    int LeadOreID = 1002;
-    int SilverOreID = 1003;
-    int PlatinumOreID = 1004;
-    int ZincOreID = 1005;
-    int CobaltOreID = 1006;
-    int ChromiumOreID = 1007;
-    int UraniumOreID = 1008;
-    int PlutoniumOreID = 1009;
-    
-    int LimestoneID = 1020;				//Mineral Rock 1020-1024
-    int SaltRockID = 1021;
-    int BauxiteID = 1022;
-    int RutileID = 1023;
-    int ScheeliteID = 1024;
-    
-    int SulfurOreID = 1030;				//Other Materials (Ore) 1030-
-
-    int MortarPestleID = 4000;			//Tools 4000-
-    
-    int CalciteID = 10000;				//Raw Mineral 10000-10004
-    int SaltChunkID = 10001;
-    int RawBauxiteID = 10002;
-    int RawRutileID = 10003;
-    int RawScheeliteID = 10004;
-    
-    int CrushedIronID = 10010;			//Crushed Ore 10010-10019
-    int CrushedGoldID = 10011;
-    int CrushedCopperID = 10012;
-    int CrushedTinID = 10013;
-    int CrushedLeadID = 10014;
-    int CrushedSilverID = 10015;
-    int CrushedPlatinumID = 10016;
-    int CrushedZincID = 10017;
-    int CrushedCobaltID = 10018;
-    int CrushedChromiumID = 10019;
-    
-    int IronDustID = 10020;				//Dust 10020-10029
-    int GoldDustID = 10021;
-    int CopperDustID = 10022;
-    int TinDustID = 10023;
-    int LeadDustID = 10024;
-    int SilverDustID = 10025;
-    int PlatinumDustID = 10026;
-    int ZincDustID = 10027;
-    int CobaltDustID = 10028;
-    int ChromiumDustID = 10029;
-    
-    int SaltID = 10030;					//Mineral Dust 10030-10033			
-    int AluminaDustID = 10031;
-    int TitanateDustID = 10032;
-    int TungstateDustID = 10033;
-    
-    int PurifiedIronID = 10020;    				//Purified Dust 10040-10049
-    int PurifiedGoldID = 10021;
-    int PurifiedCopperID = 10022;
-    int PurifiedTinID = 10023;
-    int PurifiedLeadID = 10024;
-    int PurifiedSilverID = 10025;
-    int PurifiedPlatinumID = 10026;
-    int PurifiedZincID = 10027;
-    int PurifiedCobaltID = 10028;
-    int PurifiedChromiumID = 10029;
-    
-    int PurifiedAluminaID = 10050;		//Purified Mineral Dust 10050-10052
-    int PurifiedTitanateID = 10051;
-    int PurifiedTungstateID = 10052;
-    
-    int RefinedIronID = 10060;    		//Refined Dust 10060-10069
-    int RefinedGoldID = 10061;
-    int RefinedCopperID = 10062;
-    int RefinedTinID = 10063;
-    int RefinedLeadID = 10064;
-    int RefinedSilverID = 10065;
-    int RefinedPlatinumID = 10066;
-    int RefinedZincID = 10067;
-    int RefinedCobaltID = 10068;
-    int RefinedChromiumID = 10069;
-    
-    int RefinedAluminaID = 10070;		//Refined Mineral Dust 10070-10072
-    int RefinedTitanateID = 10071;
-    int RefinedTungstateID = 10072;
-    
-    int CopperIngotID = 10080;			//Ingot 10080-10093
-    int TinIngotID = 10081;
-    int LeadIngotID = 10082;
-    int SilverIngotID = 10083;
-    int PlatinumIngotID = 10084;
-    int ZincIngotID = 10085;
-    int CobaltIngotID = 10086;
-    int ChromiumIngotID = 10087;
-    int UraniumIngotID = 10088;
-    int PlutoniumIngotID = 10089;
-    int SteelIngotID = 10090;
-    int AluminumIngotID = 10091;
-    int TungstenIngotID = 10092;
-    int TitaniumIngotID = 10093;
-    
-    int SulfurChunkID = 10100;			//Other Materials (Raw) 10100-
-    int SulfurDustID = 10101;
+    public static Item MortarAndPestle, Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron, CrushedGold,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedNickel, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust, CopperDust, TinDust, LeadDust, SilverDust, NickelDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, CopperIngot, TinIngot, LeadIngot, SilverIngot, NickelIngot, PlatinumIngot, ZincIngot, CobaltIngot, ChromiumIngot, UraniumIngot, PlutoniumIngot, SteelIngot, AluminumIngot, TungstenIngot, TitaniumIngot, IronNugget, CopperNugget, TinNugget, LeadNugget, SilverNugget, PlatinumNugget, ZincNugget, NickelNugget, ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget, SteelNugget, SulfurChunk, SulfurDust, ItemCryolite;
     
     
     OorEventHandler handler = new OorEventHandler();
@@ -163,24 +59,112 @@ public class OorTech
     	
     	//Blocks
     	
-    	CopperOre = new CopperOre(CopperOreID, Material.rock).setBlockName("CopperOre");
-    	TinOre = new TinOre(TinOreID, Material.rock).setBlockName("TinOre");
-    	Limestone = new Limestone(LimestoneID, Material.rock).setBlockName("Limestone");
-    	LeadOre = new LeadOre(LeadOreID, Material.rock).setBlockName("LeadOre");
-    	SilverOre = new SilverOre(SilverOreID, Material.rock).setBlockName("SilverOre");
-    	Bauxite = new Bauxite(BauxiteID, Material.rock).setBlockName("Bauxite");
+    	CopperOre = new CopperOre();
+    	TinOre = new TinOre();
+    	LeadOre = new LeadOre();
+    	SilverOre = new SilverOre();
+    	NickelOre = new NickelOre();
+    	PlatinumOre = new PlatinumOre();
+    	ZincOre = new ZincOre();
+    	CobaltOre = new CobaltOre();
+    	ChromiumOre = new ChromiumOre();
+    	UraniumOre = new UraniumOre();
+    	PlutoniumOre = new PlutoniumOre();
+    	Limestone = new Limestone();
+    	SaltRock = new SaltRock();
+    	Bauxite = new Bauxite();
+    	Rutile = new Rutile();
+    	Scheelite = new Scheelite();
+    	Cryolite = new Cryolite();
+    	SulfurOre = new SulfurOre();
     	
     	//Items
     	
-    	Calcite = new Calcite(CalciteID).setUnlocalizedName("Calcite");
-    	RawBauxite = new RawBauxite(RawBauxiteID).setUnlocalizedName("RawBauxite");
-    	AluminaDust = new AluminaDust(AluminaDustID).setUnlocalizedName("AluminaDust");
-    	CopperIngot = new CopperIngot(CopperIngotID).setUnlocalizedName("CopperIngot");
-    	TinIngot = new TinIngot(TinIngotID).setUnlocalizedName("TinIngot");
-    	LeadIngot = new LeadIngot(LeadIngotID).setUnlocalizedName("LeadIngot");
-    	SilverIngot = new SilverIngot(SilverIngotID).setUnlocalizedName("SilverIngot");
-    	AluminumIngot = new AluminumIngot(AluminumIngotID).setUnlocalizedName("AluminumIngot");
-    	SteelIngot = new SteelIngot(SteelIngotID).setUnlocalizedName("SteelIngot");
+    	MortarAndPestle = new OorGenericItems("MortarAndPestle");
+    	Calcite = new OorGenericItems("Calcite");
+    	SaltChunk = new OorGenericItems("SaltChunk");
+    	RawBauxite = new OorGenericItems("RawBauxite");
+    	RawRutile = new OorGenericItems("RawRutile");
+    	RawScheelite = new OorGenericItems("RawScheelite");
+    	CrushedIron = new OorGenericItems("CrushedIron");
+    	CrushedGold = new OorGenericItems("CrushedGold");
+    	CrushedCopper = new OorGenericItems("CrushedCopper");
+    	CrushedTin = new OorGenericItems("CrushedTin");
+    	CrushedLead = new OorGenericItems("CrushedLead");
+    	CrushedSilver = new OorGenericItems("CrushedSilver");
+    	CrushedPlatinum = new OorGenericItems("CrushedPlatinum");
+    	CrushedZinc = new OorGenericItems("CrushedZinc");
+    	CrushedNickel = new OorGenericItems("CrushedNickel");
+    	CrushedChromium = new OorGenericItems("CrushedChromium");
+    	IronDust = new OorGenericItems("IronDust");
+    	GoldDust = new OorGenericItems("GoldDust");
+    	CopperDust = new OorGenericItems("CopperDust");
+    	TinDust = new OorGenericItems("TinDust");
+    	LeadDust = new OorGenericItems("LeadDust");
+    	SilverDust = new OorGenericItems("SilverDust");
+    	PlatinumDust = new OorGenericItems("PlatinumDust");
+    	ZincDust = new OorGenericItems("ZincDust");
+    	NickelDust = new OorGenericItems("NickelDust");
+    	ChromiumDust = new OorGenericItems("ChromiumDust");
+    	Salt = new OorGenericItems("Salt");
+    	AluminaDust = new OorGenericItems("AluminaDust");
+    	TitanateDust = new OorGenericItems("TitanateDust");
+    	TungstateDust = new OorGenericItems("TungstateDust");
+    	PurifiedIron = new OorGenericItems("PurifiedIron");
+    	PurifiedGold = new OorGenericItems("PurifiedGold");
+    	PurifiedCopper = new OorGenericItems("PurifiedCopper");
+    	PurifiedTin = new OorGenericItems("PurifiedTin");
+    	PurifiedLead = new OorGenericItems("PurifiedLead");
+    	PurifiedSilver = new OorGenericItems("PurifiedSilver");
+    	PurifiedPlatinum = new OorGenericItems("PurifiedPlatinum");
+    	PurifiedZinc = new OorGenericItems("PurifiedZinc");
+    	PurifiedNickel = new OorGenericItems("PurifiedNickel");
+    	PurifiedChromium = new OorGenericItems("PurifiedChromium");
+    	PurifiedAlumina = new OorGenericItems("PurifiedAlumina");
+    	PurifiedTitanate = new OorGenericItems("PurifiedTitanate");
+    	PurifiedTungstate = new OorGenericItems("PurifiedTungstate");
+    	RefinedIron = new OorGenericItems("RefinedIron");
+    	RefinedGold = new OorGenericItems("RefinedGold");
+    	RefinedCopper = new OorGenericItems("RefinedCopper");
+    	RefinedTin = new OorGenericItems("RefinedTin");
+    	RefinedLead = new OorGenericItems("RefinedLead");
+    	RefinedSilver = new OorGenericItems("RefinedSilver");
+    	RefinedPlatinum = new OorGenericItems("RefinedPlatinum");
+    	RefinedZinc = new OorGenericItems("RefinedZinc");
+    	RefinedNickel = new OorGenericItems("RefinedNickel");
+    	RefinedChromium = new OorGenericItems("RefinedChromium");
+    	RefinedAlumina = new OorGenericItems("RefinedAlumina");
+    	RefinedTitanate = new OorGenericItems("RefinedTitanate");
+    	RefinedTungstate = new OorGenericItems("RefinedTungstate");
+    	CopperIngot = new OorGenericItems("CopperIngot");
+    	TinIngot = new OorGenericItems("TinIngot");
+    	LeadIngot = new OorGenericItems("LeadIngot");
+    	SilverIngot = new OorGenericItems("SilverIngot");
+    	PlatinumIngot = new OorGenericItems("PlatinumIngot");
+    	ZincIngot = new OorGenericItems("ZincIngot");
+    	NickelIngot = new OorGenericItems("NickelIngot");
+    	ChromiumIngot = new OorGenericItems("ChromiumIngot");
+    	AluminumIngot = new OorGenericItems("AluminumIngot");
+    	TitaniumIngot = new OorGenericItems("TitaniumIngot");
+    	TungstenIngot = new OorGenericItems("TungstenIngot");
+    	SteelIngot = new OorGenericItems("SteelIngot");
+    	IronNugget = new OorGenericItems("IronNugget");
+    	CopperNugget = new OorGenericItems("CopperNugget");
+    	TinNugget = new OorGenericItems("TinNugget");
+    	LeadNugget = new OorGenericItems("LeadNugget");
+    	SilverNugget = new OorGenericItems("SilverNugget");
+    	PlatinumNugget = new OorGenericItems("PlatinumNugget");
+    	ZincNugget = new OorGenericItems("ZincNugget");
+    	NickelNugget = new OorGenericItems("NickelNugget");
+    	ChromiumNugget = new OorGenericItems("ChromiumNugget");
+    	AluminumNugget = new OorGenericItems("AluminumNugget");
+    	TitaniumNugget = new OorGenericItems("TitaniumNugget");
+    	TungstenNugget = new OorGenericItems("TungstenNugget");
+    	SteelNugget = new OorGenericItems("SteelNugget");
+    	SulfurChunk = new OorGenericItems("SulfurChunk");
+    	SulfurDust = new OorGenericItems("SulfurDust");
+    	ItemCryolite = new OorGenericItems("ItemCryolite");
+    	
     	
     	//Registry
     	
@@ -191,15 +175,90 @@ public class OorTech
     	GameRegistry.registerBlock(SilverOre, "SilverOre");
     	GameRegistry.registerBlock(Bauxite, "Bauxite");
     	
+    	GameRegistry.registerItem(MortarAndPestle, "MortarAndPestle");
     	GameRegistry.registerItem(Calcite, "Calcite");
+    	GameRegistry.registerItem(SaltChunk, "SaltChunk");
     	GameRegistry.registerItem(RawBauxite, "RawBauxite");
+    	GameRegistry.registerItem(RawRutile, "RawRutile");
+    	GameRegistry.registerItem(RawScheelite, "RawScheelite");
+    	GameRegistry.registerItem(CrushedIron, "CrushedIron");
+    	GameRegistry.registerItem(CrushedGold, "CrushedGold");
+    	GameRegistry.registerItem(CrushedCopper, "CrushedCopper");
+    	GameRegistry.registerItem(CrushedTin, "CrushedTin");
+    	GameRegistry.registerItem(CrushedLead, "CrushedLead");
+    	GameRegistry.registerItem(CrushedSilver, "CrushedSilver");
+    	GameRegistry.registerItem(CrushedPlatinum, "CrushedPlatinum");
+    	GameRegistry.registerItem(CrushedZinc, "CrushedZinc");
+    	GameRegistry.registerItem(CrushedNickel, "CrushedNickel");
+    	GameRegistry.registerItem(CrushedChromium, "CrushedChromium");
+    	GameRegistry.registerItem(IronDust, "IronDust");
+    	GameRegistry.registerItem(GoldDust, "GoldDust");
+    	GameRegistry.registerItem(CopperDust, "CopperDust");
+    	GameRegistry.registerItem(TinDust, "TinDust");
+    	GameRegistry.registerItem(LeadDust, "LeadDust");
+    	GameRegistry.registerItem(SilverDust, "SilverDust");
+    	GameRegistry.registerItem(PlatinumDust, "PlatinumDust");
+    	GameRegistry.registerItem(ZincDust, "ZincDust");
+    	GameRegistry.registerItem(NickelDust, "NickelDust");
+    	GameRegistry.registerItem(ChromiumDust, "ChromiumDust");
+    	GameRegistry.registerItem(Salt, "Salt");
     	GameRegistry.registerItem(AluminaDust, "AluminaDust");
+    	GameRegistry.registerItem(TitanateDust, "TitanateDust");
+    	GameRegistry.registerItem(TungstateDust, "TungstateDust");
+    	GameRegistry.registerItem(PurifiedIron, "PurifiedIron");
+    	GameRegistry.registerItem(PurifiedGold, "PurifiedGold");
+    	GameRegistry.registerItem(PurifiedCopper, "PurifiedCopper");
+    	GameRegistry.registerItem(PurifiedTin, "PurifiedTin");
+    	GameRegistry.registerItem(PurifiedLead, "PurifiedLead");
+    	GameRegistry.registerItem(PurifiedSilver, "PurifiedSilver");
+    	GameRegistry.registerItem(PurifiedPlatinum, "PurifiedPlatinum");
+    	GameRegistry.registerItem(PurifiedZinc, "PurifiedZinc");
+    	GameRegistry.registerItem(PurifiedNickel, "PurifiedNickel");
+    	GameRegistry.registerItem(PurifiedChromium, "PurifiedChromium");
+    	GameRegistry.registerItem(PurifiedAlumina, "PurifiedAlumina");
+    	GameRegistry.registerItem(PurifiedTitanate, "PurifiedTitanate");
+    	GameRegistry.registerItem(PurifiedTungstate, "PurifiedTungstate");
+    	GameRegistry.registerItem(RefinedIron, "RefinedIron");
+    	GameRegistry.registerItem(RefinedGold, "RefinedGold");
+    	GameRegistry.registerItem(RefinedCopper, "RefinedCopper");
+    	GameRegistry.registerItem(RefinedTin, "RefinedTin");
+    	GameRegistry.registerItem(RefinedLead, "RefinedLead");
+    	GameRegistry.registerItem(RefinedSilver, "RefinedSilver");
+    	GameRegistry.registerItem(RefinedPlatinum, "RefinedPlatinum");
+    	GameRegistry.registerItem(RefinedZinc, "RefinedZinc");
+    	GameRegistry.registerItem(RefinedNickel, "RefinedNickel");
+    	GameRegistry.registerItem(RefinedChromium, "RefinedChromium");
+    	GameRegistry.registerItem(RefinedAlumina, "RefinedAlumina");
+    	GameRegistry.registerItem(RefinedTitanate, "RefinedTitanate");
+    	GameRegistry.registerItem(RefinedTungstate, "RefinedTungstate");
     	GameRegistry.registerItem(CopperIngot, "CopperIngot");
     	GameRegistry.registerItem(TinIngot, "TinIngot");
     	GameRegistry.registerItem(LeadIngot, "LeadIngot");
     	GameRegistry.registerItem(SilverIngot, "SilverIngot");
+    	GameRegistry.registerItem(PlatinumIngot, "PlatinumIngot");
+    	GameRegistry.registerItem(ZincIngot, "ZincIngot");
+    	GameRegistry.registerItem(NickelIngot, "NickelIngot");
+    	GameRegistry.registerItem(ChromiumIngot, "ChromiumIngot");
     	GameRegistry.registerItem(AluminumIngot, "AluminumIngot");
+    	GameRegistry.registerItem(TitaniumIngot, "TitaniumIngot");
+    	GameRegistry.registerItem(TungstenIngot, "TungstenIngot");
     	GameRegistry.registerItem(SteelIngot, "SteelIngot");
+    	GameRegistry.registerItem(IronNugget, "IronNugget");
+    	GameRegistry.registerItem(CopperNugget, "CopperNugget");
+    	GameRegistry.registerItem(TinNugget, "TinNugget");
+    	GameRegistry.registerItem(LeadNugget, "LeadNugget");
+    	GameRegistry.registerItem(SilverNugget, "SilverNugget");
+    	GameRegistry.registerItem(PlatinumNugget, "PlatinumNugget");
+    	GameRegistry.registerItem(ZincNugget, "ZincNugget");
+    	GameRegistry.registerItem(NickelNugget, "NickelNugget");
+    	GameRegistry.registerItem(ChromiumNugget, "ChromiumNugget");
+    	GameRegistry.registerItem(AluminumNugget, "AluminumNugget");
+    	GameRegistry.registerItem(TitaniumNugget, "TitaniumNugget");
+    	GameRegistry.registerItem(TungstenNugget, "TungstenNugget");
+    	GameRegistry.registerItem(SteelNugget, "SteelNugget");
+    	GameRegistry.registerItem(SulfurChunk, "SulfurChunk");
+    	GameRegistry.registerItem(SulfurDust, "SulfurDust");
+    	GameRegistry.registerItem(ItemCryolite, "ItemCryolite");
     	
     	GameRegistry.registerWorldGenerator(handler, 0);
     	

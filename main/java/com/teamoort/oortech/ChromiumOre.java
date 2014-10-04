@@ -2,14 +2,12 @@ package com.teamoort.oortech;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 
-public class TinOre extends Block {
+public class ChromiumOre extends Block {
 
-	String name = "TinOre";
+	String name = "ChromiumOre";
 	
-	public TinOre() {
+	public ChromiumOre() {
 		super(Material.rock);
 		setBlockName(OorTech.MODID + "_" + name);
 		setBlockTextureName(OorTech.MODID + ":" + name);

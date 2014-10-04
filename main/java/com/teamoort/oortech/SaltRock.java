@@ -4,14 +4,13 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
-public class Bauxite extends Block {
+public class SaltRock extends Block {
 
-	String name = "Bauxite";
+	String name = "SaltRock";
 	
-	public Bauxite() {
+	public SaltRock() {
 		super(Material.rock);
 		setBlockName(OorTech.MODID + "_" + name);
 		setBlockTextureName(OorTech.MODID + ":" + name);
@@ -23,12 +22,12 @@ public class Bauxite extends Block {
 	}
 	
 	public Item getItemDropped(int metadata, Random random,int fortune){
-		return OorTech.RawBauxite;
+		return OorTech.SaltChunk;
 	}
 	
 	public int quantityDropped(Random random)
     {
-        return random.nextInt(2) + 2;
+        return 2 + random.nextInt(2);
     }
 	
 	public int quantityDroppedWithBonus(int fortune, Random random)

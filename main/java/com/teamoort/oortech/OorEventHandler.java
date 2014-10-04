@@ -42,12 +42,26 @@ public class OorEventHandler implements IWorldGenerator
 	private void generateSurface(World world, Random random, int x, int z)
 	{
 	
-		this.addOreSpawn(OorTech.CopperOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 30, 70);
-		this.addOreSpawn(OorTech.TinOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 10, 60);
-		this.addOreSpawn(OorTech.LeadOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 10, 60);
-		this.addOreSpawn(OorTech.SilverOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 15, 5, 45);
+		this.addOreSpawn(OorTech.CopperOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 12, 30, 70);
+		this.addOreSpawn(OorTech.TinOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 12, 10, 60);
+		this.addOreSpawn(OorTech.LeadOre, 0, Blocks.stone, world, random, x, z, 16, 16, 3 + random.nextInt(4), 12, 10, 60);
+		this.addOreSpawn(OorTech.SilverOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(3), 12, 7, 50);
+		this.addOreSpawn(OorTech.PlatinumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 1 + random.nextInt(1), 5, 5, 37);
+		this.addOreSpawn(OorTech.NickelOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(2), 10, 12, 46);
+		this.addOreSpawn(OorTech.CobaltOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 5, 52);
+		this.addOreSpawn(OorTech.ChromiumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 5, 52);
+		this.addOreSpawn(OorTech.ZincOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 15, 60);
+		this.addOreSpawn(OorTech.UraniumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 1, 5, 3, 40);
+		this.addOreSpawn(OorTech.PlutoniumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 1, 5, 3, 40);
 		this.addOreSpawn(OorTech.Limestone, 0, Blocks.stone, world, random, x, z, 16, 16, 16 + random.nextInt(10), 16, 30, 125);
-		this.addOreSpawn(OorTech.Bauxite, 0, Blocks.stone, world, random, x, z, 16, 16, 16 + random.nextInt(10), 16, 30, 125);
+		this.addOreSpawn(OorTech.SaltRock, 0, Blocks.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 12, 30, 125);
+		this.addOreSpawn(OorTech.SaltRock, 0, Blocks.dirt, world, random, x, z, 16, 16, 1 + random.nextInt(2), 12, 30, 125);
+		this.addOreSpawn(OorTech.SaltRock, 0, Blocks.water, world, random, x, z, 16, 16, 1 + random.nextInt(2), 12, 30, 125);
+		this.addOreSpawn(OorTech.Bauxite, 0, Blocks.stone, world, random, x, z, 16, 16, 15 + random.nextInt(10), 16, 30, 100);
+		this.addOreSpawn(OorTech.Rutile, 0, Blocks.stone, world, random, x, z, 16, 16, 13 + random.nextInt(9), 16, 20, 90);
+		this.addOreSpawn(OorTech.Scheelite, 0, Blocks.stone, world, random, x, z, 16, 16, 10 + random.nextInt(8), 16, 10, 80);
+		this.addOreSpawn(OorTech.Cryolite, 0, Blocks.stone, world, random, x, z, 16, 16, 10 + random.nextInt(5), 16, 30, 70);
+		this.addOreSpawn(OorTech.SulfurOre, 0, Blocks.lava, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 3, 125);
 		
 	}
 

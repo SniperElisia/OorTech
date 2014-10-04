@@ -4,26 +4,25 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
-public class Bauxite extends Block {
+public class Scheelite extends Block {
 
-	String name = "Bauxite";
+	String name = "Scheelite";
 	
-	public Bauxite() {
+	public Scheelite() {
 		super(Material.rock);
 		setBlockName(OorTech.MODID + "_" + name);
 		setBlockTextureName(OorTech.MODID + ":" + name);
 		setCreativeTab(OorTech.tabOort);
-		setHarvestLevel("pickaxe", 1);
+		setHarvestLevel("pickaxe", 2);
 		setHardness(2.0F);
 		setResistance(10.0F);
 		
 	}
 	
 	public Item getItemDropped(int metadata, Random random,int fortune){
-		return OorTech.RawBauxite;
+		return OorTech.RawScheelite;
 	}
 	
 	public int quantityDropped(Random random)

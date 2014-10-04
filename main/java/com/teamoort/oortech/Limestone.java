@@ -8,13 +8,19 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class Limestone extends Block{
+public class Limestone extends Block {
 
-	public Limestone(int id, Material mat){
-		super (mat);
-		this.setCreativeTab(OorTech.tabOort);
-		this.setHardness(2.0F);
-		this.setResistance(10.0F);
+	String name = "Limestone";
+	
+	public Limestone() {
+		super(Material.rock);
+		setBlockName(OorTech.MODID + "_" + name);
+		setBlockTextureName(OorTech.MODID + ":" + name);
+		setCreativeTab(OorTech.tabOort);
+		setHarvestLevel("pickaxe", 1);
+		setHardness(2.0F);
+		setResistance(10.0F);
+		
 	}
 	
 	public Item getItemDropped(int metadata, Random random,int fortune){
@@ -23,13 +29,21 @@ public class Limestone extends Block{
 	
 	public int quantityDropped(Random random)
     {
-        return 4;
+        return 3 + random.nextInt(2);
     }
 	
-	@Override
-	public void registerBlockIcons(IIconRegister icon)
-    {
-        this.blockIcon = icon.registerIcon("oortech:Limestone");
-    }
+	public int quantityDroppedWithBonus(int fortune, Random random)
+	{
+	
+		if (fortune > 0)
+			{
+				int j = random.nextInt(fortune + 5) - 1;
+				if (j > 0) 
+				{
+					return j++;
+				}
+			}
+		return 3;
+	}
 	
 }
