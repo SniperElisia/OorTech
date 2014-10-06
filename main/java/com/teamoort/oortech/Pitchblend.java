@@ -3,11 +3,11 @@ package com.teamoort.oortech;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class UraniumOre extends Block {
+public class Pitchblend extends Block {
 
-	String name = "UraniumOre";
+	String name = "Pitchblend";
 	
-	public UraniumOre() {
+	public Pitchblend() {
 		super(Material.rock);
 		setBlockName(OorTech.MODID + "_" + name);
 		setBlockTextureName(OorTech.MODID + ":" + name);
