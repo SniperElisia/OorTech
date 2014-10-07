@@ -59,7 +59,7 @@ public class OorEventHandler implements IWorldGenerator
 		addOreSpawn(OorTech.CobaltOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 5, 52);
 		addOreSpawn(OorTech.ChromiumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 5, 52);
 		addOreSpawn(OorTech.ZincOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 15, 60);
-		addOreSpawn(OorTech.UraniumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 1, 5, 3, 40);
+		addOreSpawn(OorTech.Pitchblende, 0, Blocks.stone, world, random, x, z, 16, 16, 1, 5, 3, 40);
 		addOreSpawn(OorTech.PlutoniumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 1, 5, 3, 40);
 		addOreSpawn(OorTech.Limestone, 0, Blocks.stone, world, random, x, z, 16, 16, 16 + random.nextInt(10), 16, 30, 125);
 		addOreSpawn(OorTech.SaltRock, 0, Blocks.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 12, 30, 125);

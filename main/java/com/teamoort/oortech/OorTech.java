@@ -44,7 +44,7 @@ public class OorTech
     
     //Blocks
     
-    public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, UraniumOre, PlutoniumOre, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian;
+    public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblende, PlutoniumOre, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian;
     
     //Items
     
@@ -68,7 +68,7 @@ public class OorTech
     	ZincOre = new ZincOre();
     	CobaltOre = new CobaltOre();
     	ChromiumOre = new ChromiumOre();
-    	UraniumOre = new UraniumOre();
+    	Pitchblende = new UraniumOre();
     	PlutoniumOre = new PlutoniumOre();
     	Limestone = new Limestone();
     	SaltRock = new SaltRock();
@@ -200,7 +200,7 @@ public class OorTech
     	GameRegistry.registerBlock(ZincOre, "ZincOre");
     	GameRegistry.registerBlock(CobaltOre, "CobaltOre");
     	GameRegistry.registerBlock(ChromiumOre, "ChromiumOre");
-    	GameRegistry.registerBlock(UraniumOre, "UraniumOre"); 
+    	GameRegistry.registerBlock(Pitchblende, "Pitchblende"); 
     	GameRegistry.registerBlock(PlutoniumOre, "PlutoniumOre");   	
     	GameRegistry.registerBlock(Limestone, "Limestone");
     	GameRegistry.registerBlock(SaltRock, "SaltRock");
@@ -326,7 +326,7 @@ public class OorTech
     	OreDictionary.registerOre("oreZinc", OorTech.ZincOre);
     	OreDictionary.registerOre("oreCobalt", OorTech.CobaltOre);
  		OreDictionary.registerOre("oreChromium", OorTech.ChromiumOre);
-   		OreDictionary.registerOre("oreUranium", OorTech.UraniumOre); 
+   		OreDictionary.registerOre("orePitchblende", OorTech.Pitchblende); 
     	OreDictionary.registerOre("orePlutonium", OorTech.PlutoniumOre);   	
    		OreDictionary.registerOre("blockLimestone", OorTech.Limestone);
     	OreDictionary.registerOre("blockSaltRock", OorTech.SaltRock);
