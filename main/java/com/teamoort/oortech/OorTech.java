@@ -372,20 +372,20 @@ public class OorTech
     	OreDictionary.registerOre("crushedZinc", OorTech.CrushedZinc);
     	OreDictionary.registerOre("crushedNickel", OorTech.CrushedNickel);
     	OreDictionary.registerOre("crushedChromium", OorTech.CrushedChromium);
-    	OreDictionary.registerOre("dustIronOor", OorTech.IronDust);
-    	OreDictionary.registerOre("dustGoldOor", OorTech.GoldDust);
-    	OreDictionary.registerOre("dustCopperOor", OorTech.CopperDust);
-    	OreDictionary.registerOre("dustTinOor", OorTech.TinDust);
-    	OreDictionary.registerOre("dustLeadOor", OorTech.LeadDust);
-    	OreDictionary.registerOre("dustSilverOor", OorTech.SilverDust);
-    	OreDictionary.registerOre("dustPlatinumOor", OorTech.PlatinumDust);
-    	OreDictionary.registerOre("dustZincOor", OorTech.ZincDust);
-    	OreDictionary.registerOre("dustNickelOor", OorTech.NickelDust);
-    	OreDictionary.registerOre("dustChromiumOor", OorTech.ChromiumDust);
+    	OreDictionary.registerOre("dustIronOort", OorTech.IronDust);
+    	OreDictionary.registerOre("dustGoldOort", OorTech.GoldDust);
+    	OreDictionary.registerOre("dustCopperOort", OorTech.CopperDust);
+    	OreDictionary.registerOre("dustTinOort", OorTech.TinDust);
+    	OreDictionary.registerOre("dustLeadOort", OorTech.LeadDust);
+    	OreDictionary.registerOre("dustSilverOort", OorTech.SilverDust);
+    	OreDictionary.registerOre("dustPlatinumOort", OorTech.PlatinumDust);
+    	OreDictionary.registerOre("dustZincOort", OorTech.ZincDust);
+    	OreDictionary.registerOre("dustNickelOort", OorTech.NickelDust);
+    	OreDictionary.registerOre("dustChromiumOort", OorTech.ChromiumDust);
     	OreDictionary.registerOre("dustSalt", OorTech.Salt);
-    	OreDictionary.registerOre("dustAluminumOor", OorTech.AluminaDust);
-    	OreDictionary.registerOre("dustTitaniumOor", OorTech.TitanateDust);
-    	OreDictionary.registerOre("dustTungstenOor", OorTech.TungstateDust);
+    	OreDictionary.registerOre("dustAluminumOort", OorTech.AluminaDust);
+    	OreDictionary.registerOre("dustTitaniumOort", OorTech.TitanateDust);
+    	OreDictionary.registerOre("dustTungstenOort", OorTech.TungstateDust);
     	OreDictionary.registerOre("dustPurifiedIron", OorTech.PurifiedIron);
     	OreDictionary.registerOre("dustPurifiedGold", OorTech.PurifiedGold);
     	OreDictionary.registerOre("dustPurifiedCopper", OorTech.PurifiedCopper);
@@ -420,10 +420,10 @@ public class OorTech
     	OreDictionary.registerOre("ingotZinc", OorTech.ZincIngot);
     	OreDictionary.registerOre("ingotNickel", OorTech.NickelIngot);
     	OreDictionary.registerOre("ingotChromium", OorTech.ChromiumIngot);
-    	OreDictionary.registerOre("ingotAluminumOor", OorTech.AluminumIngot);
-    	OreDictionary.registerOre("ingotTitaniumOor", OorTech.TitaniumIngot);
-    	OreDictionary.registerOre("ingotTungstenOor", OorTech.TungstenIngot);
-    	OreDictionary.registerOre("ingotSteelOor", OorTech.SteelIngot);
+    	OreDictionary.registerOre("ingotAluminumOort", OorTech.AluminumIngot);
+    	OreDictionary.registerOre("ingotTitaniumOort", OorTech.TitaniumIngot);
+    	OreDictionary.registerOre("ingotTungstenOort", OorTech.TungstenIngot);
+    	OreDictionary.registerOre("ingotSteelOort", OorTech.SteelIngot);
     	OreDictionary.registerOre("nuggetIron", OorTech.IronNugget);
     	OreDictionary.registerOre("nuggetCopper", OorTech.CopperNugget);
     	OreDictionary.registerOre("nuggetTin", OorTech.TinNugget);
@@ -438,7 +438,7 @@ public class OorTech
     	OreDictionary.registerOre("nuggetTungsten", OorTech.TungstenNugget);
     	OreDictionary.registerOre("nuggetSteel", OorTech.SteelNugget);
     	OreDictionary.registerOre("lumpSulfur", OorTech.SulfurChunk);
-    	OreDictionary.registerOre("dustSulfurOor", OorTech.SulfurDust);
+    	OreDictionary.registerOre("dustSulfurOort", OorTech.SulfurDust);
     	OreDictionary.registerOre("materialCryolite", OorTech.ItemCryolite);
 
 
