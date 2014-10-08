@@ -9,7 +9,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
-public class OorEventHandler implements IWorldGenerator
+public class OortEventHandler implements IWorldGenerator
 {
 
 	@Override
