@@ -36,15 +36,25 @@ public class OortEventHandler implements IWorldGenerator
 
 	private void generateNether(World world, Random random, int x, int z) 
 	{
+		int Xcoord = x + random.nextInt(16);
+		int Ycoord = 10 + random.nextInt(128);
+		int Zcoord = z + random.nextInt(16);
+		(new WorldGenMinable(OorTech.FerronickelOre, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.PseudoBronzeOre, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.PseudoBrassOre, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.ArgentAurum, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.PseudoSolder, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.PseudoStellite, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.TNTium, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
 		
-		addOreSpawn(OorTech.FerronickelOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 20, 1, 255);
-		addOreSpawn(OorTech.PseudoBronzeOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 20, 1, 255);
-		addOreSpawn(OorTech.PseudoBrassOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 20, 1, 255);
-		addOreSpawn(OorTech.ArgentAurum, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 20, 1, 255);
-		addOreSpawn(OorTech.PseudoSolder, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 20, 1, 255);
-		addOreSpawn(OorTech.PseudoStellite, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 20, 1, 255);
-		addOreSpawn(OorTech.TNTium, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1, 32, 1, 255);
-		
+		addOreSpawn(OorTech.FerronickelOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
+		addOreSpawn(OorTech.PseudoBronzeOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
+		addOreSpawn(OorTech.PseudoBrassOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
+		addOreSpawn(OorTech.ArgentAurum, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7),30, 1, 255);
+		addOreSpawn(OorTech.PseudoSolder, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
+		addOreSpawn(OorTech.PseudoStellite, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
+		addOreSpawn(OorTech.TNTium, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1, 30, 1, 255);
+
 	}
 
 	private void generateSurface(World world, Random random, int x, int z)
@@ -76,20 +86,37 @@ public class OortEventHandler implements IWorldGenerator
 
 	private void generateEnd(World world, Random random, int x, int z) 
 	{
+		int Xcoord = x + random.nextInt(16);
+		int Ycoord = 10 + random.nextInt(128);
+		int Zcoord = z + random.nextInt(16);
+		
+		(new WorldGenMinable(OorTech.IronObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.GoldObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.CopperObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.TinObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.LeadObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.SilverObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.PlatinumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.NickelObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.ZincObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.CobaltObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.ChromiumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.UraniumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(OorTech.PlutoniumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, Xcoord, Ycoord, Zcoord);
 
-		addOreSpawn(OorTech.IronObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 20, 100);
-		addOreSpawn(OorTech.GoldObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.CopperObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.TinObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.LeadObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.SilverObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.PlatinumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(3), 5, 1, 100);
-		addOreSpawn(OorTech.NickelObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.ZincObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.CobaltObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.ChromiumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(OorTech.UraniumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
-		addOreSpawn(OorTech.PlutoniumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
+		addOreSpawn(OorTech.IronObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 20, 100);
+		addOreSpawn(OorTech.GoldObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.CopperObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.TinObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.LeadObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.SilverObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.PlatinumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(3), 5, 1, 100);
+		addOreSpawn(OorTech.NickelObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.ZincObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.CobaltObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.ChromiumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(OorTech.UraniumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
+		addOreSpawn(OorTech.PlutoniumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
 		
 	}
 	
