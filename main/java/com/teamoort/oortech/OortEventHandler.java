@@ -47,12 +47,12 @@ public class OortEventHandler implements IWorldGenerator
 		(new WorldGenMinable(OorTech.PseudoStellite, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
 		(new WorldGenMinable(OorTech.TNTium, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
 		
-		addOreSpawn(OorTech.FerronickelOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
-		addOreSpawn(OorTech.PseudoBronzeOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
-		addOreSpawn(OorTech.PseudoBrassOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
-		addOreSpawn(OorTech.ArgentAurum, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7),30, 1, 255);
-		addOreSpawn(OorTech.PseudoSolder, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
-		addOreSpawn(OorTech.PseudoStellite, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 30, 1, 255);
+		addOreSpawn(OorTech.FerronickelOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
+		addOreSpawn(OorTech.PseudoBronzeOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
+		addOreSpawn(OorTech.PseudoBrassOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
+		addOreSpawn(OorTech.ArgentAurum, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7),60, 1, 255);
+		addOreSpawn(OorTech.PseudoSolder, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
+		addOreSpawn(OorTech.PseudoStellite, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
 		addOreSpawn(OorTech.TNTium, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1, 30, 1, 255);
 
 	}
