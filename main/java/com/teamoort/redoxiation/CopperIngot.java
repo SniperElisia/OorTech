@@ -9,7 +9,7 @@ public class CopperIngot extends Item{
 	
 	public CopperIngot(int id){
 		super();
-		this.setCreativeTab(Redoxiation.tabOort);
+		this.setCreativeTab(Redoxiation.tabRedoxiation);
 		this.setMaxStackSize(64);
 	}
 	

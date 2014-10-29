@@ -27,9 +27,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class Redoxiation
 {
     public static final String MODID = "Redoxiation";
-    public static final String VERSION = "Alpha 0.0.0.001";
+    public static final String VERSION = "Alpha 0.0.0.002";
     
-    public static final CreativeTabs tabOort = new CreativeTabs("Redoxiation")
+    public static final CreativeTabs tabRedoxiation = new CreativeTabs("Redoxiation")
     {
         private static final String __OBFID = "CL_00000080";
         @SideOnly(Side.CLIENT)

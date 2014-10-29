@@ -9,7 +9,7 @@ public class AluminaDust extends Item{
 	
 	public AluminaDust(int id){
 		super();
-		this.setCreativeTab(Redoxiation.tabOort);
+		this.setCreativeTab(Redoxiation.tabRedoxiation);
 		this.setMaxStackSize(64);
 	}
 	

@@ -13,7 +13,7 @@ public class CopperOre extends Block {
 		super(Material.rock);
 		setBlockName(Redoxiation.MODID + "_" + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
-		setCreativeTab(Redoxiation.tabOort);
+		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 1);
 		setHardness(2.5F);
 		setResistance(5.0F);

@@ -9,7 +9,7 @@ public class RawBauxite extends Item{
 	
 	public RawBauxite(int id){
 		super();
-		this.setCreativeTab(Redoxiation.tabOort);
+		this.setCreativeTab(Redoxiation.tabRedoxiation);
 		this.setMaxStackSize(64);
 	}
 	

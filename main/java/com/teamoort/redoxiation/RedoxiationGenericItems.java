@@ -11,7 +11,7 @@ public class RedoxiationGenericItems extends Item{
 		
 		setUnlocalizedName(Redoxiation.MODID + "_" + name);
 		setTextureName(Redoxiation.MODID + ":" + name);
-		setCreativeTab(Redoxiation.tabOort);
+		setCreativeTab(Redoxiation.tabRedoxiation);
 		
 	}
 	

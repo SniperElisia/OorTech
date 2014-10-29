@@ -9,7 +9,7 @@ public class SteelIngot extends Item{
 	
 	public SteelIngot(int id){
 		super();
-		this.setCreativeTab(Redoxiation.tabOort);
+		this.setCreativeTab(Redoxiation.tabRedoxiation);
 		this.setMaxStackSize(64);
 	}
 	

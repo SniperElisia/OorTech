@@ -17,7 +17,7 @@ public class TNTium extends Block {
 		super(Material.rock);
 		setBlockName(Redoxiation.MODID + "_" + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
-		setCreativeTab(Redoxiation.tabOort);
+		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 2);
 		setHardness(3.0F);
 		setResistance(15.0F);

@@ -10,7 +10,7 @@ public class Calcite extends Item{
 	
 	public Calcite(int id){
 		super();
-		this.setCreativeTab(Redoxiation.tabOort);
+		this.setCreativeTab(Redoxiation.tabRedoxiation);
 		this.setMaxStackSize(64);
 	}
 	

@@ -9,7 +9,7 @@ public class SilverIngot extends Item{
 	
 	public SilverIngot(int id){
 		super();
-		this.setCreativeTab(Redoxiation.tabOort);
+		this.setCreativeTab(Redoxiation.tabRedoxiation);
 		this.setMaxStackSize(64);
 	}
 	
