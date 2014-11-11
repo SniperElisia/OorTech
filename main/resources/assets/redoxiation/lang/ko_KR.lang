@@ -23,7 +23,7 @@ tile.OorTech_FerronickelOre.name=네더 페로니켈 광석
 tile.OorTech_PseudoBronzeOre.name=네더 가청동 광석
 tile.OorTech_PseudoBrassOre.name=네더 가황동 광석
 tile.OorTech_ArgentAurum.name=은빛 금
-tile.OorTech_PseudoSolder.name=가땜납
+tile.OorTech_PseudoSolder.name=네더 가땜납 광석
 tile.OorTech_PseudoStellite.name=네더 가스텔라이트 광석
 tile.OorTech_TNTium.name=화약석
 tile.OorTech_IronObsidian.name=철을 함유한 흑요석
@@ -37,7 +37,7 @@ tile.OorTech_PlatinumObsidian.name=백금을 함유한 흑요석
 tile.OorTech_ZincObsidian.name=아연을 함유한 흑요석
 tile.OorTech_CobaltObsidian.name=코발트를 함유한 흑요석
 tile.OorTech_ChromiumObsidian.name=크로뮴을 함유한 흑요석
-tile.OorTech_UraniumObsidian.name=우라을 함유한 흑요석
+tile.OorTech_UraniumObsidian.name=우라늄을 함유한 흑요석
 tile.OorTech_PlutoniumObsidian.name=플루토늄을 함유한 흑요석
 
 #오르트테크 아이템
