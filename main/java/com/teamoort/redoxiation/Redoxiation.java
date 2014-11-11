@@ -50,6 +50,10 @@ public class Redoxiation
     
     public static Item MortarAndPestle, Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron, CrushedGold,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedNickel, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust, CopperDust, TinDust, LeadDust, SilverDust, NickelDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, CopperIngot, TinIngot, LeadIngot, SilverIngot, NickelIngot, PlatinumIngot, ZincIngot, CobaltIngot, ChromiumIngot, UraniumIngot, PlutoniumIngot, SteelIngot, AluminumIngot, TungstenIngot, TitaniumIngot, IronNugget, CopperNugget, TinNugget, LeadNugget, SilverNugget, PlatinumNugget, ZincNugget, NickelNugget, ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget, SteelNugget, SulfurChunk, SulfurDust, ItemCryolite, CrashedNetherrack, CrashedObsidian;
     
+    //fluids
+
+    public static Fluid HotAir;
+    public static BlockFluidClassic HotAirBlock;
     
     RedoxiationEventHandler handler = new RedoxiationEventHandler();
     
@@ -441,6 +445,12 @@ public class Redoxiation
     	OreDictionary.registerOre("dustSulfurOort", Redoxiation.SulfurDust);
     	OreDictionary.registerOre("materialCryolite", Redoxiation.ItemCryolite);
 
+        //Fluids
 
+        HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(50).setTemperature(1473).setViscosity(4500).setGaseous(true);
+        FluidRegistry.registerFluid(HotAir);
+        HotAirBlock = (BlockFluidClassic) new BlockHotAir(HotAir, Material.lava).setBlockName("HotAir");
+        GameRegistry.registerBlock(HotAirBlock, "FluidHotAir");
+        HotAir.setUnlocalizedName(HotAirBlock.getUnlocalizedName());
     }
 }
