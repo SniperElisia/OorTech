@@ -7,6 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
@@ -447,9 +448,18 @@ public class Redoxiation
 
         //Fluids
 
-        HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(50).setTemperature(1473).setViscosity(4500).setGaseous(true);
+        HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(0).setTemperature(1473).setViscosity(2000).setGaseous(true);
+        
+        //Fluid Registry
+        
         FluidRegistry.registerFluid(HotAir);
+        
+        //Block Fluids
+        
         HotAirBlock = (BlockFluidClassic) new BlockHotAir(HotAir, Material.lava).setBlockName("HotAir");
+        
+        //Block Fluids Registry
+        
         GameRegistry.registerBlock(HotAirBlock, "FluidHotAir");
         HotAir.setUnlocalizedName(HotAirBlock.getUnlocalizedName());
     }
