@@ -448,7 +448,7 @@ public class Redoxiation
 
         //Fluids
 
-        HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(0).setTemperature(1473).setViscosity(2000).setGaseous(true);
+        HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(-10).setTemperature(1473).setViscosity(2000).setGaseous(true);
         
         //Fluid Registry
         
