@@ -53,8 +53,8 @@ public class Redoxiation
     
     //fluids
 
-    public static Fluid HotAir;
-    public static BlockFluidClassic HotAirBlock;
+    public static Fluid HotAir, MoltenPigiron;
+    public static BlockFluidClassic HotAirBlock, MoltenPigironBlock;
     
     RedoxiationEventHandler handler = new RedoxiationEventHandler();
     
@@ -449,18 +449,23 @@ public class Redoxiation
         //Fluids
 
         HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(-10).setTemperature(1473).setViscosity(2000).setGaseous(true);
+        MoltenPigiron = new Fluid("MoltenPigiron").setLuminosity(15).setDensity(7874).setTemperature(1900).setViscosity(2000).setGaseous(false);
         
         //Fluid Registry
         
         FluidRegistry.registerFluid(HotAir);
+        FluidRegistry.registerFluid(MoltenPigiron);
         
         //Block Fluids
         
         HotAirBlock = (BlockFluidClassic) new BlockHotAir(HotAir, Material.lava).setBlockName("HotAir");
+        MoltenPigironBlock = (BlockFluidClassic) new BlockMoltenPigiron(MoltenPigiron, Material.lava).setBlockName("MoltenPigiron");
         
         //Block Fluids Registry
         
         GameRegistry.registerBlock(HotAirBlock, "FluidHotAir");
+        GameRegistry.registerBlock(MoltenPigironBlock, "FluidMoltenPigiron");
         HotAir.setUnlocalizedName(HotAirBlock.getUnlocalizedName());
+        MoltenPigiron.setUnlocalizedName(MoltenPigironBlock.getUnlocalizedName());
     }
 }
