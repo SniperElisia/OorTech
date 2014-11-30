@@ -3,6 +3,7 @@ package com.teamoort.redoxiation.blocks;
 import java.util.Random;
 
 import com.teamoort.redoxiation.Redoxiation;
+import com.teamoort.redoxiation.items.RedoxiationGenericItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -24,7 +25,7 @@ public class Rutile extends Block {
 	}
 	
 	public Item getItemDropped(int metadata, Random random,int fortune){
-		return Redoxiation.RawRutile;
+		return RedoxiationGenericItems.RawRutile;
 	}
 	
 	public int quantityDropped(Random random)

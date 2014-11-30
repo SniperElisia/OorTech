@@ -3,6 +3,7 @@ package com.teamoort.redoxiation.blocks;
 import java.util.Random;
 
 import com.teamoort.redoxiation.Redoxiation;
+import com.teamoort.redoxiation.items.RedoxiationGenericItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -24,7 +25,7 @@ public class SulfurOre extends Block {
 	}
 	
 	public Item getItemDropped(int metadata, Random random,int fortune){
-		return Redoxiation.SulfurChunk;
+		return RedoxiationGenericItems.SulfurChunk;
 	}
 	
 	public int quantityDropped(Random random)
