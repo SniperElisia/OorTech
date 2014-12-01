@@ -293,13 +293,13 @@ public class RedoxiationGenericItems extends Item{
 	@Override
 	public String getUnlocalizedName()
 	{
-		return Redoxiation.MODID + itemname;
+		return "item." + Redoxiation.MODID + "_" + itemname;
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return Redoxiation.MODID + itemname;
+		return "item." + Redoxiation.MODID + "_" + itemname;
 	}
 	
 	@Override
