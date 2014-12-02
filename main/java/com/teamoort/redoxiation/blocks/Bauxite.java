@@ -19,7 +19,7 @@ public class Bauxite extends Block {
 		setBlockName(Redoxiation.MODID + "_" + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
-		setHarvestLevel("pickaxe", 1);
+		setHarvestLevel("pickaxe", 2);
 		setHardness(2.0F);
 		setResistance(10.0F);
 		
