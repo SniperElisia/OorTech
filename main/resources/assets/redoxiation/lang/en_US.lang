@@ -10,7 +10,7 @@ tile.Redoxiation_PlatinumOre.name=Platinum Ore
 tile.Redoxiation_ZincOre.name=Zinc Ore
 tile.Redoxiation_CobaltOre.name=Cobalt Ore
 tile.Redoxiation_ChromiumOre.name=Chromium Ore
-tile.Redoxiation_UraniumOre.name=Uranium Ore
+tile.Redoxiation_Pitchblend.name=Pitchblend
 tile.Redoxiation_PlutoniumOre.name=Plutonium Ore
 tile.Redoxiation_Limestone.name=Limestone
 tile.Redoxiation_SaltRock.name=Salt Rock
@@ -126,6 +126,10 @@ item.Redoxiation_SulfurChunk.name=Sulfur Chunk
 item.Redoxiation_SulfurDust.name=Sulfur Dust
 item.Redoxiation_ItemCryolite.name=Cryolite
 
+#Redoxiation Fluids
+tile.HotAir.name=Hot Air
+tile.MoltenPigiron.name=Molten Pig Iron
 
 #Redoxiation Creative Tabs
 itemGroup.Redoxiation=Redoxiation
+itemGroup.RedoxiationItems=Redoxiation Items

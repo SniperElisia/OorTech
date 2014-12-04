@@ -1,6 +1,6 @@
 ﻿#ko_KR.lang
 
-#오르트테크 블럭
+#레독시에이션 블럭
 tile.Redoxiation_CopperOre.name=구리 광석
 tile.Redoxiation_TinOre.name=주석 광석
 tile.Redoxiation_LeadOre.name=납 광석
@@ -10,7 +10,7 @@ tile.Redoxiation_PlatinumOre.name=백금 광석
 tile.Redoxiation_ZincOre.name=아연 광석
 tile.Redoxiation_CobaltOre.name=코발트 광석
 tile.Redoxiation_ChromiumOre.name=크로뮴 광석
-tile.Redoxiation_UraniumOre.name=우라늄 광석
+tile.Redoxiation_Pitchblend.name=역청 우라늄석
 tile.Redoxiation_PlutoniumOre.name=플루토늄 광석
 tile.Redoxiation_Limestone.name=석회암
 tile.Redoxiation_SaltRock.name=암염
@@ -40,7 +40,7 @@ tile.Redoxiation_ChromiumObsidian.name=크로뮴을 함유한 흑요석
 tile.Redoxiation_UraniumObsidian.name=우라늄을 함유한 흑요석
 tile.Redoxiation_PlutoniumObsidian.name=플루토늄을 함유한 흑요석
 
-#오르트테크 아이템
+#레독시에이션 아이템
 item.Redoxiation_MortarAndPestle.name=막자와 막자사발
 item.Redoxiation_Calcite.name=방해석
 item.Redoxiation_SaltChunk.name=소금 덩어리
@@ -126,6 +126,10 @@ item.Redoxiation_SulfurChunk.name=유황 덩어리
 item.Redoxiation_SulfurDust.name=유황 가루
 item.Redoxiation_ItemCryolite.name=빙정석
 
+#레독시에이션 액체
+tile.HotAir.name=열풍
+tile.MoltenPigiron.name=녹은 선철
 
-#오르테크의 크리에이티브 탭들
-itemGroup.Redoxiation=오르테크
+#레독시에이션의 크리에이티브 탭들
+itemGroup.Redoxiation=레독시에이션 블럭
+itemGroup.RedoxiationItems=레독시에이션 아이템

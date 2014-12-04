@@ -83,7 +83,7 @@ public class Redoxiation
         }
     };
     
-    public static final CreativeTabs tabRedoxiationitems = new CreativeTabs("Redoxiation Items")
+    public static final CreativeTabs tabRedoxiationitems = new CreativeTabs("RedoxiationItems")
     {
     	private static final String __OBFID = "CL_00000081";
         @SideOnly(Side.CLIENT)
