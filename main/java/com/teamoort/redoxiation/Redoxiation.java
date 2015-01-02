@@ -1,47 +1,9 @@
 package com.teamoort.redoxiation;
 
-import com.teamoort.redoxiation.blocks.ArgentAurum;
-import com.teamoort.redoxiation.blocks.Bauxite;
-import com.teamoort.redoxiation.blocks.BlockHotAir;
-import com.teamoort.redoxiation.blocks.BlockMoltenPigiron;
-import com.teamoort.redoxiation.blocks.ChromiumObsidian;
-import com.teamoort.redoxiation.blocks.ChromiumOre;
-import com.teamoort.redoxiation.blocks.CobaltObsidian;
-import com.teamoort.redoxiation.blocks.CobaltOre;
-import com.teamoort.redoxiation.blocks.CopperObsidian;
-import com.teamoort.redoxiation.blocks.CopperOre;
-import com.teamoort.redoxiation.blocks.Cryolite;
-import com.teamoort.redoxiation.blocks.FerronickelOre;
-import com.teamoort.redoxiation.blocks.GoldObsidian;
-import com.teamoort.redoxiation.blocks.IronObsidian;
-import com.teamoort.redoxiation.blocks.LeadObsidian;
-import com.teamoort.redoxiation.blocks.LeadOre;
-import com.teamoort.redoxiation.blocks.Limestone;
-import com.teamoort.redoxiation.blocks.NickelObsidian;
-import com.teamoort.redoxiation.blocks.NickelOre;
-import com.teamoort.redoxiation.blocks.Pitchblend;
-import com.teamoort.redoxiation.blocks.PlatinumObsidian;
-import com.teamoort.redoxiation.blocks.PlatinumOre;
-import com.teamoort.redoxiation.blocks.PlutoniumObsidian;
-import com.teamoort.redoxiation.blocks.PlutoniumOre;
-import com.teamoort.redoxiation.blocks.PseudoBrassOre;
-import com.teamoort.redoxiation.blocks.PseudoBronzeOre;
-import com.teamoort.redoxiation.blocks.PseudoSolder;
-import com.teamoort.redoxiation.blocks.PseudoStellite;
+
 import com.teamoort.redoxiation.blocks.RedoxiationBlocks;
-import com.teamoort.redoxiation.blocks.Rutile;
-import com.teamoort.redoxiation.blocks.SaltRock;
-import com.teamoort.redoxiation.blocks.Scheelite;
-import com.teamoort.redoxiation.blocks.SilverObsidian;
-import com.teamoort.redoxiation.blocks.SilverOre;
-import com.teamoort.redoxiation.blocks.SulfurOre;
-import com.teamoort.redoxiation.blocks.TNTium;
-import com.teamoort.redoxiation.blocks.TinObsidian;
-import com.teamoort.redoxiation.blocks.TinOre;
-import com.teamoort.redoxiation.blocks.UraniumObsidian;
-import com.teamoort.redoxiation.blocks.ZincObsidian;
-import com.teamoort.redoxiation.blocks.ZincOre;
 import com.teamoort.redoxiation.items.RedoxiationGenericItems;
+import com.teamoort.redoxiation.proxy.CommonProxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -58,8 +20,10 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.Metadata;
 import cpw.mods.fml.common.ModMetadata;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -70,6 +34,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 @Mod(modid = Redoxiation.MODID, version = Redoxiation.VERSION)
 public class Redoxiation
 {
+	@Instance(Redoxiation.MODID)
+	public static Redoxiation instance;
+	
+	@SidedProxy(clientSide = "com.teamoort.redoxiation.proxy.ClientProxy", serverSide = "com.teamoort.redoxiation.proxy.CommonProxy")
+	public static CommonProxy proxy;
+	
     public static final String MODID = "Redoxiation";
     public static final String VERSION = "Alpha 0.0.0.002";
     
@@ -103,6 +73,7 @@ public class Redoxiation
     {
     	RedoxiationGenericItems.registerItems();
     	RedoxiationBlocks.registerBlocks();
+    	proxy.registerTileEntitySpecialRenderer();
     	
     	GameRegistry.registerWorldGenerator(handler, 0);
     	
