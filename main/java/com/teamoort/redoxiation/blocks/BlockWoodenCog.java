@@ -8,6 +8,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -26,6 +27,14 @@ public class BlockWoodenCog extends BlockContainer{
 	public TileEntity createNewTileEntity(World world, int i)
 	{
 		return new TileEntityWoodenCog();
+	}
+	
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
+	{
+		TileEntityWoodenCog tile = (TileEntityWoodenCog) world.getTileEntity(x, y, z);
+		tile.setRotation(tile.getRotation() + 0.06544984694978735913463840381832f);
+		return true;
 	}
 	
 	@Override
