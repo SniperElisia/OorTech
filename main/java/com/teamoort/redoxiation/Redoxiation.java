@@ -40,7 +40,7 @@ public class Redoxiation
 	@SidedProxy(clientSide = "com.teamoort.redoxiation.proxy.ClientProxy", serverSide = "com.teamoort.redoxiation.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
-    public static final String MODID = "Redoxiation";
+    public static final String MODID = "redoxiation";
     public static final String VERSION = "Alpha 0.0.0.002";
     
     public static final CreativeTabs tabRedoxiation = new CreativeTabs("Redoxiation")
