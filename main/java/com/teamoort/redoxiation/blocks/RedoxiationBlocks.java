@@ -12,7 +12,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class RedoxiationBlocks{
 	
-	public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblend, PlutoniumOre, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian,WoodenCog;
+	public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblend, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian,WoodenCog;
 	public static Fluid HotAir, MoltenPigiron;
     public static BlockFluidClassic HotAirBlock, MoltenPigironBlock;
     
@@ -30,7 +30,6 @@ public class RedoxiationBlocks{
     	CobaltOre = new CobaltOre();
     	ChromiumOre = new ChromiumOre();
     	Pitchblend = new Pitchblend();
-    	PlutoniumOre = new PlutoniumOre();
     	Limestone = new Limestone();
     	SaltRock = new SaltRock();
     	Bauxite = new Bauxite();
@@ -72,7 +71,6 @@ public class RedoxiationBlocks{
     	GameRegistry.registerBlock(CobaltOre, "CobaltOre");
     	GameRegistry.registerBlock(ChromiumOre, "ChromiumOre");
     	GameRegistry.registerBlock(Pitchblend, "Pitchblend"); 
-    	GameRegistry.registerBlock(PlutoniumOre, "PlutoniumOre");   	
     	GameRegistry.registerBlock(Limestone, "Limestone");
     	GameRegistry.registerBlock(SaltRock, "SaltRock");
     	GameRegistry.registerBlock(Bauxite, "Bauxite");
@@ -111,8 +109,7 @@ public class RedoxiationBlocks{
     	OreDictionary.registerOre("oreZinc", ZincOre);
     	OreDictionary.registerOre("oreCobalt", CobaltOre);
  		OreDictionary.registerOre("oreChromium", ChromiumOre);
-   		OreDictionary.registerOre("orePitchblend", Pitchblend); 
-    	OreDictionary.registerOre("orePlutonium", PlutoniumOre);   	
+   		OreDictionary.registerOre("orePitchblend", Pitchblend);    	
    		OreDictionary.registerOre("blockLimestone", Limestone);
     	OreDictionary.registerOre("blockSaltRock", SaltRock);
     	OreDictionary.registerOre("blockBauxite", Bauxite);
