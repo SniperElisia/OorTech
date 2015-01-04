@@ -4,7 +4,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.teamoort.redoxiation.Redoxiation;
 import com.teamoort.redoxiation.blocks.tileentity.TileEntityWoodenCog;
-import com.teamoort.redoxiation.model.ModelCogs;
+import com.teamoort.redoxiation.model.ModelWoodenCog;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
@@ -14,11 +14,11 @@ public class RenderWoodenCog extends TileEntitySpecialRenderer {
 	
 	public static final ResourceLocation texture = new ResourceLocation(Redoxiation.MODID, "textures/blocks/WoodenCog.png");
 	
-	private ModelCogs model;
+	private ModelWoodenCog model;
 	
 	public RenderWoodenCog ()
 	{
-		this.model = new ModelCogs();
+		this.model = new ModelWoodenCog();
 	}
 	
 	@Override

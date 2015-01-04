@@ -11,9 +11,9 @@ public class TileEntityWoodenCog extends TileEntity{
 	@Override
 	public void updateEntity()
 	{
-		if(rotation >= 6.283185307179586476925286766559f)
+		if(rotation >= 6.4f)
 		{
-			rotation = rotation - 6.283185307179586476925286766559f;
+			rotation = 0.0f;
 		}
 	}
 	public int getVolume()
