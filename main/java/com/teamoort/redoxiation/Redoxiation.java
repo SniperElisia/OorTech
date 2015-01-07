@@ -74,6 +74,8 @@ public class Redoxiation
     	RedoxiationGenericItems.registerItems();
     	RedoxiationBlocks.registerBlocks();
     	proxy.registerTileEntitySpecialRenderer();
+    	RedoxiationRecipeManager.recipeFurance();
+    	RedoxiationRecipeManager.recipeCrafting();
     	
     	GameRegistry.registerWorldGenerator(handler, 0);
     	
