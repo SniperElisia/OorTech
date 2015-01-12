@@ -19,7 +19,6 @@ public class RedoxiationRecipeManager {
 		GameRegistry.addSmelting(RedoxiationBlocks.NickelOre, new ItemStack(RedoxiationGenericItems.NickelIngot,1,0), 0.1f);
 		GameRegistry.addSmelting(RedoxiationBlocks.PlatinumOre, new ItemStack(RedoxiationGenericItems.PlatinumIngot,1,0), 0.1f);
 		GameRegistry.addSmelting(RedoxiationBlocks.SilverOre, new ItemStack(RedoxiationGenericItems.SilverIngot,1,0),0.1f);
-		GameRegistry.addSmelting(RedoxiationBlocks.SulfurOre, new ItemStack(RedoxiationGenericItems.SulfurChunk,1,0), 0.1f);
 		GameRegistry.addSmelting(RedoxiationBlocks.TinOre, new ItemStack(RedoxiationGenericItems.TinIngot,1,0),0.1f);
 		GameRegistry.addSmelting(RedoxiationBlocks.ZincOre, new ItemStack(RedoxiationGenericItems.ZincIngot,1,0), 0.1f);
 		
