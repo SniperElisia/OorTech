@@ -41,7 +41,7 @@ public class Redoxiation
 	public static CommonProxy proxy;
 	
     public static final String MODID = "redoxiation";
-    public static final String VERSION = "Alpha 0.0.0.002";
+    public static final String VERSION = "Alpha 0.0.0.003";
     
     public static final CreativeTabs tabRedoxiation = new CreativeTabs("Redoxiation")
     {
