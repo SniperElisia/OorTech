@@ -11,6 +11,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
@@ -42,6 +43,8 @@ public class Redoxiation
     public static final String MODID = "redoxiation";
     public static final String VERSION = "Alpha 0.0.0.003";
     
+    public static boolean dummybool;
+    
     public static final CreativeTabs tabRedoxiation = new CreativeTabs("Redoxiation")
     {
         private static final String __OBFID = "CL_00000080";
@@ -70,12 +73,19 @@ public class Redoxiation
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	//Simple Config
+    	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+    	config.load();
+    	dummybool = config.getBoolean("Dummy", config.CATEGORY_GENERAL, true, "Dummy");
+    	config.save();
+    	//Config end
     	RedoxiationGenericItems.registerItems();
     	RedoxiationBlocks.registerBlocks();
     	proxy.registerTileEntitySpecialRenderer();
+    	if(dummybool == true){
     	RedoxiationRecipeManager.recipeFurance();
     	RedoxiationRecipeManager.recipeCrafting();
-    	
+    	}
     	GameRegistry.registerWorldGenerator(handler, 0);
     	
     }
