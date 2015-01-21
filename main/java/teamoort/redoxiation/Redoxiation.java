@@ -83,7 +83,7 @@ public class Redoxiation
     	RedoxiationBlocks.registerBlocks();
     	proxy.registerTileEntitySpecialRenderer();
     	if(dummybool == true){
-    	RedoxiationRecipeManager.recipeFurance();
+    	RedoxiationRecipeManager.recipeFurnace();
     	RedoxiationRecipeManager.recipeCrafting();
     	}
     	GameRegistry.registerWorldGenerator(handler, 0);

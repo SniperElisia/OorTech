@@ -7,7 +7,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class RedoxiationRecipeManager {
 
-	public static void recipeFurance()
+	public static void recipeFurnace()
 	{
 		//Normal Smelting
 		GameRegistry.addSmelting(RedoxiationBlocks.CopperOre, new ItemStack(RedoxiationGenericItems.CopperIngot,1,0),0.1f);
