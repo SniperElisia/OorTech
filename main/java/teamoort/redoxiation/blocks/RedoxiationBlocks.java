@@ -11,7 +11,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class RedoxiationBlocks{
 	
-	public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblend, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian,WoodenCog;
+	public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblend, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian,WoodenCog, StoneCog, IronCog;
 	public static Fluid HotAir, MoltenPigiron;
     public static BlockFluidClassic HotAirBlock, MoltenPigironBlock;
     
@@ -57,6 +57,8 @@ public class RedoxiationBlocks{
     	UraniumObsidian = new UraniumObsidian();
     	PlutoniumObsidian = new PlutoniumObsidian();
     	WoodenCog = new BlockWoodenCog();
+    	StoneCog = new BlockStoneCog();
+    	IronCog = new BlockIronCog();
     	
     	//Registry
     	
@@ -98,6 +100,8 @@ public class RedoxiationBlocks{
     	GameRegistry.registerBlock(UraniumObsidian, "UraniumObsidian");
     	GameRegistry.registerBlock(PlutoniumObsidian, "PlutoniumObsidian");
     	GameRegistry.registerBlock(WoodenCog, "WoodenCog");
+    	GameRegistry.registerBlock(StoneCog, "StoneCog");
+    	GameRegistry.registerBlock(IronCog, "IronCog");
     	
     	OreDictionary.registerOre("oreCopper", CopperOre);
     	OreDictionary.registerOre("oreTin", TinOre);
