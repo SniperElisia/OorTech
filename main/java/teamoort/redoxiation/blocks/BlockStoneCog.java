@@ -16,7 +16,7 @@ public class BlockStoneCog extends BlockContainer{
 	@SideOnly(Side.CLIENT)
 	public BlockStoneCog()
 	{
-		super(Material.ground);
+		super(Material.wood);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setBlockName("StoneCog");
 		GameRegistry.registerTileEntity(TileEntityStoneCog.class, Redoxiation.MODID + ".StoneCog");
