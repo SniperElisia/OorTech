@@ -97,6 +97,7 @@ public class RedoxiationGenericItems extends Item{
     	AluminumIngot = new RedoxiationGenericItems("AluminumIngot", "");
     	TitaniumIngot = new RedoxiationGenericItems("TitaniumIngot", "");
     	TungstenIngot = new RedoxiationGenericItems("TungstenIngot", "");
+    	CobaltIngot = new RedoxiationGenericItems("CobaltIngot","");
     	SteelIngot = new RedoxiationGenericItems("SteelIngot", "");
     	IronNugget = new RedoxiationGenericItems("IronNugget", "");
     	CopperNugget = new RedoxiationGenericItems("CopperNugget", "");
@@ -184,6 +185,7 @@ public class RedoxiationGenericItems extends Item{
     	GameRegistry.registerItem(AluminumIngot, "AluminumIngot");
     	GameRegistry.registerItem(TitaniumIngot, "TitaniumIngot");
     	GameRegistry.registerItem(TungstenIngot, "TungstenIngot");
+    	GameRegistry.registerItem(CobaltIngot, "CobaltIngot");
     	GameRegistry.registerItem(SteelIngot, "SteelIngot");
     	GameRegistry.registerItem(IronNugget, "IronNugget");
     	GameRegistry.registerItem(CopperNugget, "CopperNugget");
@@ -269,6 +271,7 @@ public class RedoxiationGenericItems extends Item{
     	OreDictionary.registerOre("ingotAluminumOort", RedoxiationGenericItems.AluminumIngot);
     	OreDictionary.registerOre("ingotTitaniumOort", RedoxiationGenericItems.TitaniumIngot);
     	OreDictionary.registerOre("ingotTungstenOort", RedoxiationGenericItems.TungstenIngot);
+    	OreDictionary.registerOre("ingotCobalt", RedoxiationGenericItems.CobaltIngot);
     	OreDictionary.registerOre("ingotSteelOort", RedoxiationGenericItems.SteelIngot);
     	OreDictionary.registerOre("nuggetIron", RedoxiationGenericItems.IronNugget);
     	OreDictionary.registerOre("nuggetCopper", RedoxiationGenericItems.CopperNugget);

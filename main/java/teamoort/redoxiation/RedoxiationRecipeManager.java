@@ -19,6 +19,9 @@ public class RedoxiationRecipeManager {
 		GameRegistry.addSmelting(RedoxiationBlocks.SilverOre, new ItemStack(RedoxiationGenericItems.SilverIngot,1,0),0.1f);
 		GameRegistry.addSmelting(RedoxiationBlocks.TinOre, new ItemStack(RedoxiationGenericItems.TinIngot,1,0),0.1f);
 		GameRegistry.addSmelting(RedoxiationBlocks.ZincOre, new ItemStack(RedoxiationGenericItems.ZincIngot,1,0), 0.1f);
+		GameRegistry.addSmelting(RedoxiationBlocks.Bauxite, new ItemStack(RedoxiationGenericItems.AluminumIngot,1,0), 0.1f);
+		GameRegistry.addSmelting(RedoxiationBlocks.Rutile, new ItemStack(RedoxiationGenericItems.TitaniumIngot,1,0), 0.1f);
+		GameRegistry.addSmelting(RedoxiationBlocks.Scheelite, new ItemStack(RedoxiationGenericItems.TungstenIngot,1,0), 0.1f);
 		
 		//Dust Smelting
 		GameRegistry.addSmelting(new ItemStack(RedoxiationGenericItems.CopperDust,1,0), new ItemStack(RedoxiationGenericItems.CopperIngot,1,0), 0.1f);
