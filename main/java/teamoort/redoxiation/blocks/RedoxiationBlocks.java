@@ -60,8 +60,13 @@ public class RedoxiationBlocks{
     	WoodenCog = new BlockWoodenCog();
     	StoneCog = new BlockStoneCog();
     	IronCog = new BlockIronCog();
+<<<<<<< HEAD
     	BlastFurnaceBlock = new BlastFurnaceBlock();
 
+=======
+    	TestBlock = new BlockTestBlock();
+    	
+>>>>>>> cf9dd652c039077a1395d3bda8f25b907f872efa
     	//Registry
     	
     	GameRegistry.registerBlock(CopperOre, "CopperOre");

@@ -17,7 +17,7 @@ public class RedoxiationGenericItems extends Item{
 	private final String itemname;
 	private final String information;
 	
-	public static Item MortarAndPestle, Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron, CrushedGold,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedNickel, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust, CopperDust, TinDust, LeadDust, SilverDust, NickelDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, CopperIngot, TinIngot, LeadIngot, SilverIngot, NickelIngot, PlatinumIngot, ZincIngot, CobaltIngot, ChromiumIngot, UraniumIngot, PlutoniumIngot, SteelIngot, AluminumIngot, TungstenIngot, TitaniumIngot, IronNugget, CopperNugget, TinNugget, LeadNugget, SilverNugget, PlatinumNugget, ZincNugget, NickelNugget, ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget, SteelNugget, SulfurChunk, SulfurDust, ItemCryolite, CrashedNetherrack, CrashedObsidian;
+	public static Item Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron, CrushedGold,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedNickel, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust, CopperDust, TinDust, LeadDust, SilverDust, NickelDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, CopperIngot, TinIngot, LeadIngot, SilverIngot, NickelIngot, PlatinumIngot, ZincIngot, CobaltIngot, ChromiumIngot, UraniumIngot, PlutoniumIngot, SteelIngot, AluminumIngot, TungstenIngot, TitaniumIngot, IronNugget, CopperNugget, TinNugget, LeadNugget, SilverNugget, PlatinumNugget, ZincNugget, NickelNugget, ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget, SteelNugget, SulfurChunk, SulfurDust, ItemCryolite, CrashedNetherrack, CrashedObsidian;
 	
 	public RedoxiationGenericItems(String name, String info)
 	{
@@ -28,97 +28,103 @@ public class RedoxiationGenericItems extends Item{
 		itemname = name;
 	}
 	
+	public RedoxiationGenericItems(String name)
+	{
+		super();
+		setCreativeTab(Redoxiation.tabRedoxiationitems);
+		itemname = name;
+		information = "null";
+	}
+	
 	public static void registerItems()
 	{
-		MortarAndPestle = new RedoxiationGenericItems("MortarAndPestle", "");
     	Calcite = new RedoxiationGenericItems("Calcite", "CaCO3");
-    	SaltChunk = new RedoxiationGenericItems("SaltChunk", "");
-    	RawBauxite = new RedoxiationGenericItems("RawBauxite", "");
-    	RawRutile = new RedoxiationGenericItems("RawRutile", "");
-    	RawScheelite = new RedoxiationGenericItems("RawScheelite", "");
-    	CrushedIron = new RedoxiationGenericItems("CrushedIron", "");
-    	CrushedGold = new RedoxiationGenericItems("CrushedGold", "");
-    	CrushedCopper = new RedoxiationGenericItems("CrushedCopper", "");
-    	CrushedTin = new RedoxiationGenericItems("CrushedTin", "");
-    	CrushedLead = new RedoxiationGenericItems("CrushedLead", "");
-    	CrushedSilver = new RedoxiationGenericItems("CrushedSilver", "");
-    	CrushedPlatinum = new RedoxiationGenericItems("CrushedPlatinum", "");
-    	CrushedZinc = new RedoxiationGenericItems("CrushedZinc", "");
-    	CrushedNickel = new RedoxiationGenericItems("CrushedNickel", "");
-    	CrushedChromium = new RedoxiationGenericItems("CrushedChromium", "");
-    	IronDust = new RedoxiationGenericItems("IronDust", "");
-    	GoldDust = new RedoxiationGenericItems("GoldDust", "");
-    	CopperDust = new RedoxiationGenericItems("CopperDust", "");
-    	TinDust = new RedoxiationGenericItems("TinDust", "");
-    	LeadDust = new RedoxiationGenericItems("LeadDust", "");
-    	SilverDust = new RedoxiationGenericItems("SilverDust", "");
-    	PlatinumDust = new RedoxiationGenericItems("PlatinumDust", "");
-    	ZincDust = new RedoxiationGenericItems("ZincDust", "");
-    	NickelDust = new RedoxiationGenericItems("NickelDust", "");
-    	ChromiumDust = new RedoxiationGenericItems("ChromiumDust", "");
-    	Salt = new RedoxiationGenericItems("Salt", "");
-    	AluminaDust = new RedoxiationGenericItems("AluminaDust", "");
-    	TitanateDust = new RedoxiationGenericItems("TitanateDust", "");
-    	TungstateDust = new RedoxiationGenericItems("TungstateDust", "");
-    	PurifiedIron = new RedoxiationGenericItems("PurifiedIron", "");
-    	PurifiedGold = new RedoxiationGenericItems("PurifiedGold", "");
-    	PurifiedCopper = new RedoxiationGenericItems("PurifiedCopper", "");
-    	PurifiedTin = new RedoxiationGenericItems("PurifiedTin", "");
-    	PurifiedLead = new RedoxiationGenericItems("PurifiedLead", "");
-    	PurifiedSilver = new RedoxiationGenericItems("PurifiedSilver", "");
-    	PurifiedPlatinum = new RedoxiationGenericItems("PurifiedPlatinum", "");
-    	PurifiedZinc = new RedoxiationGenericItems("PurifiedZinc", "");
-    	PurifiedNickel = new RedoxiationGenericItems("PurifiedNickel", "");
-    	PurifiedChromium = new RedoxiationGenericItems("PurifiedChromium", "");
-    	PurifiedAlumina = new RedoxiationGenericItems("PurifiedAlumina", "");
-    	PurifiedTitanate = new RedoxiationGenericItems("PurifiedTitanate", "");
-    	PurifiedTungstate = new RedoxiationGenericItems("PurifiedTungstate", "");
-    	RefinedIron = new RedoxiationGenericItems("RefinedIron", "");
-    	RefinedGold = new RedoxiationGenericItems("RefinedGold", "");
-    	RefinedCopper = new RedoxiationGenericItems("RefinedCopper", "");
-    	RefinedTin = new RedoxiationGenericItems("RefinedTin", "");
-    	RefinedLead = new RedoxiationGenericItems("RefinedLead", "");
-    	RefinedSilver = new RedoxiationGenericItems("RefinedSilver", "");
-    	RefinedPlatinum = new RedoxiationGenericItems("RefinedPlatinum", "");
-    	RefinedZinc = new RedoxiationGenericItems("RefinedZinc", "");
-    	RefinedNickel = new RedoxiationGenericItems("RefinedNickel", "");
-    	RefinedChromium = new RedoxiationGenericItems("RefinedChromium", "");
-    	RefinedAlumina = new RedoxiationGenericItems("RefinedAlumina", "");
-    	RefinedTitanate = new RedoxiationGenericItems("RefinedTitanate", "");
-    	RefinedTungstate = new RedoxiationGenericItems("RefinedTungstate", "");
-    	CopperIngot = new RedoxiationGenericItems("CopperIngot", "");
-    	TinIngot = new RedoxiationGenericItems("TinIngot", "");
-    	LeadIngot = new RedoxiationGenericItems("LeadIngot", "");
-    	SilverIngot = new RedoxiationGenericItems("SilverIngot", "");
-    	PlatinumIngot = new RedoxiationGenericItems("PlatinumIngot", "");
-    	ZincIngot = new RedoxiationGenericItems("ZincIngot", "");
-    	NickelIngot = new RedoxiationGenericItems("NickelIngot", "");
-    	ChromiumIngot = new RedoxiationGenericItems("ChromiumIngot", "");
-    	AluminumIngot = new RedoxiationGenericItems("AluminumIngot", "");
-    	TitaniumIngot = new RedoxiationGenericItems("TitaniumIngot", "");
-    	TungstenIngot = new RedoxiationGenericItems("TungstenIngot", "");
-    	CobaltIngot = new RedoxiationGenericItems("CobaltIngot","");
-    	SteelIngot = new RedoxiationGenericItems("SteelIngot", "");
-    	IronNugget = new RedoxiationGenericItems("IronNugget", "");
-    	CopperNugget = new RedoxiationGenericItems("CopperNugget", "");
-    	TinNugget = new RedoxiationGenericItems("TinNugget", "");
-    	LeadNugget = new RedoxiationGenericItems("LeadNugget", "");
-    	SilverNugget = new RedoxiationGenericItems("SilverNugget", "");
-    	PlatinumNugget = new RedoxiationGenericItems("PlatinumNugget", "");
-    	ZincNugget = new RedoxiationGenericItems("ZincNugget", "");
-    	NickelNugget = new RedoxiationGenericItems("NickelNugget", "");
-    	ChromiumNugget = new RedoxiationGenericItems("ChromiumNugget", "");
-    	AluminumNugget = new RedoxiationGenericItems("AluminumNugget", "");
-    	TitaniumNugget = new RedoxiationGenericItems("TitaniumNugget", "");
-    	TungstenNugget = new RedoxiationGenericItems("TungstenNugget", "");
-    	SteelNugget = new RedoxiationGenericItems("SteelNugget", "");
-    	SulfurChunk = new RedoxiationGenericItems("SulfurChunk", "");
-    	SulfurDust = new RedoxiationGenericItems("SulfurDust", "");
-    	ItemCryolite = new RedoxiationGenericItems("ItemCryolite", "");
-    	CrashedNetherrack = new RedoxiationGenericItems("CrashedNetherrack", "");
-    	CrashedObsidian = new RedoxiationGenericItems("CrashedObsidian", "");
+    	SaltChunk = new RedoxiationGenericItems("SaltChunk", "NaCl");
+    	RawBauxite = new RedoxiationGenericItems("RawBauxite", "Al(OH)3");
+    	RawRutile = new RedoxiationGenericItems("RawRutile", "Ti");
+    	RawScheelite = new RedoxiationGenericItems("RawScheelite", "CaWO4");
+    	CrushedIron = new RedoxiationGenericItems("CrushedIron", "Fe");
+    	CrushedGold = new RedoxiationGenericItems("CrushedGold", "Au");
+    	CrushedCopper = new RedoxiationGenericItems("CrushedCopper", "Cu");
+    	CrushedTin = new RedoxiationGenericItems("CrushedTin", "Sn");
+    	CrushedLead = new RedoxiationGenericItems("CrushedLead", "Pb");
+    	CrushedSilver = new RedoxiationGenericItems("CrushedSilver", "Ag");
+    	CrushedPlatinum = new RedoxiationGenericItems("CrushedPlatinum", "Pt");
+    	CrushedZinc = new RedoxiationGenericItems("CrushedZinc", "Zn");
+    	CrushedNickel = new RedoxiationGenericItems("CrushedNickel", "Ni");
+    	CrushedChromium = new RedoxiationGenericItems("CrushedChromium", "Cr");
+    	IronDust = new RedoxiationGenericItems("IronDust", "Fe");
+    	GoldDust = new RedoxiationGenericItems("GoldDust", "Au");
+    	CopperDust = new RedoxiationGenericItems("CopperDust", "Cu");
+    	TinDust = new RedoxiationGenericItems("TinDust", "Sn");
+    	LeadDust = new RedoxiationGenericItems("LeadDust", "Pb");
+    	SilverDust = new RedoxiationGenericItems("SilverDust", "Ag");
+    	PlatinumDust = new RedoxiationGenericItems("PlatinumDust", "Pt");
+    	ZincDust = new RedoxiationGenericItems("ZincDust", "Zn");
+    	NickelDust = new RedoxiationGenericItems("NickelDust", "Ni");
+    	ChromiumDust = new RedoxiationGenericItems("ChromiumDust", "Cr");
+    	Salt = new RedoxiationGenericItems("Salt", "NaCl");
+    	AluminaDust = new RedoxiationGenericItems("AluminaDust", "Al2O3");
+    	TitanateDust = new RedoxiationGenericItems("TitanateDust", "TiO2");
+    	TungstateDust = new RedoxiationGenericItems("TungstateDust", "WO3");
+    	PurifiedIron = new RedoxiationGenericItems("PurifiedIron", "Fe");
+    	PurifiedGold = new RedoxiationGenericItems("PurifiedGold", "Au");
+    	PurifiedCopper = new RedoxiationGenericItems("PurifiedCopper", "Cu");
+    	PurifiedTin = new RedoxiationGenericItems("PurifiedTin", "Sn");
+    	PurifiedLead = new RedoxiationGenericItems("PurifiedLead", "Pb");
+    	PurifiedSilver = new RedoxiationGenericItems("PurifiedSilver", "Ag");
+    	PurifiedPlatinum = new RedoxiationGenericItems("PurifiedPlatinum", "Pt");
+    	PurifiedZinc = new RedoxiationGenericItems("PurifiedZinc", "Zn");
+    	PurifiedNickel = new RedoxiationGenericItems("PurifiedNickel", "Ni");
+    	PurifiedChromium = new RedoxiationGenericItems("PurifiedChromium", "Cr");
+    	PurifiedAlumina = new RedoxiationGenericItems("PurifiedAlumina", "Al2O3");
+    	PurifiedTitanate = new RedoxiationGenericItems("PurifiedTitanate", "TiO2");
+    	PurifiedTungstate = new RedoxiationGenericItems("PurifiedTungstate", "WO3");
+    	RefinedIron = new RedoxiationGenericItems("RefinedIron", "Fe");
+    	RefinedGold = new RedoxiationGenericItems("RefinedGold", "Au");
+    	RefinedCopper = new RedoxiationGenericItems("RefinedCopper", "Cu");
+    	RefinedTin = new RedoxiationGenericItems("RefinedTin", "Sn");
+    	RefinedLead = new RedoxiationGenericItems("RefinedLead", "Fb");
+    	RefinedSilver = new RedoxiationGenericItems("RefinedSilver", "Ag");
+    	RefinedPlatinum = new RedoxiationGenericItems("RefinedPlatinum", "Pt");
+    	RefinedZinc = new RedoxiationGenericItems("RefinedZinc", "Zn");
+    	RefinedNickel = new RedoxiationGenericItems("RefinedNickel", "Ni");
+    	RefinedChromium = new RedoxiationGenericItems("RefinedChromium", "Cr");
+    	RefinedAlumina = new RedoxiationGenericItems("RefinedAlumina", "Al2O3");
+    	RefinedTitanate = new RedoxiationGenericItems("RefinedTitanate", "TiO2");
+    	RefinedTungstate = new RedoxiationGenericItems("RefinedTungstate", "WO3");
+    	CopperIngot = new RedoxiationGenericItems("CopperIngot", "Cu");
+    	TinIngot = new RedoxiationGenericItems("TinIngot", "Sn");
+    	LeadIngot = new RedoxiationGenericItems("LeadIngot", "Pb");
+    	SilverIngot = new RedoxiationGenericItems("SilverIngot", "Ag");
+    	PlatinumIngot = new RedoxiationGenericItems("PlatinumIngot", "Pt");
+    	ZincIngot = new RedoxiationGenericItems("ZincIngot", "Zn");
+    	NickelIngot = new RedoxiationGenericItems("NickelIngot", "Ni");
+    	ChromiumIngot = new RedoxiationGenericItems("ChromiumIngot", "Cr");
+    	AluminumIngot = new RedoxiationGenericItems("AluminumIngot", "Al2O3");
+    	TitaniumIngot = new RedoxiationGenericItems("TitaniumIngot", "TiO2");
+    	TungstenIngot = new RedoxiationGenericItems("TungstenIngot", "WO3");
+    	CobaltIngot = new RedoxiationGenericItems("CobaltIngot","Co");
+    	SteelIngot = new RedoxiationGenericItems("SteelIngot");
+    	IronNugget = new RedoxiationGenericItems("IronNugget", "Fe");
+    	CopperNugget = new RedoxiationGenericItems("CopperNugget", "Cu");
+    	TinNugget = new RedoxiationGenericItems("TinNugget", "Sn");
+    	LeadNugget = new RedoxiationGenericItems("LeadNugget", "Pb");
+    	SilverNugget = new RedoxiationGenericItems("SilverNugget", "Ag");
+    	PlatinumNugget = new RedoxiationGenericItems("PlatinumNugget", "Pt");
+    	ZincNugget = new RedoxiationGenericItems("ZincNugget", "Zn");
+    	NickelNugget = new RedoxiationGenericItems("NickelNugget", "Ni");
+    	ChromiumNugget = new RedoxiationGenericItems("ChromiumNugget", "Cr");
+    	AluminumNugget = new RedoxiationGenericItems("AluminumNugget", "Al2O3");
+    	TitaniumNugget = new RedoxiationGenericItems("TitaniumNugget", "TiO2");
+    	TungstenNugget = new RedoxiationGenericItems("TungstenNugget", "WO3");
+    	SteelNugget = new RedoxiationGenericItems("SteelNugget");
+    	SulfurChunk = new RedoxiationGenericItems("SulfurChunk");
+    	SulfurDust = new RedoxiationGenericItems("SulfurDust");
+    	ItemCryolite = new RedoxiationGenericItems("ItemCryolite");
+    	CrashedNetherrack = new RedoxiationGenericItems("CrashedNetherrack");
+    	CrashedObsidian = new RedoxiationGenericItems("CrashedObsidian");
     	
-    	GameRegistry.registerItem(MortarAndPestle, "MortarAndPestle");
     	GameRegistry.registerItem(Calcite, "Calcite");
     	GameRegistry.registerItem(SaltChunk, "SaltChunk");
     	GameRegistry.registerItem(RawBauxite, "RawBauxite");
@@ -204,7 +210,6 @@ public class RedoxiationGenericItems extends Item{
     	GameRegistry.registerItem(SulfurDust, "SulfurDust");
     	GameRegistry.registerItem(ItemCryolite, "ItemCryolite");
     	
-    	OreDictionary.registerOre("materialMortarAndPestle", RedoxiationGenericItems.MortarAndPestle);
     	OreDictionary.registerOre("materialCalcite", RedoxiationGenericItems.Calcite);
     	OreDictionary.registerOre("lumpSalt", RedoxiationGenericItems.SaltChunk);
     	OreDictionary.registerOre("lumpBauxite", RedoxiationGenericItems.RawBauxite);
@@ -313,6 +318,9 @@ public class RedoxiationGenericItems extends Item{
 	@Override
 	public void addInformation(ItemStack itemstack, EntityPlayer player, List list, boolean par4)
 	{
-		list.add(information);
+		if (!(information=="null"))
+		{
+			list.add(information);
+		}
 	}
 }
