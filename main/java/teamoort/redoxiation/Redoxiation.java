@@ -1,7 +1,9 @@
 package teamoort.redoxiation;
 
 
+import cpw.mods.fml.common.network.NetworkRegistry;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
+import teamoort.redoxiation.blocks.gui.GuiHandler;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
 import teamoort.redoxiation.proxy.CommonProxy;
 import net.minecraft.block.Block;
@@ -88,5 +90,11 @@ public class Redoxiation
     	}
     	GameRegistry.registerWorldGenerator(handler, 0);
     	
+    }
+
+    @EventHandler
+    public void Init(FMLInitializationEvent event)
+    {
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
     }
 }
