@@ -59,5 +59,4 @@ public class BlockStoneCog extends BlockContainer{
 	{
 		return false;
 	}
-
 }
