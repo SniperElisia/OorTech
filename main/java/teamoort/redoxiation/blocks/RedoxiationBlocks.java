@@ -60,7 +60,7 @@ public class RedoxiationBlocks{
     	WoodenCog = new BlockWoodenCog();
     	StoneCog = new BlockStoneCog();
     	IronCog = new BlockIronCog();
-    	TestBlock = new TestBlock();
+    	TestBlock = new BlockTestBlock();
     	
     	//Registry
     	

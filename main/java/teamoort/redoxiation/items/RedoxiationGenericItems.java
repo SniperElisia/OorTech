@@ -105,7 +105,7 @@ public class RedoxiationGenericItems extends Item{
     	TitaniumIngot = new RedoxiationGenericItems("TitaniumIngot", "TiO2");
     	TungstenIngot = new RedoxiationGenericItems("TungstenIngot", "WO3");
     	CobaltIngot = new RedoxiationGenericItems("CobaltIngot","Co");
-    	SteelIngot = new RedoxiationGenericItems("SteelIngot", "");
+    	SteelIngot = new RedoxiationGenericItems("SteelIngot");
     	IronNugget = new RedoxiationGenericItems("IronNugget", "Fe");
     	CopperNugget = new RedoxiationGenericItems("CopperNugget", "Cu");
     	TinNugget = new RedoxiationGenericItems("TinNugget", "Sn");
@@ -118,12 +118,12 @@ public class RedoxiationGenericItems extends Item{
     	AluminumNugget = new RedoxiationGenericItems("AluminumNugget", "Al2O3");
     	TitaniumNugget = new RedoxiationGenericItems("TitaniumNugget", "TiO2");
     	TungstenNugget = new RedoxiationGenericItems("TungstenNugget", "WO3");
-    	SteelNugget = new RedoxiationGenericItems("SteelNugget", "");
-    	SulfurChunk = new RedoxiationGenericItems("SulfurChunk", "");
-    	SulfurDust = new RedoxiationGenericItems("SulfurDust", "");
-    	ItemCryolite = new RedoxiationGenericItems("ItemCryolite", "");
-    	CrashedNetherrack = new RedoxiationGenericItems("CrashedNetherrack", "");
-    	CrashedObsidian = new RedoxiationGenericItems("CrashedObsidian", "");
+    	SteelNugget = new RedoxiationGenericItems("SteelNugget");
+    	SulfurChunk = new RedoxiationGenericItems("SulfurChunk");
+    	SulfurDust = new RedoxiationGenericItems("SulfurDust");
+    	ItemCryolite = new RedoxiationGenericItems("ItemCryolite");
+    	CrashedNetherrack = new RedoxiationGenericItems("CrashedNetherrack");
+    	CrashedObsidian = new RedoxiationGenericItems("CrashedObsidian");
     	
     	GameRegistry.registerItem(Calcite, "Calcite");
     	GameRegistry.registerItem(SaltChunk, "SaltChunk");

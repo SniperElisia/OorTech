@@ -9,8 +9,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class TestBlock extends BlockContainer {
-    public TestBlock() {
+public class BlockTestBlock extends BlockContainer {
+    public BlockTestBlock() {
         super(Material.wood);
         setCreativeTab(Redoxiation.tabRedoxiation);
         setBlockName("TestBlock");
