@@ -125,7 +125,6 @@ public class RedoxiationGenericItems extends Item{
     	CrashedNetherrack = new RedoxiationGenericItems("CrashedNetherrack", "");
     	CrashedObsidian = new RedoxiationGenericItems("CrashedObsidian", "");
     	
-    	GameRegistry.registerItem(MortarAndPestle, "MortarAndPestle");
     	GameRegistry.registerItem(Calcite, "Calcite");
     	GameRegistry.registerItem(SaltChunk, "SaltChunk");
     	GameRegistry.registerItem(RawBauxite, "RawBauxite");
@@ -211,7 +210,6 @@ public class RedoxiationGenericItems extends Item{
     	GameRegistry.registerItem(SulfurDust, "SulfurDust");
     	GameRegistry.registerItem(ItemCryolite, "ItemCryolite");
     	
-    	OreDictionary.registerOre("materialMortarAndPestle", RedoxiationGenericItems.MortarAndPestle);
     	OreDictionary.registerOre("materialCalcite", RedoxiationGenericItems.Calcite);
     	OreDictionary.registerOre("lumpSalt", RedoxiationGenericItems.SaltChunk);
     	OreDictionary.registerOre("lumpBauxite", RedoxiationGenericItems.RawBauxite);
