@@ -28,6 +28,14 @@ public class RedoxiationGenericItems extends Item{
 		itemname = name;
 	}
 	
+	public RedoxiationGenericItems(String name)
+	{
+		super();
+		setCreativeTab(Redoxiation.tabRedoxiationitems);
+		itemname = name;
+		information = "null";
+	}
+	
 	public static void registerItems()
 	{
     	Calcite = new RedoxiationGenericItems("Calcite", "CaCO3");
@@ -312,6 +320,9 @@ public class RedoxiationGenericItems extends Item{
 	@Override
 	public void addInformation(ItemStack itemstack, EntityPlayer player, List list, boolean par4)
 	{
-		list.add(information);
+		if (!(information=="null"))
+		{
+			list.add(information);
+		}
 	}
 }
