@@ -27,13 +27,7 @@ public class TileBlastFurnaceBlock extends TileEntity {
                             }
                 }
             } else {
-                for (int x = xCoord - 1; x < xCoord + 2; x++)
-                    for (int y = yCoord; y < yCoord + 3; y++)
-                        for (int z = zCoord - 1; z < zCoord + 2; z++) {
-                            if (worldObj.getBlock(x, y, z) == RedoxiationBlocks.BlastFurnaceBlock) {
-                                BlastFurnaceBlock.multiblock = false;
-                            }
-                        }
+                BlastFurnaceBlock.multiblock = false;
                 // Constantly check if structure is formed until it is.
                 if (checkMultiBlockForm())
                     setupStructure();
