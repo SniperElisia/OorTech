@@ -7,12 +7,12 @@ import net.minecraft.world.World;
 import teamoort.redoxiation.Redoxiation;
 
 public class GuiBlastFurnace extends GuiScreen {
-    private int x, y, z;
-    private EntityPlayer player;
-    private World world;
+    int x, y, z;
+    EntityPlayer player;
+    World world;
     private int xSize, ySize;
 
-    private ResourceLocation backgroundimage = new ResourceLocation(Redoxiation.MODID + ":" + "textures/client/gui/GuiSmasher.png");
+    private ResourceLocation backgroundimage = new ResourceLocation(Redoxiation.MODID + ":" + "textures/gui/GuiBlastFurnace.png");
 
     public GuiBlastFurnace(EntityPlayer player, World world, int x, int y, int z) {
 
