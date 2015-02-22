@@ -1,8 +1,8 @@
-package teamoort.redoxiation.blocks;
+/*package teamoort.redoxiation.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import teamoort.redoxiation.Redoxiation;
-import teamoort.redoxiation.blocks.tileentity.TileEntityTestBlock;
+import teamoort.redoxiat
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -41,4 +41,4 @@ public class BlockTestBlock extends BlockContainer {
     public TileEntity createNewTileEntity(World world, int meta) {
         return new TileEntityTestBlock();
     }
-}
+}*/
