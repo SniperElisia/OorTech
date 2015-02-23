@@ -22,7 +22,7 @@ public class GuiBlastFurnace extends GuiScreen {
         this.player = player;
         this.world = world;
         xSize = 176;
-        ySize = 214;
+        ySize = 166;
     }
 
     @Override
