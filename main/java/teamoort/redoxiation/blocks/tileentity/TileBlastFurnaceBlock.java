@@ -8,29 +8,31 @@ import teamoort.redoxiation.blocks.BlastFurnaceBlock;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 
 public class TileBlastFurnaceBlock extends TileEntity {
-    private boolean hasMaster, isMaster;
-    private int masterX, masterY, masterZ;
- 
-    @Override
-    public void updateEntity() {
-        super.updateEntity();
-        if (!worldObj.isRemote) {
-            if (hasMaster()) { 
-                if (isMaster()) {
-                	System.out.println("MultiBlock Initalized");
-                    for (int x = xCoord - 1; x < xCoord + 2; x++)
-                        for (int y = yCoord; y < yCoord + 3; y++)
-                            for (int z = zCoord - 1; z < zCoord + 2; z++) {
-                                if (worldObj.getBlock(x, y, z) == RedoxiationBlocks.BlastFurnaceBlock) {
-                                    BlastFurnaceBlock.multiblock = true;
-                                }
-                            }
-                }
-            } else {
-                BlastFurnaceBlock.multiblock = false;
-                // Constantly check if structure is formed until it is.
-                if (checkMultiBlockForm())
+	private boolean hasMaster, isMaster;
+	private int masterX, masterY, masterZ;
+	@Override
+	public void updateEntity() {
+		super.updateEntity();
+		if (!worldObj.isRemote) {
+			if (hasMaster()) {
+				if (isMaster()) {
+					for (int x = xCoord - 1; x < xCoord + 2; x++){
+						for (int y = yCoord; y < yCoord + 3; y++){
+							for (int z = zCoord - 1; z < zCoord + 2; z++)
+							{
+								if (worldObj.getBlock(x, y, z) == RedoxiationBlocks.BlastFurnaceBlock) {
+									BlastFurnaceBlock.multiblock = true;
+								}
+							}
+						}
+					}
+				}
+			} else {
+				BlastFurnaceBlock.multiblock = false;
+				// Constantly check if structure is formed until it is.
+				if (checkMultiBlockForm()){
                     setupStructure();
+                }
             }
         }
     }
