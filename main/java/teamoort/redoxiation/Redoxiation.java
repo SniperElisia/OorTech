@@ -1,6 +1,10 @@
 package teamoort.redoxiation;
 
 
+import java.util.logging.LogManager;
+
+import com.sun.istack.internal.logging.Logger;
+
 import cpw.mods.fml.common.network.NetworkRegistry;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.blocks.gui.GuiHandler;
@@ -39,6 +43,7 @@ public class Redoxiation
 	@Instance(Redoxiation.MODID)
 	public static Redoxiation instance;
 	
+	
 	@SidedProxy(clientSide = "teamoort.redoxiation.proxy.ClientProxy", serverSide = "teamoort.redoxiation.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
@@ -46,6 +51,8 @@ public class Redoxiation
     public static final String VERSION = "Alpha 0.0.0.004";
     
     public static boolean dummybool;
+    public static int oredif;
+    public static Configuration config;
     
     public static final CreativeTabs tabRedoxiation = new CreativeTabs("Redoxiation")
     {
@@ -76,10 +83,8 @@ public class Redoxiation
     public void preInit(FMLPreInitializationEvent event)
     {
     	//Simple Config
-    	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-    	config.load();
-    	dummybool = config.getBoolean("Dummy", config.CATEGORY_GENERAL, true, "Dummy");
-    	config.save();
+    	config = new Configuration(event.getSuggestedConfigurationFile());
+    	RedoxiationConfigHandler.InitConfig();
     	//Config end
     	RedoxiationGenericItems.registerItems();
     	RedoxiationBlocks.registerBlocks();

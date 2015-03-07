@@ -52,6 +52,7 @@ public class BlastFurnaceBlock extends BlockContainer {
             if (world.isRemote) {
                 if (world.getTileEntity(x, y, z) != null)
                     player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
+                System.out.println("[INFO/REDOXIATION]" + " : " + Redoxiation.oredif);
                 return true;
             }
             return true;
