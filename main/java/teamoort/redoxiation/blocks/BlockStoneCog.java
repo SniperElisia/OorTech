@@ -13,7 +13,6 @@ import net.minecraft.world.World;
 
 public class BlockStoneCog extends BlockContainer{
 	
-	@SideOnly(Side.CLIENT)
 	public BlockStoneCog()
 	{
 		super(Material.wood);
