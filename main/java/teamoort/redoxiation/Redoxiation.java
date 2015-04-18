@@ -1,10 +1,7 @@
 package teamoort.redoxiation;
 
 
-import java.util.logging.LogManager;
-
-import com.sun.istack.internal.logging.Logger;
-
+import org.apache.logging.log4j.core.Logger;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.blocks.gui.GuiHandler;
@@ -74,14 +71,19 @@ public class Redoxiation
         }
     };
     
+    
     @Metadata
     public ModMetadata meta;
     
     RedoxiationEventHandler handler = new RedoxiationEventHandler();
     
+    public static org.apache.logging.log4j.Logger logger;
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	logger = event.getModLog();
+    	logger.info("Hello World!");
     	//Simple Config
     	config = new Configuration(event.getSuggestedConfigurationFile());
     	RedoxiationConfigHandler.InitConfig();

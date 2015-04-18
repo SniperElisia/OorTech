@@ -7,6 +7,7 @@ public class RedoxiationConfigHandler {
 	private static Configuration config = Redoxiation.config;
 	public static final String CATEGORY_OREGEN = "oregen";
 	public static final String CATEGORY_ITEMS = "items";
+	public static final String CATEGORY_TOOLS = "tools";
 	public static void InitConfig(){
 		RedoxiationEventHandler oregen = new RedoxiationEventHandler();
 		RedoxiationGenericItems items = null;
@@ -110,7 +111,6 @@ public class RedoxiationConfigHandler {
     	items.ZincDust_enable = config.getBoolean("ZincDust", CATEGORY_ITEMS, true, "ZincDust Configuration");
     	items.ZincIngot_enable = config.getBoolean("ZincIngot", CATEGORY_ITEMS, true, "ZincIngot Configuration");
     	items.ZincNugget_enable = config.getBoolean("ZincNugget", CATEGORY_ITEMS, true, "ZincNugget Configuration");
-    	
     			
     	//oregen
     	//Nether gen control Start
