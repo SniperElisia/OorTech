@@ -32,5 +32,6 @@ public class RedoxiationRecipeManager {
 	public static void recipeCrafting()
 	{
 		//Todo : Add Crafting Recipes. If you want add, just add. You can Delete this.
+		Redoxiation.logger.info("Recipe & Smelting Complete. Starting World generator");
 	}
 }

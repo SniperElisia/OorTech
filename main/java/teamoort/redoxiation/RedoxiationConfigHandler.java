@@ -125,5 +125,6 @@ public class RedoxiationConfigHandler {
     	//Overworld gen control Start
     	
     	config.save();
+    	Redoxiation.logger.info("Config Loading Complete. Starting Item Registry");
 	}
 }

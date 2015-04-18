@@ -166,5 +166,7 @@ public class RedoxiationBlocks{
         GameRegistry.registerBlock(MoltenPigironBlock, "FluidMoltenPigiron");
         HotAir.setUnlocalizedName(HotAirBlock.getUnlocalizedName());
         MoltenPigiron.setUnlocalizedName(MoltenPigironBlock.getUnlocalizedName());
+        
+        Redoxiation.logger.info("Block Registry Complete. Starting Tileentity proxy.");
 	}
 }

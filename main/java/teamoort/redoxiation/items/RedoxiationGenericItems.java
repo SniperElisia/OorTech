@@ -540,6 +540,7 @@ public class RedoxiationGenericItems extends Item{
     	CrashedObsidian = new RedoxiationGenericItems("CrashedObsidian");
     	
     	}
+    	Redoxiation.logger.info("Item Registry Complete. Starting block Registry.");
     	}
     
 	@Override

@@ -32,6 +32,7 @@ public class RedoxiationEventHandler implements IWorldGenerator
 			break;
 			
 		}
+		Redoxiation.logger.info("World generator complete. Finished pre-init. Starting init.");
 		
 	}
 
