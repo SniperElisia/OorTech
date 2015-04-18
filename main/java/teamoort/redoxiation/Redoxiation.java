@@ -2,6 +2,7 @@ package teamoort.redoxiation;
 
 
 import org.apache.logging.log4j.core.Logger;
+
 import cpw.mods.fml.common.network.NetworkRegistry;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.blocks.gui.GuiHandler;
@@ -28,6 +29,7 @@ import cpw.mods.fml.common.Mod.Metadata;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -103,5 +105,10 @@ public class Redoxiation
     public void Init(FMLInitializationEvent event)
     {
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+    }
+    
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event){
+    	
     }
 }
