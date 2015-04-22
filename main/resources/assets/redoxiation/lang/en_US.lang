@@ -1,6 +1,6 @@
 #en_US.lang
 
-#redoxiation Blocks
+#Redoxiation Blocks
 tile.redoxiation_CopperOre.name=Copper Ore
 tile.redoxiation_TinOre.name=Tin Ore
 tile.redoxiation_LeadOre.name=Lead Ore
@@ -39,7 +39,7 @@ tile.redoxiation_ChromiumObsidian.name=Chromii Obsius
 tile.redoxiation_UraniumObsidian.name=Uranii Obsius
 tile.redoxiation_PlutoniumObsidian.name=Plutonii Obsius
 
-#redoxiation Items
+#Redoxiation Items
 item.redoxiation_MortarAndPestle.name=Mortar and Pestle
 item.redoxiation_Calcite.name=Calcite
 item.redoxiation_SaltChunk.name=Salt Chunk
@@ -126,10 +126,32 @@ item.redoxiation_SulfurChunk.name=Sulfur Chunk
 item.redoxiation_SulfurDust.name=Sulfur Dust
 item.redoxiation_ItemCryolite.name=Cryolite
 
-#redoxiation Fluids
+#Redoxiation Fluids
 tile.HotAir.name=Hot Air
 tile.MoltenPigiron.name=Molten Pig Iron
 
-#redoxiation Creative Tabs
+#Redoxiation Tools
+item.redoxiation_WoodenSaw.name=Wooden Saw
+item.redoxiation_IronSaw.name=Iron Saw
+item.redoxiation_GoldenSaw.name=Golden Saw
+item.redoxiation_DiamondSaw.name=Diamond Saw
+item.redoxiation_CopperSaw.name=Copper Saw
+item.redoxiation_BronzeSaw.name=Bronze Saw
+item.redoxiation_SteelSaw.name=Steel Saw
+item.redoxiation_DuraluminSaw.name=Duralumin Saw
+item.redoxiation_TitaniumSaw.name=Titanium Steel Saw
+item.redoxiation_TungstenSaw.name=Tungsten Steel Saw
+item.redoxiation_WoodenScythe.name=Wooden Scythe
+item.redoxiation_IronScythe.name=Iron Scythe
+item.redoxiation_GoldenScythe.name=Golden Scythe
+item.redoxiation_DiamondScythe.name=Diamond Scythe
+item.redoxiation_CopperScythe.name=Copper Scythe
+item.redoxiation_BronzeScythe.name=Bronze Scythe
+item.redoxiation_SteelScythe.name=Steel Scythe
+item.redoxiation_DuraluminScythe.name=Duralumin Scythe
+item.redoxiation_TitaniumScythe.name=Titanium Steel Scythe
+item.redoxiation_TungstenScythe.name=Tungsten Steel Scythe
+
+#Redoxiation Creative Tabs
 itemGroup.Redoxiation=redoxiation Blocks
 itemGroup.RedoxiationItems=redoxiation Items
