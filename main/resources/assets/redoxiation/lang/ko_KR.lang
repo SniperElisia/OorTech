@@ -130,6 +130,28 @@ item.redoxiation_ItemCryolite.name=빙정석
 tile.HotAir.name=열풍
 tile.MoltenPigiron.name=녹은 선철
 
+#레독시에이션 도구
+item.redoxiation_WoodenSaw.name=나무 톱
+item.redoxiation_IronSaw.name=철 톱
+item.redoxiation_GoldenSaw.name=금 톱
+item.redoxiation_DiamondSaw.name=다이아몬드 톱
+item.redoxiation_CopperSaw.name=구리 톱
+item.redoxiation_BronzeSaw.name=청동 톱
+item.redoxiation_SteelSaw.name=강철 톱
+item.redoxiation_DuraluminSaw.name=두랄루민 톱
+item.redoxiation_TitaniumSaw.name=티타늄강 톱
+item.redoxiation_TungstenSaw.name=텅스텐강 톱
+item.redoxiation_WoodenScythe.name=나무 낫
+item.redoxiation_IronScythe.name=철 낫
+item.redoxiation_GoldenScythe.name=금 낫
+item.redoxiation_DiamondScythe.name=다이아몬드 낫
+item.redoxiation_CopperScythe.name=구리 낫
+item.redoxiation_BronzeScythe.name=청동 낫
+item.redoxiation_SteelScythe.name=강철 낫
+item.redoxiation_DuraluminScythe.name=두랄루민 낫
+item.redoxiation_TitaniumScythe.name=티타늄강 낫
+item.redoxiation_TungstenScythe.name=텅스텐강 낫
+
 #레독시에이션의 크리에이티브 탭들
 itemGroup.Redoxiation=레독시에이션 블럭
 itemGroup.RedoxiationItems=레독시에이션 아이템
