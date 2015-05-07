@@ -1,6 +1,6 @@
 ﻿#ko_KR.lang
 
-#레독시에이션 블럭
+#리덕시에이션 블럭
 tile.redoxiation_CopperOre.name=구리 광석
 tile.redoxiation_TinOre.name=주석 광석
 tile.redoxiation_LeadOre.name=납 광석
@@ -39,7 +39,7 @@ tile.redoxiation_ChromiumObsidian.name=크로뮴을 함유한 흑요석
 tile.redoxiation_UraniumObsidian.name=우라늄을 함유한 흑요석
 tile.redoxiation_PlutoniumObsidian.name=플루토늄을 함유한 흑요석
 
-#레독시에이션 아이템
+#리덕시에이션 아이템
 item.redoxiation_MortarAndPestle.name=막자와 막자사발
 item.redoxiation_Calcite.name=방해석
 item.redoxiation_SaltChunk.name=소금 덩어리
@@ -126,11 +126,11 @@ item.redoxiation_SulfurChunk.name=유황 덩어리
 item.redoxiation_SulfurDust.name=유황 가루
 item.redoxiation_ItemCryolite.name=빙정석
 
-#레독시에이션 액체
+#리덕시에이션 액체
 tile.HotAir.name=열풍
 tile.MoltenPigiron.name=녹은 선철
 
-#레독시에이션 도구
+#리덕시에이션 도구
 item.redoxiation_WoodenSaw.name=나무 톱
 item.redoxiation_IronSaw.name=철 톱
 item.redoxiation_GoldenSaw.name=금 톱
@@ -152,6 +152,6 @@ item.redoxiation_DuraluminScythe.name=두랄루민 낫
 item.redoxiation_TitaniumScythe.name=티타늄강 낫
 item.redoxiation_TungstenScythe.name=텅스텐강 낫
 
-#레독시에이션의 크리에이티브 탭들
-itemGroup.Redoxiation=레독시에이션 블럭
-itemGroup.RedoxiationItems=레독시에이션 아이템
+#리덕시에이션의 크리에이티브 탭들
+itemGroup.Redoxiation=리덕시에이션 블럭
+itemGroup.RedoxiationItems=리덕시에이션 아이템
