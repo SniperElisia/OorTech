@@ -10,7 +10,7 @@ public class SilverObsidian extends Block {
 	
 	public SilverObsidian() {
 		super(Material.rock);
-		setBlockName(Redoxiation.MODID + "_" + name);
+		setBlockName("Redoxiation." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 3);

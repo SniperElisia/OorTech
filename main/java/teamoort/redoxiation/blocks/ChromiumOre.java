@@ -10,7 +10,7 @@ public class ChromiumOre extends Block {
 	
 	public ChromiumOre() {
 		super(Material.rock);
-		setBlockName(Redoxiation.MODID + "_" + name);
+		setBlockName("Redoxiation." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 1);

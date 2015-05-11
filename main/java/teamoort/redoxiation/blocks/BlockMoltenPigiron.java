@@ -30,8 +30,8 @@ public class BlockMoltenPigiron extends BlockFluidClassic {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister register) {
-        stillIcon = register.registerIcon("redoxiation:MoltenPigironStill");
-        flowingIcon = register.registerIcon("redoxiation:MoltenPigironFlowing");
+        stillIcon = register.registerIcon("Redoxiation:MoltenPigironStill");
+        flowingIcon = register.registerIcon("Redoxiation:MoltenPigironFlowing");
     }
 
     @Override

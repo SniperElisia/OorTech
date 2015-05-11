@@ -30,8 +30,8 @@ public class BlockHotAir extends BlockFluidClassic {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister register) {
-        stillIcon = register.registerIcon("redoxiation:HotAirStill");
-        flowingIcon = register.registerIcon("redoxiation:HotAirFlowing");
+        stillIcon = register.registerIcon("Redoxiation:HotAirStill");
+        flowingIcon = register.registerIcon("Redoxiation:HotAirFlowing");
     }
 
     @Override

@@ -15,11 +15,16 @@ public class RedoxiationConfigHandler {
     	Redoxiation.dummybool = config.getBoolean("Dummy", config.CATEGORY_GENERAL, true, "Dummy");
     	Redoxiation.oredif = config.getInt("OreDifficulty", config.CATEGORY_GENERAL, 1, 0, 2, "1 to 2");
     	// Enable / Disable
-    	// Blocks Start
-    	// Ores Start
-    	// Ores End
-    	// Blocks End
-    	// Items Start
+    	
+		// Blocks Start
+    	
+		// Ores Start
+    	
+		// Ores End
+    	
+		// Blocks End
+    	
+		// Items Start
     	items.AluminaDust_enable = config.getBoolean("AluminaDust", CATEGORY_ITEMS, true, "AluminaDust Configuration");
     	items.AluminumIngot_enable = config.getBoolean("AluminumIngot", CATEGORY_ITEMS, true, "AluminumIngot Configuration");
     	items.AluminumNugget_enable = config.getBoolean("AluminumNugget", CATEGORY_ITEMS, true, "AluminumNugget Configuration");

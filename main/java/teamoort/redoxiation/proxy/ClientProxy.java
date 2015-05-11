@@ -28,7 +28,6 @@ public class ClientProxy extends CommonProxy{
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RedoxiationBlocks.WoodenCog), new ItemRenderWoodenCog(renderWoodenCog, new TileEntityWoodenCog()));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RedoxiationBlocks.StoneCog), new ItemRenderStoneCog(renderStoneCog, new TileEntityStoneCog()));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RedoxiationBlocks.IronCog), new ItemRenderIronCog(renderIronCog, new TileEntityIronCog()));
-		
 	}
 
 }

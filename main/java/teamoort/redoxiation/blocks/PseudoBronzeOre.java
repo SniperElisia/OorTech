@@ -10,7 +10,7 @@ public class PseudoBronzeOre extends Block {
 	
 	public PseudoBronzeOre() {
 		super(Material.rock);
-		setBlockName(Redoxiation.MODID + "_" + name);
+		setBlockName("Redoxiation." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 2);

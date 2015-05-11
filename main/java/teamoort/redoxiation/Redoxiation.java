@@ -46,8 +46,8 @@ public class Redoxiation
 	@SidedProxy(clientSide = "teamoort.redoxiation.proxy.ClientProxy", serverSide = "teamoort.redoxiation.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
-    public static final String MODID = "redoxiation";
-    public static final String VERSION = "Alpha 0.0.0.004";
+    public static final String MODID = "Redoxiation";
+    public static final String VERSION = "Alpha 0.04A";
     
     public static boolean dummybool;
     public static int oredif;

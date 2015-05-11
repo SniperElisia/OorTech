@@ -15,7 +15,7 @@ public class RedoxiationEventHandler implements IWorldGenerator
 	public static boolean FerronickelOregen, PseudoBronzeOregen, PseudoBrassOregen, ArgentAurumOregen, PseudoSolderOregen, PseudoStelliteOregen, TNTiumOregen;
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
-			IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
+		IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
 	{
 
 		switch(world.provider.dimensionId)
