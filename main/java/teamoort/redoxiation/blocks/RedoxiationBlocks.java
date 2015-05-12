@@ -20,16 +20,16 @@ public class RedoxiationBlocks{
 	{
 	//Blocks
     	
-    	CopperOre = new CopperOre();
-    	TinOre = new TinOre();
-    	LeadOre = new LeadOre();
-    	SilverOre = new SilverOre();
-    	NickelOre = new NickelOre();
-    	PlatinumOre = new PlatinumOre();
-    	ZincOre = new ZincOre();
-    	CobaltOre = new CobaltOre();
-    	ChromiumOre = new ChromiumOre();
-    	Pitchblend = new Pitchblend();
+    	CopperOre = new RedoxiationOre("CopperOre", 1, 2.5F, 5.0F);
+    	TinOre = new RedoxiationOre("TinOre", 1, 2.5F, 5.0F);
+    	LeadOre = new RedoxiationOre("LeadOre", 1, 2.5F, 5.0F);
+    	SilverOre = new RedoxiationOre("SilverOre", 2, 2.5F, 5.0F);
+    	NickelOre = new RedoxiationOre("NickelOre", 1, 2.5F, 5.0F);
+    	PlatinumOre = new RedoxiationOre("PlatinumOre", 2, 2.5F, 5.0F);
+    	ZincOre = new RedoxiationOre("ZincOre", 1, 2.5F, 5.0F);
+    	CobaltOre = new RedoxiationOre("CoblatOre", 1, 2.5F, 5.0F);
+    	ChromiumOre = new RedoxiationOre("ChromiumOre", 1, 2.5F, 5.0F);
+    	Pitchblend = new RedoxiationOre("Pitchblend", 2, 2.5F, 5.0F);
     	Limestone = new Limestone();
     	SaltRock = new SaltRock();
     	Bauxite = new Bauxite();

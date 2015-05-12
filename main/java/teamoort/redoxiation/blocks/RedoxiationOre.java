@@ -1,22 +1,19 @@
 package teamoort.redoxiation.blocks;
 
-import teamoort.redoxiation.Redoxiation;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import teamoort.redoxiation.Redoxiation;
 
-public class ChromiumOre extends Block {
-
-	String name = "ChromiumOre";
+public class RedoxiationOre extends Block {
 	
-	public ChromiumOre() {
+	public RedoxiationOre(String name, int harvestlevel, float hardness, float resistance) {
 		super(Material.rock);
 		setBlockName(Redoxiation.MODID + "." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
-		setHarvestLevel("pickaxe", 1);
-		setHardness(2.5F);
-		setResistance(5.0F);
+		setHarvestLevel("pickaxe", harvestlevel);
+		setHardness(hardness);
+		setResistance(resistance);
 		
 	}
-
 }
