@@ -10,7 +10,7 @@ public class PlatinumObsidian extends Block {
 	
 	public PlatinumObsidian() {
 		super(Material.rock);
-		setBlockName("Redoxiation." + name);
+		setBlockName(Redoxiation.MODID + "." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 3);

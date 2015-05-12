@@ -10,7 +10,7 @@ public class NickelObsidian extends Block {
 	
 	public NickelObsidian() {
 		super(Material.rock);
-		setBlockName("Redoxiation." + name);
+		setBlockName(Redoxiation.MODID + "." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 3);
