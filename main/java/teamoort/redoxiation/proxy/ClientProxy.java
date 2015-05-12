@@ -17,8 +17,7 @@ import net.minecraftforge.client.MinecraftForgeClient;
 
 public class ClientProxy extends CommonProxy{
 	
-	public void registerTileEntitySpecialRenderer()
-	{
+	public void registerTileEntitySpecialRenderer() {
 		TileEntitySpecialRenderer renderWoodenCog = new RenderWoodenCog();
 		TileEntitySpecialRenderer renderStoneCog = new RenderStoneCog();
 		TileEntitySpecialRenderer renderIronCog = new RenderIronCog();
@@ -29,5 +28,4 @@ public class ClientProxy extends CommonProxy{
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RedoxiationBlocks.StoneCog), new ItemRenderStoneCog(renderStoneCog, new TileEntityStoneCog()));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RedoxiationBlocks.IronCog), new ItemRenderIronCog(renderIronCog, new TileEntityIronCog()));
 	}
-
 }

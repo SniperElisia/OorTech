@@ -5,62 +5,59 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
+
 public class TileEntityWoodenCog extends TileEntity{
 	private int volume = 0;
 	private float rotation = 0;
+
 	@Override
-	public void updateEntity()
-	{
-		if(rotation >= 6.283185307179586476925286766559f)
-		{
+	public void updateEntity() {
+		if(rotation >= 6.283185307179586476925286766559f) {
 			rotation = rotation - 6.283185307179586476925286766559f;
 		}
 	}
-	public int getVolume()
-	{
+
+	public int getVolume() {
 		return volume;
 	}
 	
-	public void setVolume(int argV)
-	{
+	public void setVolume(int argV) {
 		volume = argV;
 	}
 	
-	public float getRotation()
-	{
+	public float getRotation() {
 		return rotation;
 	}
-	public void setRotation(float argR)
-	{
+	
+	public void setRotation(float argR) {
 		rotation = argR;
 	}
+
 	//rotation save to NBT
 	@Override
-	public void readFromNBT(NBTTagCompound compound)
-	{
+	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 		rotation = compound.getFloat("rotation");
 	}
+
 	@Override
-	public void writeToNBT(NBTTagCompound compound)
-	{
+	public void writeToNBT(NBTTagCompound compound) {
 		super. writeToNBT(compound);
 		compound.setFloat("rotation", rotation);
 	}
+
 	//Server<->Client
 	@Override
-	public Packet getDescriptionPacket()
-	{
+	public Packet getDescriptionPacket() {
 		NBTTagCompound tag = new NBTTagCompound();
 		this.writeToNBT(tag);
 		
 		return new S35PacketUpdateTileEntity(this.xCoord,this.yCoord,this.zCoord,this.blockMetadata,tag);
 	}
+
 	@Override
-	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt)
-	{
+	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
 		NBTTagCompound tag = pkt.func_148857_g();
 		this.readFromNBT(tag);
 	}
-
 }

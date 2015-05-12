@@ -13,7 +13,9 @@ public class GuiHandler implements IGuiHandler {
 
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        if(ID == GUIs.BlastFurnaceBlock.ordinal()) return new GuiBlastFurnace(player, world, x, y, z);
-        else return null;
+        if(ID == GUIs.BlastFurnaceBlock.ordinal()) 
+			return new GuiBlastFurnace(player, world, x, y, z);
+        else 
+			return null;
     }
 }

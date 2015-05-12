@@ -38,6 +38,7 @@ tile.Redoxiation.CobaltObsidian.name=코발트를 함유한 흑요석
 tile.Redoxiation.ChromiumObsidian.name=크로뮴을 함유한 흑요석
 tile.Redoxiation.UraniumObsidian.name=우라늄을 함유한 흑요석
 tile.Redoxiation.PlutoniumObsidian.name=플루토늄을 함유한 흑요석
+tile.BlastFurnaceBlock.name=Blast Furnace
 
 #리덕시에이션 아이템
 item.Redoxiation.MortarAndPestle.name=막자와 막자사발
@@ -129,6 +130,11 @@ item.Redoxiation.ItemCryolite.name=빙정석
 #리덕시에이션 액체
 tile.HotAir.name=열풍
 tile.MoltenPigiron.name=녹은 선철
+
+#Redoxiation Cogs
+Redoxiation.WoodenCog.name=Wooden Cogs
+Redoxiation.StoneCog.name=Stone Cogs
+Redoxiation.IronCog.name=Iron Cogs
 
 #리덕시에이션 도구
 item.Redoxiation.WoodenSaw.name=나무 톱

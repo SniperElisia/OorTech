@@ -14,7 +14,7 @@ public class Rutile extends Block {
 	
 	public Rutile() {
 		super(Material.rock);
-		setBlockName("Redoxiation." + name);
+		setBlockName(Redoxiation.MODID + "." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setHarvestLevel("pickaxe", 2);

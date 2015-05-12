@@ -47,7 +47,7 @@ public class Redoxiation
 	public static CommonProxy proxy;
 	
     public static final String MODID = "Redoxiation";
-    public static final String VERSION = "Alpha 0.04A";
+    public static final String VERSION = "Alpha 0.04";
     
     public static boolean dummybool;
     public static int oredif;

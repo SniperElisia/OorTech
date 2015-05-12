@@ -53,7 +53,7 @@ public class TileBlastFurnaceBlock extends TileEntity {
 						} else if (!((TileBlastFurnaceBlock)tile).hasMaster())
 							i++;
 					}
-			}
+				}
 		// check if there are 26 blocks present ((3*3*3) - 1) and check that center block is empty
 		return i > 25 && worldObj.isAirBlock(xCoord, yCoord + 1, zCoord);
 	}

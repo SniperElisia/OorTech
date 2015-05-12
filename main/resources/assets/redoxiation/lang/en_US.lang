@@ -38,6 +38,7 @@ tile.Redoxiation.CobaltObsidian.name=Cobalti Obsius
 tile.Redoxiation.ChromiumObsidian.name=Chromii Obsius
 tile.Redoxiation.UraniumObsidian.name=Uranii Obsius
 tile.Redoxiation.PlutoniumObsidian.name=Plutonii Obsius
+tile.BlastFurnaceBlock.name=Blast Furnace
 
 #Redoxiation Items
 item.Redoxiation.MortarAndPestle.name=Mortar and Pestle
@@ -129,6 +130,11 @@ item.Redoxiation.ItemCryolite.name=Cryolite
 #Redoxiation Fluids
 tile.HotAir.name=Hot Air
 tile.MoltenPigiron.name=Molten Pig Iron
+
+#Redoxiation Cogs
+Redoxiation.WoodenCog.name=Wooden Cogs
+Redoxiation.StoneCog.name=Stone Cogs
+Redoxiation.IronCog.name=Iron Cogs
 
 #Redoxiation Tools
 item.Redoxiation.WoodenSaw.name=Wooden Saw
