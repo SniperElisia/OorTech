@@ -19,18 +19,18 @@ public class RedoxiationBlocks{
 	public static void registerBlocks()
 	{
 	//Blocks
-    	//Normal Ore
-    	CopperOre = new RedoxiationOre("CopperOre", 1, 2.5F, 5.0F);
-    	TinOre = new RedoxiationOre("TinOre", 1, 2.5F, 5.0F);
-    	LeadOre = new RedoxiationOre("LeadOre", 1, 2.5F, 5.0F);
-    	SilverOre = new RedoxiationOre("SilverOre", 2, 2.5F, 5.0F);
-    	NickelOre = new RedoxiationOre("NickelOre", 1, 2.5F, 5.0F);
-    	PlatinumOre = new RedoxiationOre("PlatinumOre", 2, 2.5F, 5.0F);
-    	ZincOre = new RedoxiationOre("ZincOre", 1, 2.5F, 5.0F);
-    	CobaltOre = new RedoxiationOre("CoblatOre", 1, 2.5F, 5.0F);
-    	ChromiumOre = new RedoxiationOre("ChromiumOre", 1, 2.5F, 5.0F);
+    	//Normal Ore					Type, Name, Harvest level, Hardness, Resistance
+    	CopperOre = new RedoxiationOre("Normal", "CopperOre", 1, 2.5F, 5.0F);
+    	TinOre = new RedoxiationOre("Normal", "TinOre", 1, 2.5F, 5.0F);
+    	LeadOre = new RedoxiationOre("Normal", "LeadOre", 1, 2.5F, 5.0F);
+    	SilverOre = new RedoxiationOre("Normal", "SilverOre", 2, 2.5F, 5.0F);
+    	NickelOre = new RedoxiationOre("Normal", "NickelOre", 1, 2.5F, 5.0F);
+    	PlatinumOre = new RedoxiationOre("Normal", "PlatinumOre", 2, 2.5F, 5.0F);
+    	ZincOre = new RedoxiationOre("Normal", "ZincOre", 1, 2.5F, 5.0F);
+    	CobaltOre = new RedoxiationOre("Normal", "CobaltOre", 1, 2.5F, 5.0F);
+    	ChromiumOre = new RedoxiationOre("Normal", "ChromiumOre", 1, 2.5F, 5.0F);
 		
-    	Pitchblend = new RedoxiationOre("Pitchblend", 2, 2.5F, 5.0F);
+    	Pitchblend = new RedoxiationOre("Normal", "Pitchblend", 2, 2.5F, 5.0F);
     	Limestone = new Limestone();
     	SaltRock = new SaltRock();
     	Bauxite = new Bauxite();
@@ -39,29 +39,30 @@ public class RedoxiationBlocks{
     	Cryolite = new Cryolite();
     	SulfurOre = new SulfurOre();
 		
-    	FerronickelOre = new RedoxiationOre("FerronickelOre", 2, 3.0F, 15.0F);
-    	PseudoBronzeOre = new RedoxiationOre("PseudoBronzeOre", 2, 3.0F, 15.0F);
-    	PseudoBrassOre = new RedoxiationOre("PseudoBrassOre", 2, 3.0F, 15.0F);
+		//Nether Ore
+    	FerronickelOre = new RedoxiationOre("Nether", "FerronickelOre", 2, 3.0F, 15.0F);
+    	PseudoBronzeOre = new RedoxiationOre("Nether", "PseudoBronzeOre", 2, 3.0F, 15.0F);
+    	PseudoBrassOre = new RedoxiationOre("Nether", "PseudoBrassOre", 2, 3.0F, 15.0F);
 		
-    	ArgentAurum = new RedoxiationOre("ArgentAurum", 2, 3.0F, 15.0F);
-    	PseudoSolder = new RedoxiationOre("PseudoSolder", 2, 3.0F, 15.0F);
-    	PseudoStellite = new RedoxiationOre("PseudoStellite", 2, 3.0F, 15.0F);
+    	ArgentAurum = new RedoxiationOre("Nether", "ArgentAurum", 2, 3.0F, 15.0F);
+    	PseudoSolder = new RedoxiationOre("Nether", "PseudoSolder", 2, 3.0F, 15.0F);
+    	PseudoStellite = new RedoxiationOre("Nether", "PseudoStellite", 2, 3.0F, 15.0F);
     	TNTium = new TNTium();
 		
 		//Obsidian Ore
-    	IronObsidian = new RedoxiationObsidian("IronObsidian", 3, 50.0F, 2000.0F);
-    	GoldObsidian = new RedoxiationObsidian("GoldObsidian", 3, 50.0F, 2000.0F);
-    	CopperObsidian = new RedoxiationObsidian("CopperObsidian", 3, 50.0F, 2000.0F);
-    	TinObsidian = new RedoxiationObsidian("TinObsidian", 3, 50.0F, 2000.0F);
-    	LeadObsidian = new RedoxiationObsidian("LeadObsidian", 3, 50.0F, 2000.0F);
-    	SilverObsidian = new RedoxiationObsidian("SilverObsidian", 3, 50.0F, 2000.0F);
-    	NickelObsidian = new RedoxiationObsidian("NickelObsidian", 3, 50.0F, 2000.0F);
-    	PlatinumObsidian = new RedoxiationObsidian("PlatinumObsidian", 3, 50.0F, 2000.0F);
-    	ZincObsidian = new RedoxiationObsidian("ZincObsidian", 3, 50.0F, 2000.0F);
-    	CobaltObsidian = new RedoxiationObsidian("CobaltObsidian", 3, 50.0F, 2000.0F);
-    	ChromiumObsidian = new RedoxiationObsidian("ChromiumObsidian", 3, 50.0F, 2000.0F);
-    	UraniumObsidian = new RedoxiationObsidian("UraniumObsidian", 3, 50.0F, 2000.0F);
-    	PlutoniumObsidian = new RedoxiationObsidian("PlutoniumObsidian", 3, 50.0F, 2000.0F);
+    	IronObsidian = new RedoxiationOre("Obsidian", "IronObsidian", 3, 50.0F, 2000.0F);
+    	GoldObsidian = new RedoxiationOre("Obsidian", "GoldObsidian", 3, 50.0F, 2000.0F);
+    	CopperObsidian = new RedoxiationOre("Obsidian", "CopperObsidian", 3, 50.0F, 2000.0F);
+    	TinObsidian = new RedoxiationOre("Obsidian", "TinObsidian", 3, 50.0F, 2000.0F);
+    	LeadObsidian = new RedoxiationOre("Obsidian", "LeadObsidian", 3, 50.0F, 2000.0F);
+    	SilverObsidian = new RedoxiationOre("Obsidian", "SilverObsidian", 3, 50.0F, 2000.0F);
+    	NickelObsidian = new RedoxiationOre("Obsidian", "NickelObsidian", 3, 50.0F, 2000.0F);
+    	PlatinumObsidian = new RedoxiationOre("Obsidian", "PlatinumObsidian", 3, 50.0F, 2000.0F);
+    	ZincObsidian = new RedoxiationOre("Obsidian", "ZincObsidian", 3, 50.0F, 2000.0F);
+    	CobaltObsidian = new RedoxiationOre("Obsidian", "CobaltObsidian", 3, 50.0F, 2000.0F);
+    	ChromiumObsidian = new RedoxiationOre("Obsidian", "ChromiumObsidian", 3, 50.0F, 2000.0F);
+    	UraniumObsidian = new RedoxiationOre("Obsidian", "UraniumObsidian", 3, 50.0F, 2000.0F);
+    	PlutoniumObsidian = new RedoxiationOre("Obsidian", "PlutoniumObsidian", 3, 50.0F, 2000.0F);
 		
 		//Cog
     	WoodenCog = new BlockWoodenCog();
