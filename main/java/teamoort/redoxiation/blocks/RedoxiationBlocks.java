@@ -19,7 +19,7 @@ public class RedoxiationBlocks{
 	public static void registerBlocks()
 	{
 	//Blocks
-    	
+    	//Normal Ore
     	CopperOre = new RedoxiationOre("CopperOre", 1, 2.5F, 5.0F);
     	TinOre = new RedoxiationOre("TinOre", 1, 2.5F, 5.0F);
     	LeadOre = new RedoxiationOre("LeadOre", 1, 2.5F, 5.0F);
@@ -29,6 +29,7 @@ public class RedoxiationBlocks{
     	ZincOre = new RedoxiationOre("ZincOre", 1, 2.5F, 5.0F);
     	CobaltOre = new RedoxiationOre("CoblatOre", 1, 2.5F, 5.0F);
     	ChromiumOre = new RedoxiationOre("ChromiumOre", 1, 2.5F, 5.0F);
+		
     	Pitchblend = new RedoxiationOre("Pitchblend", 2, 2.5F, 5.0F);
     	Limestone = new Limestone();
     	SaltRock = new SaltRock();
@@ -37,29 +38,37 @@ public class RedoxiationBlocks{
     	Scheelite = new Scheelite();
     	Cryolite = new Cryolite();
     	SulfurOre = new SulfurOre();
-    	FerronickelOre = new FerronickelOre();
-    	PseudoBronzeOre = new PseudoBronzeOre();
-    	PseudoBrassOre = new PseudoBrassOre();
-    	ArgentAurum = new ArgentAurum();
-    	PseudoSolder = new PseudoSolder();
-    	PseudoStellite = new PseudoStellite();
+		
+    	FerronickelOre = new RedoxiationOre("FerronickelOre", 2, 3.0F, 15.0F);
+    	PseudoBronzeOre = new RedoxiationOre("PseudoBronzeOre", 2, 3.0F, 15.0F);
+    	PseudoBrassOre = new RedoxiationOre("PseudoBrassOre", 2, 3.0F, 15.0F);
+		
+    	ArgentAurum = new RedoxiationOre("ArgentAurum", 2, 3.0F, 15.0F);
+    	PseudoSolder = new RedoxiationOre("PseudoSolder", 2, 3.0F, 15.0F);
+    	PseudoStellite = new RedoxiationOre("PseudoStellite", 2, 3.0F, 15.0F);
     	TNTium = new TNTium();
-    	IronObsidian = new IronObsidian();
-    	GoldObsidian = new GoldObsidian();
-    	CopperObsidian = new CopperObsidian();
-    	TinObsidian = new TinObsidian();
-    	LeadObsidian = new LeadObsidian();
-    	SilverObsidian = new SilverObsidian();
-    	NickelObsidian = new NickelObsidian();
-    	PlatinumObsidian = new PlatinumObsidian();
-    	ZincObsidian = new ZincObsidian();
-    	CobaltObsidian = new CobaltObsidian();
-    	ChromiumObsidian = new ChromiumObsidian();
-    	UraniumObsidian = new UraniumObsidian();
-    	PlutoniumObsidian = new PlutoniumObsidian();
+		
+		//Obsidian Ore
+    	IronObsidian = new RedoxiationOre("IronObsidian", 3, 50.0F, 2000.0F);
+    	GoldObsidian = new RedoxiationOre("GoldObsidian", 3, 50.0F, 2000.0F);
+    	CopperObsidian = new RedoxiationOre("CopperObsidian", 3, 50.0F, 2000.0F);
+    	TinObsidian = new RedoxiationOre("TinObsidian", 3, 50.0F, 2000.0F);
+    	LeadObsidian = new RedoxiationOre("LeadObsidian", 3, 50.0F, 2000.0F);
+    	SilverObsidian = new RedoxiationOre("SilverObsidian", 3, 50.0F, 2000.0F);
+    	NickelObsidian = new RedoxiationOre("NickelObsidian", 3, 50.0F, 2000.0F);
+    	PlatinumObsidian = new RedoxiationOre("PlatinumObsidian", 3, 50.0F, 2000.0F);
+    	ZincObsidian = new RedoxiationOre("ZincObsidian", 3, 50.0F, 2000.0F);
+    	CobaltObsidian = new RedoxiationOre("CobaltObsidian", 3, 50.0F, 2000.0F);
+    	ChromiumObsidian = new RedoxiationOre("ChromiumObsidian", 3, 50.0F, 2000.0F);
+    	UraniumObsidian = new RedoxiationOre("UraniumObsidian", 3, 50.0F, 2000.0F);
+    	PlutoniumObsidian = new RedoxiationOre("PlutoniumObsidian", 3, 50.0F, 2000.0F);
+		
+		//Cog
     	WoodenCog = new BlockWoodenCog();
     	StoneCog = new BlockStoneCog();
     	IronCog = new BlockIronCog();
+		
+		//Machine
     	BlastFurnaceBlock = new BlastFurnaceBlock();
 
     	//Registry
@@ -146,22 +155,18 @@ public class RedoxiationBlocks{
 
     	
         //Fluids
-
         HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(-10).setTemperature(1473).setViscosity(2000).setGaseous(true);
         MoltenPigiron = new Fluid("MoltenPigiron").setLuminosity(15).setDensity(7874).setTemperature(1900).setViscosity(2000).setGaseous(false);
         
         //Fluid Registry
-        
         FluidRegistry.registerFluid(HotAir);
         FluidRegistry.registerFluid(MoltenPigiron);
         
         //Block Fluids
-        
         HotAirBlock = (BlockFluidClassic) new BlockHotAir(HotAir, Material.lava).setBlockName("HotAir");
         MoltenPigironBlock = (BlockFluidClassic) new BlockMoltenPigiron(MoltenPigiron, Material.lava).setBlockName("MoltenPigiron");
         
         //Block Fluids Registry
-        
         GameRegistry.registerBlock(HotAirBlock, "FluidHotAir");
         GameRegistry.registerBlock(MoltenPigironBlock, "FluidMoltenPigiron");
         HotAir.setUnlocalizedName(HotAirBlock.getUnlocalizedName());
