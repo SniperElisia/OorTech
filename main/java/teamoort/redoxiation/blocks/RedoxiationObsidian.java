@@ -4,9 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import teamoort.redoxiation.Redoxiation;
 
-public class RedoxiationOre extends Block {
+public class RedoxiationObsidian extends Block {
 	
-	public RedoxiationOre(String name, int harvestlevel, float hardness, float resistance) {
+	public RedoxiationObsidian(String name, int harvestlevel, float hardness, float resistance) {
 		super(Material.rock);
 		setBlockName(Redoxiation.MODID + "." + name);
 		setBlockTextureName(Redoxiation.MODID + ":" + name);
@@ -14,5 +14,6 @@ public class RedoxiationOre extends Block {
 		setHarvestLevel("pickaxe", harvestlevel);
 		setHardness(hardness);
 		setResistance(resistance);
+		setStepSound(soundTypePiston);
 	}
 }
