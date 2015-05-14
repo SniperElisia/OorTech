@@ -14,6 +14,16 @@ public class RedoxiationOre extends Block {
 		setHarvestLevel("pickaxe", harvestlevel);
 		setHardness(hardness);
 		setResistance(resistance);
-		
+	}
+	
+	public RedoxiationObsidian(String name, int harvestlevel, float hardness, float resistance) {
+		super(Material.rock);
+		setBlockName(Redoxiation.MODID + "." + name);
+		setBlockTextureName(Redoxiation.MODID + ":" + name);
+		setCreativeTab(Redoxiation.tabRedoxiation);
+		setHarvestLevel("pickaxe", harvestlevel);
+		setHardness(hardness);
+		setResistance(resistance);
+		setStepSound(soundTypePiston);
 	}
 }

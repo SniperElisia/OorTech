@@ -49,19 +49,19 @@ public class RedoxiationBlocks{
     	TNTium = new TNTium();
 		
 		//Obsidian Ore
-    	IronObsidian = new RedoxiationOre("IronObsidian", 3, 50.0F, 2000.0F);
-    	GoldObsidian = new RedoxiationOre("GoldObsidian", 3, 50.0F, 2000.0F);
-    	CopperObsidian = new RedoxiationOre("CopperObsidian", 3, 50.0F, 2000.0F);
-    	TinObsidian = new RedoxiationOre("TinObsidian", 3, 50.0F, 2000.0F);
-    	LeadObsidian = new RedoxiationOre("LeadObsidian", 3, 50.0F, 2000.0F);
-    	SilverObsidian = new RedoxiationOre("SilverObsidian", 3, 50.0F, 2000.0F);
-    	NickelObsidian = new RedoxiationOre("NickelObsidian", 3, 50.0F, 2000.0F);
-    	PlatinumObsidian = new RedoxiationOre("PlatinumObsidian", 3, 50.0F, 2000.0F);
-    	ZincObsidian = new RedoxiationOre("ZincObsidian", 3, 50.0F, 2000.0F);
-    	CobaltObsidian = new RedoxiationOre("CobaltObsidian", 3, 50.0F, 2000.0F);
-    	ChromiumObsidian = new RedoxiationOre("ChromiumObsidian", 3, 50.0F, 2000.0F);
-    	UraniumObsidian = new RedoxiationOre("UraniumObsidian", 3, 50.0F, 2000.0F);
-    	PlutoniumObsidian = new RedoxiationOre("PlutoniumObsidian", 3, 50.0F, 2000.0F);
+    	IronObsidian = new RedoxiationObsidian("IronObsidian", 3, 50.0F, 2000.0F);
+    	GoldObsidian = new RedoxiationObsidian("GoldObsidian", 3, 50.0F, 2000.0F);
+    	CopperObsidian = new RedoxiationObsidian("CopperObsidian", 3, 50.0F, 2000.0F);
+    	TinObsidian = new RedoxiationObsidian("TinObsidian", 3, 50.0F, 2000.0F);
+    	LeadObsidian = new RedoxiationObsidian("LeadObsidian", 3, 50.0F, 2000.0F);
+    	SilverObsidian = new RedoxiationObsidian("SilverObsidian", 3, 50.0F, 2000.0F);
+    	NickelObsidian = new RedoxiationObsidian("NickelObsidian", 3, 50.0F, 2000.0F);
+    	PlatinumObsidian = new RedoxiationObsidian("PlatinumObsidian", 3, 50.0F, 2000.0F);
+    	ZincObsidian = new RedoxiationObsidian("ZincObsidian", 3, 50.0F, 2000.0F);
+    	CobaltObsidian = new RedoxiationObsidian("CobaltObsidian", 3, 50.0F, 2000.0F);
+    	ChromiumObsidian = new RedoxiationObsidian("ChromiumObsidian", 3, 50.0F, 2000.0F);
+    	UraniumObsidian = new RedoxiationObsidian("UraniumObsidian", 3, 50.0F, 2000.0F);
+    	PlutoniumObsidian = new RedoxiationObsidian("PlutoniumObsidian", 3, 50.0F, 2000.0F);
 		
 		//Cog
     	WoodenCog = new BlockWoodenCog();
