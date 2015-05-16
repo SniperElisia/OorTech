@@ -4,11 +4,13 @@ import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentTranslation;
+import teamoort.redoxiation.Redoxiation;
 import teamoort.redoxiation.blocks.BlastFurnaceBlock;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 
 public class TileBlastFurnaceBlock extends TileEntity {
 	private boolean hasMaster, isMaster;
+	public boolean hasmastercheck;
 	private int masterX, masterY, masterZ;
 	@Override
 	public void updateEntity() {
@@ -22,13 +24,16 @@ public class TileBlastFurnaceBlock extends TileEntity {
 							{
 								if (worldObj.getBlock(x, y, z) == RedoxiationBlocks.BlastFurnaceBlock) {
 									BlastFurnaceBlock.multiblock = true;
+									hasmastercheck = true;
 								}
 							}
 						}
 					}
 				}
-			} else {
+			}
+			else {
 				BlastFurnaceBlock.multiblock = false;
+				hasmastercheck = false;
 				// Constantly check if structure is formed until it is.
 				if (checkMultiBlockForm()){
                     setupStructure();
@@ -91,13 +96,16 @@ public class TileBlastFurnaceBlock extends TileEntity {
     
     /** Reset all the parts of the structure */
     public void resetStructure() {
-        for (int x = xCoord - 1; x < xCoord + 2; x++)
-            for (int y = yCoord; y < yCoord + 3; y++)
+        for (int x = xCoord - 1; x < xCoord + 2; x++) {
+            for (int y = yCoord; y < yCoord + 3; y++) {
                 for (int z = zCoord - 1; z < zCoord + 2; z++) {
                     TileEntity tile = worldObj.getTileEntity(x, y, z);
-                    if (tile != null && (tile instanceof TileBlastFurnaceBlock))
+                    if (tile != null && (tile instanceof TileBlastFurnaceBlock)) {
                         ((TileBlastFurnaceBlock) tile).reset();
+                    }
                 }
+            }
+        }
     }
  
     @Override

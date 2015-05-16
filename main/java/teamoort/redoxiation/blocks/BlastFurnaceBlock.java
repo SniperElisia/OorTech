@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 
 public class BlastFurnaceBlock extends BlockContainer {
     public static boolean multiblock = false;
+    public static boolean hm = false;
 
     public BlastFurnaceBlock() {
         super(Material.wood);
@@ -26,10 +27,10 @@ public class BlastFurnaceBlock extends BlockContainer {
         TileEntity tile = world.getTileEntity(x, y, z);
         if (tile != null && tile instanceof TileBlastFurnaceBlock) {
             TileBlastFurnaceBlock multiBlock = (TileBlastFurnaceBlock) tile;
-            int mX = multiBlock.getMasterX();
-            int mY = multiBlock.getMasterY();
-            int mZ = multiBlock.getMasterZ();
             if (multiBlock.hasMaster()) {
+                int mX = multiBlock.getMasterX();
+                int mY = multiBlock.getMasterY();
+                int mZ = multiBlock.getMasterZ();
                 if (multiBlock.isMaster()) {
                     if (!multiBlock.checkMultiBlockForm()) {
                         multiBlock.resetStructure();
@@ -61,10 +62,11 @@ public class BlastFurnaceBlock extends BlockContainer {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ) {
-        if(multiblock) {
+        if((((TileBlastFurnaceBlock)world.getTileEntity(x, y, z)).hasMaster())) {
             if (world.isRemote) {
-                if (world.getTileEntity(x, y, z) != null)
+                if (world.getTileEntity(x, y, z) != null) {
                     player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
+                }
                 System.out.println("[INFO/REDOXIATION]" + " : " + Redoxiation.oredif);
                 return true;
             }
