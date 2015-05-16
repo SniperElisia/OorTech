@@ -26,14 +26,27 @@ public class BlastFurnaceBlock extends BlockContainer {
         TileEntity tile = world.getTileEntity(x, y, z);
         if (tile != null && tile instanceof TileBlastFurnaceBlock) {
             TileBlastFurnaceBlock multiBlock = (TileBlastFurnaceBlock) tile;
+            int mX = multiBlock.getMasterX();
+            int mY = multiBlock.getMasterY();
+            int mZ = multiBlock.getMasterZ();
             if (multiBlock.hasMaster()) {
                 if (multiBlock.isMaster()) {
-                    if (!multiBlock.checkMultiBlockForm())
+                    if (!multiBlock.checkMultiBlockForm()) {
                         multiBlock.resetStructure();
-                } else {
+                    }
+                }
+                else {
                     if (!multiBlock.checkForMaster()) {
                         multiBlock.reset();
                         world.markBlockForUpdate(x, y, z);
+                    }
+                    else {
+                    	TileBlastFurnaceBlock mastertile = (TileBlastFurnaceBlock) world.getTileEntity(mX, mY, mZ);
+                    	if (mastertile.isMaster()) {
+                    		if (!mastertile.checkMultiBlockForm()) {
+                    			mastertile.resetStructure();
+                    		}
+                    	}
                     }
                 }
             }
