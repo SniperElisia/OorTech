@@ -1,2 +1,2 @@
-![](http://darklambs.net/m/redoxiation/asset/img/logo.PNG)
+![](http://i.imgur.com/qJQXwzA.png)
 ---
