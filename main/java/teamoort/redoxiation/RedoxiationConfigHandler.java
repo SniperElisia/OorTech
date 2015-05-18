@@ -1,13 +1,16 @@
 package teamoort.redoxiation;
 
+import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
 import net.minecraftforge.common.config.Configuration;
 
 public class RedoxiationConfigHandler {
 	private static Configuration config = Redoxiation.config;
 	public static final String CATEGORY_OREGEN = "oregen";
+	public static final String CATEGORY_BLOCKS = "blocks";
 	public static final String CATEGORY_ITEMS = "items";
 	public static final String CATEGORY_TOOLS = "tools";
+	public static String comment = "";
 	public static void InitConfig(){
 		RedoxiationEventHandler oregen = new RedoxiationEventHandler();
 		RedoxiationGenericItems items = null;
@@ -19,7 +22,16 @@ public class RedoxiationConfigHandler {
 		// Blocks Start
     	
 		// Ores Start
-    	
+    	RedoxiationBlocks.CopperOre_cfg = config.getBoolean("CopperOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.TinOre_cfg = config.getBoolean("TinOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.LeadOre_cfg = config.getBoolean("LeadOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.SilverOre_cfg = config.getBoolean("SilverOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.NickelOre_cfg = config.getBoolean("NickelOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.PlatinumOre_cfg = config.getBoolean("PlatinumOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.ZincOre_cfg = config.getBoolean("ZincOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.CobaltOre_cfg = config.getBoolean("CoblatOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.ChromiumOre_cfg = config.getBoolean("ChromiumOre", CATEGORY_BLOCKS, true, comment);
+    	RedoxiationBlocks.Pitchblend_cfg = config.getBoolean("Pitchblend", CATEGORY_BLOCKS, true, comment);
 		// Ores End
     	
 		// Blocks End

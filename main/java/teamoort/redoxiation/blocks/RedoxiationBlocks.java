@@ -15,6 +15,7 @@ public class RedoxiationBlocks{
 	public static Fluid HotAir, MoltenPigiron;
 	public static BlockFluidClassic HotAirBlock, MoltenPigironBlock;
 	public static Block BlastFurnaceBlock;
+	public static boolean CopperOre_cfg, TinOre_cfg, LeadOre_cfg, SilverOre_cfg, NickelOre_cfg, PlatinumOre_cfg, ZincOre_cfg, CobaltOre_cfg, ChromiumOre_cfg, Pitchblend_cfg;
     
 	public static void registerBlocks()
 	{
