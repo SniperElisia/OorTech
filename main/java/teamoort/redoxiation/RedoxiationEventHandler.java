@@ -1,7 +1,7 @@
-package teamoort.redoxiation;
+package teamoort.Redoxiation;
 
 import java.util.Random;
-import teamoort.redoxiation.blocks.RedoxiationBlocks;
+import teamoort.Redoxiation.blocks.RedoxiationBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;

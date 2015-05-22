@@ -1,8 +1,8 @@
-package teamoort.redoxiation.items;
+package teamoort.Redoxiation.items;
 
 import java.util.List;
 
-import teamoort.redoxiation.Redoxiation;
+import teamoort.Redoxiation.Redoxiation;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,6 +1,6 @@
-package teamoort.redoxiation.blocks;
+package teamoort.Redoxiation.blocks;
 
-import teamoort.redoxiation.Redoxiation;
+import teamoort.Redoxiation.Redoxiation;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;

@@ -1,4 +1,4 @@
-package teamoort.redoxiation.model;
+package teamoort.Redoxiation.model;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

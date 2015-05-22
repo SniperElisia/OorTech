@@ -1,4 +1,4 @@
-package teamoort.redoxiation.blocks.tileentity;
+package teamoort.Redoxiation.blocks.tileentity;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;

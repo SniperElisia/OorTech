@@ -1,10 +1,10 @@
-package teamoort.redoxiation.blocks.gui;
+package teamoort.Redoxiation.blocks.gui;
 
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import teamoort.redoxiation.Redoxiation;
+import teamoort.Redoxiation.Redoxiation;
 
 public class GuiBlastFurnace extends GuiScreen {
     int x, y, z;

@@ -1,4 +1,4 @@
-package teamoort.redoxiation.render;
+package teamoort.Redoxiation.render;
 
 import org.lwjgl.opengl.GL11;
 
