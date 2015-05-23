@@ -2,8 +2,8 @@ package teamoort.redoxiation.blocks;
 
 import java.util.Random;
 
-import teamoort.Redoxiation.Redoxiation;
-import teamoort.Redoxiation.items.RedoxiationGenericItems;
+import teamoort.redoxiation.Redoxiation;
+import teamoort.redoxiation.items.RedoxiationGenericItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

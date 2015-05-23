@@ -4,7 +4,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import teamoort.Redoxiation.Redoxiation;
+import teamoort.redoxiation.Redoxiation;
 
 public class GuiBlastFurnace extends GuiScreen {
     int x, y, z;

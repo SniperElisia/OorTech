@@ -2,7 +2,7 @@ package teamoort.redoxiation.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import teamoort.Redoxiation.Redoxiation;
+import teamoort.redoxiation.Redoxiation;
 
 public class RedoxiationOre extends Block {
 	

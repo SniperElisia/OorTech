@@ -4,10 +4,10 @@ package teamoort.redoxiation;
 import org.apache.logging.log4j.core.Logger;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
-import teamoort.Redoxiation.blocks.RedoxiationBlocks;
-import teamoort.Redoxiation.blocks.gui.GuiHandler;
-import teamoort.Redoxiation.items.RedoxiationGenericItems;
-import teamoort.Redoxiation.proxy.CommonProxy;
+import teamoort.redoxiation.blocks.RedoxiationBlocks;
+import teamoort.redoxiation.blocks.gui.GuiHandler;
+import teamoort.redoxiation.items.RedoxiationGenericItems;
+import teamoort.redoxiation.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialLiquid;

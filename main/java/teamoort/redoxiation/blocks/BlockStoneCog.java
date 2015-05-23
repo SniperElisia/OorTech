@@ -1,7 +1,7 @@
 package teamoort.redoxiation.blocks;
 
-import teamoort.Redoxiation.Redoxiation;
-import teamoort.Redoxiation.blocks.tileentity.TileEntityStoneCog;
+import teamoort.redoxiation.Redoxiation;
+import teamoort.redoxiation.blocks.tileentity.TileEntityStoneCog;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
