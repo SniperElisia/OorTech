@@ -1,4 +1,4 @@
-package teamoort.Redoxiation.blocks.gui;
+package teamoort.redoxiation.blocks.gui;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;

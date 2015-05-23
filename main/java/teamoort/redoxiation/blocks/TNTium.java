@@ -1,8 +1,8 @@
-package teamoort.Redoxiation.blocks;
+package teamoort.redoxiation.blocks;
 
 import java.util.Random;
 
-import teamoort.Redoxiation.Redoxiation;
+import teamoort.redoxiation.Redoxiation;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityTNTPrimed;

@@ -1,6 +1,6 @@
-package teamoort.Redoxiation.proxy;
+package teamoort.redoxiation.proxy;
 
-import teamoort.Redoxiation.Redoxiation;
+import teamoort.redoxiation.Redoxiation;
 
 public class CommonProxy {
 	public void registerTileEntitySpecialRenderer(){method();}

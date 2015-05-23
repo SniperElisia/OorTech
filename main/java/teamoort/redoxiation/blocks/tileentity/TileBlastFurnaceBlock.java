@@ -1,12 +1,12 @@
-package teamoort.Redoxiation.blocks.tileentity;
+package teamoort.redoxiation.blocks.tileentity;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentTranslation;
-import teamoort.Redoxiation.Redoxiation;
-import teamoort.Redoxiation.blocks.BlastFurnaceBlock;
-import teamoort.Redoxiation.blocks.RedoxiationBlocks;
+import teamoort.redoxiation.Redoxiation;
+import teamoort.redoxiation.blocks.BlastFurnaceBlock;
+import teamoort.redoxiation.blocks.RedoxiationBlocks;
 
 public class TileBlastFurnaceBlock extends TileEntity {
 	private boolean hasMaster, isMaster;
