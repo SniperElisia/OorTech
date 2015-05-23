@@ -1,5 +1,6 @@
 package teamoort.Redoxiation.blocks.tileentity;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -10,7 +11,6 @@ import teamoort.Redoxiation.blocks.RedoxiationBlocks;
 
 public class TileBlastFurnaceBlock extends TileEntity {
 	private boolean hasMaster, isMaster;
-	public boolean hasmastercheck;
 	private int masterX, masterY, masterZ;
 	@Override
 	public void updateEntity() {
@@ -22,9 +22,10 @@ public class TileBlastFurnaceBlock extends TileEntity {
 						for (int y = yCoord; y < yCoord + 3; y++){
 							for (int z = zCoord - 1; z < zCoord + 2; z++)
 							{
-								if (worldObj.getBlock(x, y, z) == RedoxiationBlocks.BlastFurnaceBlock) {
+								Block testblock = worldObj.getBlock(xCoord, yCoord, zCoord);
+								if (testblock == RedoxiationBlocks.BlastFurnaceBlock) {
 									BlastFurnaceBlock.multiblock = true;
-									hasmastercheck = true;
+									((BlastFurnaceBlock)testblock).setismultiblock(true);
 								}
 							}
 						}
@@ -32,8 +33,9 @@ public class TileBlastFurnaceBlock extends TileEntity {
 				}
 			}
 			else {
+				Block testblock = worldObj.getBlock(xCoord, yCoord, zCoord);
+				((BlastFurnaceBlock)testblock).setismultiblock(false);
 				BlastFurnaceBlock.multiblock = false;
-				hasmastercheck = false;
 				// Constantly check if structure is formed until it is.
 				if (checkMultiBlockForm()){
                     setupStructure();
