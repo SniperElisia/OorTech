@@ -2,9 +2,9 @@ package teamoort.redoxiation.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
-import teamoort.redoxiation.Redoxiation;
-import teamoort.redoxiation.blocks.gui.GUIs;
-import teamoort.redoxiation.blocks.tileentity.TileBlastFurnaceBlock;
+import teamoort.Redoxiation.Redoxiation;
+import teamoort.Redoxiation.blocks.gui.GUIs;
+import teamoort.Redoxiation.blocks.tileentity.TileBlastFurnaceBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

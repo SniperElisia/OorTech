@@ -1,7 +1,7 @@
 package teamoort.redoxiation;
 
-import teamoort.redoxiation.blocks.RedoxiationBlocks;
-import teamoort.redoxiation.items.RedoxiationGenericItems;
+import teamoort.Redoxiation.blocks.RedoxiationBlocks;
+import teamoort.Redoxiation.items.RedoxiationGenericItems;
 import net.minecraftforge.common.config.Configuration;
 
 public class RedoxiationConfigHandler {

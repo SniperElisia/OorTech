@@ -2,9 +2,9 @@ package teamoort.redoxiation.render;
 
 import org.lwjgl.opengl.GL11;
 
-import teamoort.redoxiation.Redoxiation;
-import teamoort.redoxiation.blocks.tileentity.TileEntityStoneCog;
-import teamoort.redoxiation.model.ModelCogs;
+import teamoort.Redoxiation.Redoxiation;
+import teamoort.Redoxiation.blocks.tileentity.TileEntityStoneCog;
+import teamoort.Redoxiation.model.ModelCogs;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;

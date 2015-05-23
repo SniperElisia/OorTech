@@ -1,15 +1,15 @@
 package teamoort.redoxiation.proxy;
 
-import teamoort.redoxiation.blocks.RedoxiationBlocks;
-import teamoort.redoxiation.blocks.tileentity.TileEntityIronCog;
-import teamoort.redoxiation.blocks.tileentity.TileEntityWoodenCog;
-import teamoort.redoxiation.blocks.tileentity.TileEntityStoneCog;
-import teamoort.redoxiation.render.ItemRenderIronCog;
-import teamoort.redoxiation.render.ItemRenderWoodenCog;
-import teamoort.redoxiation.render.ItemRenderStoneCog;
-import teamoort.redoxiation.render.RenderIronCog;
-import teamoort.redoxiation.render.RenderWoodenCog;
-import teamoort.redoxiation.render.RenderStoneCog;
+import teamoort.Redoxiation.blocks.RedoxiationBlocks;
+import teamoort.Redoxiation.blocks.tileentity.TileEntityIronCog;
+import teamoort.Redoxiation.blocks.tileentity.TileEntityStoneCog;
+import teamoort.Redoxiation.blocks.tileentity.TileEntityWoodenCog;
+import teamoort.Redoxiation.render.ItemRenderIronCog;
+import teamoort.Redoxiation.render.ItemRenderStoneCog;
+import teamoort.Redoxiation.render.ItemRenderWoodenCog;
+import teamoort.Redoxiation.render.RenderIronCog;
+import teamoort.Redoxiation.render.RenderStoneCog;
+import teamoort.Redoxiation.render.RenderWoodenCog;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.Item;
