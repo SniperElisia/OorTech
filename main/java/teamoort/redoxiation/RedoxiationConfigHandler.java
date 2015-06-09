@@ -22,9 +22,9 @@ public class RedoxiationConfigHandler {
 		// Blocks Start
     	
     	// Ores Start
-    	RedoxiationBlocks.CopperOre_cfg = config.get("CopperOre", CATEGORY_BLOCKS, true).getBoolean();
-    	RedoxiationBlocks.TinOre_cfg = config.get("TinOre", CATEGORY_BLOCKS, true).getBoolean();
-    	RedoxiationBlocks.LeadOre_cfg = config.get("LeadOre", CATEGORY_BLOCKS, true).getBoolean();
+    	RedoxiationBlocks.CopperOre_cfg = config.get(CATEGORY_BLOCKS, "CopperOre", true).getBoolean();
+    	RedoxiationBlocks.TinOre_cfg = config.get(CATEGORY_BLOCKS, "TinOre", true).getBoolean();
+    	RedoxiationBlocks.LeadOre_cfg = config.get(CATEGORY_BLOCKS, "LeadOre", true).getBoolean();
     	RedoxiationBlocks.SilverOre_cfg = config.get("SilverOre", CATEGORY_BLOCKS, true).getBoolean();
     	RedoxiationBlocks.NickelOre_cfg = config.get("NickelOre", CATEGORY_BLOCKS, true).getBoolean();
     	RedoxiationBlocks.PlatinumOre_cfg = config.get("PlatinumOre", CATEGORY_BLOCKS, true).getBoolean();
