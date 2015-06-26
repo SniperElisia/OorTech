@@ -62,12 +62,14 @@ public class BlastFurnaceBlock extends BlockContainer {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ) {
+        System.out.println("[INFO/REDOXIATION]" + " ; " + Redoxiation.oredif);
         if((((TileBlastFurnaceBlock)world.getTileEntity(x, y, z)).hasMaster())) {
+            System.out.println("[INFO/REDOXIATION]" + " / " + Redoxiation.oredif);
             if (world.isRemote) {
                 if (world.getTileEntity(x, y, z) != null) {
+                    System.out.println("[INFO/REDOXIATION]" + " : " + Redoxiation.oredif);
                     player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
                 }
-                System.out.println("[INFO/REDOXIATION]" + " : " + Redoxiation.oredif);
                 return true;
             }
             return true;
