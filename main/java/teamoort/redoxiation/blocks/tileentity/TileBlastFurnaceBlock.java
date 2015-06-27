@@ -23,7 +23,6 @@ public class TileBlastFurnaceBlock extends TileEntity {
 							for (int z = zCoord - 1; z < zCoord + 2; z++)
 							{
 								if (worldObj.getBlock(x, y, z) == RedoxiationBlocks.BlastFurnaceBlock) {
-									BlastFurnaceBlock.multiblock = true;
 									hasmastercheck = true;
 								}
 							}
@@ -32,7 +31,6 @@ public class TileBlastFurnaceBlock extends TileEntity {
 				}
 			}
 			else {
-				BlastFurnaceBlock.multiblock = false;
 				hasmastercheck = false;
 				// Constantly check if structure is formed until it is.
 				if (checkMultiBlockForm()){

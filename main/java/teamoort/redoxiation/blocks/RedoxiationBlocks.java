@@ -14,7 +14,7 @@ public class RedoxiationBlocks{
 	public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblend, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian,WoodenCog, StoneCog, IronCog;
 	public static Fluid HotAir, MoltenPigiron;
 	public static BlockFluidClassic HotAirBlock, MoltenPigironBlock;
-	public static Block BlastFurnaceBlock;
+	public static Block BlastFurnaceBlock, FloodFillBlock;
 	public static boolean CopperOre_cfg, TinOre_cfg, LeadOre_cfg, SilverOre_cfg, NickelOre_cfg, PlatinumOre_cfg, ZincOre_cfg, CobaltOre_cfg, ChromiumOre_cfg, Pitchblend_cfg;
     
 	public static void registerBlocks()
@@ -72,6 +72,7 @@ public class RedoxiationBlocks{
 		
 		//Machine
     	BlastFurnaceBlock = new BlastFurnaceBlock();
+    	FloodFillBlock = new FloodFillBlock();
 
     	//Registry
     	
@@ -116,6 +117,7 @@ public class RedoxiationBlocks{
     	GameRegistry.registerBlock(StoneCog, "StoneCog");
     	GameRegistry.registerBlock(IronCog, "IronCog");
     	GameRegistry.registerBlock(BlastFurnaceBlock,"BlastFurnaceBlock");
+    	GameRegistry.registerBlock(FloodFillBlock, "FloodFillBlock");
 
     	OreDictionary.registerOre("oreCopper", CopperOre);
     	OreDictionary.registerOre("oreTin", TinOre);

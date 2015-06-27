@@ -12,14 +12,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlastFurnaceBlock extends BlockContainer {
-    public static boolean multiblock = false;
-    public static boolean hm = false;
 
     public BlastFurnaceBlock() {
         super(Material.wood);
         setCreativeTab(Redoxiation.tabRedoxiation);
         setBlockName("BlastFurnaceBlock");
-        GameRegistry.registerTileEntity(TileBlastFurnaceBlock.class, Redoxiation.MODID + ".BlastFurnaceblock");
+        GameRegistry.registerTileEntity(TileBlastFurnaceBlock.class, Redoxiation.MODID + ".BlastFurnaceBlock");
     }
 
     @Override
