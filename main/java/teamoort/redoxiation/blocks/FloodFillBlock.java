@@ -20,10 +20,16 @@ public class FloodFillBlock extends BlockContainer{
 	
 	
 	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
+		
+	}
+	
+	public void onBlockAdded(World world, int x, int y, int z) {
 		TileFloodFillBlock tile = (TileFloodFillBlock)world.getTileEntity(x, y, z);
-		int print = tile.fill(x, y, z, 0);
+		int print = tile.fill(x, y, z, 0, 1);
+		tile.fill(x, y, z, 0, 0);
 		System.out.println("[INFO/REDOXIATION]" + " : " + print);
 	}
+	
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileFloodFillBlock();

@@ -11,37 +11,37 @@ public class TileFloodFillBlock extends TileEntity{
 	int ischeckpoint, state;
 	int chunknumber;
 	
-	public boolean checkstate(int x, int y, int z){
-		return ((worldObj.getBlock(x, y, z)==RedoxiationBlocks.FloodFillBlock)&&(((TileFloodFillBlock)worldObj.getTileEntity(x, y, z)).state==0));
+	public boolean checkstate(int x, int y, int z, int st){
+		return ((worldObj.getBlock(x, y, z)==RedoxiationBlocks.FloodFillBlock)&&(((TileFloodFillBlock)worldObj.getTileEntity(x, y, z)).state!=st));
 	}
 	
-	public int fill(int x, int y, int z, int checknum){
+	public int fill(int x, int y, int z, int checknum, int st){
 		checknum++;
 		TileEntity tile = worldObj.getTileEntity(x, y, z);
-		((TileFloodFillBlock)worldObj.getTileEntity(x, y, z)).state=1;
-		if (checkstate(x+1, y, z))
+		((TileFloodFillBlock)worldObj.getTileEntity(x, y, z)).state=st;
+		if (checkstate(x+1, y, z, st))
 		{
-			checknum = fill(x+1, y, z, checknum);
+			checknum = fill(x+1, y, z, checknum, st);
 		}
-		else if (checkstate(x-1, y, z))
+		else if (checkstate(x-1, y, z, st))
 		{
-			checknum = fill(x-1, y, z, checknum);
+			checknum = fill(x-1, y, z, checknum, st);
 		}
-		else if (checkstate(x, y+1, z))
+		else if (checkstate(x, y+1, z, st))
 		{
-			checknum = fill(x, y+1, z, checknum);
+			checknum = fill(x, y+1, z, checknum, st);
 		}
-		else if (checkstate(x, y-1, z))
+		else if (checkstate(x, y-1, z, st))
 		{
-			checknum = fill(x, y-1, z, checknum);
+			checknum = fill(x, y-1, z, checknum, st);
 		}
-		else if (checkstate(x, y, z+1))
+		else if (checkstate(x, y, z+1, st))
 		{
-			checknum = fill(x, y, z+1, checknum);
+			checknum = fill(x, y, z+1, checknum, st);
 		}
-		else if (checkstate(x, y, z-1))
+		else if (checkstate(x, y, z-1, st))
 		{
-			checknum = fill(x, y, z-1, checknum);
+			checknum = fill(x, y, z-1, checknum, st);
 		}
 		return checknum;
 	}
