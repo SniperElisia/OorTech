@@ -30,6 +30,10 @@ public class FloodFillBlock extends BlockContainer{
 		System.out.println("[INFO/REDOXIATION]" + " : " + print);
 	}
 	
+	public void breakBlock(World world, int x, int y, int z, Block block, int meta)
+    {
+		
+    }
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileFloodFillBlock();
