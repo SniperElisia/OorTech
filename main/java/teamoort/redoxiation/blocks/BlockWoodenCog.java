@@ -28,14 +28,6 @@ public class BlockWoodenCog extends BlockContainer{
 	}
 	
 	@Override
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
-	{
-		TileEntityWoodenCog tile = (TileEntityWoodenCog) world.getTileEntity(x, y, z);
-		tile.setRotation(tile.getRotation() + 0.06544984694978735913463840381832f);
-		return true;
-	}
-	
-	@Override
 	public String getUnlocalizedName()
 	{
 		return Redoxiation.MODID + ".WoodenCog";

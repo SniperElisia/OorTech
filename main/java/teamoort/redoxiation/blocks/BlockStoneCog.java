@@ -28,14 +28,6 @@ public class BlockStoneCog extends BlockContainer{
 	}
 	
 	@Override
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
-	{
-		TileEntityStoneCog tile = (TileEntityStoneCog) world.getTileEntity(x, y, z);
-		tile.setRotation(tile.getRotation() + 0.06544984694978735913463840381832f);
-		return true;
-	}
-	
-	@Override
 	public String getUnlocalizedName()
 	{
 		return Redoxiation.MODID + ".StoneCog";

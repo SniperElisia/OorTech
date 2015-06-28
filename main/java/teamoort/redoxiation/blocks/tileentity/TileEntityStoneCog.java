@@ -12,6 +12,7 @@ public class TileEntityStoneCog extends TileEntity {
 	
 	@Override
 	public void updateEntity() {
+		rotation += 0.06283185307179586476925286766559f;
 		if(rotation >= 6.283185307179586476925286766559f) {
 			rotation = rotation - 6.283185307179586476925286766559f;
 		}
