@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 public class TileFloodFillBlock extends TileEntity{
 	
-	int ischeckpoint, state;
+	int state;
 	int chunknumber;
 	
 	public boolean checkstate(int x, int y, int z, int st){
@@ -23,27 +23,86 @@ public class TileFloodFillBlock extends TileEntity{
 		{
 			checknum = fill(x+1, y, z, checknum, st);
 		}
-		else if (checkstate(x-1, y, z, st))
+		if (checkstate(x-1, y, z, st))
 		{
 			checknum = fill(x-1, y, z, checknum, st);
 		}
-		else if (checkstate(x, y+1, z, st))
+		if (checkstate(x, y+1, z, st))
 		{
 			checknum = fill(x, y+1, z, checknum, st);
 		}
-		else if (checkstate(x, y-1, z, st))
+		if (checkstate(x, y-1, z, st))
 		{
 			checknum = fill(x, y-1, z, checknum, st);
 		}
-		else if (checkstate(x, y, z+1, st))
+		if (checkstate(x, y, z+1, st))
 		{
 			checknum = fill(x, y, z+1, checknum, st);
 		}
-		else if (checkstate(x, y, z-1, st))
+		if (checkstate(x, y, z-1, st))
 		{
 			checknum = fill(x, y, z-1, checknum, st);
 		}
 		return checknum;
+	}
+	
+	public void reset (int x, int y, int z) {
+		if (checkstate(x+1, y, z, 1))
+		{
+			int print = fill(x+1, y, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x-1, y, z, 1))
+		{
+			int print = fill(x-1, y, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y+1, z, 1))
+		{
+			int print = fill(x, y+1, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y-1, z, 1))
+		{
+			int print = fill(x, y-1, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y, z+1, 1))
+		{
+			int print = fill(x, y, z+1, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y, z-1, 1))
+		{
+			int print = fill(x, y, z-1, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		
+		
+		if (checkstate(x+1, y, z, 0))
+		{
+			fill(x+1, y, z, 0, 0);
+		}
+		if (checkstate(x-1, y, z, 0))
+		{
+			fill(x-1, y, z, 0, 0);
+		}
+		if (checkstate(x, y+1, z, 0))
+		{
+			fill(x, y+1, z, 0, 0);
+		}
+		if (checkstate(x, y-1, z, 0))
+		{
+			fill(x, y-1, z, 0, 0);
+		}
+		if (checkstate(x, y, z+1, 0))
+		{
+			fill(x, y, z+1, 0, 0);
+		}
+		if (checkstate(x, y, z-1, 0))
+		{
+			fill(x, y, z-1, 0, 0);
+		}
 	}
 	
 	@Override

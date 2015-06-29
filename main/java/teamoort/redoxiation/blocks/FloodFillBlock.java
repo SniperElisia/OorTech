@@ -18,7 +18,6 @@ public class FloodFillBlock extends BlockContainer{
         GameRegistry.registerTileEntity(TileFloodFillBlock.class, Redoxiation.MODID + ".FloodFillBlock");
     }
 	
-	
 	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
 		
 	}
@@ -30,10 +29,11 @@ public class FloodFillBlock extends BlockContainer{
 		System.out.println("[INFO/REDOXIATION]" + " : " + print);
 	}
 	
-	public void breakBlock(World world, int x, int y, int z, Block block, int meta)
-    {
-		
-    }
+	public void onBlockPreDestroy(World world, int x, int y, int z, int meta) {
+		TileFloodFillBlock tile = (TileFloodFillBlock)world.getTileEntity(x, y, z);
+		tile.reset(x, y, z);
+	}
+	
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileFloodFillBlock();
