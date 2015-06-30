@@ -29,9 +29,69 @@ public class FloodFillBlock extends BlockContainer{
 		System.out.println("[INFO/REDOXIATION]" + " : " + print);
 	}
 	
-	public void onBlockPreDestroy(World world, int x, int y, int z, int meta) {
-		TileFloodFillBlock tile = (TileFloodFillBlock)world.getTileEntity(x, y, z);
-		tile.reset(x, y, z);
+	public void breakBlock(World world, int x, int y, int z, Block block, int meta){
+
+		if (checkstate(x+1, y, z, 1, world))
+		{
+			int print = ((TileFloodFillBlock)world.getTileEntity(x+1, y, z)).fill(x+1, y, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x-1, y, z, 1, world))
+		{
+			int print = ((TileFloodFillBlock)world.getTileEntity(x-1, y, z)).fill(x-1, y, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y+1, z, 1, world))
+		{
+			int print = ((TileFloodFillBlock)world.getTileEntity(x, y+1, z)).fill(x, y+1, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y-1, z, 1, world))
+		{
+			int print = ((TileFloodFillBlock)world.getTileEntity(x, y-1, z)).fill(x, y-1, z, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y, z+1, 1, world))
+		{
+			int print = ((TileFloodFillBlock)world.getTileEntity(x, y, z+1)).fill(x, y, z+1, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		if (checkstate(x, y, z-1, 1, world))
+		{
+			int print = ((TileFloodFillBlock)world.getTileEntity(x, y, z-1)).fill(x, y, z-1, 0, 1);
+			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+		}
+		
+		
+		if (checkstate(x+1, y, z, 0, world))
+		{
+			((TileFloodFillBlock)world.getTileEntity(x+1, y, z)).fill(x+1, y, z, 0, 0);
+		}
+		if (checkstate(x-1, y, z, 0, world))
+		{
+			((TileFloodFillBlock)world.getTileEntity(x-1, y, z)).fill(x-1, y, z, 0, 0);
+		}
+		if (checkstate(x, y+1, z, 0, world))
+		{
+			((TileFloodFillBlock)world.getTileEntity(x, y+1, z)).fill(x, y+1, z, 0, 0);
+		}
+		if (checkstate(x, y-1, z, 0, world))
+		{
+			((TileFloodFillBlock)world.getTileEntity(x, y-1, z)).fill(x, y-1, z, 0, 0);
+		}
+		if (checkstate(x, y, z+1, 0, world))
+		{
+			((TileFloodFillBlock)world.getTileEntity(x, y, z+1)).fill(x, y, z+1, 0, 0);
+		}
+		if (checkstate(x, y, z-1, 0, world))
+		{
+			((TileFloodFillBlock)world.getTileEntity(x, y, z-1)).fill(x, y, z-1, 0, 0);
+		}
+		
+	}
+	
+	public boolean checkstate(int x, int y, int z, int st, World world){
+		return ((world.getBlock(x, y, z)==RedoxiationBlocks.FloodFillBlock)&&(((TileFloodFillBlock)world.getTileEntity(x, y, z)).state()!=st));
 	}
 	
 	@Override
