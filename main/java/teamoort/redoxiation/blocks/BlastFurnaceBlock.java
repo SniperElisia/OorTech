@@ -12,18 +12,19 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlastFurnaceBlock extends BlockContainer {
+    public boolean multiblock = false;
 
     public BlastFurnaceBlock() {
         super(Material.wood);
         setCreativeTab(Redoxiation.tabRedoxiation);
         setBlockName("BlastFurnaceBlock");
-        GameRegistry.registerTileEntity(TileBlastFurnaceBlock.class, Redoxiation.MODID + ".BlastFurnaceBlock");
+        GameRegistry.registerTileEntity(TileBlastFurnaceBlock.class, Redoxiation.MODID + ".BlastFurnaceblock");
     }
 
     @Override
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
         TileEntity tile = world.getTileEntity(x, y, z);
-        if (tile != null && tile instanceof TileBlastFurnaceBlock) {
+        if (tile != null && (tile instanceof TileBlastFurnaceBlock)) {
             TileBlastFurnaceBlock multiBlock = (TileBlastFurnaceBlock) tile;
             if (multiBlock.hasMaster()) {
                 int mX = multiBlock.getMasterX();
@@ -36,21 +37,32 @@ public class BlastFurnaceBlock extends BlockContainer {
                 }
                 else {
                     if (!multiBlock.checkForMaster()) {
-                        multiBlock.reset();
-                        world.markBlockForUpdate(x, y, z);
                     }
                     else {
                     	TileBlastFurnaceBlock mastertile = (TileBlastFurnaceBlock) world.getTileEntity(mX, mY, mZ);
-                    	if (mastertile.isMaster()) {
-                    		if (!mastertile.checkMultiBlockForm()) {
-                    			mastertile.resetStructure();
-                    		}
-                    	}
+                        if(mastertile != null) {
+                            if (mastertile.isMaster()) {
+                                if (!mastertile.checkMultiBlockForm()) {
+                                    mastertile.resetStructure();
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
         super.onNeighborBlockChange(world, x, y, z, block);
+    }
+    @Override
+    public void breakBlock(World world, int x, int y, int z, Block block, int metadata) {
+        TileEntity tile = world.getTileEntity(x, y, z);
+        if (tile != null && (tile instanceof TileBlastFurnaceBlock)) {
+            TileBlastFurnaceBlock multiBlock = (TileBlastFurnaceBlock) tile;
+            if (multiBlock.isMaster()) {
+                multiBlock.resetStructure();
+            }
+        }
+        super.breakBlock(world, x, y, z, block, metadata);
     }
 
     @Override
@@ -60,18 +72,17 @@ public class BlastFurnaceBlock extends BlockContainer {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ) {
-        System.out.println("[INFO/REDOXIATION]" + " ; " + Redoxiation.oredif);
-        if((((TileBlastFurnaceBlock)world.getTileEntity(x, y, z)).hasMaster())) {
-            System.out.println("[INFO/REDOXIATION]" + " / " + Redoxiation.oredif);
-            if (world.isRemote) {
-                if (world.getTileEntity(x, y, z) != null) {
+        if (world.isRemote) {
+            if (world.getTileEntity(x, y, z) != null) {
+                if (multiblock) {
                     System.out.println("[INFO/REDOXIATION]" + " : " + Redoxiation.oredif);
                     player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
+                    return true;
                 }
-                return true;
             }
-            return true;
+            return false;
+        }else {
+                return multiblock;
         }
-        return false;
     }
 }
