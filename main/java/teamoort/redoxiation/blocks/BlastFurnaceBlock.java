@@ -12,6 +12,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlastFurnaceBlock extends BlockContainer {
+	
+	private boolean multiblock = false;
+	
+	public void setmultiblock(boolean bool) {
+		multiblock = bool;
+	}
 
     public BlastFurnaceBlock() {
         super(Material.wood);
@@ -60,14 +66,11 @@ public class BlastFurnaceBlock extends BlockContainer {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ) {
-        System.out.println("[INFO/REDOXIATION]" + " ; " + Redoxiation.oredif);
-        if((((TileBlastFurnaceBlock)world.getTileEntity(x, y, z)).hasMaster())) {
-            System.out.println("[INFO/REDOXIATION]" + " / " + Redoxiation.oredif);
+    	TileEntity tile = world.getTileEntity(x, y, z);
+    	boolean hasmaster = ((TileBlastFurnaceBlock)tile).hasMaster();
+        if(hasmaster) {
             if (world.isRemote) {
-                if (world.getTileEntity(x, y, z) != null) {
-                    System.out.println("[INFO/REDOXIATION]" + " : " + Redoxiation.oredif);
-                    player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
-                }
+            	player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
                 return true;
             }
             return true;
