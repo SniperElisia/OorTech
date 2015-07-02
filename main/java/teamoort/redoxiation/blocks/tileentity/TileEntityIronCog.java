@@ -9,10 +9,11 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityIronCog extends TileEntity {
 	private int volume = 0;
 	private float rotation = 0;
-	
+	private float angvel = 0;
+
 	@Override
 	public void updateEntity() {
-		rotation += 0.06283185307179586476925286766559f;
+		rotation += 0.3141592653589793238462643383279f*angvel;
 		if(rotation >= 6.283185307179586476925286766559f) {
 			rotation = rotation - 6.283185307179586476925286766559f;
 		}
