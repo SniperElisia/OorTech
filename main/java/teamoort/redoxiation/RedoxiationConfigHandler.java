@@ -38,11 +38,11 @@ public class RedoxiationConfigHandler {
     	
     	// Items Start
     	items.AluminaDust_enable = config.get(CATEGORY_ITEMS, "AluminaDust", true).getBoolean();
-    	items.AluminumIngot_enable = config.get(CATEGORY_ITEMS, "AluminumIngot", true).getBoolean();
+    	items.IngotAluminum_enable = config.get(CATEGORY_ITEMS, "IngotAluminum", true).getBoolean();
     	items.AluminumNugget_enable = config.get(CATEGORY_ITEMS, "AluminumNugget", true).getBoolean();
     	items.Calcite_enable = config.get(CATEGORY_ITEMS, "Calcite", true).getBoolean();
     	items.ChromiumDust_enable = config.get(CATEGORY_ITEMS, "ChromiumDust", true).getBoolean();
-    	items.ChromiumIngot_enable = config.get(CATEGORY_ITEMS, "ChroumiumIngot", true).getBoolean();
+    	items.IngotChromium_enable = config.get(CATEGORY_ITEMS, "ChroumiumIngot", true).getBoolean();
     	items.ChromiumNugget_enable = config.get(CATEGORY_ITEMS, "ChromiumNugget", true).getBoolean();
     	items.CobaltDust_enable = config.get(CATEGORY_ITEMS, "CoblatDust", true).getBoolean();
     	items.CobaltIngot_enable = config.get(CATEGORY_ITEMS, "CobaltIngot", true).getBoolean();

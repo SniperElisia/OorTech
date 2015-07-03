@@ -16,9 +16,9 @@ public class RedoxiationGenericItems extends Item{
 	private final String itemname;
 	private final String information;
 	
-	public static Item Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron, CrushedGold,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedNickel, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust, CopperDust, TinDust, LeadDust, SilverDust, NickelDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, CopperIngot, TinIngot, LeadIngot, SilverIngot, NickelIngot, PlatinumIngot, ZincIngot, CobaltIngot, ChromiumIngot, UraniumIngot, PlutoniumIngot, SteelIngot, AluminumIngot, TungstenIngot, TitaniumIngot, IronNugget, CopperNugget, TinNugget, LeadNugget, SilverNugget, PlatinumNugget, ZincNugget, NickelNugget, ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget, SteelNugget, SulfurChunk, SulfurDust, ItemCryolite, CrashedNetherrack, CrashedObsidian;
+	public static Item Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedIron, CrushedGold,  CrushedCopper, CrushedTin, CrushedLead, CrushedSilver, CrushedNickel, CrushedPlatinum, CrushedZinc,  CrushedChromium, IronDust, GoldDust, CopperDust, TinDust, LeadDust, SilverDust, NickelDust, PlatinumDust, ZincDust, CobaltDust, ChromiumDust, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, IngotCopper, IngotTin, IngotLead, IngotSilver, IngotNickel, IngotPlatinum, IngotZinc, IngotCobalt, IngotChromium, UraniumIngot, PlutoniumIngot, IngotSteel, IngotAluminum, IngotTungsten, IngotTitanium, IronNugget, CopperNugget, TinNugget, LeadNugget, SilverNugget, PlatinumNugget, ZincNugget, NickelNugget, ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget, SteelNugget, SulfurChunk, SulfurDust, ItemCryolite, CrashedNetherrack, CrashedObsidian;
 	public static boolean Calcite_enable, SaltChunk_enable, RawBauxite_enable, RawRutile_enable, RawScheelite_enable, CrushedIron_enable, CrushedGold_enable,  CrushedCopper_enable, CrushedTin_enable, CrushedLead_enable, CrushedSilver_enable, CrushedNickel_enable, CrushedPlatinum_enable, CrushedZinc_enable,  CrushedChromium_enable, IronDust_enable, GoldDust_enable, CopperDust_enable, TinDust_enable, LeadDust_enable, SilverDust_enable, NickelDust_enable, PlatinumDust_enable, ZincDust_enable, CobaltDust_enable, ChromiumDust_enable,
-	Salt_enable, AluminaDust_enable, TitanateDust_enable, TungstateDust_enable, PurifiedIron_enable, PurifiedGold_enable, PurifiedCopper_enable, PurifiedTin_enable, PurifiedLead_enable, PurifiedSilver_enable, PurifiedNickel_enable, PurifiedPlatinum_enable, PurifiedZinc_enable, PurifiedCobalt_enable, PurifiedChromium_enable, PurifiedAlumina_enable, PurifiedTitanate_enable, PurifiedTungstate_enable, RefinedIron_enable, RefinedGold_enable, RefinedCopper_enable, RefinedTin_enable, RefinedLead_enable, RefinedSilver_enable, RefinedNickel_enable, RefinedPlatinum_enable, RefinedZinc_enable, RefinedCobalt_enable, RefinedChromium_enable, RefinedAlumina_enable, RefinedTitanate_enable, RefinedTungstate_enable, CopperIngot_enable, TinIngot_enable, LeadIngot_enable, SilverIngot_enable, NickelIngot_enable, PlatinumIngot_enable, ZincIngot_enable, CobaltIngot_enable, ChromiumIngot_enable, UraniumIngot_enable, PlutoniumIngot_enable, SteelIngot_enable, AluminumIngot_enable, TungstenIngot_enable, TitaniumIngot_enable, IronNugget_enable, CopperNugget_enable, TinNugget_enable, LeadNugget_enable, SilverNugget_enable, PlatinumNugget_enable, ZincNugget_enable, NickelNugget_enable, ChromiumNugget_enable, AluminumNugget_enable, TitaniumNugget_enable, TungstenNugget_enable, SteelNugget_enable, SulfurChunk_enable, SulfurDust_enable, ItemCryolite_enable, CrashedNetherrack_enable, CrashedObsidian_enable;
+	Salt_enable, AluminaDust_enable, TitanateDust_enable, TungstateDust_enable, PurifiedIron_enable, PurifiedGold_enable, PurifiedCopper_enable, PurifiedTin_enable, PurifiedLead_enable, PurifiedSilver_enable, PurifiedNickel_enable, PurifiedPlatinum_enable, PurifiedZinc_enable, PurifiedCobalt_enable, PurifiedChromium_enable, PurifiedAlumina_enable, PurifiedTitanate_enable, PurifiedTungstate_enable, RefinedIron_enable, RefinedGold_enable, RefinedCopper_enable, RefinedTin_enable, RefinedLead_enable, RefinedSilver_enable, RefinedNickel_enable, RefinedPlatinum_enable, RefinedZinc_enable, RefinedCobalt_enable, RefinedChromium_enable, RefinedAlumina_enable, RefinedTitanate_enable, RefinedTungstate_enable, IngotCopper_enable, IngotTin_enable, IngotLead_enable, IngotSilver_enable, IngotNickel_enable, IngotPlatinum_enable, IngotZinc_enable, IngotCobalt_enable, IngotChromium_enable, UraniumIngot_enable, PlutoniumIngot_enable, IngotSteel_enable, IngotAluminum_enable, IngotTungsten_enable, IngotTitanium_enable, IronNugget_enable, CopperNugget_enable, TinNugget_enable, LeadNugget_enable, SilverNugget_enable, PlatinumNugget_enable, ZincNugget_enable, NickelNugget_enable, ChromiumNugget_enable, AluminumNugget_enable, TitaniumNugget_enable, TungstenNugget_enable, SteelNugget_enable, SulfurChunk_enable, SulfurDust_enable, ItemCryolite_enable, CrashedNetherrack_enable, CrashedObsidian_enable;
 	
 	public RedoxiationGenericItems(String name, String info)
 	{
@@ -74,12 +74,12 @@ public class RedoxiationGenericItems extends Item{
 			OreDictionary.registerOre("crushedGold", RedoxiationGenericItems.CrushedGold);
     	}
 		if(CrushedCopper_enable){
-			CrushedCopper = new RedoxiationGenericItems("CrushedCopper", "Cu");
+			CrushedCopper = new RedoxiationGenericItems("CrushedOreCopper", "Cu");
 			GameRegistry.registerItem(CrushedCopper, "CrushedCopper");
 			OreDictionary.registerOre("crushedCopper", RedoxiationGenericItems.CrushedCopper);
     	}
 		if(CrushedTin_enable){
-			CrushedTin = new RedoxiationGenericItems("CrushedTin", "Sn");
+			CrushedTin = new RedoxiationGenericItems("CrushedOreTin", "Sn");
 			GameRegistry.registerItem(CrushedTin, "CrushedTin");
 			OreDictionary.registerOre("crushedTin", RedoxiationGenericItems.CrushedTin);
     	}
@@ -313,70 +313,70 @@ public class RedoxiationGenericItems extends Item{
 			GameRegistry.registerItem(RefinedTungstate, "RefinedTungstate");
 			OreDictionary.registerOre("dustRefinedTungstate", RedoxiationGenericItems.RefinedTungstate);
     	}
-    	if(CopperIngot_enable){
-			CopperIngot = new RedoxiationGenericItems("CopperIngot", "Cu");
-			GameRegistry.registerItem(CopperIngot, "CopperIngot");
-			OreDictionary.registerOre("ingotCopper", RedoxiationGenericItems.CopperIngot);
+    	if(IngotCopper_enable){
+			IngotCopper = new RedoxiationGenericItems("IngotCopper", "Cu");
+			GameRegistry.registerItem(IngotCopper, "IngotCopper");
+			OreDictionary.registerOre("ingotCopper", RedoxiationGenericItems.IngotCopper);
     	}
-    	if(TinIngot_enable){
-			TinIngot = new RedoxiationGenericItems("TinIngot", "Sn");
-			GameRegistry.registerItem(TinIngot, "TinIngot");
-			OreDictionary.registerOre("ingotTin", RedoxiationGenericItems.TinIngot);
+    	if(IngotTin_enable){
+			IngotTin = new RedoxiationGenericItems("IngotTin", "Sn");
+			GameRegistry.registerItem(IngotTin, "IngotTin");
+			OreDictionary.registerOre("ingotTin", RedoxiationGenericItems.IngotTin);
     	}
-    	if(LeadIngot_enable){
-			LeadIngot = new RedoxiationGenericItems("LeadIngot", "Pb");
-			GameRegistry.registerItem(LeadIngot, "LeadIngot");
-			OreDictionary.registerOre("ingotLead", RedoxiationGenericItems.LeadIngot);
+    	if(IngotLead_enable){
+			IngotLead = new RedoxiationGenericItems("IngotLead", "Pb");
+			GameRegistry.registerItem(IngotLead, "IngotLead");
+			OreDictionary.registerOre("ingotLead", RedoxiationGenericItems.IngotLead);
 		}
-    	if(SilverIngot_enable){
-			SilverIngot = new RedoxiationGenericItems("SilverIngot", "Ag");
-			GameRegistry.registerItem(SilverIngot, "SilverIngot");
-			OreDictionary.registerOre("ingotSilver", RedoxiationGenericItems.SilverIngot);
+    	if(IngotSilver_enable){
+			IngotSilver = new RedoxiationGenericItems("IngotSilver", "Ag");
+			GameRegistry.registerItem(IngotSilver, "IngotSilver");
+			OreDictionary.registerOre("ingotSilver", RedoxiationGenericItems.IngotSilver);
     	}
-    	if(PlatinumIngot_enable){
-			PlatinumIngot = new RedoxiationGenericItems("PlatinumIngot", "Pt");	
-			GameRegistry.registerItem(PlatinumIngot, "PlatinumIngot");
-			OreDictionary.registerOre("ingotPlatinum", RedoxiationGenericItems.PlatinumIngot);
+    	if(IngotPlatinum_enable){
+			IngotPlatinum = new RedoxiationGenericItems("IngotPlatinum", "Pt");	
+			GameRegistry.registerItem(IngotPlatinum, "IngotPlatinum");
+			OreDictionary.registerOre("ingotPlatinum", RedoxiationGenericItems.IngotPlatinum);
     	}
-    	if(ZincIngot_enable){
-			ZincIngot = new RedoxiationGenericItems("ZincIngot", "Zn");
-			GameRegistry.registerItem(ZincIngot, "ZincIngot");
-			OreDictionary.registerOre("ingotZinc", RedoxiationGenericItems.ZincIngot);
+    	if(IngotZinc_enable){
+			IngotZinc = new RedoxiationGenericItems("IngotZinc", "Zn");
+			GameRegistry.registerItem(IngotZinc, "IngotZinc");
+			OreDictionary.registerOre("ingotZinc", RedoxiationGenericItems.IngotZinc);
     	}
-    	if(NickelIngot_enable){
-			NickelIngot = new RedoxiationGenericItems("NickelIngot", "Ni");
-			GameRegistry.registerItem(NickelIngot, "NickelIngot");
-			OreDictionary.registerOre("ingotNickel", RedoxiationGenericItems.NickelIngot);
+    	if(IngotNickel_enable){
+			IngotNickel = new RedoxiationGenericItems("IngotNickel", "Ni");
+			GameRegistry.registerItem(IngotNickel, "IngotNickel");
+			OreDictionary.registerOre("ingotNickel", RedoxiationGenericItems.IngotNickel);
     	}
-    	if(ChromiumIngot_enable){
-			ChromiumIngot = new RedoxiationGenericItems("ChromiumIngot", "Cr");
-			GameRegistry.registerItem(ChromiumIngot, "ChromiumIngot");
-			OreDictionary.registerOre("ingotChromium", RedoxiationGenericItems.ChromiumIngot);
+    	if(IngotChromium_enable){
+			IngotChromium = new RedoxiationGenericItems("IngotChromium", "Cr");
+			GameRegistry.registerItem(IngotChromium, "IngotChromium");
+			OreDictionary.registerOre("ingotChromium", RedoxiationGenericItems.IngotChromium);
     	}
-    	if(AluminumIngot_enable){
-			AluminumIngot = new RedoxiationGenericItems("AluminumIngot", "Al2O3");
-			GameRegistry.registerItem(AluminumIngot, "AluminumIngot");
-			OreDictionary.registerOre("ingotAluminumOort", RedoxiationGenericItems.AluminumIngot);
+    	if(IngotAluminum_enable){
+			IngotAluminum = new RedoxiationGenericItems("IngotAluminum", "Al2O3");
+			GameRegistry.registerItem(IngotAluminum, "IngotAluminum");
+			OreDictionary.registerOre("ingotAluminumOort", RedoxiationGenericItems.IngotAluminum);
     	}
-    	if(TitaniumIngot_enable){
-			TitaniumIngot = new RedoxiationGenericItems("TitaniumIngot", "TiO2");
-			GameRegistry.registerItem(TitaniumIngot, "TitaniumIngot");
-			OreDictionary.registerOre("ingotTitaniumOort", RedoxiationGenericItems.TitaniumIngot);
+    	if(IngotTitanium_enable){
+			IngotTitanium = new RedoxiationGenericItems("IngotTitanium", "TiO2");
+			GameRegistry.registerItem(IngotTitanium, "IngotTitanium");
+			OreDictionary.registerOre("ingotTitaniumOort", RedoxiationGenericItems.IngotTitanium);
     	}
-    	if(TungstenIngot_enable){
-			TungstenIngot = new RedoxiationGenericItems("TungstenIngot", "WO3");
-			GameRegistry.registerItem(TungstenIngot, "TungstenIngot");
-			OreDictionary.registerOre("ingotTungstenOort", RedoxiationGenericItems.TungstenIngot);
+    	if(IngotTungsten_enable){
+			IngotTungsten = new RedoxiationGenericItems("IngotTungsten", "WO3");
+			GameRegistry.registerItem(IngotTungsten, "IngotTungsten");
+			OreDictionary.registerOre("ingotTungstenOort", RedoxiationGenericItems.IngotTungsten);
 		}
-    	if(CobaltIngot_enable){
-			CobaltIngot = new RedoxiationGenericItems("CobaltIngot","Co");
-			GameRegistry.registerItem(CobaltIngot, "CobaltIngot");
-			OreDictionary.registerOre("ingotCobalt", RedoxiationGenericItems.CobaltIngot);
+    	if(IngotCobalt_enable){
+			IngotCobalt = new RedoxiationGenericItems("IngotCobalt","Co");
+			GameRegistry.registerItem(IngotCobalt, "IngotCobalt");
+			OreDictionary.registerOre("ingotCobalt", RedoxiationGenericItems.IngotCobalt);
     	}
-    	if(SteelIngot_enable){
-			SteelIngot = new RedoxiationGenericItems("SteelIngot");
-			GameRegistry.registerItem(SteelIngot, "SteelIngot");
-			OreDictionary.registerOre("ingotSteelOort", RedoxiationGenericItems.SteelIngot);
+    	if(IngotSteel_enable){
+			IngotSteel = new RedoxiationGenericItems("IngotSteel");
+			GameRegistry.registerItem(IngotSteel, "IngotSteel");
+			OreDictionary.registerOre("ingotSteelOort", RedoxiationGenericItems.IngotSteel);
     	}
     	if(IronNugget_enable){
 			IronNugget = new RedoxiationGenericItems("IronNugget", "Fe");
