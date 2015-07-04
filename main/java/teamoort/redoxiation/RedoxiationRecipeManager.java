@@ -24,9 +24,7 @@ public class RedoxiationRecipeManager {
 		GameRegistry.addSmelting(RedoxiationBlocks.Scheelite, new ItemStack(RedoxiationGenericItems.IngotTungsten,1,0), 0.1f);
 		
 		//Dust Smelting
-		GameRegistry.addSmelting(new ItemStack(RedoxiationGenericItems.CopperDust,1,0), new ItemStack(RedoxiationGenericItems.IngotCopper,1,0), 0.1f);
-		GameRegistry.addSmelting(new ItemStack(RedoxiationGenericItems.ChromiumDust,1,0), new ItemStack(RedoxiationGenericItems.IngotChromium,1,0), 0.1f);
-		GameRegistry.addSmelting(new ItemStack(RedoxiationGenericItems.CobaltDust,1,0), new ItemStack(RedoxiationGenericItems.IngotCobalt,1,0), 0.1f);
+		
 	}
 	
 	public static void recipeCrafting()
