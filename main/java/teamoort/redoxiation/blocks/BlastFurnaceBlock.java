@@ -63,7 +63,10 @@ public class BlastFurnaceBlock extends BlockContainer {
             if (world.getTileEntity(x, y, z) instanceof TileBlastFurnaceBlock) {
                 TileBlastFurnaceBlock tile = (TileBlastFurnaceBlock)world.getTileEntity(x, y, z);
                 if (tile.hasmastercheck) {
-                    player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
+                    int mx = tile.getMasterX();
+                    int my = tile.getMasterY();
+                    int mz = tile.getMasterZ();
+                    player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, mx, my, mz);
                     return true;
                 }
             }
