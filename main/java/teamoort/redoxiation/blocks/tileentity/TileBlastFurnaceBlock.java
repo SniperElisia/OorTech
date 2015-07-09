@@ -10,7 +10,6 @@ import teamoort.redoxiation.blocks.RedoxiationBlocks;
 
 public class TileBlastFurnaceBlock extends TileEntity {
 	private boolean hasMaster, isMaster;
-	public boolean hasmastercheck;
 	private int masterX, masterY, masterZ;
 	@Override
 	public void updateEntity() {
@@ -23,7 +22,7 @@ public class TileBlastFurnaceBlock extends TileEntity {
 							for (int z = zCoord - 1; z < zCoord + 2; z++)
 							{
 								if (worldObj.getBlock(x, y, z) == RedoxiationBlocks.BlastFurnaceBlock) {
-									hasmastercheck = true;
+									((BlastFurnaceBlock)(worldObj.getBlock(x, y, z))).setmultiblock(true);
 									BlastFurnaceBlock bfblock = (BlastFurnaceBlock)(worldObj.getBlock(x, y, z));
 									bfblock.setmultiblock(true);
 								}
@@ -33,9 +32,7 @@ public class TileBlastFurnaceBlock extends TileEntity {
 				}
 			}
 			else {
-				hasmastercheck = false;
-				BlastFurnaceBlock bfblock = (BlastFurnaceBlock)(worldObj.getBlock(xCoord, yCoord, zCoord));
-				bfblock.setmultiblock(false);
+				((BlastFurnaceBlock)(worldObj.getBlock(xCoord, yCoord, zCoord))).setmultiblock(false);
 				// Constantly check if structure is formed until it is.
 				if (checkMultiBlockForm()){
                     setupStructure();
