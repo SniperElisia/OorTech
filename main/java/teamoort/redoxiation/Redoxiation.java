@@ -98,6 +98,8 @@ public class Redoxiation
     	RedoxiationRecipeManager.recipeCrafting();
     	}
     	GameRegistry.registerWorldGenerator(handler, 0);
+        NetworkRegistry.INSTANCE.registerGuiHandler(Redoxiation.instance, GuiHandlerRegistry.getInstance());
+        GuiHandlerRegistry.getInstance().registerGuiHandler(new GuiHandler(), GuiHandler.getGuiID());
     	
     }
 

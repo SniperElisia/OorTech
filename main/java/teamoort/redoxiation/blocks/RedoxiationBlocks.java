@@ -12,8 +12,8 @@ import net.minecraftforge.oredict.OreDictionary;
 public class RedoxiationBlocks{
 	
 	public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre, PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblend, Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite, SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre, ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian, GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian, SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian, CobaltObsidian, ChromiumObsidian, UraniumObsidian, PlutoniumObsidian,WoodenCog, StoneCog, IronCog;
-	public static Fluid HotAir, MoltenPigiron;
-	public static BlockFluidClassic HotAirBlock, MoltenPigironBlock;
+	public static Fluid HotAir, MoltenPigiron, Slag;
+	public static BlockFluidClassic HotAirBlock, MoltenPigironBlock, SlagBlock;
 	public static Block BlastFurnaceBlock, FloodFillBlock;
 	public static boolean CopperOre_cfg, TinOre_cfg, LeadOre_cfg, SilverOre_cfg, NickelOre_cfg, PlatinumOre_cfg, ZincOre_cfg, CobaltOre_cfg, ChromiumOre_cfg, Pitchblend_cfg;
     
@@ -116,7 +116,7 @@ public class RedoxiationBlocks{
     	GameRegistry.registerBlock(WoodenCog, "WoodenCog");
     	GameRegistry.registerBlock(StoneCog, "StoneCog");
     	GameRegistry.registerBlock(IronCog, "IronCog");
-    	GameRegistry.registerBlock(BlastFurnaceBlock,"BlastFurnaceBlock");
+    	GameRegistry.registerBlock(BlastFurnaceBlock, "BlastFurnaceBlock");
     	GameRegistry.registerBlock(FloodFillBlock, "FloodFillBlock");
 
     	OreDictionary.registerOre("oreCopper", CopperOre);
@@ -161,20 +161,26 @@ public class RedoxiationBlocks{
         //Fluids
         HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(-10).setTemperature(1473).setViscosity(2000).setGaseous(true);
         MoltenPigiron = new Fluid("MoltenPigiron").setLuminosity(15).setDensity(7874).setTemperature(1900).setViscosity(2000).setGaseous(false);
+        Slag = new Fluid("Slag").setLuminosity(15).setDensity(7874).setTemperature(1900).setViscosity(2000).setGaseous(false);
         
         //Fluid Registry
         FluidRegistry.registerFluid(HotAir);
         FluidRegistry.registerFluid(MoltenPigiron);
+        FluidRegistry.registerFluid(Slag);
         
         //Block Fluids
         HotAirBlock = (BlockFluidClassic) new BlockHotAir(HotAir, Material.lava).setBlockName("HotAir");
         MoltenPigironBlock = (BlockFluidClassic) new BlockMoltenPigiron(MoltenPigiron, Material.lava).setBlockName("MoltenPigiron");
+        SlagBlock = (BlockFluidClassic) new BlockSlag(Slag, Material.lava).setBlockName("Slag");
         
         //Block Fluids Registry
         GameRegistry.registerBlock(HotAirBlock, "FluidHotAir");
         GameRegistry.registerBlock(MoltenPigironBlock, "FluidMoltenPigiron");
+        GameRegistry.registerBlock(SlagBlock, "FluidSlag");
+
         HotAir.setUnlocalizedName(HotAirBlock.getUnlocalizedName());
         MoltenPigiron.setUnlocalizedName(MoltenPigironBlock.getUnlocalizedName());
+        Slag.setUnlocalizedName(Slag.getUnlocalizedName());
         
         Redoxiation.logger.info("Block Registry Complete. Starting Tileentity proxy.");
 	}
