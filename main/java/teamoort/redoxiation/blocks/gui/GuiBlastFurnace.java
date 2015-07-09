@@ -42,12 +42,12 @@ public class GuiBlastFurnace extends GuiContainer {
     final int COOK_BAR_WIDTH = 68;
     final int COOK_BAR_HEIGHT = 46;
 
-    final int FLAME_XPOS = 0;
-    final int FLAME_YPOS = 0;
-    final int FLAME_ICON_U = 0;   // texture position of flame icon
-    final int FLAME_ICON_V = 0;
-    final int FLAME_WIDTH = 0;
-    final int FLAME_HEIGHT = 0;
+    final int FLAME_XPOS = 65;
+    final int FLAME_YPOS = 116;
+    final int FLAME_ICON_U = 176;   // texture position of flame icon
+    final int FLAME_ICON_V = 46;
+    final int FLAME_WIDTH = 14;
+    final int FLAME_HEIGHT = 14;
     final int FLAME_X_SPACING = 0;
 
     @Override
@@ -66,12 +66,12 @@ public class GuiBlastFurnace extends GuiContainer {
                 (int)(cookProgress * COOK_BAR_WIDTH), COOK_BAR_HEIGHT);
 
         // draw the fuel remaining bar for each fuel slot flame
-//        for (int i = 0; i < tileEntity.FUEL_SLOTS_COUNT; ++i) {
-//            double burnRemaining = tileEntity.fractionOfFuelRemaining(i);
-//            int yOffset = (int)((1.0 - burnRemaining) * FLAME_HEIGHT);
-//            drawTexturedModalRect(guiLeft + FLAME_XPOS + FLAME_X_SPACING * i, guiTop + FLAME_YPOS + yOffset,
-//                    FLAME_ICON_U, FLAME_ICON_V + yOffset, FLAME_WIDTH, FLAME_HEIGHT - yOffset);
-//        }
+        for (int i = 0; i < tileEntity.FUEL_SLOTS_COUNT; ++i) {
+            double burnRemaining = tileEntity.fractionOfFuelRemaining(i);
+            int yOffset = (int)((1.0 - burnRemaining) * FLAME_HEIGHT);
+            drawTexturedModalRect(guiLeft + FLAME_XPOS + FLAME_X_SPACING * i, guiTop + FLAME_YPOS + yOffset,
+                    FLAME_ICON_U, FLAME_ICON_V + yOffset, FLAME_WIDTH, FLAME_HEIGHT - yOffset);
+        }
     }
 
     @Override

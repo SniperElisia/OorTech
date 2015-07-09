@@ -7,8 +7,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagIntArray;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
@@ -22,203 +20,11 @@ import teamoort.redoxiation.BlastFurnaceRecipes;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
 
-import java.util.Arrays;
-
-public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUpdatePlayerListBox{
-	private boolean hasMaster, isMaster;
-    public boolean hasmastercheck;
-	private int masterX, masterY, masterZ;
-
-    @Override
-    public void updateEntity() {
-        if (!worldObj.isRemote) {
-            if (hasMaster()) {
-                hasmastercheck = true;
-                if (isMaster()) {
-                    if (!checkMultiBlockForm()) {
-                        resetStructure();
-                    }
-                }
-            } else {
-                // Constantly check if structure is formed until it is.
-                if (checkMultiBlockForm()) {
-                    setupStructure();
-                }
-            }
-        }
-    }
-
-    /** Check that structure is properly formed */
-	public boolean checkMultiBlockForm() {
-		int i = 0;
-		// Scan a 3x3x3 area, starting with the bottom left corner
-		for (int x = xCoord - 1; x < xCoord + 2; x++)
-			for (int y = yCoord; y < yCoord + 3; y++)
-				for (int z = zCoord - 1; z < zCoord + 2; z++) {
-					TileEntity tile = worldObj.getTileEntity(x, y, z);
-					// Make sure tile isn't null, is an instance of the same Tile, and isn't already a part of a multiblock
-					if (tile != null && (tile instanceof TileBlastFurnaceBlock)) {
-						if (this.isMaster()) {
-							if (((TileBlastFurnaceBlock)tile).hasMaster())
-								i++;
-						} else if (!((TileBlastFurnaceBlock)tile).hasMaster())
-							i++;
-					}
-				}
-		// check if there are 26 blocks present ((3*3*3) - 1) and check that center block is empty
-		return i > 25 && worldObj.isAirBlock(xCoord, yCoord + 1, zCoord);
-	}
- 
-    /** Setup all the blocks in the structure*/
-    public void setupStructure() {
-        for (int x = xCoord - 1; x < xCoord + 2; x++)
-            for (int y = yCoord; y < yCoord + 3; y++)
-                for (int z = zCoord - 1; z < zCoord + 2; z++) {
-                    TileEntity tile = worldObj.getTileEntity(x, y, z);
-                    // Check if block is bottom center block
-                    boolean master = (x == xCoord && y == yCoord && z == zCoord);
-                    if (tile != null && (tile instanceof TileBlastFurnaceBlock)) {
-                        ((TileBlastFurnaceBlock) tile).setMasterCoords(xCoord, yCoord, zCoord);
-                        ((TileBlastFurnaceBlock) tile).setHasMaster(true);
-                        ((TileBlastFurnaceBlock) tile).setIsMaster(master);
-                        ((TileBlastFurnaceBlock) tile).hasmastercheck = true;
-                    }
-                }
-    }
- 
-    /** Reset method to be run when the master is gone or tells them to */
-    public void reset() {
-        masterX = 0;
-        masterY = 0;
-        masterZ = 0;
-        hasMaster = false;
-        isMaster = false;
-        hasmastercheck = false;
-    }
- 
-    /** Check that the master exists */
-    public boolean checkForMaster() {
-        TileEntity tile = worldObj.getTileEntity(masterX, masterY, masterZ);
-        return (tile != null && (tile instanceof TileBlastFurnaceBlock));
-    }
-    
-    /** Reset all the parts of the structure */
-    public void resetStructure() {
-        for (int x = xCoord - 1; x < xCoord + 2; x++) {
-            for (int y = yCoord; y < yCoord + 3; y++) {
-                for (int z = zCoord - 1; z < zCoord + 2; z++) {
-                    TileEntity tile = worldObj.getTileEntity(x, y, z);
-                    if (tile != null && (tile instanceof TileBlastFurnaceBlock)) {
-                        ((TileBlastFurnaceBlock) tile).reset();
-                    }
-                }
-            }
-        }
-    }
- 
-    @Override
-    public void writeToNBT(NBTTagCompound data) {
-        super.writeToNBT(data);
-        data.setInteger("masterX", masterX);
-        data.setInteger("masterY", masterY);
-        data.setInteger("masterZ", masterZ);
-        data.setBoolean("hasMaster", hasMaster);
-        data.setBoolean("isMaster", isMaster);
-        if (hasMaster() && isMaster()) {
-            // Any other values should ONLY BE SAVED TO THE MASTER
-        }
-        // Save the stored item stacks
-
-        // to use an analogy with Java, this code generates an array of hashmaps
-        // The itemStack in each slot is converted to an NBTTagCompound, which is effectively a hashmap of key->value pairs such
-        //   as slot=1, id=2353, count=1, etc
-        // Each of these NBTTagCompound are then inserted into NBTTagList, which is similar to an array.
-        NBTTagList dataForAllSlots = new NBTTagList();
-        for (int i = 0; i < this.itemStacks.length; ++i) {
-            if (this.itemStacks[i] != null) {
-                NBTTagCompound dataForThisSlot = new NBTTagCompound();
-                dataForThisSlot.setByte("Slot", (byte) i);
-                this.itemStacks[i].writeToNBT(dataForThisSlot);
-                dataForAllSlots.appendTag(dataForThisSlot);
-            }
-        }
-        // the array of hashmaps is then inserted into the parent hashmap for the container
-        data.setTag("Items", dataForAllSlots);
-
-        // Save everything else
-        data.setShort("CookTime", cookTime);
-        data.setTag("burnTimeRemaining", new NBTTagIntArray(burnTimeRemaining));
-        data.setTag("burnTimeInitial", new NBTTagIntArray(burnTimeInitialValue));
-    }
-
-    @Override
-    public void readFromNBT(NBTTagCompound data) {
-        super.readFromNBT(data);
-        masterX = data.getInteger("masterX");
-        masterY = data.getInteger("masterY");
-        masterZ = data.getInteger("masterZ");
-        hasMaster = data.getBoolean("hasMaster");
-        isMaster = data.getBoolean("isMaster");
-        if (hasMaster() && isMaster()) {
-            // Any other values should ONLY BE READ BY THE MASTER
-        }
-        final byte NBT_TYPE_COMPOUND = 10;       // See NBTBase.createNewByType() for a listing
-        NBTTagList dataForAllSlots = data.getTagList("Items", NBT_TYPE_COMPOUND);
-
-        Arrays.fill(itemStacks, null);           // set all slots to empty
-        for (int i = 0; i < dataForAllSlots.tagCount(); ++i) {
-            NBTTagCompound dataForOneSlot = dataForAllSlots.getCompoundTagAt(i);
-            byte slotNumber = dataForOneSlot.getByte("Slot");
-            if (slotNumber >= 0 && slotNumber < this.itemStacks.length) {
-                this.itemStacks[slotNumber] = ItemStack.loadItemStackFromNBT(dataForOneSlot);
-            }
-        }
-
-        // Load everything else.  Trim the arrays (or pad with 0) to make sure they have the correct number of elements
-        cookTime = data.getShort("CookTime");
-        burnTimeRemaining = Arrays.copyOf(data.getIntArray("burnTimeRemaining"), FUEL_SLOTS_COUNT);
-        burnTimeInitialValue = Arrays.copyOf(data.getIntArray("burnTimeInitial"), FUEL_SLOTS_COUNT);
-        cachedNumberOfBurningSlots = -1;
-    }
- 
-    public boolean hasMaster() {
-        return hasMaster;
-    }
- 
-    public boolean isMaster() {
-        return isMaster;
-    }
- 
-    public int getMasterX() {
-        return masterX;
-    }
- 
-    public int getMasterY() {
-        return masterY;
-    }
- 
-    public int getMasterZ() {
-        return masterZ;
-    }
- 
-    public void setHasMaster(boolean bool) {
-        hasMaster = bool;
-    }
- 
-    public void setIsMaster(boolean bool) {
-        isMaster = bool;
-    }
- 
-    public void setMasterCoords(int x, int y, int z) {
-        masterX = x;
-        masterY = y;
-        masterZ = z;
-    }
-
+public class TileMachine extends TileEntity implements IInventory, IUpdatePlayerListBox{
     // Create and initialize the itemStacks variable that will store store the itemStacks
     public static final int FUEL_SLOTS_COUNT = 1;
-    public static final int INPUT_SLOTS_COUNT = 3;
-    public static final int OUTPUT_SLOTS_COUNT = 2;
+    public static final int INPUT_SLOTS_COUNT = 1;
+    public static final int OUTPUT_SLOTS_COUNT = 1;
     public static final int TOTAL_SLOTS_COUNT = FUEL_SLOTS_COUNT + INPUT_SLOTS_COUNT + OUTPUT_SLOTS_COUNT;
 
     public static final int FIRST_FUEL_SLOT = 0;
@@ -384,68 +190,8 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
      */
     private boolean smeltItem(boolean performSmelt)
     {
-        boolean hasIronOre = false;
-        boolean hasCarbon = false;
-        boolean hasCalcite = false;
-
-        // finds the first input slot which is smeltable and whose result fits into an output slot (stacking if possible)
-        for (int inputSlot = FIRST_INPUT_SLOT; inputSlot < FIRST_INPUT_SLOT + INPUT_SLOTS_COUNT; inputSlot++) {
-            if (itemStacks[inputSlot] != null) {
-                if (itemStacks[inputSlot].getItem() == Item.getItemFromBlock(Blocks.iron_ore)) {
-                    hasIronOre = true;
-                }
-                if (itemStacks[inputSlot].getItem() == Items.coal){
-                    hasCarbon = true;
-                }
-                if (itemStacks[inputSlot].getItem() == RedoxiationGenericItems.Calcite){
-                    hasCalcite = true;
-                }
-//                    // find the first suitable output slot- either empty, or with identical item that has enough space
-//                    for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot < FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++) {
-//                        ItemStack outputStack = itemStacks[outputSlot];
-//                        if (outputStack == null) {
-//                            firstSuitableInputSlot = inputSlot;
-//                            firstSuitableOutputSlot = outputSlot;
-//                            break;
-//                        }
-//
-//                        if (outputStack.getItem() == result.getItem() && (!outputStack.getHasSubtypes())
-//                                && ItemStack.areItemStackTagsEqual(outputStack, result)) {
-//                            int combinedSize = itemStacks[outputSlot].stackSize + result.stackSize;
-//                            if (combinedSize <= getInventoryStackLimit() && combinedSize <= itemStacks[outputSlot].getMaxStackSize()) {
-//                                firstSuitableInputSlot = inputSlot;
-//                                firstSuitableOutputSlot = outputSlot;
-//                                break;
-//                            }
-//                        }
-//                    }
-            }
-        }
-
         if (!performSmelt) {
             return true;
-        }
-
-        if (!(hasIronOre && hasCarbon && hasCalcite)) {
-            return false;
-        } else {
-            for (int inputSlot = FIRST_INPUT_SLOT; inputSlot < FIRST_INPUT_SLOT + INPUT_SLOTS_COUNT; inputSlot++) {
-                itemStacks[inputSlot].stackSize--;
-                if (itemStacks[inputSlot].stackSize <=0) {
-                    itemStacks[inputSlot] = null;
-                }
-                for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot<FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++){
-                    if (itemStacks[outputSlot] == null) {
-                        if (outputSlot == FIRST_OUTPUT_SLOT){
-                            itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.MoltenPigironBlock);
-                        } else {
-                            itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.SlagBlock);
-                        }
-                    } else {
-                        ++itemStacks[outputSlot].stackSize;
-                    }
-                }
-            }
         }
         markDirty();
         return true;
@@ -577,7 +323,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
     // will add a key for this container to the lang file so we can name it in the GUI
     @Override
     public String getInventoryName() {
-        return "BlastFurnace";
+        return "Machine";
     }
 
     @Override
