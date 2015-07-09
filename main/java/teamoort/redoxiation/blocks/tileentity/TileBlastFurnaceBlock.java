@@ -19,7 +19,6 @@ import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import teamoort.redoxiation.BlastFurnaceRecipes;
-import teamoort.redoxiation.blocks.BlastFurnaceBlock;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
 
@@ -30,9 +29,12 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
     public boolean hasmastercheck;
 	private int masterX, masterY, masterZ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private boolean hasmastercheck;
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 6371d01... 윽
 
     @Override
     public void updateEntity() {
@@ -73,7 +75,10 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
 				((BlastFurnaceBlock)(worldObj.getBlock(xCoord, yCoord, zCoord))).setmultiblock(false);
 				// Constantly check if structure is formed until it is.
 				if (checkMultiBlockForm()){
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 6371d01... 윽
 >>>>>>> origin/master
                     setupStructure();
             }
@@ -211,10 +216,6 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
         burnTimeRemaining = Arrays.copyOf(data.getIntArray("burnTimeRemaining"), FUEL_SLOTS_COUNT);
         burnTimeInitialValue = Arrays.copyOf(data.getIntArray("burnTimeInitial"), FUEL_SLOTS_COUNT);
         cachedNumberOfBurningSlots = -1;
-    }
-    
-    public boolean hasmastercheck() {
-    	return hasmastercheck;
     }
  
     public boolean hasMaster() {

@@ -12,8 +12,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BlastFurnaceBlock extends BlockContainer {
-	
-	private boolean multiblock;
 
     public BlastFurnaceBlock() {
         super(Material.wood);
@@ -64,7 +62,7 @@ public class BlastFurnaceBlock extends BlockContainer {
         if (!world.isRemote) {
             if (world.getTileEntity(x, y, z) instanceof TileBlastFurnaceBlock) {
                 TileBlastFurnaceBlock tile = (TileBlastFurnaceBlock)world.getTileEntity(x, y, z);
-                if (tile.hasmastercheck()) {
+                if (tile.hasmastercheck) {
                     player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, x, y, z);
                     return true;
                 }
@@ -72,9 +70,5 @@ public class BlastFurnaceBlock extends BlockContainer {
             return false;
         }
         return true;
-    }
-    
-    public void setmultiblock(boolean bool) {
-    	multiblock = bool;
     }
 }
