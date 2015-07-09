@@ -27,8 +27,12 @@ import java.util.Arrays;
 
 public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUpdatePlayerListBox{
 	private boolean hasMaster, isMaster;
+    public boolean hasmastercheck;
 	private int masterX, masterY, masterZ;
+<<<<<<< HEAD
 	private boolean hasmastercheck;
+=======
+>>>>>>> origin/master
 
     @Override
     public void updateEntity() {
@@ -43,6 +47,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
             } else {
                 // Constantly check if structure is formed until it is.
                 if (checkMultiBlockForm())
+<<<<<<< HEAD
 =======
 	@Override
 	public void updateEntity() {
@@ -68,20 +73,9 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
 				((BlastFurnaceBlock)(worldObj.getBlock(xCoord, yCoord, zCoord))).setmultiblock(false);
 				// Constantly check if structure is formed until it is.
 				if (checkMultiBlockForm()){
+=======
+>>>>>>> origin/master
                     setupStructure();
-            }
-        }
-    }
-
-    public void setHasmastercheck(boolean hasmastercheck) {
-        for (int x = xCoord - 1; x < xCoord + 2; x++){
-            for (int y = yCoord; y < yCoord + 3; y++){
-                for (int z = zCoord - 1; z < zCoord + 2; z++)
-                {
-                    if (worldObj.getTileEntity(x, y, z) instanceof TileBlastFurnaceBlock) {
-                        ((TileBlastFurnaceBlock)worldObj.getTileEntity(x, y, z)).hasmastercheck = hasmastercheck;
-                    }
-                }
             }
         }
     }
