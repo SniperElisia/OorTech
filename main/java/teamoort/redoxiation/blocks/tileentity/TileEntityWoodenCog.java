@@ -1,5 +1,6 @@
 package teamoort.redoxiation.blocks.tileentity;
 
+import teamoort.redoxiation.Redoxiation;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -14,9 +15,9 @@ public class TileEntityWoodenCog extends TileEntity{
 
 	@Override
 	public void updateEntity() {
-		if (chunknumber() != 0)
+		if (chunknumber != 0)
 		{
-			angvel = ((float)20)/chunknumber();
+			angvel = 1/((float)chunknumber);
 		}
 		else {
 			angvel = 0;
@@ -120,7 +121,8 @@ public class TileEntityWoodenCog extends TileEntity{
 	public int setfill(int x, int y, int z, int checknum, int st){
 		TileEntity tile = worldObj.getTileEntity(x, y, z);
 		((TileEntityWoodenCog)tile).state = st;
-		((TileEntityWoodenCog)tile).setchunknumber(checknum);
+		((TileEntityWoodenCog)tile).chunknumber = checknum;
+		System.out.println(chunknumber);
 		if (checkstate(x+1, y, z, st))
 		{
 			fill(x+1, y, z, checknum, st);
