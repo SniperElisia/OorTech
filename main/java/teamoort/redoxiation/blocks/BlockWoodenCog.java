@@ -58,68 +58,69 @@ public class BlockWoodenCog extends BlockContainer{
 	
 	public void onBlockAdded(World world, int x, int y, int z) {
 		TileEntityWoodenCog tile = (TileEntityWoodenCog)world.getTileEntity(x, y, z);
-		int print = tile.fill(x, y, z, 0, 1);
+		tile.fill(x, y, z, 0, 1);
 		tile.fill(x, y, z, 0, 0);
-		System.out.println("[INFO/REDOXIATION]" + " : " + print);
 	}
 	
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta){
+		
+		int check = 0;
 
 		if (checkstate(x+1, y, z, 1, world))
 		{
-			int print = ((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).fill(x+1, y, z, 0, 1);
-			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+			((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).fill(x+1, y, z, 0, 1);
 		}
 		if (checkstate(x-1, y, z, 1, world))
 		{
-			int print = ((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).fill(x-1, y, z, 0, 1);
-			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+			((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).fill(x-1, y, z, 0, 1);
 		}
 		if (checkstate(x, y+1, z, 1, world))
 		{
-			int print = ((TileEntityWoodenCog)world.getTileEntity(x, y+1, z)).fill(x, y+1, z, 0, 1);
-			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+			((TileEntityWoodenCog)world.getTileEntity(x, y+1, z)).fill(x, y+1, z, 0, 1);
 		}
 		if (checkstate(x, y-1, z, 1, world))
 		{
-			int print = ((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).fill(x, y-1, z, 0, 1);
-			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+			((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).fill(x, y-1, z, 0, 1);
 		}
 		if (checkstate(x, y, z+1, 1, world))
 		{
-			int print = ((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).fill(x, y, z+1, 0, 1);
-			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+			((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).fill(x, y, z+1, 0, 1);
 		}
 		if (checkstate(x, y, z-1, 1, world))
 		{
-			int print = ((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).fill(x, y, z-1, 0, 1);
-			System.out.println("[INFO/REDOXIATION]" + " : " + print);
+			((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).fill(x, y, z-1, 0, 1);
 		}
 		
 		
 		if (checkstate(x+1, y, z, 0, world))
 		{
-			((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).fill(x+1, y, z, 0, 0);
+			check = ((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).chunknumber();
+			((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).setfill(x+1, y, z, check, 0);
 		}
 		if (checkstate(x-1, y, z, 0, world))
 		{
-			((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).fill(x-1, y, z, 0, 0);
+			check = ((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).chunknumber();
+			((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).setfill(x-1, y, z, check, 0);
 		}
 		if (checkstate(x, y+1, z, 0, world))
 		{
-			((TileEntityWoodenCog)world.getTileEntity(x, y+1, z)).fill(x, y+1, z, 0, 0);
+			check = ((TileEntityWoodenCog)world.getTileEntity(x, y+1, z)).chunknumber();
+			((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).setfill(x, y+1, z, check, 0);
 		}
 		if (checkstate(x, y-1, z, 0, world))
 		{
-			((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).fill(x, y-1, z, 0, 0);
+			check = ((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).chunknumber();
+			((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).setfill(x, y-1, z, check, 0);
 		}
 		if (checkstate(x, y, z+1, 0, world))
 		{
-			((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).fill(x, y, z+1, 0, 0);
+			check = ((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).chunknumber();
+			((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).setfill(x, y, z+1, check, 0);
 		}
 		if (checkstate(x, y, z-1, 0, world))
 		{
-			((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).fill(x, y, z-1, 0, 0);
+			check = ((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).chunknumber();
+			((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).setfill(x, y, z-1, check, 0);
 		}
 		
 	}
