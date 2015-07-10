@@ -17,7 +17,7 @@ public class TileEntityWoodenCog extends TileEntity{
 	public void updateEntity() {
 		if (chunknumber != 0)
 		{
-			angvel = 1/((float)chunknumber);
+			angvel = 6.283185307179586476925286766559f/((float)chunknumber);
 		}
 		else {
 			angvel = 0;
@@ -49,14 +49,16 @@ public class TileEntityWoodenCog extends TileEntity{
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 		rotation = compound.getFloat("rotation");
-        setchunknumber(compound.getInteger("chunknumber"));
+		angvel = compound.getFloat("angvel");
+        chunknumber = compound.getInteger("chunknumber");
 	}
 
 	@Override
 	public void writeToNBT(NBTTagCompound compound) {
 		super. writeToNBT(compound);
 		compound.setFloat("rotation", rotation);
-        compound.setInteger("chunknumber", chunknumber());
+		compound.setFloat("angvel", angvel);
+        compound.setInteger("chunknumber", chunknumber);
 	}
 
 	//Server<->Client
@@ -75,8 +77,8 @@ public class TileEntityWoodenCog extends TileEntity{
 	}
 	
 	//FloodFill
-	int state;
-	private int chunknumber=0;
+	private int state;
+	private int chunknumber = 0;
 	
 	public boolean checkstate(int x, int y, int z, int st){
 		return ((worldObj.getBlock(x, y, z)==RedoxiationBlocks.WoodenCog)&&(((TileEntityWoodenCog)worldObj.getTileEntity(x, y, z)).state!=st));
@@ -120,32 +122,31 @@ public class TileEntityWoodenCog extends TileEntity{
 	
 	public int setfill(int x, int y, int z, int checknum, int st){
 		TileEntity tile = worldObj.getTileEntity(x, y, z);
-		((TileEntityWoodenCog)tile).state = st;
-		((TileEntityWoodenCog)tile).chunknumber = checknum;
-		System.out.println(chunknumber);
+		((TileEntityWoodenCog)tile).setstate(st);
+		((TileEntityWoodenCog)tile).setchunknumber(checknum);
 		if (checkstate(x+1, y, z, st))
 		{
-			fill(x+1, y, z, checknum, st);
+			setfill(x+1, y, z, checknum, st);
 		}
 		if (checkstate(x-1, y, z, st))
 		{
-			fill(x-1, y, z, checknum, st);
+			setfill(x-1, y, z, checknum, st);
 		}
 		if (checkstate(x, y+1, z, st))
 		{
-			fill(x, y+1, z, checknum, st);
+			setfill(x, y+1, z, checknum, st);
 		}
 		if (checkstate(x, y-1, z, st))
 		{
-			fill(x, y-1, z, checknum, st);
+			setfill(x, y-1, z, checknum, st);
 		}
 		if (checkstate(x, y, z+1, st))
 		{
-			fill(x, y, z+1, checknum, st);
+			setfill(x, y, z+1, checknum, st);
 		}
 		if (checkstate(x, y, z-1, st))
 		{
-			fill(x, y, z-1, checknum, st);
+			setfill(x, y, z-1, checknum, st);
 		}
 		return checknum;
 	}
@@ -156,5 +157,9 @@ public class TileEntityWoodenCog extends TileEntity{
 
 	public void setchunknumber(int chunknumber) {
 		this.chunknumber = chunknumber;
+	}
+	
+	public void setstate(int state) {
+		this.state = state;
 	}
 }
