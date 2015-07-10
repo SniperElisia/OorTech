@@ -1,5 +1,6 @@
 package teamoort.redoxiation.blocks.tileentity;
 
+import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
@@ -40,12 +41,14 @@ public class TileEntityWoodenCog extends TileEntity{
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 		rotation = compound.getFloat("rotation");
+        chunknumber = compound.getInteger("chunknumber");
 	}
 
 	@Override
 	public void writeToNBT(NBTTagCompound compound) {
 		super. writeToNBT(compound);
 		compound.setFloat("rotation", rotation);
+        compound.setInteger("chunknumber", chunknumber);
 	}
 
 	//Server<->Client
@@ -61,5 +64,48 @@ public class TileEntityWoodenCog extends TileEntity{
 	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
 		NBTTagCompound tag = pkt.func_148857_g();
 		this.readFromNBT(tag);
+	}
+	
+	//FloodFill
+	int state;
+	int chunknumber;
+	
+	public boolean checkstate(int x, int y, int z, int st){
+		return ((worldObj.getBlock(x, y, z)==RedoxiationBlocks.WoodenCog)&&(((TileEntityWoodenCog)worldObj.getTileEntity(x, y, z)).state!=st));
+	}
+	
+	public int state(){
+		return state;
+	}
+	
+	public int fill(int x, int y, int z, int checknum, int st){
+		checknum++;
+		TileEntity tile = worldObj.getTileEntity(x, y, z);
+		((TileEntityWoodenCog)worldObj.getTileEntity(x, y, z)).state=st;
+		if (checkstate(x+1, y, z, st))
+		{
+			checknum = fill(x+1, y, z, checknum, st);
+		}
+		if (checkstate(x-1, y, z, st))
+		{
+			checknum = fill(x-1, y, z, checknum, st);
+		}
+		if (checkstate(x, y+1, z, st))
+		{
+			checknum = fill(x, y+1, z, checknum, st);
+		}
+		if (checkstate(x, y-1, z, st))
+		{
+			checknum = fill(x, y-1, z, checknum, st);
+		}
+		if (checkstate(x, y, z+1, st))
+		{
+			checknum = fill(x, y, z+1, checknum, st);
+		}
+		if (checkstate(x, y, z-1, st))
+		{
+			checknum = fill(x, y, z-1, checknum, st);
+		}
+		return checknum;
 	}
 }
