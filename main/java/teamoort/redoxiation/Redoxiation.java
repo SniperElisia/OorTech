@@ -4,6 +4,8 @@ package teamoort.redoxiation;
 import org.apache.logging.log4j.core.Logger;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
+import teamoort.redoxiation.achievement.AchievementEvents;
+import teamoort.redoxiation.achievement.RedoxiationAchievements;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.blocks.gui.GuiHandler;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
@@ -31,12 +33,13 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid = Redoxiation.MODID, version = Redoxiation.VERSION)
+@Mod(modid = Redoxiation.MODID, version = Redoxiation.VERSION, name = Redoxiation.NAME)
 public class Redoxiation
 {
 	@Instance(Redoxiation.MODID)
@@ -48,6 +51,7 @@ public class Redoxiation
 	
     public static final String MODID = "redoxiation";
     public static final String VERSION = "Alpha 0.04";
+    public static final String NAME = "Redoxiation";
     
     public static boolean dummybool;
     public static int oredif;
@@ -97,6 +101,10 @@ public class Redoxiation
     	RedoxiationRecipeManager.recipeFurnace();
     	RedoxiationRecipeManager.recipeCrafting();
     	}
+    	if (RedoxiationAchievements.isachivenable)
+        {
+            RedoxiationAchievements.addDefaultAchievements();
+        }
     	GameRegistry.registerWorldGenerator(handler, 0);
         NetworkRegistry.INSTANCE.registerGuiHandler(Redoxiation.instance, GuiHandlerRegistry.getInstance());
         GuiHandlerRegistry.getInstance().registerGuiHandler(new GuiHandler(), GuiHandler.getGuiID());
@@ -107,10 +115,20 @@ public class Redoxiation
     public void Init(FMLInitializationEvent event)
     {
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+        if (RedoxiationAchievements.isachivenable)
+        {
+            RedoxiationAchievements.registerAchievementPane();
+            MinecraftForge.EVENT_BUS.register(new AchievementEvents());
+            logger.info("ACHIVLOADED");
+        }
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event){
-    	
+    	  
+    }
+    @EventHandler
+    public void serverLoad(FMLServerStartingEvent event)
+    {
     }
 }

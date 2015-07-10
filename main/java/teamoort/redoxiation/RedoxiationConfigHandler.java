@@ -1,5 +1,6 @@
 package teamoort.redoxiation;
 
+import teamoort.redoxiation.achievement.RedoxiationAchievements;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
 import net.minecraftforge.common.config.Configuration;
@@ -17,6 +18,7 @@ public class RedoxiationConfigHandler {
 		config.load();
     	Redoxiation.dummybool = config.get(config.CATEGORY_GENERAL, "Dummy", true).getBoolean();
     	Redoxiation.oredif = config.getInt("OreDifficulty", config.CATEGORY_GENERAL, 1, 0, 2, "1 to 2");
+    	RedoxiationAchievements.isachivenable = config.getBoolean("Achievement Enable", config.CATEGORY_GENERAL, true, "Achivevement Option");
     	// Enable / Disable
     	
 		// Blocks Start
