@@ -48,7 +48,8 @@ public class RedoxiationAchievements {
     	{
     		return;
     	}
-    	addAchivement("START:DASH", new Achievement("STARTDASH", "STARTDASH", 2, 0, RedoxiationGenericItems.IngotCopper ,null));
+    	//new Achievement(Name, Name, xCode(?), yCode(?), display item, required achievement)
+    	addAchivement("START:DASH", new Achievement("STARTDASH", "STARTDASH", 0, 0, RedoxiationGenericItems.IngotCopper ,null));
     	
     }
     
