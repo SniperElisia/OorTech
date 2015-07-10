@@ -94,20 +94,18 @@ public class GuiBlastFurnace extends GuiContainer {
         }
 
         // If the mouse is over one of the burn time indicator add the burn time indicator hovering text
-//        for (int i = 0; i < tileEntity.FUEL_SLOTS_COUNT; ++i) {
-//            if (isInRect(guiLeft + FLAME_XPOS + FLAME_X_SPACING * i, guiTop + FLAME_YPOS, FLAME_WIDTH, FLAME_HEIGHT, mouseX, mouseY)) {
-//                hoveringText.add("Fuel Time:");
-//                hoveringText.add(tileEntity.secondsOfFuelRemaining(i) + "s");
-//            }
-//        }
+        for (int i = 0; i < tileEntity.FUEL_SLOTS_COUNT; ++i) {
+            if (isInRect(guiLeft + FLAME_XPOS + FLAME_X_SPACING * i, guiTop + FLAME_YPOS, FLAME_WIDTH, FLAME_HEIGHT, mouseX, mouseY)) {
+                hoveringText.add("Fuel Time:");
+                hoveringText.add(tileEntity.secondsOfFuelRemaining(i) + "s");
+            }
+        }
         // If hoveringText is not empty draw the hovering text
-//        if (!hoveringText.isEmpty()){
-//            drawHoveringText(hoveringText, mouseX - guiLeft, mouseY - guiTop, fontRendererObj);
-//        }
-//		// You must re bind the texture and reset the colour if you still need to use it after drawing a string
-//		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
-//		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-
+        if (!hoveringText.isEmpty()){
+            drawHoveringText(hoveringText, mouseX - guiLeft, mouseY - guiTop, fontRendererObj);
+        }
+		// You must re bind the texture and reset the colour if you still need to use it after drawing a string
+		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
     }
 
     // Returns true if the given x,y coordinates are within the given rectangle

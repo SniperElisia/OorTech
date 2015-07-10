@@ -15,6 +15,13 @@ public class TileEntityWoodenCog extends TileEntity{
 
 	@Override
 	public void updateEntity() {
+        if (chunknumber != 0)
+        {
+            angvel = 6.283185307179586476925286766559f/((float)chunknumber);
+        }
+        else {
+            angvel = 0;
+        }
 		rotation += 0.3141592653589793238462643383279f*angvel;
 		if(rotation >= 6.283185307179586476925286766559f) {
 			rotation = rotation - 6.283185307179586476925286766559f;

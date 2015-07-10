@@ -298,11 +298,13 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
             // If fuel is available, keep cooking the item, otherwise start "uncooking" it at double speed
             if (numberOfFuelBurning > 0) {
                 cookTime += numberOfFuelBurning;
-            }	else {
+            } else {
                 cookTime -= 2;
             }
 
-            if (cookTime < 0) cookTime = 0;
+            if (cookTime < 0) {
+                cookTime = 0;
+            }
 
             // If cookTime has reached maxCookTime smelt the item and reset cookTime
             if (cookTime >= COOK_TIME_FOR_COMPLETION) {
@@ -400,50 +402,28 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
                 if (itemStacks[inputSlot].getItem() == RedoxiationGenericItems.Calcite){
                     hasCalcite = true;
                 }
-//                    // find the first suitable output slot- either empty, or with identical item that has enough space
-//                    for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot < FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++) {
-//                        ItemStack outputStack = itemStacks[outputSlot];
-//                        if (outputStack == null) {
-//                            firstSuitableInputSlot = inputSlot;
-//                            firstSuitableOutputSlot = outputSlot;
-//                            break;
-//                        }
-//
-//                        if (outputStack.getItem() == result.getItem() && (!outputStack.getHasSubtypes())
-//                                && ItemStack.areItemStackTagsEqual(outputStack, result)) {
-//                            int combinedSize = itemStacks[outputSlot].stackSize + result.stackSize;
-//                            if (combinedSize <= getInventoryStackLimit() && combinedSize <= itemStacks[outputSlot].getMaxStackSize()) {
-//                                firstSuitableInputSlot = inputSlot;
-//                                firstSuitableOutputSlot = outputSlot;
-//                                break;
-//                            }
-//                        }
-//                    }
             }
         }
-
+        if (!(hasIronOre && hasCarbon && hasCalcite)) {
+            return false;
+        }
         if (!performSmelt) {
             return true;
         }
-
-        if (!(hasIronOre && hasCarbon && hasCalcite)) {
-            return false;
-        } else {
-            for (int inputSlot = FIRST_INPUT_SLOT; inputSlot < FIRST_INPUT_SLOT + INPUT_SLOTS_COUNT; inputSlot++) {
-                itemStacks[inputSlot].stackSize--;
-                if (itemStacks[inputSlot].stackSize <=0) {
-                    itemStacks[inputSlot] = null;
-                }
-                for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot<FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++){
-                    if (itemStacks[outputSlot] == null) {
-                        if (outputSlot == FIRST_OUTPUT_SLOT){
-                            itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.MoltenPigironBlock);
-                        } else {
-                            itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.SlagBlock);
-                        }
+        for (int inputSlot = FIRST_INPUT_SLOT; inputSlot < FIRST_INPUT_SLOT + INPUT_SLOTS_COUNT; inputSlot++) {
+            itemStacks[inputSlot].stackSize--;
+            if (itemStacks[inputSlot].stackSize <=0) {
+                itemStacks[inputSlot] = null;
+            }
+            for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot<FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++){
+                if (itemStacks[outputSlot] == null) {
+                    if (outputSlot == FIRST_OUTPUT_SLOT){
+                        itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.MoltenPigironBlock);
                     } else {
-                        ++itemStacks[outputSlot].stackSize;
+                        itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.SlagBlock);
                     }
+                } else {
+                    ++itemStacks[outputSlot].stackSize;
                 }
             }
         }
@@ -540,22 +520,21 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
 
     // Return true if the given stack is allowed to be inserted in the given slot
     // Unlike the vanilla furnace, we allow anything to be placed in the fuel slots
-    static public boolean isItemValidForFuelSlot(ItemStack itemStack)
-    {
-        return true;
+    static public boolean isItemValidForFuelSlot(ItemStack itemStack) {
+        Item item = itemStack.getItem();
+        return item == Item.getItemFromBlock(RedoxiationBlocks.HotAirBlock);
     }
 
     // Return true if the given stack is allowed to be inserted in the given slot
     // Unlike the vanilla furnace, we allow anything to be placed in the fuel slots
-    static public boolean isItemValidForInputSlot(ItemStack itemStack)
-    {
-        return true;
+    static public boolean isItemValidForInputSlot(ItemStack itemStack) {
+        Item item = itemStack.getItem();
+        return item == Item.getItemFromBlock(Blocks.iron_ore) || item == Items.coal || item == RedoxiationGenericItems.Calcite;
     }
 
     // Return true if the given stack is allowed to be inserted in the given slot
     // Unlike the vanilla furnace, we allow anything to be placed in the fuel slots
-    static public boolean isItemValidForOutputSlot(ItemStack itemStack)
-    {
+    static public boolean isItemValidForOutputSlot(ItemStack itemStack) {
         return false;
     }
 

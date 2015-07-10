@@ -30,8 +30,8 @@ public class BlockSlag extends BlockFluidClassic {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister register) {
-        stillIcon = register.registerIcon("Redoxiation:MoltenPigironStill");
-        flowingIcon = register.registerIcon("Redoxiation:MoltenPigironFlowing");
+        stillIcon = register.registerIcon("Redoxiation:SlagStill");
+        flowingIcon = register.registerIcon("Redoxiation:SlagFlowing");
     }
 
     @Override
