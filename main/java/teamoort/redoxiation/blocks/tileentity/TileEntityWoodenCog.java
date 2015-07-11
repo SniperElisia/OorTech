@@ -17,7 +17,7 @@ public class TileEntityWoodenCog extends TileEntity{
 	public void updateEntity() {
         if (chunknumber != 0)
         {
-            angvel = 6.283185307179586476925286766559f/((float)chunknumber);
+            angvel = 0.05f/((float)chunknumber);
         }
         else {
             angvel = 0;

@@ -8,8 +8,8 @@ import teamoort.redoxiation.blocks.container.ContainerBlastFurnace;
 import teamoort.redoxiation.blocks.tileentity.TileBlastFurnaceBlock;
 
 public class GuiHandler implements IGuiHandler {
-    private static final int GUIID_MBE_31 = 31;
-    public static int getGuiID() {return GUIID_MBE_31;}
+    private static final int GUIID = 31;
+    public static int getGuiID() {return GUIID;}
 
     // Gets the server side element for the given gui id this should return a container
     @Override

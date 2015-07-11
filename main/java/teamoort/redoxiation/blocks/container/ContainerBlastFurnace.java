@@ -109,8 +109,7 @@ public class ContainerBlastFurnace extends Container {
 
     // Checks each tick to make sure the player is still able to access the inventory and if not closes the gui
     @Override
-    public boolean canInteractWith(EntityPlayer player)
-    {
+    public boolean canInteractWith(EntityPlayer player) {
         return tileBlastFurnace.isUseableByPlayer(player);
     }
 

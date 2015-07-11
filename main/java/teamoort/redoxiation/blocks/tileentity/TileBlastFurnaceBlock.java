@@ -12,19 +12,17 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
-import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
-import teamoort.redoxiation.BlastFurnaceRecipes;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
 
 import java.util.Arrays;
 
-public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUpdatePlayerListBox{
+public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
 	private boolean hasMaster, isMaster;
     public boolean hasmastercheck;
 	private int masterX, masterY, masterZ;
@@ -44,6 +42,44 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
                 if (checkMultiBlockForm()) {
                     setupStructure();
                 }
+            }
+        }
+
+        // If there is nothing to smelt or there is no room in the output, reset cookTime and return
+        System.out.println("update");
+        if (canSmelt()) {
+            System.out.println("canSmelt");
+            int numberOfFuelBurning = burnFuel();
+
+            // If fuel is available, keep cooking the item, otherwise start "uncooking" it at double speed
+            if (numberOfFuelBurning > 0) {
+                cookTime += numberOfFuelBurning;
+            } else {
+                cookTime -= 2;
+            }
+
+            if (cookTime < 0) {
+                cookTime = 0;
+            }
+
+            // If cookTime has reached maxCookTime smelt the item and reset cookTime
+            if (cookTime >= COOK_TIME_FOR_COMPLETION) {
+                smeltItem();
+                cookTime = 0;
+            }
+        }	else {
+            cookTime = 0;
+        }
+
+        // when the number of burning slots changes, we need to force the block to re-render, otherwise the change in
+        //   state will not be visible.  Likewise, we need to force a lighting recalculation.
+        // The block update (for renderer) is only required on client side, but the lighting is required on both, since
+        //    the client needs it for rendering and the server needs it for crop growth etc
+        int numberBurning = numberOfBurningFuelSlots();
+        if (cachedNumberOfBurningSlots != numberBurning) {
+            cachedNumberOfBurningSlots = numberBurning;
+            if (worldObj.isRemote) {
+                worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
             }
         }
     }
@@ -279,53 +315,9 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
      * Returns the amount of cook time completed on the currently cooking item.
      * @return fraction remaining, between 0 - 1
      */
-    public double fractionOfCookTimeComplete()
-    {
+    public double fractionOfCookTimeComplete() {
         double fraction = cookTime / (double)COOK_TIME_FOR_COMPLETION;
         return MathHelper.clamp_double(fraction, 0.0, 1.0);
-    }
-
-    // This method is called every tick to update the tile entity, i.e.
-    // - see if the fuel has run out, and if so turn the furnace "off" and slowly uncook the current item (if any)
-    // - see if any of the items have finished smelting
-    // It runs both on the server and the client.
-    @Override
-    public void update() {
-        // If there is nothing to smelt or there is no room in the output, reset cookTime and return
-        if (canSmelt()) {
-            int numberOfFuelBurning = burnFuel();
-
-            // If fuel is available, keep cooking the item, otherwise start "uncooking" it at double speed
-            if (numberOfFuelBurning > 0) {
-                cookTime += numberOfFuelBurning;
-            } else {
-                cookTime -= 2;
-            }
-
-            if (cookTime < 0) {
-                cookTime = 0;
-            }
-
-            // If cookTime has reached maxCookTime smelt the item and reset cookTime
-            if (cookTime >= COOK_TIME_FOR_COMPLETION) {
-                smeltItem();
-                cookTime = 0;
-            }
-        }	else {
-            cookTime = 0;
-        }
-
-        // when the number of burning slots changes, we need to force the block to re-render, otherwise the change in
-        //   state will not be visible.  Likewise, we need to force a lighting recalculation.
-        // The block update (for renderer) is only required on client side, but the lighting is required on both, since
-        //    the client needs it for rendering and the server needs it for crop growth etc
-        int numberBurning = numberOfBurningFuelSlots();
-        if (cachedNumberOfBurningSlots != numberBurning) {
-            cachedNumberOfBurningSlots = numberBurning;
-            if (worldObj.isRemote) {
-                worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-            }
-        }
     }
 
     /**
@@ -433,13 +425,15 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory, IUp
 
     // returns the smelting result for the given stack. Returns null if the given stack can not be smelted
     public static ItemStack getSmeltingResultForItem(ItemStack stack) {
-        BlastFurnaceRecipes recipes = BlastFurnaceRecipes.smeltingBase;
-        return recipes.getSmeltingResult(stack);
+        Item item = stack.getItem();
+        if (item == Item.getItemFromBlock(Blocks.iron_ore) || item == Items.coal || item == RedoxiationGenericItems.Calcite) {
+            return new ItemStack(RedoxiationBlocks.MoltenPigironBlock);
+        }
+        return null;
     }
 
     // returns the number of ticks the given item will burn. Returns 0 if the given item is not a valid fuel
-    public static short getItemBurnTime(ItemStack stack)
-    {
+    public static short getItemBurnTime(ItemStack stack) {
         int burntime = 0;
         if (stack.getItem() == Item.getItemFromBlock(RedoxiationBlocks.HotAirBlock)) {
             burntime = 1600;
