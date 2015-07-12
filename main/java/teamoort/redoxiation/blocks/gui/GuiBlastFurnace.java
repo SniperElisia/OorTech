@@ -62,15 +62,13 @@ public class GuiBlastFurnace extends GuiContainer {
         // get cook progress as a double between 0 and 1
         double cookProgress = tileEntity.fractionOfCookTimeComplete();
         // draw the cook progress bar
-        drawTexturedModalRect(guiLeft + COOK_BAR_XPOS, guiTop + COOK_BAR_YPOS, COOK_BAR_ICON_U, COOK_BAR_ICON_V,
-                (int)(cookProgress * COOK_BAR_WIDTH), COOK_BAR_HEIGHT);
+        drawTexturedModalRect(guiLeft + COOK_BAR_XPOS, guiTop + COOK_BAR_YPOS, COOK_BAR_ICON_U, COOK_BAR_ICON_V, COOK_BAR_WIDTH, (int)(cookProgress * COOK_BAR_HEIGHT));
 
         // draw the fuel remaining bar for each fuel slot flame
         for (int i = 0; i < tileEntity.FUEL_SLOTS_COUNT; ++i) {
             double burnRemaining = tileEntity.fractionOfFuelRemaining(i);
             int yOffset = (int)((1.0 - burnRemaining) * FLAME_HEIGHT);
-            drawTexturedModalRect(guiLeft + FLAME_XPOS + FLAME_X_SPACING * i, guiTop + FLAME_YPOS + yOffset,
-                    FLAME_ICON_U, FLAME_ICON_V + yOffset, FLAME_WIDTH, FLAME_HEIGHT - yOffset);
+            drawTexturedModalRect(guiLeft + FLAME_XPOS + FLAME_X_SPACING * i, guiTop + FLAME_YPOS + yOffset, FLAME_ICON_U, FLAME_ICON_V + yOffset, FLAME_WIDTH, FLAME_HEIGHT - yOffset);
         }
     }
 
