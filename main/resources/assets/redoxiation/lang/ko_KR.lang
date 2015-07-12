@@ -104,11 +104,11 @@ item.redoxiation.SilverIngot.name=은 주괴
 item.redoxiation.PlatinumIngot.name=백금 주괴
 item.redoxiation.ZincIngot.name=아연 주괴
 item.redoxiation.NickelIngot.name=니켈 주괴
-item.redoxiation.ChromiumIngot.name=크로뮴 주괴
-item.redoxiation.AluminumIngot.name=알루미늄 주괴
-item.redoxiation.CobaltIngot.name=코발트 주괴
-item.redoxiation.TitaniumIngot.name=티타늄 주괴
-item.redoxiation.TungstenIngot.name=텅스텐 주괴
+item.redoxiation.IngotChromium.name=크로뮴 주괴
+item.redoxiation.IngotAluminum.name=알루미늄 주괴
+item.redoxiation.IngotCobalt.name=코발트 주괴
+item.redoxiation.IngotTitanium.name=티타늄 주괴
+item.redoxiation.IngotTungsten.name=텅스텐 주괴
 item.redoxiation.SteelIngot.name=강철 주괴
 item.redoxiation.IronNugget.name=철 조각
 item.redoxiation.CopperNugget.name=구리 조각
@@ -161,3 +161,9 @@ item.redoxiation.TungstenScythe.name=텅스텐강 낫
 #리덕시에이션의 크리에이티브 탭들
 itemGroup.Redoxiation=리덕시에이션 블럭
 itemGroup.RedoxiationItems=리덕시에이션 아이템
+
+#리덕시에이션의 도전 과제
+achievement.redoxiation.start=START:DASH
+achievement.redoxiation.blast=펑, 폭발 화로!
+achievement.redoxiation.start.desc=구리 광석을 캐세요
+achievement.redoxiation.blast.desc=철을 제련하세요
