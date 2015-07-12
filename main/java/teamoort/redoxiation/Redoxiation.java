@@ -122,9 +122,7 @@ public class Redoxiation
             logger.info("ACHIVLOADED");
         }
     }
-    
-    //Å×Å©³ë
-    
+
     @EventHandler
     public void postInit(FMLPostInitializationEvent event){
     	  
