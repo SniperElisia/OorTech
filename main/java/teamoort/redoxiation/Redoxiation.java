@@ -123,6 +123,8 @@ public class Redoxiation
         }
     }
     
+    //Å×Å©³ë
+    
     @EventHandler
     public void postInit(FMLPostInitializationEvent event){
     	  
