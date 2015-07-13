@@ -29,7 +29,7 @@ public class RedoxiationRecipeManager {
 	
 	public static void recipeCrafting()
 	{
-		ItemStack ingotInvarStack = new ItemStack(RedoxiationGenericItems.IngotInvar);
+		ItemStack ingotIronStack = new ItemStack(Item.iron_ingot);
 		ItemStack blockBrickStack = new ItemStack(Block.bricks);
 		
 		GameRegistry.addRecipe(
@@ -37,7 +37,7 @@ public class RedoxiationRecipeManager {
 			"xyx",
 			"y y",
 			"xyx",
-			'x', ingotInvarStack, 'y', blockBrickStack);
+			'x', ingotIronStack, 'y', blockBrickStack);
 			
 		//Todo : Add Crafting Recipes. If you want add, just add. You can Delete this.
 		Redoxiation.logger.info("Recipe & Smelting Complete. Starting World generator");
