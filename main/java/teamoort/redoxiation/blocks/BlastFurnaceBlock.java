@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityChest;
 import teamoort.redoxiation.Redoxiation;
+import teamoort.redoxiation.achievement.RedoxiationAchievements;
 import teamoort.redoxiation.blocks.gui.GUIs;
 import teamoort.redoxiation.blocks.tileentity.TileBlastFurnaceBlock;
 import net.minecraft.block.Block;
@@ -110,6 +111,7 @@ public class BlastFurnaceBlock extends BlockContainer {
                     int my = tile.getMasterY();
                     int mz = tile.getMasterZ();
                     player.openGui(Redoxiation.instance, GUIs.BlastFurnaceBlock.ordinal(), world, mx, my, mz);
+                    RedoxiationAchievements.triggerAchievement(player, "redoxiation.blast");
                     return true;
                 }
             }

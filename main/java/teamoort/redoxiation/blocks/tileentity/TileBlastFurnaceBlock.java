@@ -280,8 +280,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
      * @param fuelSlot the number of the fuel slot (0..3)
      * @return fraction remaining, between 0 - 1
      */
-    public double fractionOfFuelRemaining(int fuelSlot)
-    {
+    public double fractionOfFuelRemaining(int fuelSlot) {
         if (burnTimeInitialValue[fuelSlot] <= 0 ) return 0;
         double fraction = burnTimeRemaining[fuelSlot] / (double)burnTimeInitialValue[fuelSlot];
         return MathHelper.clamp_double(fraction, 0.0, 1.0);
@@ -292,8 +291,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
      * @param fuelSlot the number of the fuel slot (0..3)
      * @return seconds remaining
      */
-    public int secondsOfFuelRemaining(int fuelSlot)
-    {
+    public int secondsOfFuelRemaining(int fuelSlot) {
         if (burnTimeRemaining[fuelSlot] <= 0 ) return 0;
         return burnTimeRemaining[fuelSlot] / 20; // 20 ticks per second
     }
@@ -302,8 +300,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
      * Get the number of slots which have fuel burning in them.
      * @return number of slots with burning fuel, 0 - FUEL_SLOTS_COUNT
      */
-    public int numberOfBurningFuelSlots()
-    {
+    public int numberOfBurningFuelSlots() {
         int burningCount = 0;
         for (int burnTime : burnTimeRemaining) {
             if (burnTime > 0) ++burningCount;
@@ -376,8 +373,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
      * @param performSmelt if true, perform the smelt.  if false, check whether smelting is possible, but don't change the inventory
      * @return false if no items can be smelted, true otherwise
      */
-    private boolean smeltItem(boolean performSmelt)
-    {
+    private boolean smeltItem(boolean performSmelt) {
         boolean hasIronOre = false;
         boolean hasCarbon = false;
         boolean hasCalcite = false;
@@ -399,6 +395,15 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
         if (!(hasIronOre && hasCarbon && hasCalcite)) {
             return false;
         }
+
+        for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot<FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++) {
+            if (itemStacks[outputSlot] != null) {
+                if (itemStacks[outputSlot].stackSize > getInventoryStackLimit() - 3) {
+                    return false;
+                }
+            }
+        }
+
         if (!performSmelt) {
             return true;
         }
@@ -407,16 +412,19 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
             if (itemStacks[inputSlot].stackSize <=0) {
                 itemStacks[inputSlot] = null;
             }
-            for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot<FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++){
-                if (itemStacks[outputSlot] == null) {
-                    if (outputSlot == FIRST_OUTPUT_SLOT){
-                        itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.MoltenPigironBlock);
-                    } else {
-                        itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.SlagBlock);
-                    }
+        }
+        for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot<FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++) {
+            if (itemStacks[outputSlot] == null) {
+                if (outputSlot == FIRST_OUTPUT_SLOT){
+                    itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.MoltenPigironBlock, 3);
                 } else {
-                    ++itemStacks[outputSlot].stackSize;
+                    itemStacks[outputSlot] = new ItemStack(RedoxiationBlocks.SlagBlock, 3);
                 }
+            } else {
+                if (itemStacks[outputSlot].stackSize > getInventoryStackLimit() - 3) {
+                    itemStacks[outputSlot].stackSize = getInventoryStackLimit();
+                }
+                itemStacks[outputSlot].stackSize += 3;
             }
         }
         markDirty();
@@ -586,8 +594,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
         return 0;
     }
 
-    public void setField(int id, int value)
-    {
+    public void setField(int id, int value) {
         if (id == COOK_FIELD_ID) {
             cookTime = (short)value;
         } else if (id >= FIRST_BURN_TIME_REMAINING_FIELD_ID && id < FIRST_BURN_TIME_REMAINING_FIELD_ID + FUEL_SLOTS_COUNT) {

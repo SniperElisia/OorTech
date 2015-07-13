@@ -15,7 +15,7 @@ public class BlockIronCog extends BlockContainer{
 	
 	public BlockIronCog()
 	{
-		super(Material.ground);
+		super(Material.metal);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setBlockName("IronCog");
 		GameRegistry.registerTileEntity(TileEntityIronCog.class, Redoxiation.MODID + ".IronCog");
