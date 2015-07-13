@@ -2,10 +2,17 @@ package teamoort.redoxiation;
 
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 import teamoort.redoxiation.items.RedoxiationGenericItems;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class RedoxiationRecipeManager {
+	
+	public static void recipeCrafting()
+	{
+		Redoxiation.logger.info("Recipe & Smelting Complete. Starting World generator");
+	}
 
 	public static void recipeFurnace()
 	{
@@ -25,22 +32,5 @@ public class RedoxiationRecipeManager {
 		
 		//Dust Smelting
 		
-	}
-	
-	public static void recipeCrafting()
-	{
-		ItemStack ingotIronStack = new ItemStack(Item.iron_ingot);
-		ItemStack blockBrickStack = new ItemStack(Block.bricks);
-		ItemStack blockClayStack = new ItemStack(Block.clay);
-		
-		GameRegistry.addRecipe(
-			new ItemStack(RedoxiationBlock.BlastFurnaceBlock),
-			"zyy",
-			"xyy",
-			"zyy",
-			'x', ingotIronStack, 'y', blockBrickStack), 'z', blockClayStack);
-			
-		//Todo : Add Crafting Recipes. If you want add, just add. You can Delete this.
-		Redoxiation.logger.info("Recipe & Smelting Complete. Starting World generator");
 	}
 }
