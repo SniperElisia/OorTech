@@ -381,13 +381,13 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
         // finds the first input slot which is smeltable and whose result fits into an output slot (stacking if possible)
         for (int inputSlot = FIRST_INPUT_SLOT; inputSlot < FIRST_INPUT_SLOT + INPUT_SLOTS_COUNT; inputSlot++) {
             if (itemStacks[inputSlot] != null) {
-                if (itemStacks[inputSlot].getItem() == Item.getItemFromBlock(Blocks.iron_ore)) {
+                if (itemStacks[inputSlot].getItem() == Item.getItemFromBlock(Blocks.iron_ore) && itemStacks[inputSlot].stackSize >=4) {
                     hasIronOre = true;
                 }
-                if (itemStacks[inputSlot].getItem() == Items.coal){
+                if (itemStacks[inputSlot].getItem() == Items.coal && itemStacks[inputSlot].stackSize >=17){
                     hasCarbon = true;
                 }
-                if (itemStacks[inputSlot].getItem() == RedoxiationGenericItems.Calcite){
+                if (itemStacks[inputSlot].getItem() == RedoxiationGenericItems.Calcite && itemStacks[inputSlot].stackSize >=11){
                     hasCalcite = true;
                 }
             }
@@ -408,7 +408,15 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
             return true;
         }
         for (int inputSlot = FIRST_INPUT_SLOT; inputSlot < FIRST_INPUT_SLOT + INPUT_SLOTS_COUNT; inputSlot++) {
-            itemStacks[inputSlot].stackSize--;
+            if (itemStacks[inputSlot].getItem() == Item.getItemFromBlock(Blocks.iron_ore)) {
+                itemStacks[inputSlot].stackSize -= 4;
+            }
+            if (itemStacks[inputSlot].getItem() == Items.coal && itemStacks[inputSlot].stackSize >=17){
+                itemStacks[inputSlot].stackSize -= 17;
+            }
+            if (itemStacks[inputSlot].getItem() == RedoxiationGenericItems.Calcite && itemStacks[inputSlot].stackSize >=11){
+                itemStacks[inputSlot].stackSize -= 11;
+            }
             if (itemStacks[inputSlot].stackSize <=0) {
                 itemStacks[inputSlot] = null;
             }
