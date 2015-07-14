@@ -126,15 +126,19 @@ item.redoxiation.SteelNugget.name=강철 조각
 item.redoxiation.SulfurChunk.name=유황 덩어리
 item.redoxiation.SulfurDust.name=유황 가루
 item.redoxiation.ItemCryolite.name=빙정석
+item.redoxiation.HotAirBucket.name=열풍 양동이
+item.redoxiation.MoltenPigironBucket.name=녹은 선철 양동이
+item.redoxiation.SlagBucket.name=슬래그 양동이
 
 #리덕시에이션 액체
 tile.HotAir.name=열풍
 tile.MoltenPigiron.name=녹은 선철
+tile.Slag.name=슬래그
 
-#Redoxiation Cogs
-redoxiation.WoodenCog.name=Wooden Cogs
-redoxiation.StoneCog.name=Stone Cogs
-redoxiation.IronCog.name=Iron Cogs
+#리덕시에이션 톱니바퀴
+redoxiation.WoodenCog.name=나무 톱니바퀴
+redoxiation.StoneCog.name=돌 톱니바퀴
+redoxiation.IronCog.name=철 톱니바퀴
 
 #리덕시에이션 도구
 item.redoxiation.WoodenSaw.name=나무 톱

@@ -44,17 +44,14 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
                 }
             }
         }
-
-        // If there is nothing to smelt or there is no room in the output, reset cookTime and return
         if (canSmelt()) {
-            System.out.println("canSmelt");
             int numberOfFuelBurning = burnFuel();
 
             // If fuel is available, keep cooking the item, otherwise start "uncooking" it at double speed
             if (numberOfFuelBurning > 0) {
                 cookTime += numberOfFuelBurning;
             } else {
-                cookTime -= 2;
+                cookTime -= 1;
             }
 
             if (cookTime < 0) {
@@ -67,6 +64,7 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
                 cookTime = 0;
             }
         }	else {
+            burnTimeRemaining[0] = 0;
             cookTime = 0;
         }
 

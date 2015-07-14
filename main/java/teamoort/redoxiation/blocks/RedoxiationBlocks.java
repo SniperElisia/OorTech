@@ -182,6 +182,6 @@ public class RedoxiationBlocks{
         MoltenPigiron.setUnlocalizedName(MoltenPigironBlock.getUnlocalizedName());
         Slag.setUnlocalizedName(Slag.getUnlocalizedName());
         
-        Redoxiation.logger.info("Block Registry Complete. Starting Tileentity proxy.");
+        Redoxiation.logger.info("Block Registry Complete. Starting Item Registry");
 	}
 }

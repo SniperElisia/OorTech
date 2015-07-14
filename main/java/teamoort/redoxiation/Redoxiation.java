@@ -94,10 +94,10 @@ public class Redoxiation
     	config = new Configuration(event.getSuggestedConfigurationFile());
     	RedoxiationConfigHandler.InitConfig();
     	//Config end
+        RedoxiationBlocks.registerBlocks();
     	RedoxiationGenericItems.registerItems();
-    	RedoxiationBlocks.registerBlocks();
     	proxy.registerTileEntitySpecialRenderer();
-    	if(dummybool == true){
+    	if(dummybool){
     	RedoxiationRecipeManager.recipeFurnace();
     	RedoxiationRecipeManager.recipeCrafting();
     	}

@@ -126,10 +126,14 @@ item.redoxiation.SteelNugget.name=Steel Nugget
 item.redoxiation.SulfurChunk.name=Sulfur Chunk
 item.redoxiation.SulfurDust.name=Sulfur Dust
 item.redoxiation.ItemCryolite.name=Cryolite
+item.redoxiation.HotAirBucket.name=Hot Air Bucket
+item.redoxiation.MoltenPigironBucket.name=Molten Pig Iron Bucket
+item.redoxiation.SlagBucket.name=Slag Bucket
 
 #Redoxiation Fluids
 tile.HotAir.name=Hot Air
 tile.MoltenPigiron.name=Molten Pig Iron
+tile.Slag.name=Slag
 
 #Redoxiation Cogs
 redoxiation.WoodenCog.name=Wooden Cogs

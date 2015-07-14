@@ -36,7 +36,9 @@ public class BlockHotAir extends BlockFluidClassic {
 
     @Override
     public boolean canDisplace(IBlockAccess world, int x, int y, int z) {
-        if (world.getBlock(x,  y,  z).getMaterial().isLiquid()) return false;
+        if (world.getBlock(x,  y,  z).getMaterial().isLiquid()) {
+            return false;
+        }
         return super.canDisplace(world, x, y, z);
     }
 

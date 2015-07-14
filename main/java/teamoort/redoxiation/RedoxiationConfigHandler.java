@@ -130,6 +130,9 @@ public class RedoxiationConfigHandler {
     	items.DustZinc_enable = config.get(CATEGORY_ITEMS, "DustZinc", true).getBoolean();
     	items.IngotZinc_enable = config.get(CATEGORY_ITEMS, "ZincIngot", true).getBoolean();
     	items.ZincNugget_enable = config.get(CATEGORY_ITEMS, "ZincNugget", true).getBoolean();
+        items.ItemHotAirBucket_enable = config.get(CATEGORY_ITEMS, "HotAirBucket", true).getBoolean();
+        items.ItemMoltenPigironBucket_enable = config.get(CATEGORY_ITEMS, "MoltenPigironBucket", true).getBoolean();
+        items.ItemSlagBucket_enable = config.get(CATEGORY_ITEMS, "SlagBucket", true).getBoolean();
   
     	//oregen
     	//Nether gen control Start
