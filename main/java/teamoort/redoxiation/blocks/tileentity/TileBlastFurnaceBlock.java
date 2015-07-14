@@ -46,7 +46,6 @@ public class TileBlastFurnaceBlock extends TileEntity implements IInventory{
         }
 
         // If there is nothing to smelt or there is no room in the output, reset cookTime and return
-        System.out.println("update");
         if (canSmelt()) {
             System.out.println("canSmelt");
             int numberOfFuelBurning = burnFuel();
