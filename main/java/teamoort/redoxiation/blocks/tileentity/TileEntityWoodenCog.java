@@ -12,9 +12,12 @@ public class TileEntityWoodenCog extends TileEntity{
 	private int volume = 0;
 	private float rotation = 0;
 	private float angvel = 0;
-
+	private int state;
+	private int chunknumber = 0;
+	
 	@Override
 	public void updateEntity() {
+		Redoxiation.logger.info(chunknumber + " " + angvel);
         if (chunknumber != 0)
         {
             angvel = 0.05f/((float)chunknumber);
@@ -77,9 +80,6 @@ public class TileEntityWoodenCog extends TileEntity{
 	}
 	
 	//FloodFill
-	private int state;
-	private int chunknumber = 0;
-	
 	public boolean checkstate(int x, int y, int z, int st){
 		return ((worldObj.getBlock(x, y, z)==RedoxiationBlocks.WoodenCog)&&(((TileEntityWoodenCog)worldObj.getTileEntity(x, y, z)).state!=st));
 	}
