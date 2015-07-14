@@ -57,3 +57,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+main/resources/assets/redoxiation/textures/gui/GUIBlastFurnace.png
+*.png
+main/resources/assets/redoxiation/textures/gui/GUIBlastFurnace.png
