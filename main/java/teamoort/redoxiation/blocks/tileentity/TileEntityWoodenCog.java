@@ -121,9 +121,8 @@ public class TileEntityWoodenCog extends TileEntity{
 	}
 	
 	public int setfill(int x, int y, int z, int checknum, int st){
-		TileEntity tile = worldObj.getTileEntity(x, y, z);
-		((TileEntityWoodenCog)tile).setstate(st);
-		((TileEntityWoodenCog)tile).setchunknumber(checknum);
+		((TileEntityWoodenCog)(worldObj.getTileEntity(x, y, z))).setstate(st);
+		((TileEntityWoodenCog)(worldObj.getTileEntity(x, y, z))).setchunknumber(checknum);
 		if (checkstate(x+1, y, z, st))
 		{
 			setfill(x+1, y, z, checknum, st);
