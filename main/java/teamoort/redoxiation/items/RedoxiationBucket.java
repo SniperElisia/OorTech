@@ -4,8 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBucket;
 import teamoort.redoxiation.Redoxiation;
 
-public class ItemHotAirBucket extends ItemBucket {
-    public ItemHotAirBucket(Block block) {
+public class RedoxiationBucket extends ItemBucket {
+
+    public RedoxiationBucket(Block block) {
         super(block);
         this.setCreativeTab(Redoxiation.tabRedoxiationitems);
     }

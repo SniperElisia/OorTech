@@ -469,7 +469,7 @@ public class RedoxiationGenericItems extends Item{
 			CrashedObsidian = new RedoxiationGenericItems("CrashedObsidian");
     	}
         if(ItemHotAirBucket_enable) {
-            ItemHotAirBucket = new ItemHotAirBucket(RedoxiationBlocks.HotAirBlock);
+            ItemHotAirBucket = new RedoxiationBucket(RedoxiationBlocks.HotAirBlock);
             ItemHotAirBucket.setUnlocalizedName("HotAirBucket").setContainerItem(Items.bucket);
             GameRegistry.registerItem(ItemHotAirBucket, "HotAirBucket");
             FluidContainerRegistry.registerFluidContainer(RedoxiationBlocks.HotAir, new ItemStack(ItemHotAirBucket), new ItemStack(Items.bucket));
@@ -477,7 +477,7 @@ public class RedoxiationGenericItems extends Item{
             MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
         }
         if(ItemMoltenPigironBucket_enable) {
-            ItemMoltenPigironBucket = new ItemMoltenPigironBucket(RedoxiationBlocks.MoltenPigironBlock);
+            ItemMoltenPigironBucket = new RedoxiationBucket(RedoxiationBlocks.MoltenPigironBlock);
             ItemMoltenPigironBucket.setUnlocalizedName("MoltenPigironBucket").setContainerItem(Items.bucket);
             GameRegistry.registerItem(ItemMoltenPigironBucket, "MoltenPigironBucket");
             FluidContainerRegistry.registerFluidContainer(RedoxiationBlocks.MoltenPigiron, new ItemStack(ItemMoltenPigironBucket), new ItemStack(Items.bucket));
@@ -485,7 +485,7 @@ public class RedoxiationGenericItems extends Item{
             MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
         }
         if(ItemSlagBucket_enable) {
-            ItemSlagBucket = new ItemSlagBucket(RedoxiationBlocks.SlagBlock);
+            ItemSlagBucket = new RedoxiationBucket(RedoxiationBlocks.SlagBlock);
             ItemSlagBucket.setUnlocalizedName("SlagBucket").setContainerItem(Items.bucket);
             GameRegistry.registerItem(ItemSlagBucket, "SlagBucket");
             FluidContainerRegistry.registerFluidContainer(RedoxiationBlocks.Slag, new ItemStack(ItemSlagBucket), new ItemStack(Items.bucket));
