@@ -90,7 +90,7 @@ public class RedoxiationEventHandler implements IWorldGenerator
 		addOreSpawn(RedoxiationBlocks.CobaltOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 5, 52);
 		addOreSpawn(RedoxiationBlocks.ChromiumOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 5, 52);
 		addOreSpawn(RedoxiationBlocks.ZincOre, 0, Blocks.stone, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 15, 60);
-		addOreSpawn(RedoxiationBlocks.Pitchblend, 0, Blocks.stone, world, random, x, z, 16, 16, 1, 5, 3, 40);
+		addOreSpawn(RedoxiationBlocks.Pitchblend, 0, Blocks.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 5, 3, 40);
 		addOreSpawn(RedoxiationBlocks.Limestone, 0, Blocks.stone, world, random, x, z, 16, 16, 16 + random.nextInt(10), 16, 30, 125);
 		addOreSpawn(RedoxiationBlocks.SaltRock, 0, Blocks.stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 12, 30, 125);
 		addOreSpawn(RedoxiationBlocks.SaltRock, 0, Blocks.dirt, world, random, x, z, 16, 16, 1 + random.nextInt(2), 12, 30, 125);
@@ -100,7 +100,6 @@ public class RedoxiationEventHandler implements IWorldGenerator
 		addOreSpawn(RedoxiationBlocks.Scheelite, 0, Blocks.stone, world, random, x, z, 16, 16, 10 + random.nextInt(8), 16, 10, 80);
 		addOreSpawn(RedoxiationBlocks.Cryolite, 0, Blocks.stone, world, random, x, z, 16, 16, 10 + random.nextInt(5), 16, 30, 70);
 		addOreSpawn(RedoxiationBlocks.SulfurOre, 0, Blocks.lava, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 3, 125);
-		
 	}
 
 
