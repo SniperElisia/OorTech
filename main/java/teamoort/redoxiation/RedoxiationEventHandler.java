@@ -101,9 +101,6 @@ public class RedoxiationEventHandler implements IWorldGenerator
 
 	private void generateEnd(World world, Random random, int x, int z) 
 	{
-		int Xcoord = x + random.nextInt(16);
-		int Ycoord = 10 + random.nextInt(128);
-		int Zcoord = z + random.nextInt(16);
 		
 		(new WorldGenMinable(RedoxiationBlocks.IronObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		(new WorldGenMinable(RedoxiationBlocks.GoldObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
