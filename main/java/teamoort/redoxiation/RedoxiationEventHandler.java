@@ -38,42 +38,39 @@ public class RedoxiationEventHandler implements IWorldGenerator
 
 	private void generateNether(World world, Random random, int x, int z) 
 	{
-		int Xcoord = x + random.nextInt(16);
-		int Ycoord = 10 + random.nextInt(128);
-		int Zcoord = z + random.nextInt(16);
 		
 		if(FerronickelOregen){
-		(new WorldGenMinable(RedoxiationBlocks.FerronickelOre, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RedoxiationBlocks.FerronickelOre, 0, 15, Blocks.netherrack)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		addOreSpawn(RedoxiationBlocks.FerronickelOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
 		}
 		
 		if(PseudoBronzeOregen){
-		(new WorldGenMinable(RedoxiationBlocks.PseudoBronzeOre, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RedoxiationBlocks.PseudoBronzeOre, 0, 15, Blocks.netherrack)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		addOreSpawn(RedoxiationBlocks.PseudoBronzeOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
 		}
 		
 		if(PseudoBrassOregen){
-		(new WorldGenMinable(RedoxiationBlocks.PseudoBrassOre, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RedoxiationBlocks.PseudoBrassOre, 0, 15, Blocks.netherrack)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		addOreSpawn(RedoxiationBlocks.PseudoBrassOre, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
 		}
 		
 		if(ArgentAurumOregen){
-		(new WorldGenMinable(RedoxiationBlocks.ArgentAurum, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RedoxiationBlocks.ArgentAurum, 0, 15, Blocks.netherrack)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		addOreSpawn(RedoxiationBlocks.ArgentAurum, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7),60, 1, 255);
 		}
 		
 		if(PseudoSolderOregen){
-		(new WorldGenMinable(RedoxiationBlocks.PseudoSolder, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RedoxiationBlocks.PseudoSolder, 0, 15, Blocks.netherrack)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		addOreSpawn(RedoxiationBlocks.PseudoSolder, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
 		}
 		
 		if(PseudoStelliteOregen){
-		(new WorldGenMinable(RedoxiationBlocks.PseudoStellite, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RedoxiationBlocks.PseudoStellite, 0, 15, Blocks.netherrack)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		addOreSpawn(RedoxiationBlocks.PseudoStellite, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1 + random.nextInt(7), 60, 1, 255);
 		}
 		
 		if(TNTiumOregen){
-		(new WorldGenMinable(RedoxiationBlocks.TNTium, 0, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+		(new WorldGenMinable(RedoxiationBlocks.TNTium, 0, 15, Blocks.netherrack)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 		addOreSpawn(RedoxiationBlocks.TNTium, 0, Blocks.netherrack, world, random, x, z, 16, 16, 1, 30, 1, 255);
 		}
 	}
