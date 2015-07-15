@@ -37,6 +37,7 @@ public class RedoxiationGenericItems extends Item{
 		super();
 		setCreativeTab(Redoxiation.tabRedoxiationitems);
 		ITEMNAME = name;
+		INFORMATION = "null";
 	}
 	
 	public static void registerItems()
