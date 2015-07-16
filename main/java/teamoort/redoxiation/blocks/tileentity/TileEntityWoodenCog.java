@@ -48,10 +48,10 @@ public class TileEntityWoodenCog extends TileEntity{
 	}
 
 	//rotation save to NBT
+	
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
-		rotation = compound.getFloat("rotation");
 		angvel = compound.getFloat("angvel");
         chunknumber = compound.getInteger("chunknumber");
 	}
@@ -59,7 +59,6 @@ public class TileEntityWoodenCog extends TileEntity{
 	@Override
 	public void writeToNBT(NBTTagCompound compound) {
 		super. writeToNBT(compound);
-		compound.setFloat("rotation", rotation);
 		compound.setFloat("angvel", angvel);
         compound.setInteger("chunknumber", chunknumber);
 	}
