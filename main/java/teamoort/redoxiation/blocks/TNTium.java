@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 public class TNTium extends Block {
 
 	String name = "TNTium";
-	
+
 	public TNTium() {
 		super(Material.rock);
 		setBlockName(Redoxiation.MODID + "." + name);
@@ -22,29 +22,24 @@ public class TNTium extends Block {
 		setHarvestLevel("pickaxe", 2);
 		setHardness(3.0F);
 		setResistance(15.0F);
-		
+
 	}
 
-
-	public void onBlockDestroyedByPlayer(World world, int x, int y, int z, int meta)
-	{
+	public void onBlockDestroyedByPlayer(World world, int x, int y, int z,
+			int meta) {
 		Random random = new Random();
-		if(random.nextInt(4)>=3)
-		{
+		if (random.nextInt(4) >= 3) {
 			world.createExplosion(null, x, y, z, 2, true);
 		}
-        
+
 	}
 
-    public Item getItemDropped(int meta, Random rand, int fortune)
-    {
-        return Items.gunpowder;
-    }
-    
-    public int quantityDropped(Random rand)
-    {
-        return 1 + rand.nextInt(2);
-    }
+	public Item getItemDropped(int meta, Random rand, int fortune) {
+		return Items.gunpowder;
+	}
 
-	
+	public int quantityDropped(Random rand) {
+		return 1 + rand.nextInt(2);
+	}
+
 }

@@ -12,59 +12,54 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockWoodenCog extends BlockContainer{
-	
-	public BlockWoodenCog()
-	{
+public class BlockWoodenCog extends BlockContainer {
+
+	public BlockWoodenCog() {
 		super(Material.wood);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setBlockName("WoodenCog");
-		GameRegistry.registerTileEntity(TileEntityWoodenCog.class, Redoxiation.MODID + ".WoodenCog");
+		GameRegistry.registerTileEntity(TileEntityWoodenCog.class,
+				Redoxiation.MODID + ".WoodenCog");
 	}
-	
+
 	@Override
-	public TileEntity createNewTileEntity(World world, int i)
-	{
+	public TileEntity createNewTileEntity(World world, int i) {
 		return new TileEntityWoodenCog();
 	}
-	
+
 	@Override
-	public String getUnlocalizedName()
-	{
-		return Redoxiation.MODID + ".WoodenCog";
+	public String getUnlocalizedName() {
+		return "tile." + Redoxiation.MODID + ".WoodenCog";
 	}
-	
+
 	@Override
-	public int getRenderType()
-	{
+	public int getRenderType() {
 		return -1;
 	}
-	
+
 	@Override
-	public boolean isOpaqueCube()
-	{
+	public boolean isOpaqueCube() {
 		return false;
 	}
-	
+
 	@Override
-	public boolean renderAsNormalBlock()
-	{
+	public boolean renderAsNormalBlock() {
 		return false;
 	}
-	
-	public boolean checkstate(int x, int y, int z, int st, World world){
-		return ((world.getBlock(x, y, z)==RedoxiationBlocks.WoodenCog)&&(((TileEntityWoodenCog)world.getTileEntity(x, y, z)).state()!=st));
+
+	public boolean checkstate(int x, int y, int z, int st, World world) {
+		return ((world.getBlock(x, y, z) == RedoxiationBlocks.WoodenCog) && (((TileEntityWoodenCog) world.getTileEntity(x, y, z)).state() != st));
 	}
-	
+
 	public void onBlockAdded(World world, int x, int y, int z) {
-		TileEntityWoodenCog tile = (TileEntityWoodenCog)world.getTileEntity(x, y, z);
+		TileEntityWoodenCog tile = (TileEntityWoodenCog) world.getTileEntity(x, y, z);
 		tile.fill(x, y, z, 0, 1);
 		int check = tile.chunknumber();
 		tile.setfill(x, y, z, check, 0);
 	}
-	
-	public void breakBlock(World world, int x, int y, int z, Block block, int meta){
-		
+
+	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
+
 		int check = 0;
 
 		if (checkstate(x+1, y, z, 1, world))

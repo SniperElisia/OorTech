@@ -11,43 +11,37 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockStoneCog extends BlockContainer{
-	
-	public BlockStoneCog()
-	{
+public class BlockStoneCog extends BlockContainer {
+
+	public BlockStoneCog() {
 		super(Material.rock);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setBlockName("StoneCog");
 		GameRegistry.registerTileEntity(TileEntityStoneCog.class, Redoxiation.MODID + ".StoneCog");
 	}
-	
+
 	@Override
-	public TileEntity createNewTileEntity(World world, int i)
-	{
+	public TileEntity createNewTileEntity(World world, int i) {
 		return new TileEntityStoneCog();
 	}
-	
+
 	@Override
-	public String getUnlocalizedName()
-	{
-		return Redoxiation.MODID + ".StoneCog";
+	public String getUnlocalizedName() {
+		return "tile." + Redoxiation.MODID + ".StoneCog";
 	}
-	
+
 	@Override
-	public int getRenderType()
-	{
+	public int getRenderType() {
 		return -1;
 	}
-	
+
 	@Override
-	public boolean isOpaqueCube()
-	{
+	public boolean isOpaqueCube() {
 		return false;
 	}
-	
+
 	@Override
-	public boolean renderAsNormalBlock()
-	{
+	public boolean renderAsNormalBlock() {
 		return false;
 	}
 }

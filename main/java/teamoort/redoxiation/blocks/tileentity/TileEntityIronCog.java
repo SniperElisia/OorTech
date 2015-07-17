@@ -13,53 +13,53 @@ public class TileEntityIronCog extends TileEntity {
 
 	@Override
 	public void updateEntity() {
-		rotation += 0.3141592653589793238462643383279f*angvel;
-		if(rotation >= 6.283185307179586476925286766559f) {
+		rotation += 0.3141592653589793238462643383279f * angvel;
+		if (rotation >= 6.283185307179586476925286766559f) {
 			rotation = rotation - 6.283185307179586476925286766559f;
 		}
 	}
-	
+
 	public int getVolume() {
 		return volume;
 	}
-	
+
 	public void setVolume(int argV) {
 		volume = argV;
 	}
-	
+
 	public float getRotation() {
 		return rotation;
 	}
-	
+
 	public void setRotation(float argR) {
 		rotation = argR;
 	}
-	
-	//rotation save to NBT
+
+	// rotation save to NBT
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
 		super.readFromNBT(compound);
 		rotation = compound.getFloat("rotation");
 	}
-	
+
 	@Override
 	public void writeToNBT(NBTTagCompound compound) {
-		super. writeToNBT(compound);
+		super.writeToNBT(compound);
 		compound.setFloat("rotation", rotation);
 	}
-	
-	//Server<->Client
+
+	// Server<->Client
 	@Override
 	public Packet getDescriptionPacket() {
 		NBTTagCompound tag = new NBTTagCompound();
 		this.writeToNBT(tag);
-		
-		return new S35PacketUpdateTileEntity(this.xCoord,this.yCoord,this.zCoord,this.blockMetadata,tag);
+
+		return new S35PacketUpdateTileEntity(this.xCoord, this.yCoord,
+				this.zCoord, this.blockMetadata, tag);
 	}
-	
+
 	@Override
-	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt)
-	{
+	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
 		NBTTagCompound tag = pkt.func_148857_g();
 		this.readFromNBT(tag);
 	}

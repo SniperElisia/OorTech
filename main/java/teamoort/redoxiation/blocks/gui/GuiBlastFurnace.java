@@ -20,19 +20,20 @@ import java.util.List;
 @SideOnly(Side.CLIENT)
 public class GuiBlastFurnace extends GuiContainer {
 
-    // This is the resource location for the background image
-    private static final ResourceLocation texture = new ResourceLocation("redoxiation", "textures/gui/GuiBlastFurnace.png");
-    private TileBlastFurnaceBlock tileEntity;
+	// This is the resource location for the background image
+	private static final ResourceLocation texture = new ResourceLocation("redoxiation", "textures/gui/GuiBlastFurnace.png");
+	private TileBlastFurnaceBlock tileEntity;
 
-    public GuiBlastFurnace(InventoryPlayer invPlayer, TileBlastFurnaceBlock tileBlastFurnaceBlock) {
-        super(new ContainerBlastFurnace(invPlayer, tileBlastFurnaceBlock));
+	public GuiBlastFurnace(InventoryPlayer invPlayer,
+			TileBlastFurnaceBlock tileBlastFurnaceBlock) {
+		super(new ContainerBlastFurnace(invPlayer, tileBlastFurnaceBlock));
 
-        // Set the width and height of the gui
-        xSize = 176;
-        ySize = 218;
+		// Set the width and height of the gui
+		xSize = 176;
+		ySize = 218;
 
-        this.tileEntity = tileBlastFurnaceBlock;
-    }
+		this.tileEntity = tileBlastFurnaceBlock;
+	}
 
     // some [x,y] coordinates of graphical elements
     final int COOK_BAR_XPOS = 58;
@@ -106,8 +107,8 @@ public class GuiBlastFurnace extends GuiContainer {
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
     }
 
-    // Returns true if the given x,y coordinates are within the given rectangle
-    public static boolean isInRect(int x, int y, int xSize, int ySize, int mouseX, int mouseY){
-        return ((mouseX >= x && mouseX <= x+xSize) && (mouseY >= y && mouseY <= y+ySize));
-    }
+	// Returns true if the given x,y coordinates are within the given rectangle
+	public static boolean isInRect(int x, int y, int xSize, int ySize, int mouseX, int mouseY) {
+		return ((mouseX >= x && mouseX <= x + xSize) && (mouseY >= y && mouseY <= y + ySize));
+	}
 }

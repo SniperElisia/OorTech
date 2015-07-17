@@ -1,4 +1,5 @@
 package teamoort.redoxiation.blocks.container;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,20 +12,20 @@ import net.minecraft.item.ItemStack;
 import teamoort.redoxiation.blocks.tileentity.TileBlastFurnaceBlock;
 
 /**
- * User: brandon3055
- * Date: 06/01/2015
+ * User: brandon3055 Date: 06/01/2015
  *
- * ContainerSmelting is used to link the client side gui to the server side inventory and it is where
- * you add the slots holding items. It is also used to send server side data such as progress bars to the client
- * for use in guis
+ * ContainerSmelting is used to link the client side gui to the server side
+ * inventory and it is where you add the slots holding items. It is also used to
+ * send server side data such as progress bars to the client for use in guis
  */
 public class ContainerBlastFurnace extends Container {
 
-    // Stores the tile entity instance for later use
-    private TileBlastFurnaceBlock tileBlastFurnace;
+	// Stores the tile entity instance for later use
+	private TileBlastFurnaceBlock tileBlastFurnace;
 
-    // These store cache values, used by the server to only update the client side tile entity when values have changed
-    private int [] cachedFields;
+	// These store cache values, used by the server to only update the client
+	// side tile entity when values have changed
+	private int[] cachedFields;
 
     // must assign a slot index to each of the slots used by the GUI.
     // For this container, we can see the furnace fuel, input, and output slots as well as the player inventory slots and the hotbar.

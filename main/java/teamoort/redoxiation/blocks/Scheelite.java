@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 public class Scheelite extends Block {
 
 	String name = "Scheelite";
-	
+
 	public Scheelite() {
 		super(Material.rock);
 		setBlockName(Redoxiation.MODID + "." + name);
@@ -20,30 +20,26 @@ public class Scheelite extends Block {
 		setHarvestLevel("pickaxe", 2);
 		setHardness(2.0F);
 		setResistance(10.0F);
-		
+
 	}
-	
-	public Item getItemDropped(int metadata, Random random,int fortune){
+
+	public Item getItemDropped(int metadata, Random random, int fortune) {
 		return RedoxiationGenericItems.RawScheelite;
 	}
-	
-	public int quantityDropped(Random random)
-    {
-        return random.nextInt(2) + 2;
-    }
-	
-	public int quantityDroppedWithBonus(int fortune, Random random)
-	{
-	
-		if (fortune > 0)
-			{
-				int j = random.nextInt(fortune + 5) - 1;
-				if (j > 0) 
-				{
-					return j++;
-				}
+
+	public int quantityDropped(Random random) {
+		return random.nextInt(2) + 2;
+	}
+
+	public int quantityDroppedWithBonus(int fortune, Random random) {
+
+		if (fortune > 0) {
+			int j = random.nextInt(fortune + 5) - 1;
+			if (j > 0) {
+				return j++;
 			}
+		}
 		return 3;
 	}
-	
+
 }
