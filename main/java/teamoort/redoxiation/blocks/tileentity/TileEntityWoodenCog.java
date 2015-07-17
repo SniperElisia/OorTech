@@ -7,6 +7,7 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 
 public class TileEntityWoodenCog extends TileEntity {
 	private int volume = 0;
@@ -111,27 +112,29 @@ public class TileEntityWoodenCog extends TileEntity {
 		return checknum;
 	}
 
-	public int setfill(int x, int y, int z, int checknum, int st) {
-		((TileEntityWoodenCog) (worldObj.getTileEntity(x, y, z))).setstate(st);
-		((TileEntityWoodenCog) (worldObj.getTileEntity(x, y, z))).setchunknumber(checknum);
+	public int setfill(int x, int y, int z, int checknum, int st, World world) {
+		
+		TileEntity tile = worldObj.getTileEntity(x, y, z);
+		((TileEntityWoodenCog) tile).setstate(st);
 		if (checkstate(x + 1, y, z, st)) {
-			((TileEntityWoodenCog) (worldObj.getTileEntity(x + 1, y, z))).setfill(x + 1, y, z, checknum, st);
+			setfill(x + 1, y, z, checknum, st, world);
 		}
 		if (checkstate(x - 1, y, z, st)) {
-			((TileEntityWoodenCog) (worldObj.getTileEntity(x - 1, y, z))).setfill(x - 1, y, z, checknum, st);
+			setfill(x - 1, y, z, checknum, st, world);
 		}
 		if (checkstate(x, y + 1, z, st)) {
-			((TileEntityWoodenCog) (worldObj.getTileEntity(x, y + 1, z))).setfill(x, y + 1, z, checknum, st);
+			setfill(x, y + 1, z, checknum, st, world);
 		}
 		if (checkstate(x, y - 1, z, st)) {
-			((TileEntityWoodenCog) (worldObj.getTileEntity(x, y - 1, z))).setfill(x, y - 1, z, checknum, st);
+			setfill(x, y - 1, z, checknum, st, world);
 		}
 		if (checkstate(x, y, z + 1, st)) {
-			((TileEntityWoodenCog) (worldObj.getTileEntity(x, y, z + 1))).setfill(x, y, z + 1, checknum, st);
+			setfill(x, y, z + 1, checknum, st, world);
 		}
 		if (checkstate(x, y, z - 1, st)) {
-			((TileEntityWoodenCog) (worldObj.getTileEntity(x, y, z - 1))).setfill(x, y, z - 1, checknum, st);
+			setfill(x, y, z - 1, checknum, st, world);
 		}
+		((TileEntityWoodenCog) tile).setchunknumber(checknum);
 		return checknum;
 	}
 

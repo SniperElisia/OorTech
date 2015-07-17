@@ -55,7 +55,7 @@ public class BlockWoodenCog extends BlockContainer {
 		TileEntityWoodenCog tile = (TileEntityWoodenCog) world.getTileEntity(x, y, z);
 		tile.fill(x, y, z, 0, 1);
 		int check = tile.chunknumber();
-		tile.setfill(x, y, z, check, 0);
+		tile.setfill(x, y, z, check, 0, world);
 	}
 
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
@@ -91,32 +91,32 @@ public class BlockWoodenCog extends BlockContainer {
 		if (checkstate(x+1, y, z, 0, world))
 		{
 			check = ((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).chunknumber();
-			((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).setfill(x+1, y, z, check, 0);
+			((TileEntityWoodenCog)world.getTileEntity(x+1, y, z)).setfill(x+1, y, z, check, 0, world);
 		}
 		if (checkstate(x-1, y, z, 0, world))
 		{
 			check = ((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).chunknumber();
-			((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).setfill(x-1, y, z, check, 0);
+			((TileEntityWoodenCog)world.getTileEntity(x-1, y, z)).setfill(x-1, y, z, check, 0, world);
 		}
 		if (checkstate(x, y+1, z, 0, world))
 		{
 			check = ((TileEntityWoodenCog)world.getTileEntity(x, y+1, z)).chunknumber();
-			((TileEntityWoodenCog)world.getTileEntity(x, y+1, z)).setfill(x, y+1, z, check, 0);
+			((TileEntityWoodenCog)world.getTileEntity(x, y+1, z)).setfill(x, y+1, z, check, 0, world);
 		}
 		if (checkstate(x, y-1, z, 0, world))
 		{
 			check = ((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).chunknumber();
-			((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).setfill(x, y-1, z, check, 0);
+			((TileEntityWoodenCog)world.getTileEntity(x, y-1, z)).setfill(x, y-1, z, check, 0, world);
 		}
 		if (checkstate(x, y, z+1, 0, world))
 		{
 			check = ((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).chunknumber();
-			((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).setfill(x, y, z+1, check, 0);
+			((TileEntityWoodenCog)world.getTileEntity(x, y, z+1)).setfill(x, y, z+1, check, 0, world);
 		}
 		if (checkstate(x, y, z-1, 0, world))
 		{
 			check = ((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).chunknumber();
-			((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).setfill(x, y, z-1, check, 0);
+			((TileEntityWoodenCog)world.getTileEntity(x, y, z-1)).setfill(x, y, z-1, check, 0, world);
 		}
 		
 	}

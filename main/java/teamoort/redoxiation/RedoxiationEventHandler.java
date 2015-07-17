@@ -102,33 +102,33 @@ public class RedoxiationEventHandler implements IWorldGenerator
 	private void generateEnd(World world, Random random, int x, int z) 
 	{
 		
-		(new WorldGenMinable(RedoxiationBlocks.IronObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.GoldObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.CopperObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.TinObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.LeadObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.SilverObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.PlatinumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.NickelObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.ZincObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.CobaltObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.ChromiumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.UraniumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
-		(new WorldGenMinable(RedoxiationBlocks.PlutoniumObsidian, 0, 15, Blocks.end_stone)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.IronObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.GoldObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.CopperObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.TinObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.LeadObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.SilverObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.PlatinumObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.NickelObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.ZincObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.CobaltObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.ChromiumObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.UraniumObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
+		(new WorldGenMinable(RedoxiationBlocks.PlutoniumObsidian, 0, 15, Blocks.obsidian)).generate(world, random, x + random.nextInt(16), 10 + random.nextInt(128), z + random.nextInt(16));
 
-		addOreSpawn(RedoxiationBlocks.IronObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 20, 100);
-		addOreSpawn(RedoxiationBlocks.GoldObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.CopperObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.TinObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.LeadObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.SilverObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.PlatinumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(3), 5, 1, 100);
-		addOreSpawn(RedoxiationBlocks.NickelObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.ZincObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.CobaltObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.ChromiumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
-		addOreSpawn(RedoxiationBlocks.UraniumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
-		addOreSpawn(RedoxiationBlocks.PlutoniumObsidian, 0, Blocks.end_stone, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
+		addOreSpawn(RedoxiationBlocks.IronObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 20, 100);
+		addOreSpawn(RedoxiationBlocks.GoldObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.CopperObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.TinObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.LeadObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.SilverObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.PlatinumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(3), 5, 1, 100);
+		addOreSpawn(RedoxiationBlocks.NickelObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.ZincObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.CobaltObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.ChromiumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(5), 16, 1, 100);
+		addOreSpawn(RedoxiationBlocks.UraniumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
+		addOreSpawn(RedoxiationBlocks.PlutoniumObsidian, 0, Blocks.obsidian, world, random, x, z, 16, 16, 1 + random.nextInt(2), 3, 1, 100);
 		
 	}
 	
