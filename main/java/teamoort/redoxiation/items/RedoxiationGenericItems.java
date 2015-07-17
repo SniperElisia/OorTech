@@ -24,17 +24,10 @@ public class RedoxiationGenericItems extends Item {
 	public static Item Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite,
 			CrushedOreIron, CrushedOreGold, CrushedOreCopper, CrushedOreTin,
 			CrushedOreLead, CrushedOreSilver, CrushedOreNickel,
-			CrushedOrePlatinum, CrushedOreZinc, CrushedOreChromium, DustIron,
-			DustGold, DustCopper, DustTin, DustLead, DustSilver, DustNickel,
-			DustPlatinum, DustZinc, DustCobalt, DustChromium, Salt,
-			AluminaDust, TitanateDust, TungstateDust, PurifiedIron,
-			PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead,
-			PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc,
-			PurifiedCobalt, PurifiedChromium, PurifiedAlumina,
-			PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold,
-			RefinedCopper, RefinedTin, RefinedLead, RefinedSilver,
-			RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt,
-			RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate,
+			CrushedOrePlatinum, CrushedOreZinc, CrushedOreChromium, DustOreIron,
+			DustOreGold, DustOreCopper, DustOreTin, DustOreLead, DustOreSilver, DustOreNickel,
+			DustOrePlatinum, DustOreZinc, DustOreCobalt, DustOreChromium, Salt,
+			DustBauxite, DustRutile, DustScheelite,
 			IngotCopper, IngotTin, IngotLead, IngotSilver, IngotNickel,
 			IngotPlatinum, IngotZinc, IngotCobalt, IngotChromium, UraniumIngot,
 			PlutoniumIngot, IngotSteel, IngotAluminum, IngotTungsten,
@@ -51,23 +44,12 @@ public class RedoxiationGenericItems extends Item {
 			CrushedOreTin_enable, CrushedOreLead_enable,
 			CrushedOreSilver_enable, CrushedOreNickel_enable,
 			CrushedOrePlatinum_enable, CrushedOreZinc_enable,
-			CrushedOreChromium_enable, DustIron_enable, DustGold_enable,
-			DustCopper_enable, DustTin_enable, DustLead_enable,
-			DustSilver_enable, DustNickel_enable, DustPlatinum_enable,
-			DustZinc_enable, DustCobalt_enable, DustChromium_enable,
-			Salt_enable, AluminaDust_enable, TitanateDust_enable,
-			TungstateDust_enable, PurifiedIron_enable, PurifiedGold_enable,
-			PurifiedCopper_enable, PurifiedTin_enable, PurifiedLead_enable,
-			PurifiedSilver_enable, PurifiedNickel_enable,
-			PurifiedPlatinum_enable, PurifiedZinc_enable,
-			PurifiedCobalt_enable, PurifiedChromium_enable,
-			PurifiedAlumina_enable, PurifiedTitanate_enable,
-			PurifiedTungstate_enable, RefinedIron_enable, RefinedGold_enable,
-			RefinedCopper_enable, RefinedTin_enable, RefinedLead_enable,
-			RefinedSilver_enable, RefinedNickel_enable, RefinedPlatinum_enable,
-			RefinedZinc_enable, RefinedCobalt_enable, RefinedChromium_enable,
-			RefinedAlumina_enable, RefinedTitanate_enable,
-			RefinedTungstate_enable, IngotCopper_enable, IngotTin_enable,
+			CrushedOreChromium_enable, DustOreIron_enable, DustOreGold_enable,
+			DustOreCopper_enable, DustOreTin_enable, DustOreLead_enable,
+			DustOreSilver_enable, DustOreNickel_enable, DustOrePlatinum_enable,
+			DustOreZinc_enable, DustOreCobalt_enable, DustOreChromium_enable,
+			Salt_enable, DustBauxite_enable, DustRutile_enable,
+			DustScheelite_enable, IngotCopper_enable, IngotTin_enable,
 			IngotLead_enable, IngotSilver_enable, IngotNickel_enable,
 			IngotPlatinum_enable, IngotZinc_enable, IngotCobalt_enable,
 			IngotChromium_enable, UraniumIngot_enable, PlutoniumIngot_enable,
@@ -172,205 +154,75 @@ public class RedoxiationGenericItems extends Item {
 			GameRegistry.registerItem(CrushedOreChromium, "CrushedOreChromium");
 			OreDictionary.registerOre("crushedChromium", RedoxiationGenericItems.CrushedOreChromium);
 		}
-		if(DustIron_enable){
-			DustIron = new RedoxiationGenericItems("DustIron", "Fe");
-			GameRegistry.registerItem(DustIron, "DustIron");
-			OreDictionary.registerOre("dustIronRedox", RedoxiationGenericItems.DustIron);
+		if(DustOreIron_enable){
+			DustOreIron = new RedoxiationGenericItems("DustOreIron", "Fe");
+			GameRegistry.registerItem(DustOreIron, "DustOreIron");
+			OreDictionary.registerOre("DustOreIronRedox", RedoxiationGenericItems.DustOreIron);
 		}
-		if(DustGold_enable){
-			DustGold = new RedoxiationGenericItems("DustGold", "Au");
-			GameRegistry.registerItem(DustGold, "DustGold");
-			OreDictionary.registerOre("dustGoldRedox", RedoxiationGenericItems.DustGold);
+		if(DustOreGold_enable){
+			DustOreGold = new RedoxiationGenericItems("DustOreGold", "Au");
+			GameRegistry.registerItem(DustOreGold, "DustOreGold");
+			OreDictionary.registerOre("DustOreGoldRedox", RedoxiationGenericItems.DustOreGold);
 		}
-		if(DustCopper_enable){
-			DustCopper = new RedoxiationGenericItems("DustCopper", "Cu");
-			GameRegistry.registerItem(DustCopper, "DustCopper");
-			OreDictionary.registerOre("dustCopperRedox", RedoxiationGenericItems.DustCopper);
+		if(DustOreCopper_enable){
+			DustOreCopper = new RedoxiationGenericItems("DustOreCopper", "Cu");
+			GameRegistry.registerItem(DustOreCopper, "DustOreCopper");
+			OreDictionary.registerOre("DustOreCopperRedox", RedoxiationGenericItems.DustOreCopper);
 		}
-		if(DustTin_enable){
-			DustTin = new RedoxiationGenericItems("DustTin", "Sn");
-			GameRegistry.registerItem(DustTin, "DustTin");
-			OreDictionary.registerOre("dustTinRedox", RedoxiationGenericItems.DustTin);
+		if(DustOreTin_enable){
+			DustOreTin = new RedoxiationGenericItems("DustOreTin", "Sn");
+			GameRegistry.registerItem(DustOreTin, "DustOreTin");
+			OreDictionary.registerOre("DustOreTinRedox", RedoxiationGenericItems.DustOreTin);
 		}
-		if(DustLead_enable){
-			DustLead = new RedoxiationGenericItems("DustLead", "Pb");
-			GameRegistry.registerItem(DustLead, "DustLead");
-			OreDictionary.registerOre("dustLeadRedox", RedoxiationGenericItems.DustLead);
+		if(DustOreLead_enable){
+			DustOreLead = new RedoxiationGenericItems("DustOreLead", "Pb");
+			GameRegistry.registerItem(DustOreLead, "DustOreLead");
+			OreDictionary.registerOre("DustOreLeadRedox", RedoxiationGenericItems.DustOreLead);
 		}
-		if(DustSilver_enable){
-			DustSilver = new RedoxiationGenericItems("DustSilver", "Ag");
-			GameRegistry.registerItem(DustSilver, "DustSilver");
-			OreDictionary.registerOre("dustSilverRedox", RedoxiationGenericItems.DustSilver);
+		if(DustOreSilver_enable){
+			DustOreSilver = new RedoxiationGenericItems("DustOreSilver", "Ag");
+			GameRegistry.registerItem(DustOreSilver, "DustOreSilver");
+			OreDictionary.registerOre("DustOreSilverRedox", RedoxiationGenericItems.DustOreSilver);
 		}
-		if(DustPlatinum_enable){
-			DustPlatinum = new RedoxiationGenericItems("DustPlatinum", "Pt");
-			GameRegistry.registerItem(DustPlatinum, "DustPlatinum");
-			OreDictionary.registerOre("dustPlatinumRedox", RedoxiationGenericItems.DustPlatinum);
+		if(DustOrePlatinum_enable){
+			DustOrePlatinum = new RedoxiationGenericItems("DustOrePlatinum", "Pt");
+			GameRegistry.registerItem(DustOrePlatinum, "DustOrePlatinum");
+			OreDictionary.registerOre("DustOrePlatinumRedox", RedoxiationGenericItems.DustOrePlatinum);
 		}
-    	if(DustZinc_enable){
-			DustZinc = new RedoxiationGenericItems("DustZinc", "Zn");
-			GameRegistry.registerItem(DustZinc, "DustZinc");
-			OreDictionary.registerOre("dustZincRedox", RedoxiationGenericItems.DustZinc);
+    	if(DustOreZinc_enable){
+			DustOreZinc = new RedoxiationGenericItems("DustOreZinc", "Zn");
+			GameRegistry.registerItem(DustOreZinc, "DustOreZinc");
+			OreDictionary.registerOre("DustOreZincRedox", RedoxiationGenericItems.DustOreZinc);
     	}
-    	if(DustNickel_enable){
-			DustNickel = new RedoxiationGenericItems("DustNickel", "Ni");
-			GameRegistry.registerItem(DustNickel, "DustNickel");
-			OreDictionary.registerOre("dustNickelRedox", RedoxiationGenericItems.DustNickel);
+    	if(DustOreNickel_enable){
+			DustOreNickel = new RedoxiationGenericItems("DustOreNickel", "Ni");
+			GameRegistry.registerItem(DustOreNickel, "DustOreNickel");
+			OreDictionary.registerOre("DustOreNickelRedox", RedoxiationGenericItems.DustOreNickel);
     	}
-    	if(DustChromium_enable){
-			DustChromium = new RedoxiationGenericItems("DustChromium", "Cr");
-			GameRegistry.registerItem(DustChromium, "DustChromium");
-			OreDictionary.registerOre("dustChromiumRedox", RedoxiationGenericItems.DustChromium);
+    	if(DustOreChromium_enable){
+			DustOreChromium = new RedoxiationGenericItems("DustOreChromium", "Cr");
+			GameRegistry.registerItem(DustOreChromium, "DustOreChromium");
+			OreDictionary.registerOre("DustOreChromiumRedox", RedoxiationGenericItems.DustOreChromium);
     	}
     	if(Salt_enable){
 			Salt = new RedoxiationGenericItems("Salt", "NaCl");
 			GameRegistry.registerItem(Salt, "Salt");
-			OreDictionary.registerOre("dustSaltRedox", RedoxiationGenericItems.Salt);
+			OreDictionary.registerOre("DustOreSaltRedox", RedoxiationGenericItems.Salt);
     	}
-    	if(AluminaDust_enable){
-			AluminaDust = new RedoxiationGenericItems("AluminaDust", "Al2O3");
-			GameRegistry.registerItem(AluminaDust, "AluminaDust");
-			OreDictionary.registerOre("dustAluminumRedox", RedoxiationGenericItems.AluminaDust);
+    	if(DustBauxite_enable){
+			DustBauxite = new RedoxiationGenericItems("DustBauxite", "Al2O3");
+			GameRegistry.registerItem(DustBauxite, "DustBauxite");
+			OreDictionary.registerOre("DustOreAluminumRedox", RedoxiationGenericItems.DustBauxite);
     	}
-    	if(TitanateDust_enable){
-			TitanateDust = new RedoxiationGenericItems("TitanateDust", "TiO2");
-			GameRegistry.registerItem(TitanateDust, "TitanateDust");
-			OreDictionary.registerOre("dustTitaniumRedox", RedoxiationGenericItems.TitanateDust);
+    	if(DustRutile_enable){
+			DustRutile = new RedoxiationGenericItems("DustRutile", "TiO2");
+			GameRegistry.registerItem(DustRutile, "DustRutile");
+			OreDictionary.registerOre("DustOreTitaniumRedox", RedoxiationGenericItems.DustRutile);
     	}
-    	if(TungstateDust_enable){
-			TungstateDust = new RedoxiationGenericItems("TungstateDust", "WO3");
-			GameRegistry.registerItem(TungstateDust, "TungstateDust");
-			OreDictionary.registerOre("dustTungstenRedox", RedoxiationGenericItems.TungstateDust);
-    	}
-    	if(PurifiedIron_enable){
-			PurifiedIron = new RedoxiationGenericItems("PurifiedIron", "Fe");
-			GameRegistry.registerItem(PurifiedIron, "PurifiedIron");
-			OreDictionary.registerOre("dustPurifiedIron", RedoxiationGenericItems.PurifiedIron);
-    	}
-    	if(PurifiedGold_enable){
-			PurifiedGold = new RedoxiationGenericItems("PurifiedGold", "Au");
-			GameRegistry.registerItem(PurifiedGold, "PurifiedGold");
-			OreDictionary.registerOre("dustPurifiedGold", RedoxiationGenericItems.PurifiedGold);
-    	}
-    	if(PurifiedCopper_enable){
-			PurifiedCopper = new RedoxiationGenericItems("PurifiedCopper", "Cu");
-			GameRegistry.registerItem(PurifiedCopper, "PurifiedCopper");
-			OreDictionary.registerOre("dustPurifiedCopper", RedoxiationGenericItems.PurifiedCopper);
-    	}
-    	if(PurifiedTin_enable){
-			PurifiedTin = new RedoxiationGenericItems("PurifiedTin", "Sn");
-			GameRegistry.registerItem(PurifiedTin, "PurifiedTin");
-			OreDictionary.registerOre("dustPurifiedTin", RedoxiationGenericItems.PurifiedTin);
-    	}
-    	if(PurifiedLead_enable){
-			PurifiedLead = new RedoxiationGenericItems("PurifiedLead", "Pb");
-			GameRegistry.registerItem(PurifiedLead, "PurifiedLead");
-			OreDictionary.registerOre("dustPurifiedLead", RedoxiationGenericItems.PurifiedLead);
-    	}
-    	if(PurifiedSilver_enable){
-			PurifiedSilver = new RedoxiationGenericItems("PurifiedSilver", "Ag");
-			GameRegistry.registerItem(PurifiedSilver, "PurifiedSilver");
-			OreDictionary.registerOre("dustPurifiedSilver", RedoxiationGenericItems.PurifiedSilver);
-    	}
-    	if(PurifiedPlatinum_enable){
-			PurifiedPlatinum = new RedoxiationGenericItems("PurifiedPlatinum", "Pt");
-			GameRegistry.registerItem(PurifiedPlatinum, "PurifiedPlatinum"); 
-			OreDictionary.registerOre("dustPurifiedPlatinum", RedoxiationGenericItems.PurifiedPlatinum);
-    	}
-    	if(PurifiedZinc_enable){
-			PurifiedZinc = new RedoxiationGenericItems("PurifiedZinc", "Zn");
-			GameRegistry.registerItem(PurifiedZinc, "PurifiedZinc");
-			OreDictionary.registerOre("dustPurifiedZinc", RedoxiationGenericItems.PurifiedZinc);
-    	}
-    	if(PurifiedNickel_enable){
-			PurifiedNickel = new RedoxiationGenericItems("PurifiedNickel", "Ni");
-			GameRegistry.registerItem(PurifiedNickel, "PurifiedNickel");
-			OreDictionary.registerOre("dustPurifiedNickel", RedoxiationGenericItems.PurifiedNickel);
-    	}
-    	if(PurifiedChromium_enable){
-			PurifiedChromium = new RedoxiationGenericItems("PurifiedChromium", "Cr");
-			GameRegistry.registerItem(PurifiedChromium, "PurifiedChromium");
-			OreDictionary.registerOre("dustPurifiedChromium", RedoxiationGenericItems.PurifiedChromium);
-    	}
-    	if(PurifiedAlumina_enable){
-			PurifiedAlumina = new RedoxiationGenericItems("PurifiedAlumina", "Al2O3");
-			GameRegistry.registerItem(PurifiedAlumina, "PurifiedAlumina");
-			OreDictionary.registerOre("dustPurifiedAlumina", RedoxiationGenericItems.PurifiedAlumina);
-    	}
-    	if(PurifiedTitanate_enable){
-			PurifiedTitanate = new RedoxiationGenericItems("PurifiedTitanate", "TiO2");
-			GameRegistry.registerItem(PurifiedTitanate, "PurifiedTitanate");
-			OreDictionary.registerOre("dustPurifiedTitanate", RedoxiationGenericItems.PurifiedTitanate);
-		}
-    	if(PurifiedTungstate_enable){
-			PurifiedTungstate = new RedoxiationGenericItems("PurifiedTungstate", "WO3");
-			GameRegistry.registerItem(PurifiedTungstate, "PurifiedTungstate");
-			OreDictionary.registerOre("dustPurifiedTungstate", RedoxiationGenericItems.PurifiedTungstate);
-    	}
-    	if(RefinedIron_enable){
-			RefinedIron = new RedoxiationGenericItems("RefinedIron", "Fe");
-			GameRegistry.registerItem(RefinedIron, "RefinedIron");
-			OreDictionary.registerOre("dustRefinedIron", RedoxiationGenericItems.RefinedIron);
-    	}
-    	if(RefinedGold_enable){
-			RefinedGold = new RedoxiationGenericItems("RefinedGold", "Au");
-			GameRegistry.registerItem(RefinedGold, "RefinedGold");
-			OreDictionary.registerOre("dustRefinedGold", RedoxiationGenericItems.RefinedGold);
-    	}
-    	if(RefinedCopper_enable){
-			RefinedCopper = new RedoxiationGenericItems("RefinedCopper", "Cu");
-			GameRegistry.registerItem(RefinedCopper, "RefinedCopper");
-			OreDictionary.registerOre("dustRefinedCopper", RedoxiationGenericItems.RefinedCopper);
-    	}
-    	if(RefinedTin_enable){
-			RefinedTin = new RedoxiationGenericItems("RefinedTin", "Sn");
-			GameRegistry.registerItem(RefinedTin, "RefinedTin");
-			OreDictionary.registerOre("dustRefinedTin", RedoxiationGenericItems.RefinedTin);
-    	}
-    	if(RefinedLead_enable){
-			RefinedLead = new RedoxiationGenericItems("RefinedLead", "Fb");
-			GameRegistry.registerItem(RefinedLead, "RefinedLead");
-			OreDictionary.registerOre("dustRefinedLead", RedoxiationGenericItems.RefinedLead);
-    	}
-    	if(RefinedSilver_enable){
-			RefinedSilver = new RedoxiationGenericItems("RefinedSilver", "Ag");
-			GameRegistry.registerItem(RefinedSilver, "RefinedSilver");
-			OreDictionary.registerOre("dustRefinedSilver", RedoxiationGenericItems.RefinedSilver);
-    	}
-    	if(RefinedPlatinum_enable){
-			RefinedPlatinum = new RedoxiationGenericItems("RefinedPlatinum", "Pt");
-			GameRegistry.registerItem(RefinedPlatinum, "RefinedPlatinum");
-			OreDictionary.registerOre("dustRefinedPlatinum", RedoxiationGenericItems.RefinedPlatinum);
-    	}
-    	if(RefinedZinc_enable){
-			RefinedZinc = new RedoxiationGenericItems("RefinedZinc", "Zn");
-			GameRegistry.registerItem(RefinedZinc, "RefinedZinc");
-			OreDictionary.registerOre("dustRefinedZinc", RedoxiationGenericItems.RefinedZinc);
-    	}
-    	if(RefinedNickel_enable){
-			RefinedNickel = new RedoxiationGenericItems("RefinedNickel", "Ni");
-			GameRegistry.registerItem(RefinedNickel, "RefinedNickel");
-			OreDictionary.registerOre("dustRefinedNickel", RedoxiationGenericItems.RefinedNickel);
-    	}
-    	if(RefinedChromium_enable){
-			RefinedChromium = new RedoxiationGenericItems("RefinedChromium", "Cr");
-			GameRegistry.registerItem(RefinedChromium, "RefinedChromium");
-			OreDictionary.registerOre("dustRefinedChromium", RedoxiationGenericItems.RefinedChromium);
-    	}
-    	if(RefinedAlumina_enable){
-			RefinedAlumina = new RedoxiationGenericItems("RefinedAlumina", "Al2O3");
-			GameRegistry.registerItem(RefinedAlumina, "RefinedAlumina");
-			OreDictionary.registerOre("dustRefinedAlumina", RedoxiationGenericItems.RefinedAlumina);
-    	}
-    	if(RefinedTitanate_enable){
-			RefinedTitanate = new RedoxiationGenericItems("RefinedTitanate", "TiO2");
-			GameRegistry.registerItem(RefinedTitanate, "RefinedTitanate");
-			OreDictionary.registerOre("dustRefinedTitanate", RedoxiationGenericItems.RefinedTitanate);
-    	}
-    	if(RefinedTungstate_enable){
-			RefinedTungstate = new RedoxiationGenericItems("RefinedTungstate", "WO3");
-			GameRegistry.registerItem(RefinedTungstate, "RefinedTungstate");
-			OreDictionary.registerOre("dustRefinedTungstate", RedoxiationGenericItems.RefinedTungstate);
+    	if(DustScheelite_enable){
+			DustScheelite = new RedoxiationGenericItems("DustScheelite", "WO3");
+			GameRegistry.registerItem(DustScheelite, "DustScheelite");
+			OreDictionary.registerOre("DustOreTungstenRedox", RedoxiationGenericItems.DustScheelite);
     	}
     	if(IngotCopper_enable){
 			IngotCopper = new RedoxiationGenericItems("IngotCopper", "Cu");
@@ -510,7 +362,7 @@ public class RedoxiationGenericItems extends Item {
     	if(SulfurDust_enable){
 			SulfurDust = new RedoxiationGenericItems("SulfurDust");
 			GameRegistry.registerItem(SulfurDust, "SulfurDust");
-			OreDictionary.registerOre("dustSulfurOort", RedoxiationGenericItems.SulfurDust);
+			OreDictionary.registerOre("DustOreSulfurOort", RedoxiationGenericItems.SulfurDust);
 		}
     	if(ItemCryolite_enable){
 			ItemCryolite = new RedoxiationGenericItems("ItemCryolite");
