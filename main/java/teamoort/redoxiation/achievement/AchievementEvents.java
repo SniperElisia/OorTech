@@ -11,8 +11,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class AchievementEvents {
 	@SubscribeEvent
-	public void entitySlain (LivingDeathEvent event)
-	{
+	public void entitySlain(LivingDeathEvent event) {
 		/*if(event.source != null && event.source.getEntity() instanceof EntityPlayer)
 		{
 			EntityPlayer murderer = (EntityPlayer) event.source.getEntity();
@@ -25,14 +24,11 @@ public class AchievementEvents {
 	}
 	
 	@SubscribeEvent
-	public void onBlockHarvest(HarvestDropsEvent event)
-	{
-		if(event.harvester instanceof EntityPlayer)
-		{
+	public void onBlockHarvest(HarvestDropsEvent event) {
+		if (event.harvester instanceof EntityPlayer) {
 			EntityPlayer miner = event.harvester;
-			
-			if(event.block == RedoxiationBlocks.CopperOre)
-			{
+
+			if (event.block == RedoxiationBlocks.CopperOre) {
 				RedoxiationAchievements.triggerAchievement(miner, "redoxiation.start");
 			}
 		}
