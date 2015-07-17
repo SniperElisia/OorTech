@@ -9,10 +9,8 @@ public class CommonProxy {
 
 	private void method() {
 		if (Redoxiation.dummybool)
-			Redoxiation.logger
-					.info("Tileentity proxy complete. Starting Recipe & Smelting ");
+			Redoxiation.logger.info("Tileentity proxy complete. Starting Recipe & Smelting ");
 		else
-			Redoxiation.logger
-					.info("Tileentity proxy complete. Starting World Generator");
+			Redoxiation.logger.info("Tileentity proxy complete. Starting World Generator");
 	}
 }
