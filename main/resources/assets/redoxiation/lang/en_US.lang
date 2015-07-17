@@ -139,3 +139,9 @@ item.redoxiation.TungstenScythe.name=Tungsten Steel Scythe
 #Redoxiation Creative Tabs
 itemGroup.Redoxiation=Redoxiation Blocks
 itemGroup.RedoxiationItems=Redoxiation Items
+
+#리덕시에이션의 도전 과제
+achievement.redoxiation.start=New Start
+achievement.redoxiation.blast=Flameing Blast Furnace
+achievement.redoxiation.start.desc=Mine some copper ore!
+achievement.redoxiation.blast.desc=Make molten pigiron!

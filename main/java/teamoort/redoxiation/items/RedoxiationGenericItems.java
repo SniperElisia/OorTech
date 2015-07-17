@@ -377,7 +377,7 @@ public class RedoxiationGenericItems extends Item {
     	}
         if(ItemHotAirBucket_enable) {
             ItemHotAirBucket = new RedoxiationBucket(RedoxiationBlocks.HotAirBlock);
-            ItemHotAirBucket.setUnlocalizedName("HotAirBucket").setContainerItem(Items.bucket);
+            ItemHotAirBucket.setUnlocalizedName(Redoxiation.MODID + "." + "HotAirBucket").setContainerItem(Items.bucket);
             GameRegistry.registerItem(ItemHotAirBucket, "HotAirBucket");
             FluidContainerRegistry.registerFluidContainer(RedoxiationBlocks.HotAir, new ItemStack(ItemHotAirBucket), new ItemStack(Items.bucket));
             BucketHandler.INSTANCE.buckets.put(RedoxiationBlocks.HotAirBlock, ItemHotAirBucket);
@@ -385,7 +385,7 @@ public class RedoxiationGenericItems extends Item {
         }
         if(ItemMoltenPigironBucket_enable) {
             ItemMoltenPigironBucket = new RedoxiationBucket(RedoxiationBlocks.MoltenPigironBlock);
-            ItemMoltenPigironBucket.setUnlocalizedName("MoltenPigironBucket").setContainerItem(Items.bucket);
+            ItemMoltenPigironBucket.setUnlocalizedName(Redoxiation.MODID + "." + "MoltenPigironBucket").setContainerItem(Items.bucket);
             GameRegistry.registerItem(ItemMoltenPigironBucket, "MoltenPigironBucket");
             FluidContainerRegistry.registerFluidContainer(RedoxiationBlocks.MoltenPigiron, new ItemStack(ItemMoltenPigironBucket), new ItemStack(Items.bucket));
             BucketHandler.INSTANCE.buckets.put(RedoxiationBlocks.MoltenPigironBlock, ItemMoltenPigironBucket);
@@ -393,7 +393,7 @@ public class RedoxiationGenericItems extends Item {
         }
         if(ItemSlagBucket_enable) {
             ItemSlagBucket = new RedoxiationBucket(RedoxiationBlocks.SlagBlock);
-            ItemSlagBucket.setUnlocalizedName("SlagBucket").setContainerItem(Items.bucket);
+            ItemSlagBucket.setUnlocalizedName(Redoxiation.MODID + "." + "SlagBucket").setContainerItem(Items.bucket);
             GameRegistry.registerItem(ItemSlagBucket, "SlagBucket");
             FluidContainerRegistry.registerFluidContainer(RedoxiationBlocks.Slag, new ItemStack(ItemSlagBucket), new ItemStack(Items.bucket));
             BucketHandler.INSTANCE.buckets.put(RedoxiationBlocks.SlagBlock, ItemSlagBucket);
