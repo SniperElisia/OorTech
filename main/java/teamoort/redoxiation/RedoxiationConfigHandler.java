@@ -34,6 +34,12 @@ public class RedoxiationConfigHandler {
     	RedoxiationBlocks.CobaltOre_cfg = config.get(CATEGORY_BLOCKS, "CoblatOre", true).getBoolean();
     	RedoxiationBlocks.ChromiumOre_cfg = config.get(CATEGORY_BLOCKS, "ChromiumOre", true).getBoolean();
     	RedoxiationBlocks.Pitchblend_cfg = config.get(CATEGORY_BLOCKS, "Pitchblend", true).getBoolean();
+    	RedoxiationBlocks.Rutile_cfg = config.get(CATEGORY_BLOCKS, "Rutile", true).getBoolean();
+    	RedoxiationBlocks.Scheelite_cfg = config.get(CATEGORY_BLOCKS, "Scheelite", true).getBoolean();
+    	RedoxiationBlocks.Bauxite_cfg = config.get(CATEGORY_BLOCKS, "Bauxite", true).getBoolean();
+    	RedoxiationBlocks.SulfurOre_cfg = config.get(CATEGORY_BLOCKS, "SulfurOre", true).getBoolean();
+    	RedoxiationBlocks.Limestone_cfg = config.get(CATEGORY_BLOCKS, "Limestone", true).getBoolean();
+    	RedoxiationBlocks.Cryolite_cfg = config.get(CATEGORY_BLOCKS, "Cryolite", true).getBoolean();
 		// Ores End
     	
 		// Blocks End

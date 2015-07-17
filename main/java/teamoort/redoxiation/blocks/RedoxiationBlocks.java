@@ -27,7 +27,8 @@ public class RedoxiationBlocks {
 	
 	public static boolean CopperOre_cfg, TinOre_cfg, LeadOre_cfg,
 			SilverOre_cfg, NickelOre_cfg, PlatinumOre_cfg, ZincOre_cfg,
-			CobaltOre_cfg, ChromiumOre_cfg, Pitchblend_cfg;
+			CobaltOre_cfg, ChromiumOre_cfg, Pitchblend_cfg, Rutile_cfg,
+			Scheelite_cfg, Bauxite_cfg, Limestone_cfg, Cryolite_cfg, SulfurOre_cfg;
 
 	public static void registerBlocks() {
 		// Blocks
