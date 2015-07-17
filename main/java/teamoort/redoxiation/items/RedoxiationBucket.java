@@ -6,8 +6,8 @@ import teamoort.redoxiation.Redoxiation;
 
 public class RedoxiationBucket extends ItemBucket {
 
-    public RedoxiationBucket(Block block) {
-        super(block);
-        this.setCreativeTab(Redoxiation.tabRedoxiationitems);
-    }
+	public RedoxiationBucket(Block block) {
+		super(block);
+		this.setCreativeTab(Redoxiation.tabRedoxiationitems);
+	}
 }

@@ -16,32 +16,87 @@ import net.minecraftforge.oredict.OreDictionary;
 import teamoort.redoxiation.blocks.BlockHotAir;
 import teamoort.redoxiation.blocks.RedoxiationBlocks;
 
-public class RedoxiationGenericItems extends Item{
+public class RedoxiationGenericItems extends Item {
 
 	private final String ITEMNAME;
 	private final String INFORMATION;
+
+	public static Item Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite,
+			CrushedOreIron, CrushedOreGold, CrushedOreCopper, CrushedOreTin,
+			CrushedOreLead, CrushedOreSilver, CrushedOreNickel,
+			CrushedOrePlatinum, CrushedOreZinc, CrushedOreChromium, DustIron,
+			DustGold, DustCopper, DustTin, DustLead, DustSilver, DustNickel,
+			DustPlatinum, DustZinc, CobaltDust, DustChromium, Salt,
+			AluminaDust, TitanateDust, TungstateDust, PurifiedIron,
+			PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead,
+			PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc,
+			PurifiedCobalt, PurifiedChromium, PurifiedAlumina,
+			PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold,
+			RefinedCopper, RefinedTin, RefinedLead, RefinedSilver,
+			RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt,
+			RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate,
+			IngotCopper, IngotTin, IngotLead, IngotSilver, IngotNickel,
+			IngotPlatinum, IngotZinc, IngotCobalt, IngotChromium, UraniumIngot,
+			PlutoniumIngot, IngotSteel, IngotAluminum, IngotTungsten,
+			IngotTitanium, IronNugget, CopperNugget, TinNugget, LeadNugget,
+			SilverNugget, PlatinumNugget, ZincNugget, NickelNugget,
+			ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget,
+			SteelNugget, SulfurChunk, SulfurDust, ItemCryolite,
+			CrashedNetherrack, CrashedObsidian, ItemHotAirBucket,
+			ItemMoltenPigironBucket, ItemSlagBucket;
 	
-	public static Item Calcite, SaltChunk, RawBauxite, RawRutile, RawScheelite, CrushedOreIron, CrushedOreGold,  CrushedOreCopper, CrushedOreTin, CrushedOreLead, CrushedOreSilver, CrushedOreNickel, CrushedOrePlatinum, CrushedOreZinc,  CrushedOreChromium, DustIron, DustGold, DustCopper, DustTin, DustLead, DustSilver, DustNickel, DustPlatinum, DustZinc, CobaltDust, DustChromium, Salt, AluminaDust, TitanateDust, TungstateDust, PurifiedIron, PurifiedGold, PurifiedCopper, PurifiedTin, PurifiedLead, PurifiedSilver, PurifiedNickel, PurifiedPlatinum, PurifiedZinc, PurifiedCobalt, PurifiedChromium, PurifiedAlumina, PurifiedTitanate, PurifiedTungstate, RefinedIron, RefinedGold, RefinedCopper, RefinedTin, RefinedLead, RefinedSilver, RefinedNickel, RefinedPlatinum, RefinedZinc, RefinedCobalt, RefinedChromium, RefinedAlumina, RefinedTitanate, RefinedTungstate, IngotCopper, IngotTin, IngotLead, IngotSilver, IngotNickel, IngotPlatinum, IngotZinc, IngotCobalt, IngotChromium, UraniumIngot, PlutoniumIngot, IngotSteel, IngotAluminum, IngotTungsten, IngotTitanium, IronNugget, CopperNugget, TinNugget, LeadNugget, SilverNugget, PlatinumNugget, ZincNugget, NickelNugget, ChromiumNugget, AluminumNugget, TitaniumNugget, TungstenNugget, SteelNugget, SulfurChunk, SulfurDust, ItemCryolite, CrashedNetherrack, CrashedObsidian, ItemHotAirBucket, ItemMoltenPigironBucket, ItemSlagBucket;
-	public static boolean Calcite_enable, SaltChunk_enable, RawBauxite_enable, RawRutile_enable, RawScheelite_enable, CrushedOreIron_enable, CrushedOreGold_enable,  CrushedOreCopper_enable, CrushedOreTin_enable, CrushedOreLead_enable, CrushedOreSilver_enable, CrushedOreNickel_enable, CrushedOrePlatinum_enable, CrushedOreZinc_enable,  CrushedOreChromium_enable, DustIron_enable, DustGold_enable, DustCopper_enable, DustTin_enable, DustLead_enable, DustSilver_enable, DustNickel_enable, DustPlatinum_enable, DustZinc_enable, CobaltDust_enable, DustChromium_enable, 	Salt_enable, AluminaDust_enable, TitanateDust_enable, TungstateDust_enable, PurifiedIron_enable, PurifiedGold_enable, PurifiedCopper_enable, PurifiedTin_enable, PurifiedLead_enable, PurifiedSilver_enable, PurifiedNickel_enable, PurifiedPlatinum_enable, PurifiedZinc_enable, PurifiedCobalt_enable, PurifiedChromium_enable, PurifiedAlumina_enable, PurifiedTitanate_enable, PurifiedTungstate_enable, RefinedIron_enable, RefinedGold_enable, RefinedCopper_enable, RefinedTin_enable, RefinedLead_enable, RefinedSilver_enable, RefinedNickel_enable, RefinedPlatinum_enable, RefinedZinc_enable, RefinedCobalt_enable, RefinedChromium_enable, RefinedAlumina_enable, RefinedTitanate_enable, RefinedTungstate_enable, IngotCopper_enable, IngotTin_enable, IngotLead_enable, IngotSilver_enable, IngotNickel_enable, IngotPlatinum_enable, IngotZinc_enable, IngotCobalt_enable, IngotChromium_enable, UraniumIngot_enable, PlutoniumIngot_enable, IngotSteel_enable, IngotAluminum_enable, IngotTungsten_enable, IngotTitanium_enable, IronNugget_enable, CopperNugget_enable, TinNugget_enable, LeadNugget_enable, SilverNugget_enable, PlatinumNugget_enable, ZincNugget_enable, NickelNugget_enable, ChromiumNugget_enable, AluminumNugget_enable, TitaniumNugget_enable, TungstenNugget_enable, SteelNugget_enable, SulfurChunk_enable, SulfurDust_enable, ItemCryolite_enable, CrashedNetherrack_enable, CrashedObsidian_enable, ItemHotAirBucket_enable, ItemMoltenPigironBucket_enable, ItemSlagBucket_enable;
-	
-	public RedoxiationGenericItems(String name, String info)
-	{
+	public static boolean Calcite_enable, SaltChunk_enable, RawBauxite_enable,
+			RawRutile_enable, RawScheelite_enable, CrushedOreIron_enable,
+			CrushedOreGold_enable, CrushedOreCopper_enable,
+			CrushedOreTin_enable, CrushedOreLead_enable,
+			CrushedOreSilver_enable, CrushedOreNickel_enable,
+			CrushedOrePlatinum_enable, CrushedOreZinc_enable,
+			CrushedOreChromium_enable, DustIron_enable, DustGold_enable,
+			DustCopper_enable, DustTin_enable, DustLead_enable,
+			DustSilver_enable, DustNickel_enable, DustPlatinum_enable,
+			DustZinc_enable, CobaltDust_enable, DustChromium_enable,
+			Salt_enable, AluminaDust_enable, TitanateDust_enable,
+			TungstateDust_enable, PurifiedIron_enable, PurifiedGold_enable,
+			PurifiedCopper_enable, PurifiedTin_enable, PurifiedLead_enable,
+			PurifiedSilver_enable, PurifiedNickel_enable,
+			PurifiedPlatinum_enable, PurifiedZinc_enable,
+			PurifiedCobalt_enable, PurifiedChromium_enable,
+			PurifiedAlumina_enable, PurifiedTitanate_enable,
+			PurifiedTungstate_enable, RefinedIron_enable, RefinedGold_enable,
+			RefinedCopper_enable, RefinedTin_enable, RefinedLead_enable,
+			RefinedSilver_enable, RefinedNickel_enable, RefinedPlatinum_enable,
+			RefinedZinc_enable, RefinedCobalt_enable, RefinedChromium_enable,
+			RefinedAlumina_enable, RefinedTitanate_enable,
+			RefinedTungstate_enable, IngotCopper_enable, IngotTin_enable,
+			IngotLead_enable, IngotSilver_enable, IngotNickel_enable,
+			IngotPlatinum_enable, IngotZinc_enable, IngotCobalt_enable,
+			IngotChromium_enable, UraniumIngot_enable, PlutoniumIngot_enable,
+			IngotSteel_enable, IngotAluminum_enable, IngotTungsten_enable,
+			IngotTitanium_enable, IronNugget_enable, CopperNugget_enable,
+			TinNugget_enable, LeadNugget_enable, SilverNugget_enable,
+			PlatinumNugget_enable, ZincNugget_enable, NickelNugget_enable,
+			ChromiumNugget_enable, AluminumNugget_enable,
+			TitaniumNugget_enable, TungstenNugget_enable, SteelNugget_enable,
+			SulfurChunk_enable, SulfurDust_enable, ItemCryolite_enable,
+			CrashedNetherrack_enable, CrashedObsidian_enable,
+			ItemHotAirBucket_enable, ItemMoltenPigironBucket_enable,
+			ItemSlagBucket_enable;
+
+	public RedoxiationGenericItems(String name, String info) {
 		super();
 		setCreativeTab(Redoxiation.tabRedoxiationitems);
 		INFORMATION = info;
 		ITEMNAME = name;
 	}
-	
-	public RedoxiationGenericItems(String name)
-	{
+
+	public RedoxiationGenericItems(String name) {
 		super();
 		setCreativeTab(Redoxiation.tabRedoxiationitems);
 		ITEMNAME = name;
 		INFORMATION = "null";
 	}
-	
-	public static void registerItems()
-	{
+
+	public static void registerItems() {
 		if(Calcite_enable){
 			Calcite = new RedoxiationGenericItems("Calcite", "CaCO3");
 			GameRegistry.registerItem(Calcite, "Calcite");
@@ -491,33 +546,29 @@ public class RedoxiationGenericItems extends Item{
             FluidContainerRegistry.registerFluidContainer(RedoxiationBlocks.Slag, new ItemStack(ItemSlagBucket), new ItemStack(Items.bucket));
             BucketHandler.INSTANCE.buckets.put(RedoxiationBlocks.SlagBlock, ItemSlagBucket);
             MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
-        }
-        Redoxiation.logger.info("Item Registry Complete. Starting Tileentity proxy.");
-    }
-    
+		}
+		Redoxiation.logger.info("Item Registry Complete. Starting Tileentity proxy.");
+	}
+
 	@Override
-	public String getUnlocalizedName()
-	{
+	public String getUnlocalizedName() {
 		return "item." + Redoxiation.MODID + "." + ITEMNAME;
 	}
-	
+
 	@Override
-	public String getUnlocalizedName(ItemStack item)
-	{
+	public String getUnlocalizedName(ItemStack item) {
 		return "item." + Redoxiation.MODID + "." + ITEMNAME;
 	}
-	
+
 	@Override
-	public void registerIcons(IIconRegister reg)
-	{
+	public void registerIcons(IIconRegister reg) {
 		this.itemIcon = reg.registerIcon(Redoxiation.MODID + ":" + ITEMNAME);
 	}
-	
+
 	@Override
-	public void addInformation(ItemStack itemstack, EntityPlayer player, List list, boolean par4)
-	{
-		if (!(INFORMATION.equals("null")))
-		{
+	public void addInformation(ItemStack itemstack, EntityPlayer player,
+			List list, boolean par4) {
+		if (!(INFORMATION.equals("null"))) {
 			list.add(INFORMATION);
 		}
 	}
