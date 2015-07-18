@@ -67,7 +67,7 @@ item.redoxiation.DustOrePlatinum.name=Pulvis Platinii
 item.redoxiation.DustOreZinc.name=Pulvis Zinci
 item.redoxiation.DustOreNickel.name=Pulvis Nicheli]
 item.redoxiation.DustOreChromium.name=Pulvis Chromii
-item.redoxiation.Salt.name=Sal
+item.redoxiation.DustSalt.name=Sal
 item.redoxiation.DustBauxite.name=Pulvis Aluminae
 item.redoxiation.DustRutile.name=Pulvis Salis Titanii
 item.redoxiation.DustScheelite.name=Pulvis Salis Wolframii
@@ -98,17 +98,17 @@ item.redoxiation.NuggetTitanium.name=Segmen Titanii
 item.redoxiation.NuggetTungsten.name=Segmen Wolframii
 item.redoxiation.NuggetSteel.name=Segmen Chalybis
 item.redoxiation.SulfurChunk.name=Massa Sulphuris
-item.redoxiation.SulfurDust.name=Pulvis Sulphuris
+item.redoxiation.DustSulfur.name=Pulvis Sulphuris
 item.redoxiation.ItemCryolite.name=Cryolum Illaboratum
 
 #리덕시에이션 액체
 tile.HotAir.name=Aer Ignitus
 tile.MoltenPigiron.name=Ferrum Illiquefactum Depuratum
 
-#Redoxiation Cogs
-redoxiation.WoodenCog.name=Choragium Arboris
-redoxiation.StoneCog.name=Choraium Saxi
-redoxiation.IronCog.name=Choragium Ferri
+#리덕시에이션 톱니바퀴
+tile.redoxiation.WoodenCog.name=Choragium Arboris
+tile.redoxiation.StoneCog.name=Choraium Saxi
+tile.redoxiation.IronCog.name=Choragium Ferri
 
 #리덕시에이션 도구
 item.redoxiation.WoodenSaw.name=Serra Arboris

@@ -26,7 +26,7 @@ public class RedoxiationGenericItems extends Item {
 			CrushedOreLead, CrushedOreSilver, CrushedOreNickel,
 			CrushedOrePlatinum, CrushedOreZinc, CrushedOreChromium, DustOreIron,
 			DustOreGold, DustOreCopper, DustOreTin, DustOreLead, DustOreSilver, DustOreNickel,
-			DustOrePlatinum, DustOreZinc, DustOreCobalt, DustOreChromium, Salt,
+			DustOrePlatinum, DustOreZinc, DustOreCobalt, DustOreChromium, DustSalt,
 			DustBauxite, DustRutile, DustScheelite,
 			IngotCopper, IngotTin, IngotLead, IngotSilver, IngotNickel,
 			IngotPlatinum, IngotZinc, IngotCobalt, IngotChromium, UraniumIngot,
@@ -34,7 +34,7 @@ public class RedoxiationGenericItems extends Item {
 			IngotTitanium, NuggetIron, NuggetCopper, NuggetTin, NuggetLead,
 			NuggetSilver, NuggetPlatinum, NuggetZinc, NuggetNickel,
 			NuggetChromium, NuggetAluminum, NuggetTitanium, NuggetTungsten,
-			NuggetSteel, SulfurChunk, SulfurDust, ItemCryolite,
+			NuggetSteel, SulfurChunk, DustSulfur, ItemCryolite,
 			CrashedNetherrack, CrashedObsidian, ItemHotAirBucket,
 			ItemMoltenPigironBucket, ItemSlagBucket;
 	
@@ -48,7 +48,7 @@ public class RedoxiationGenericItems extends Item {
 			DustOreCopper_enable, DustOreTin_enable, DustOreLead_enable,
 			DustOreSilver_enable, DustOreNickel_enable, DustOrePlatinum_enable,
 			DustOreZinc_enable, DustOreCobalt_enable, DustOreChromium_enable,
-			Salt_enable, DustBauxite_enable, DustRutile_enable,
+			DustSalt_enable, DustBauxite_enable, DustRutile_enable,
 			DustScheelite_enable, IngotCopper_enable, IngotTin_enable,
 			IngotLead_enable, IngotSilver_enable, IngotNickel_enable,
 			IngotPlatinum_enable, IngotZinc_enable, IngotCobalt_enable,
@@ -59,7 +59,7 @@ public class RedoxiationGenericItems extends Item {
 			NuggetPlatinum_enable, NuggetZinc_enable, NuggetNickel_enable,
 			NuggetChromium_enable, NuggetAluminum_enable,
 			NuggetTitanium_enable, NuggetTungsten_enable, NuggetSteel_enable,
-			SulfurChunk_enable, SulfurDust_enable, ItemCryolite_enable,
+			SulfurChunk_enable, DustSulfur_enable, ItemCryolite_enable,
 			CrashedNetherrack_enable, CrashedObsidian_enable,
 			ItemHotAirBucket_enable, ItemMoltenPigironBucket_enable,
 			ItemSlagBucket_enable;
@@ -204,10 +204,10 @@ public class RedoxiationGenericItems extends Item {
 			GameRegistry.registerItem(DustOreChromium, "DustOreChromium");
 			OreDictionary.registerOre("DustOreChromiumRedox", RedoxiationGenericItems.DustOreChromium);
     	}
-    	if(Salt_enable){
-			Salt = new RedoxiationGenericItems("Salt", "NaCl");
-			GameRegistry.registerItem(Salt, "Salt");
-			OreDictionary.registerOre("DustOreSaltRedox", RedoxiationGenericItems.Salt);
+    	if(DustSalt_enable){
+    		DustSalt = new RedoxiationGenericItems("DustSalt", "NaCl");
+			GameRegistry.registerItem(DustSalt, "DustSalt");
+			OreDictionary.registerOre("DustOreSaltRedox", RedoxiationGenericItems.DustSalt);
     	}
     	if(DustBauxite_enable){
 			DustBauxite = new RedoxiationGenericItems("DustBauxite", "Al2O3");
@@ -359,10 +359,10 @@ public class RedoxiationGenericItems extends Item {
 			GameRegistry.registerItem(SulfurChunk, "SulfurChunk");
 			OreDictionary.registerOre("lumpSulfur", RedoxiationGenericItems.SulfurChunk);
     	}
-    	if(SulfurDust_enable){
-			SulfurDust = new RedoxiationGenericItems("SulfurDust");
-			GameRegistry.registerItem(SulfurDust, "SulfurDust");
-			OreDictionary.registerOre("DustOreSulfurOort", RedoxiationGenericItems.SulfurDust);
+    	if(DustSulfur_enable){
+    		DustSulfur = new RedoxiationGenericItems("DustSulfur");
+			GameRegistry.registerItem(DustSulfur, "DustSulfur");
+			OreDictionary.registerOre("DustOreSulfurOort", RedoxiationGenericItems.DustSulfur);
 		}
     	if(ItemCryolite_enable){
 			ItemCryolite = new RedoxiationGenericItems("ItemCryolite");

@@ -96,11 +96,11 @@ public class RedoxiationConfigHandler {
 
 		//Salt
 		items.SaltChunk_enable = config.get(CATEGORY_ITEMS, "SaltChunk", true).getBoolean();
-		items.Salt_enable = config.get(CATEGORY_ITEMS, "Salt", true).getBoolean();
+		items.DustSalt_enable = config.get(CATEGORY_ITEMS, "DustSalt", true).getBoolean();
 		
 		//Sulfur
 		items.SulfurChunk_enable = config.get(CATEGORY_ITEMS, "SulfurChunk", true).getBoolean();
-		items.SulfurDust_enable = config.get(CATEGORY_ITEMS, "SulfurDust", true).getBoolean();
+		items.DustSulfur_enable = config.get(CATEGORY_ITEMS, "DustSulfur", true).getBoolean();
 		
 		//Silver
 		items.NuggetSilver_enable = config.get(CATEGORY_ITEMS, "NuggetSilver", true).getBoolean();

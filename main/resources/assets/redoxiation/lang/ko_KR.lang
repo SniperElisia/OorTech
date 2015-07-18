@@ -67,7 +67,7 @@ item.redoxiation.DustOrePlatinum.name=백금 광석 가루
 item.redoxiation.DustOreZinc.name=아연 광석 가루
 item.redoxiation.DustOreNickel.name=니켈 광석 가루
 item.redoxiation.DustOreChromium.name=크로뮴 광석 가루
-item.redoxiation.Salt.name=소금
+item.redoxiation.DustSalt.name=소금
 item.redoxiation.DustBauxite.name=보크사이트 가루
 item.redoxiation.DustRutile.name=금홍석 가루
 item.redoxiation.DustScheelite.name=회중석 가루
@@ -98,7 +98,7 @@ item.redoxiation.NuggetTitanium.name=티타늄 조각
 item.redoxiation.NuggetTungsten.name=텅스텐 조각
 item.redoxiation.NuggetSteel.name=강철 조각
 item.redoxiation.SulfurChunk.name=유황 덩어리
-item.redoxiation.SulfurDust.name=유황 가루
+item.redoxiation.DustSulfur.name=유황 가루
 item.redoxiation.ItemCryolite.name=빙정석
 item.redoxiation.HotAirBucket.name=열풍 양동이
 item.redoxiation.MoltenPigironBucket.name=녹은 선철 양동이
@@ -110,9 +110,9 @@ tile.MoltenPigiron.name=녹은 선철
 tile.Slag.name=슬래그
 
 #리덕시에이션 톱니바퀴
-redoxiation.WoodenCog.name=나무 톱니바퀴
-redoxiation.StoneCog.name=돌 톱니바퀴
-redoxiation.IronCog.name=철 톱니바퀴
+tile.redoxiation.WoodenCog.name=나무 톱니바퀴
+tile.redoxiation.StoneCog.name=돌 톱니바퀴
+tile.redoxiation.IronCog.name=철 톱니바퀴
 
 #리덕시에이션 도구
 item.redoxiation.WoodenSaw.name=나무 톱

@@ -67,7 +67,7 @@ item.redoxiation.DustOrePlatinum.name=Platinum Ore Dust
 item.redoxiation.DustOreZinc.name=Zinc Ore Dust
 item.redoxiation.DustOreNickel.name=Nickel Ore Dust
 item.redoxiation.DustOreChromium.name=Chromium Ore Dust
-item.redoxiation.Salt.name=Salt
+item.redoxiation.DustSalt.name=Salt
 item.redoxiation.DustBauxite.name=Bauxite Dust
 item.redoxiation.DustRutile.name=Rutile Dust
 item.redoxiation.DustScheelite.name=Scheelite Dust
@@ -98,7 +98,7 @@ item.redoxiation.NuggetTitanium.name=Titanium Nugget
 item.redoxiation.NuggetTungsten.name=Tungsten Nugget
 item.redoxiation.NuggetSteel.name=Steel Nugget
 item.redoxiation.SulfurChunk.name=Sulfur Chunk
-item.redoxiation.SulfurDust.name=Sulfur Dust
+item.redoxiation.DustSulfur.name=Sulfur Dust
 item.redoxiation.ItemCryolite.name=Cryolite
 item.redoxiation.HotAirBucket.name=Hot Air Bucket
 item.redoxiation.MoltenPigironBucket.name=Molten Pig Iron Bucket
@@ -110,9 +110,9 @@ tile.MoltenPigiron.name=Molten Pig Iron
 tile.Slag.name=Slag
 
 #Redoxiation Cogs
-redoxiation.WoodenCog.name=Wooden Cogs
-redoxiation.StoneCog.name=Stone Cogs
-redoxiation.IronCog.name=Iron Cogs
+tile.redoxiation.WoodenCog.name=Wooden Cogs
+tile.redoxiation.StoneCog.name=Stone Cogs
+tile.redoxiation.IronCog.name=Iron Cogs
 
 #Redoxiation Tools
 item.redoxiation.WoodenSaw.name=Wooden Saw
