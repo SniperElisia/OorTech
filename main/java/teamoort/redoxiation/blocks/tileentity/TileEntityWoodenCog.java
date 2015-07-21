@@ -18,7 +18,6 @@ public class TileEntityWoodenCog extends TileEntity {
 
 	@Override
 	public void updateEntity() {
-		Redoxiation.logger.info(chunknumber + " " + angvel);
 		if (chunknumber != 0) {
 			angvel = 0.05f / ((float) chunknumber);
 		} else {
@@ -45,8 +44,6 @@ public class TileEntityWoodenCog extends TileEntity {
 	public void setRotation(float argR) {
 		rotation = argR;
 	}
-
-	// rotation save to NBT
 
 	@Override
 	public void readFromNBT(NBTTagCompound compound) {
@@ -108,7 +105,6 @@ public class TileEntityWoodenCog extends TileEntity {
 		if (checkstate(x, y, z - 1, st)) {
 			checknum = fill(x, y, z - 1, checknum, st);
 		}
-		((TileEntityWoodenCog) tile).setchunknumber(checknum);
 		return checknum;
 	}
 

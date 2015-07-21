@@ -53,8 +53,7 @@ public class BlockWoodenCog extends BlockContainer {
 
 	public void onBlockAdded(World world, int x, int y, int z) {
 		TileEntityWoodenCog tile = (TileEntityWoodenCog) world.getTileEntity(x, y, z);
-		tile.fill(x, y, z, 0, 1);
-		int check = tile.chunknumber();
+		int check = tile.fill(x, y, z, 0, 1);
 		tile.setfill(x, y, z, check, 0, world);
 	}
 
