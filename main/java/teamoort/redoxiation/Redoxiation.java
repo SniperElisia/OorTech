@@ -1,7 +1,6 @@
 package teamoort.redoxiation;
 
 import org.apache.logging.log4j.core.Logger;
-
 import cpw.mods.fml.common.network.NetworkRegistry;
 import teamoort.redoxiation.achievement.AchievementEvents;
 import teamoort.redoxiation.achievement.RedoxiationAchievements;
