@@ -20,11 +20,14 @@ import java.util.Random;
 
 public class BlastFurnaceBlock extends BlockContainer {
 	Random random = new Random();
+	
+	String name = "BlastFurnace";
 
 	public BlastFurnaceBlock() {
 		super(Material.wood);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setBlockName("BlastFurnaceBlock");
+		setBlockTextureName(Redoxiation.MODID + ":" + name);
 		GameRegistry.registerTileEntity(TileBlastFurnaceBlock.class, Redoxiation.MODID + ".BlastFurnaceBlock");
 	}
 
