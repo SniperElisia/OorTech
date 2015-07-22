@@ -85,8 +85,8 @@ public class TileEntityWoodenCog extends TileEntity {
 
 	public int fill(int x, int y, int z, int checknum, int st) {
 		checknum++;
-		TileEntity tile = worldObj.getTileEntity(x, y, z);
-		((TileEntityWoodenCog) tile).state = st;
+		TileEntityWoodenCog tile = (TileEntityWoodenCog) worldObj.getTileEntity(x, y, z);
+		tile.state = st;
 		if (checkstate(x + 1, y, z, st)) {
 			checknum = fill(x + 1, y, z, checknum, st);
 		}
@@ -105,13 +105,16 @@ public class TileEntityWoodenCog extends TileEntity {
 		if (checkstate(x, y, z - 1, st)) {
 			checknum = fill(x, y, z - 1, checknum, st);
 		}
+		
+		tile.setchunknumber(checknum);
 		return checknum;
 	}
 
 	public int setfill(int x, int y, int z, int checknum, int st, World world) {
+		TileEntityWoodenCog tile = (TileEntityWoodenCog) world.getTileEntity(x, y, z);
+		tile.setstate(st);
+		tile.setchunknumber(checknum);
 		
-		TileEntity tile = worldObj.getTileEntity(x, y, z);
-		((TileEntityWoodenCog) tile).setstate(st);
 		if (checkstate(x + 1, y, z, st)) {
 			setfill(x + 1, y, z, checknum, st, world);
 		}
@@ -130,7 +133,6 @@ public class TileEntityWoodenCog extends TileEntity {
 		if (checkstate(x, y, z - 1, st)) {
 			setfill(x, y, z - 1, checknum, st, world);
 		}
-		((TileEntityWoodenCog) tile).setchunknumber(checknum);
 		return checknum;
 	}
 
