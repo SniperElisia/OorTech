@@ -19,7 +19,7 @@ public class RenderWoodenCog extends TileEntitySpecialRenderer {
 
 	public RenderWoodenCog() {
 		texture = new ResourceLocation(Redoxiation.MODID, "models/WoodenCog.png");
-        objModelLocation = new ResourceLocation(Redoxiation.MODID, "models/CogModel1.obj");
+        objModelLocation = new ResourceLocation(Redoxiation.MODID, "models/CogModel2.obj");
         model = AdvancedModelLoader.loadModel(objModelLocation);
 	}
 	
