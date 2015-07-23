@@ -23,8 +23,7 @@ hs_err_pid*
 .LSOverride
 
 # Icon must end with two \r
-Icon
-
+Icon 
 # Thumbnails
 ._*
 
@@ -57,6 +56,4 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-main/resources/assets/redoxiation/textures/gui/GUIBlastFurnace.png
-*.png
 main/resources/assets/redoxiation/textures/gui/GUIBlastFurnace.png
