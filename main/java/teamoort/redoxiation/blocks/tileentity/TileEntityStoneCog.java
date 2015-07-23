@@ -7,7 +7,7 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityStoneCog extends TileEntity {
-	private int volume = 0;
+	private int scale = 0;
 	private float rotation = 0;
 	private float angvel = 0;
 
@@ -19,12 +19,12 @@ public class TileEntityStoneCog extends TileEntity {
 		}
 	}
 	
-	public int getVolume() {
-		return volume;
+	public int getScale() {
+		return scale;
 	}
 	
-	public void setVolume(int argV)	{
-		volume = argV;
+	public void setScale(int argV)	{
+		scale = argV;
 	}
 	
 	public float getRotation() {

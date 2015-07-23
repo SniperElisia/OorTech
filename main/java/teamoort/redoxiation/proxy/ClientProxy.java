@@ -21,7 +21,7 @@ public class ClientProxy extends CommonProxy{
 		TileEntitySpecialRenderer renderWoodenCog = new RenderWoodenCog();
 		TileEntitySpecialRenderer renderStoneCog = new RenderStoneCog();
 		TileEntitySpecialRenderer renderIronCog = new RenderIronCog();
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWoodenCog.class, renderWoodenCog);
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWoodenCog.class, renderWoodenCog);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityStoneCog.class, renderStoneCog);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityIronCog.class, renderIronCog);
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(RedoxiationBlocks.WoodenCog), new ItemRenderWoodenCog(renderWoodenCog, new TileEntityWoodenCog()));

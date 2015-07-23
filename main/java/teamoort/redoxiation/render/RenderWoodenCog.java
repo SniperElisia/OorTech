@@ -8,27 +8,35 @@ import teamoort.redoxiation.model.ModelCogs;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 
 public class RenderWoodenCog extends TileEntitySpecialRenderer {
 
-	public static final ResourceLocation texture = new ResourceLocation(Redoxiation.MODID, "textures/blocks/WoodenCog.png");
-
-	private ModelCogs model;
+	private ResourceLocation texture;
+	private ResourceLocation objModelLocation;
+	private IModelCustom model;
 
 	public RenderWoodenCog() {
-		this.model = new ModelCogs();
+		texture = new ResourceLocation(Redoxiation.MODID, "models/WoodenCog.png");
+        objModelLocation = new ResourceLocation(Redoxiation.MODID, "models/CogModel1.obj");
+        model = AdvancedModelLoader.loadModel(objModelLocation);
 	}
-
+	
 	@Override
-	public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f) {
-		TileEntityWoodenCog te = (TileEntityWoodenCog) tileentity;
-		GL11.glPushMatrix();
-		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
-		GL11.glRotatef(180, 0F, 0F, 1F);
+    public void renderTileEntityAt(TileEntity te, double posX, double posY, double posZ, float timeSinceLastTick) {
+		TileEntityWoodenCog te2 = (TileEntityWoodenCog) te;
+		float rotation = te2.getRotation() + (timeSinceLastTick / 2F);
+		float scale = te2.getScale();
+		
+		bindTexture(texture);
 
-		this.bindTexture(texture);
 		GL11.glPushMatrix();
-		this.model.renderModel(0.0625F, te.getRotation());
+		GL11.glTranslated(posX + 0.5, posY + 0.5, posZ + 0.5);
+		GL11.glScalef(scale, scale, scale);
+		GL11.glPushMatrix();
+		GL11.glRotatef(rotation, 0F, 1F, 0.5F);
+		model.renderAll();
 		GL11.glPopMatrix();
 		GL11.glPopMatrix();
 	}

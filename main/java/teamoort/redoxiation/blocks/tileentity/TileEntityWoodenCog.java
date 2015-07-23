@@ -10,7 +10,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class TileEntityWoodenCog extends TileEntity {
-	private int volume = 0;
+	private int scale = 0;
 	private float rotation = 0;
 	private float angvel = 0;
 	private int state;
@@ -29,12 +29,12 @@ public class TileEntityWoodenCog extends TileEntity {
 		}
 	}
 
-	public int getVolume() {
-		return volume;
+	public int getScale() {
+		return scale;
 	}
 
-	public void setVolume(int argV) {
-		volume = argV;
+	public void setScale(int argV) {
+		scale = argV;
 	}
 
 	public float getRotation() {
