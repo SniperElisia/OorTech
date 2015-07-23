@@ -1,5 +1,6 @@
 package teamoort.redoxiation.blocks;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import teamoort.redoxiation.Redoxiation;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -19,7 +20,7 @@ public class RedoxiationBlocks {
 			GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian,
 			SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian,
 			CobaltObsidian, ChromiumObsidian, UraniumObsidian,
-			PlutoniumObsidian, WoodenCog, StoneCog, IronCog;
+			PlutoniumObsidian, WoodenCog, StoneCog, IronCog, ExampleCog;
 	
 	public static Fluid HotAir, MoltenPigiron, Slag;
 	public static BlockFluidClassic HotAirBlock, MoltenPigironBlock, SlagBlock;
@@ -85,6 +86,7 @@ public class RedoxiationBlocks {
 		WoodenCog = new BlockWoodenCog();
 		StoneCog = new BlockStoneCog();
 		IronCog = new BlockIronCog();
+        ExampleCog = new BlockExampleCog();
 
 		// Machine
 		BlastFurnaceBlock = new BlastFurnaceBlock();
@@ -134,6 +136,8 @@ public class RedoxiationBlocks {
 		GameRegistry.registerBlock(IronCog, "IronCog");
 		GameRegistry.registerBlock(BlastFurnaceBlock, "BlastFurnaceBlock");
 		GameRegistry.registerBlock(FloodFillBlock, "FloodFillBlock");
+        GameRegistry.registerBlock(ExampleCog, "ExampleCog");
+
 
 		OreDictionary.registerOre("oreCopper", CopperOre);
 		OreDictionary.registerOre("oreTin", TinOre);
