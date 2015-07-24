@@ -64,35 +64,35 @@ public class RedoxiationConfigHandler {
 		items.nuggetChromium_enable = config.get(CATEGORY_ITEMS, "nuggetChromium", true).getBoolean();
 		items.crushedOreChromium_enable = config.get(CATEGORY_ITEMS, "crushedOreChromium", true).getBoolean();
 		items.dustOreChromium_enable = config.get(CATEGORY_ITEMS, "dustOreChromium", true).getBoolean();
-		items.ingotChromium_enable = config.get(CATEGORY_ITEMS, "Chroumiumingot", true).getBoolean();
+		items.ingotChromium_enable = config.get(CATEGORY_ITEMS, "ingotChroumium", true).getBoolean();
 		
 		//Cobalt
 		items.dustOreCobalt_enable = config.get(CATEGORY_ITEMS, "dustOreCoblat", true).getBoolean();
-		items.ingotCobalt_enable = config.get(CATEGORY_ITEMS, "Cobaltingot", true).getBoolean();
+		items.ingotCobalt_enable = config.get(CATEGORY_ITEMS, "ingotCobalt", true).getBoolean();
 		
 		//Copper
 		items.nuggetCopper_enable = config.get(CATEGORY_ITEMS, "nuggetCopper", true).getBoolean();
 		items.crushedOreCopper_enable = config.get(CATEGORY_ITEMS, "crushedOreCopper", true).getBoolean();
 		items.dustOreCopper_enable = config.get(CATEGORY_ITEMS, "dustOreCopper", true).getBoolean();
-		items.ingotCopper_enable = config.get(CATEGORY_ITEMS, "Copperingot", true).getBoolean();
+		items.ingotCopper_enable = config.get(CATEGORY_ITEMS, "ingotCopper", true).getBoolean();
 		
 		//Lead
 		items.nuggetLead_enable = config.get(CATEGORY_ITEMS, "nuggetLead", true).getBoolean();
 		items.crushedOreLead_enable = config.get(CATEGORY_ITEMS, "crushedOreLead", true).getBoolean();
 		items.dustOreLead_enable = config.get(CATEGORY_ITEMS, "dustOreLead", true).getBoolean();
-		items.ingotLead_enable = config.get(CATEGORY_ITEMS, "Leadingot", true).getBoolean();
+		items.ingotLead_enable = config.get(CATEGORY_ITEMS, "ingotLead", true).getBoolean();
 		
 		//Nickel
 		items.nuggetNickel_enable = config.get(CATEGORY_ITEMS, "nuggetNickel", true).getBoolean();
 		items.crushedOreNickel_enable = config.get(CATEGORY_ITEMS, "crushedOreNickel", true).getBoolean();
 		items.dustOreNickel_enable = config.get(CATEGORY_ITEMS, "dustOreNickel", true).getBoolean();
-		items.ingotNickel_enable = config.get(CATEGORY_ITEMS, "Nickelingot", true).getBoolean();
+		items.ingotNickel_enable = config.get(CATEGORY_ITEMS, "ingotNickel", true).getBoolean();
 		
 		//Platinum
 		items.nuggetPlatinum_enable = config.get(CATEGORY_ITEMS, "nuggetPlatinum", true).getBoolean();
 		items.crushedOrePlatinum_enable = config.get(CATEGORY_ITEMS, "crushedOrePlatinum", true).getBoolean();
 		items.dustOrePlatinum_enable = config.get(CATEGORY_ITEMS, "dustOrePlatinum", true).getBoolean();
-		items.ingotPlatinum_enable = config.get(CATEGORY_ITEMS, "Platinumingot", true).getBoolean();
+		items.ingotPlatinum_enable = config.get(CATEGORY_ITEMS, "ingotPlatinum", true).getBoolean();
 
 		//Salt
 		items.SaltChunk_enable = config.get(CATEGORY_ITEMS, "SaltChunk", true).getBoolean();
@@ -106,35 +106,35 @@ public class RedoxiationConfigHandler {
 		items.nuggetSilver_enable = config.get(CATEGORY_ITEMS, "nuggetSilver", true).getBoolean();
 		items.dustOreSilver_enable = config.get(CATEGORY_ITEMS, "dustOreSilver", true).getBoolean();
 		items.crushedOreSilver_enable = config.get(CATEGORY_ITEMS, "crushedOreSilver", true).getBoolean();
-		items.ingotSilver_enable = config.get(CATEGORY_ITEMS, "Silveringot", true).getBoolean();
+		items.ingotSilver_enable = config.get(CATEGORY_ITEMS, "ingotSilver", true).getBoolean();
 		
 		//Steel
 		items.nuggetSteel_enable = config.get(CATEGORY_ITEMS, "nuggetSteel", true).getBoolean();
-		items.ingotSteel_enable = config .get(CATEGORY_ITEMS, "Steelingot", true).getBoolean();
+		items.ingotSteel_enable = config .get(CATEGORY_ITEMS, "ingotSteel", true).getBoolean();
 		
 		//Tin
 		items.nuggetTin_enable = config.get(CATEGORY_ITEMS, "nuggetTin", true) .getBoolean();
 		items.crushedOreTin_enable = config.get(CATEGORY_ITEMS, "crushedOreTin", true).getBoolean();
 		items.dustOreTin_enable = config.get(CATEGORY_ITEMS, "dustOreTin", true) .getBoolean();
-		items.ingotTin_enable = config.get(CATEGORY_ITEMS, "Tiningot", true) .getBoolean();
+		items.ingotTin_enable = config.get(CATEGORY_ITEMS, "ingotTin", true) .getBoolean();
 		
 		//Titanate
 		items.nuggetTitanium_enable = config.get(CATEGORY_ITEMS, "nuggetTitanium", true).getBoolean();
 		items.dustRutile_enable = config.get(CATEGORY_ITEMS, "dustRutile", true).getBoolean();
-		items.ingotTitanium_enable = config.get(CATEGORY_ITEMS, "Titaniumingot", true).getBoolean();
+		items.ingotTitanium_enable = config.get(CATEGORY_ITEMS, "ingotTitanium", true).getBoolean();
 		items.RawRutile_enable = config.get(CATEGORY_ITEMS, "RawRutile", true).getBoolean();
 		
 		//Tungstate
 		items.nuggetTungsten_enable = config.get(CATEGORY_ITEMS, "nuggetTungsten", true).getBoolean();
 		items.dustScheelite_enable = config.get(CATEGORY_ITEMS, "dustScheelite", true).getBoolean();
-		items.ingotTungsten_enable = config.get(CATEGORY_ITEMS, "Tungsteningot", true).getBoolean();
+		items.ingotTungsten_enable = config.get(CATEGORY_ITEMS, "ingotTungsten", true).getBoolean();
 		items.RawScheelite_enable = config.get(CATEGORY_ITEMS, "RawScheelite", true).getBoolean();
 		
 		//Zinc
 		items.nuggetZinc_enable = config.get(CATEGORY_ITEMS, "nuggetZinc", true).getBoolean();
 		items.crushedOreZinc_enable = config.get(CATEGORY_ITEMS, "crushedOreZinc", true).getBoolean();
 		items.dustOreZinc_enable = config.get(CATEGORY_ITEMS, "dustOreZinc", true).getBoolean();
-		items.ingotZinc_enable = config.get(CATEGORY_ITEMS, "Zincingot", true).getBoolean();
+		items.ingotZinc_enable = config.get(CATEGORY_ITEMS, "ingotZinc", true).getBoolean();
 		
 		
 		//Bucket
@@ -161,9 +161,9 @@ public class RedoxiationConfigHandler {
     	oregen.ferroNickelOregen = config.getBoolean("oreFerroNickelgen", CATEGORY_OREGEN, true, "Ferronickel Oregen Configuration [Default : true]");
     	oregen.pseudoBronzeOregen = config.getBoolean("orePseudoBronzegen", CATEGORY_OREGEN, true, "PseudoBronze Oregen Configuration [Default : true]");
     	oregen.pseudoBrassOregen = config.getBoolean("orePseudoBrassOregen", CATEGORY_OREGEN, true, "PseudoBrass Oregen Configuration [Default : true]");
-    	oregen.argentAurumOregen = config.getBoolean("argentAurumOregen", CATEGORY_OREGEN, true, "ArgentAurum Oregen Configuration [Default : true");
-    	oregen.pseudoSolderOregen = config.getBoolean("pseudoSolderOregen", CATEGORY_OREGEN, true, "PseudoSolder Oregen Configuration [Default : true]");
-    	oregen.pseudoStelliteOregen = config.getBoolean("pseudoStelliteOregen", CATEGORY_OREGEN, true, "PseudoStellite Oregen Configuration [Default : true]");
+    	oregen.argentAurumOregen = config.getBoolean("argentAurumOregen", CATEGORY_OREGEN, true, "argentAurum Oregen Configuration [Default : true");
+    	oregen.pseudoSolderOregen = config.getBoolean("pseudoSolderOregen", CATEGORY_OREGEN, true, "pseudoSolder Oregen Configuration [Default : true]");
+    	oregen.pseudoStelliteOregen = config.getBoolean("pseudoStelliteOregen", CATEGORY_OREGEN, true, "pseudoStellite Oregen Configuration [Default : true]");
     	oregen.TNTiumOregen = config.getBoolean("TNTiumOregen", CATEGORY_OREGEN, true, "TNTium Oregen Configuration [Default : true]");
     	//End
     	//Overworld gen control Start
