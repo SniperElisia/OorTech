@@ -161,9 +161,9 @@ public class RedoxiationConfigHandler {
     	oregen.ferroNickelOregen = config.getBoolean("oreFerroNickelgen", CATEGORY_OREGEN, true, "Ferronickel Oregen Configuration [Default : true]");
     	oregen.pseudoBronzeOregen = config.getBoolean("orePseudoBronzegen", CATEGORY_OREGEN, true, "PseudoBronze Oregen Configuration [Default : true]");
     	oregen.pseudoBrassOregen = config.getBoolean("orePseudoBrassOregen", CATEGORY_OREGEN, true, "PseudoBrass Oregen Configuration [Default : true]");
-    	oregen.argentAurumOregen = config.getBoolean("argentAurumOregen", CATEGORY_OREGEN, true, "argentAurum Oregen Configuration [Default : true");
-    	oregen.pseudoSolderOregen = config.getBoolean("pseudoSolderOregen", CATEGORY_OREGEN, true, "pseudoSolder Oregen Configuration [Default : true]");
-    	oregen.pseudoStelliteOregen = config.getBoolean("pseudoStelliteOregen", CATEGORY_OREGEN, true, "pseudoStellite Oregen Configuration [Default : true]");
+    	oregen.argentAurumOregen = config.getBoolean("argentAurumOregen", CATEGORY_OREGEN, true, "ArgentAurum Oregen Configuration [Default : true");
+    	oregen.pseudoSolderOregen = config.getBoolean("pseudoSolderOregen", CATEGORY_OREGEN, true, "PseudoSolder Oregen Configuration [Default : true]");
+    	oregen.pseudoStelliteOregen = config.getBoolean("pseudoStelliteOregen", CATEGORY_OREGEN, true, "PseudoStellite Oregen Configuration [Default : true]");
     	oregen.TNTiumOregen = config.getBoolean("TNTiumOregen", CATEGORY_OREGEN, true, "TNTium Oregen Configuration [Default : true]");
     	//End
     	//Overworld gen control Start
