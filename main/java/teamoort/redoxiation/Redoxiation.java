@@ -58,7 +58,7 @@ public class Redoxiation {
 
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(RedoxiationBlocks.CopperOre);
+			return Item.getItemFromBlock(RedoxiationBlocks.oreCopper);
 		}
 	};
 

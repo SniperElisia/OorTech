@@ -12,37 +12,37 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class RedoxiationBlocks {
 
-	public static Block CopperOre, TinOre, LeadOre, SilverOre, NickelOre,
-			PlatinumOre, ZincOre, CobaltOre, ChromiumOre, Pitchblend,
+	public static Block oreCopper, oreTin, oreLead, oreSilver, oreNickel,
+			orePlatinum, oreZinc, oreCobalt, oreChromium, Pitchblend,
 			Limestone, SaltRock, Bauxite, Rutile, Scheelite, Cryolite,
-			SulfurOre, FerronickelOre, PseudoBronzeOre, PseudoBrassOre,
-			ArgentAurum, PseudoSolder, PseudoStellite, TNTium, IronObsidian,
-			GoldObsidian, CopperObsidian, TinObsidian, LeadObsidian,
-			SilverObsidian, NickelObsidian, PlatinumObsidian, ZincObsidian,
-			CobaltObsidian, ChromiumObsidian, UraniumObsidian,
-			PlutoniumObsidian, WoodenCog, StoneCog, IronCog, ExampleCog;
+			SulfurOre, oreFerroNickel, orePseudoBronze, orePseudoBrassOre,
+			argentAurum, pseudoSolder, pseudoStellite, TNTium, obsidianIron,
+			obsidianGold, obsidianCopper, obsidianTin, obsidianLead,
+			obsidianSilver, obsidianNickel, obsidianPlatinum, obsidianZinc,
+			obsidianCobalt, obsidianChromium, obsidianUranium,
+			obsidianPlutonium, WoodenCog, StoneCog, IronCog, ExampleCog;
 	
 	public static Fluid HotAir, MoltenPigiron, Slag;
 	public static BlockFluidClassic HotAirBlock, MoltenPigironBlock, SlagBlock;
 	public static Block BlastFurnaceBlock, FloodFillBlock;
 	
-	public static boolean CopperOre_cfg, TinOre_cfg, LeadOre_cfg,
-			SilverOre_cfg, NickelOre_cfg, PlatinumOre_cfg, ZincOre_cfg,
-			CobaltOre_cfg, ChromiumOre_cfg, Pitchblend_cfg, Rutile_cfg,
+	public static boolean oreCopper_cfg, oreTin_cfg, oreLead_cfg,
+			oreSilver_cfg, oreNickel_cfg, orePlatinum_cfg, oreZinc_cfg,
+			oreCobalt_cfg, oreChromium_cfg, Pitchblend_cfg, Rutile_cfg,
 			Scheelite_cfg, Bauxite_cfg, Limestone_cfg, Cryolite_cfg, SulfurOre_cfg;
 
 	public static void registerBlocks() {
 		// Blocks
 		// Normal Ore Name, Harvest level, Hardness, Resistance
-		CopperOre = new RedoxiationOre("CopperOre", 1, 2.5F, 5.0F);
-		TinOre = new RedoxiationOre("TinOre", 1, 2.5F, 5.0F);
-		LeadOre = new RedoxiationOre("LeadOre", 1, 2.5F, 5.0F);
-		SilverOre = new RedoxiationOre("SilverOre", 2, 2.5F, 5.0F);
-		NickelOre = new RedoxiationOre("NickelOre", 1, 2.5F, 5.0F);
-		PlatinumOre = new RedoxiationOre("PlatinumOre", 2, 2.5F, 5.0F);
-		ZincOre = new RedoxiationOre("ZincOre", 1, 2.5F, 5.0F);
-		CobaltOre = new RedoxiationOre("CobaltOre", 1, 2.5F, 5.0F);
-		ChromiumOre = new RedoxiationOre("ChromiumOre", 1, 2.5F, 5.0F);
+		oreCopper = new RedoxiationOre("oreCopper", 1, 2.5F, 5.0F);
+		oreTin = new RedoxiationOre("oreTin", 1, 2.5F, 5.0F);
+		oreLead = new RedoxiationOre("oreLead", 1, 2.5F, 5.0F);
+		oreSilver = new RedoxiationOre("oreSilver", 2, 2.5F, 5.0F);
+		oreNickel = new RedoxiationOre("oreNickel", 1, 2.5F, 5.0F);
+		orePlatinum = new RedoxiationOre("orePlatinum", 2, 2.5F, 5.0F);
+		oreZinc = new RedoxiationOre("oreZinc", 1, 2.5F, 5.0F);
+		oreCobalt = new RedoxiationOre("oreCobalt", 1, 2.5F, 5.0F);
+		oreChromium = new RedoxiationOre("oreChromium", 1, 2.5F, 5.0F);
 
 		Pitchblend = new RedoxiationOre("Pitchblend", 2, 2.5F, 5.0F);
 		Limestone = new Limestone();
@@ -54,39 +54,39 @@ public class RedoxiationBlocks {
 		SulfurOre = new SulfurOre();
 
 		// Nether Ore
-		FerronickelOre = new RedoxiationOre("FerronickelOre", 2, 3.0F, 15.0F);
-		PseudoBronzeOre = new RedoxiationOre("PseudoBronzeOre", 2, 3.0F, 15.0F);
-		PseudoBrassOre = new RedoxiationOre("PseudoBrassOre", 2, 3.0F, 15.0F);
+		oreFerroNickel = new RedoxiationOre("oreFerroNickel", 2, 3.0F, 15.0F);
+		orePseudoBronze = new RedoxiationOre("orePseudoBronze", 2, 3.0F, 15.0F);
+		orePseudoBrassOre = new RedoxiationOre("orePseudoBrassOre", 2, 3.0F, 15.0F);
 
-		ArgentAurum = new RedoxiationOre("ArgentAurum", 2, 3.0F, 15.0F);
-		PseudoSolder = new RedoxiationOre("PseudoSolder", 2, 3.0F, 15.0F);
-		PseudoStellite = new RedoxiationOre("PseudoStellite", 2, 3.0F, 15.0F);
+		argentAurum = new RedoxiationOre("argentAurum", 2, 3.0F, 15.0F);
+		pseudoSolder = new RedoxiationOre("pseudoSolder", 2, 3.0F, 15.0F);
+		pseudoStellite = new RedoxiationOre("pseudoStellite", 2, 3.0F, 15.0F);
 		TNTium = new TNTium();
 
 		// Obsidian Ore
-		IronObsidian = new RedoxiationOre("IronObsidian", 3, 50.0F, 2000.0F);
-		GoldObsidian = new RedoxiationOre("GoldObsidian", 3, 50.0F, 2000.0F);
-		CopperObsidian = new RedoxiationOre("CopperObsidian", 3, 50.0F, 2000.0F);
-		TinObsidian = new RedoxiationOre("TinObsidian", 3, 50.0F, 2000.0F);
-		LeadObsidian = new RedoxiationOre("LeadObsidian", 3, 50.0F, 2000.0F);
-		SilverObsidian = new RedoxiationOre("SilverObsidian", 3, 50.0F, 2000.0F);
-		NickelObsidian = new RedoxiationOre("NickelObsidian", 3, 50.0F, 2000.0F);
-		PlatinumObsidian = new RedoxiationOre("PlatinumObsidian", 3, 50.0F,
+		obsidianIron = new RedoxiationOre("obsidianIron", 3, 50.0F, 2000.0F);
+		obsidianGold = new RedoxiationOre("obsidianGold", 3, 50.0F, 2000.0F);
+		obsidianCopper = new RedoxiationOre("obsidianCopper", 3, 50.0F, 2000.0F);
+		obsidianTin = new RedoxiationOre("obsidianTin", 3, 50.0F, 2000.0F);
+		obsidianLead = new RedoxiationOre("obsidianLead", 3, 50.0F, 2000.0F);
+		obsidianSilver = new RedoxiationOre("obsidianSilver", 3, 50.0F, 2000.0F);
+		obsidianNickel = new RedoxiationOre("obsidianNickel", 3, 50.0F, 2000.0F);
+		obsidianPlatinum = new RedoxiationOre("obsidianPlatinum", 3, 50.0F,
 				2000.0F);
-		ZincObsidian = new RedoxiationOre("ZincObsidian", 3, 50.0F, 2000.0F);
-		CobaltObsidian = new RedoxiationOre("CobaltObsidian", 3, 50.0F, 2000.0F);
-		ChromiumObsidian = new RedoxiationOre("ChromiumObsidian", 3, 50.0F,
+		obsidianZinc = new RedoxiationOre("obsidianZinc", 3, 50.0F, 2000.0F);
+		obsidianCobalt = new RedoxiationOre("obsidianCobalt", 3, 50.0F, 2000.0F);
+		obsidianChromium = new RedoxiationOre("obsidianChromium", 3, 50.0F,
 				2000.0F);
-		UraniumObsidian = new RedoxiationOre("UraniumObsidian", 3, 50.0F,
+		obsidianUranium = new RedoxiationOre("obsidianUranium", 3, 50.0F,
 				2000.0F);
-		PlutoniumObsidian = new RedoxiationOre("PlutoniumObsidian", 3, 50.0F,
+		obsidianPlutonium = new RedoxiationOre("obsidianPlutonium", 3, 50.0F,
 				2000.0F);
 
 		// Cog
 		WoodenCog = new BlockWoodenCog();
 		StoneCog = new BlockStoneCog();
 		IronCog = new BlockIronCog();
-        ExampleCog = new BlockExampleCog();
+		ExampleCog = new BlockExampleCog();
 
 		// Machine
 		BlastFurnaceBlock = new BlastFurnaceBlock();
@@ -94,15 +94,15 @@ public class RedoxiationBlocks {
 
 		// Registry
 
-		GameRegistry.registerBlock(CopperOre, "CopperOre");
-		GameRegistry.registerBlock(TinOre, "TinOre");
-		GameRegistry.registerBlock(LeadOre, "LeadOre");
-		GameRegistry.registerBlock(SilverOre, "SilverOre");
-		GameRegistry.registerBlock(NickelOre, "NickelOre");
-		GameRegistry.registerBlock(PlatinumOre, "PlatinumOre");
-		GameRegistry.registerBlock(ZincOre, "ZincOre");
-		GameRegistry.registerBlock(CobaltOre, "CobaltOre");
-		GameRegistry.registerBlock(ChromiumOre, "ChromiumOre");
+		GameRegistry.registerBlock(oreCopper, "oreCopper");
+		GameRegistry.registerBlock(oreTin, "oreTin");
+		GameRegistry.registerBlock(oreLead, "oreLead");
+		GameRegistry.registerBlock(oreSilver, "oreSilver");
+		GameRegistry.registerBlock(oreNickel, "oreNickel");
+		GameRegistry.registerBlock(orePlatinum, "orePlatinum");
+		GameRegistry.registerBlock(oreZinc, "oreZinc");
+		GameRegistry.registerBlock(oreCobalt, "oreCobalt");
+		GameRegistry.registerBlock(oreChromium, "oreChromium");
 		GameRegistry.registerBlock(Pitchblend, "Pitchblend");
 		GameRegistry.registerBlock(Limestone, "Limestone");
 		GameRegistry.registerBlock(SaltRock, "SaltRock");
@@ -111,43 +111,42 @@ public class RedoxiationBlocks {
 		GameRegistry.registerBlock(Scheelite, "Scheelite");
 		GameRegistry.registerBlock(Cryolite, "Cryolite");
 		GameRegistry.registerBlock(SulfurOre, "SulfurOre");
-		GameRegistry.registerBlock(FerronickelOre, "FerronickelOre");
-		GameRegistry.registerBlock(PseudoBronzeOre, "PseudoBronzeOre");
-		GameRegistry.registerBlock(PseudoBrassOre, "PseudoBrassOre");
-		GameRegistry.registerBlock(ArgentAurum, "ArgentAurum");
-		GameRegistry.registerBlock(PseudoSolder, "PseudoSolder");
-		GameRegistry.registerBlock(PseudoStellite, "PseudoStellite");
+		GameRegistry.registerBlock(oreFerroNickel, "oreFerroNickel");
+		GameRegistry.registerBlock(orePseudoBronze, "orePseudoBronze");
+		GameRegistry.registerBlock(orePseudoBrassOre, "orePseudoBrassOre");
+		GameRegistry.registerBlock(argentAurum, "argentAurum");
+		GameRegistry.registerBlock(pseudoSolder, "pseudoSolder");
+		GameRegistry.registerBlock(pseudoStellite, "pseudoStellite");
 		GameRegistry.registerBlock(TNTium, "TNTium");
-		GameRegistry.registerBlock(IronObsidian, "IronObsidian");
-		GameRegistry.registerBlock(GoldObsidian, "GoldObsidian");
-		GameRegistry.registerBlock(CopperObsidian, "CopperObsidian");
-		GameRegistry.registerBlock(TinObsidian, "TinObsidian");
-		GameRegistry.registerBlock(LeadObsidian, "LeadObsidian");
-		GameRegistry.registerBlock(SilverObsidian, "SilverObsidian");
-		GameRegistry.registerBlock(NickelObsidian, "NickelObsidian");
-		GameRegistry.registerBlock(PlatinumObsidian, "PlatinumObsidian");
-		GameRegistry.registerBlock(ZincObsidian, "ZincObsidian");
-		GameRegistry.registerBlock(CobaltObsidian, "CobaltObsidian");
-		GameRegistry.registerBlock(ChromiumObsidian, "ChromiumObsidian");
-		GameRegistry.registerBlock(UraniumObsidian, "UraniumObsidian");
-		GameRegistry.registerBlock(PlutoniumObsidian, "PlutoniumObsidian");
+		GameRegistry.registerBlock(obsidianIron, "obsidianIron");
+		GameRegistry.registerBlock(obsidianGold, "obsidianGold");
+		GameRegistry.registerBlock(obsidianCopper, "obsidianCopper");
+		GameRegistry.registerBlock(obsidianTin, "obsidianTin");
+		GameRegistry.registerBlock(obsidianLead, "obsidianLead");
+		GameRegistry.registerBlock(obsidianSilver, "obsidianSilver");
+		GameRegistry.registerBlock(obsidianNickel, "obsidianNickel");
+		GameRegistry.registerBlock(obsidianPlatinum, "obsidianPlatinum");
+		GameRegistry.registerBlock(obsidianZinc, "obsidianZinc");
+		GameRegistry.registerBlock(obsidianCobalt, "obsidianCobalt");
+		GameRegistry.registerBlock(obsidianChromium, "obsidianChromium");
+		GameRegistry.registerBlock(obsidianUranium, "obsidianUranium");
+		GameRegistry.registerBlock(obsidianPlutonium, "obsidianPlutonium");
 		GameRegistry.registerBlock(WoodenCog, "WoodenCog");
 		GameRegistry.registerBlock(StoneCog, "StoneCog");
 		GameRegistry.registerBlock(IronCog, "IronCog");
 		GameRegistry.registerBlock(BlastFurnaceBlock, "BlastFurnaceBlock");
 		GameRegistry.registerBlock(FloodFillBlock, "FloodFillBlock");
-        GameRegistry.registerBlock(ExampleCog, "ExampleCog");
+		GameRegistry.registerBlock(ExampleCog, "ExampleCog");
 
-
-		OreDictionary.registerOre("oreCopper", CopperOre);
-		OreDictionary.registerOre("oreTin", TinOre);
-		OreDictionary.registerOre("oreLead", LeadOre);
-		OreDictionary.registerOre("oreSilver", SilverOre);
-		OreDictionary.registerOre("oreNickel", NickelOre);
-		OreDictionary.registerOre("orePlatinum", PlatinumOre);
-		OreDictionary.registerOre("oreZinc", ZincOre);
-		OreDictionary.registerOre("oreCobalt", CobaltOre);
-		OreDictionary.registerOre("oreChromium", ChromiumOre);
+		OreDictionary.registerOre("oreCopper", oreCopper);
+		OreDictionary.registerOre("oreTin", oreTin);
+		OreDictionary.registerOre("oreLead", oreLead);
+		OreDictionary.registerOre("oreSilver", oreSilver);
+		OreDictionary.registerOre("oreNickel", oreNickel);
+		OreDictionary.registerOre("orePlatinum", orePlatinum);
+		OreDictionary.registerOre("oreZinc", oreZinc);
+		OreDictionary.registerOre("oreCobalt", oreCobalt);
+		OreDictionary.registerOre("oreChromium", oreChromium);
 		OreDictionary.registerOre("orePitchblend", Pitchblend);
 		OreDictionary.registerOre("blockLimestone", Limestone);
 		OreDictionary.registerOre("blockSaltRock", SaltRock);
@@ -156,26 +155,26 @@ public class RedoxiationBlocks {
 		OreDictionary.registerOre("blockScheelite", Scheelite);
 		OreDictionary.registerOre("blockCryolite", Cryolite);
 		OreDictionary.registerOre("oreSulfur", SulfurOre);
-		OreDictionary.registerOre("blockFerronickel", FerronickelOre);
-		OreDictionary.registerOre("blockPseudoBronze", PseudoBronzeOre);
-		OreDictionary.registerOre("blockPseudoBrass", PseudoBrassOre);
-		OreDictionary.registerOre("blockArgentAurum", ArgentAurum);
-		OreDictionary.registerOre("blockPseudoSolder", PseudoSolder);
-		OreDictionary.registerOre("blockPseudoStellite", PseudoStellite);
+		OreDictionary.registerOre("blockFerronickel", oreFerroNickel);
+		OreDictionary.registerOre("blockPseudoBronze", orePseudoBronze);
+		OreDictionary.registerOre("blockPseudoBrass", orePseudoBrassOre);
+		OreDictionary.registerOre("blockargentAurum", argentAurum);
+		OreDictionary.registerOre("blockpseudoSolder", pseudoSolder);
+		OreDictionary.registerOre("blockpseudoStellite", pseudoStellite);
 		OreDictionary.registerOre("blockTNTium", TNTium);
-		OreDictionary.registerOre("oreIronObsidian", IronObsidian);
-		OreDictionary.registerOre("oreGoldObsidian", GoldObsidian);
-		OreDictionary.registerOre("oreCopperObsidian", CopperObsidian);
-		OreDictionary.registerOre("oreTinObsidian", TinObsidian);
-		OreDictionary.registerOre("oreLeadObsidian", LeadObsidian);
-		OreDictionary.registerOre("oreSilverObsidian", SilverObsidian);
-		OreDictionary.registerOre("oreNickelObsidian", NickelObsidian);
-		OreDictionary.registerOre("orePlatinumObsidian", PlatinumObsidian);
-		OreDictionary.registerOre("oreZincObsidian", ZincObsidian);
-		OreDictionary.registerOre("oreCobaltObsidian", CobaltObsidian);
-		OreDictionary.registerOre("oreChromiumObsidian", ChromiumObsidian);
-		OreDictionary.registerOre("oreUraniumObsidian", UraniumObsidian);
-		OreDictionary.registerOre("orePlutoniumObsidian", PlutoniumObsidian);
+		OreDictionary.registerOre("oreobsidianIron", obsidianIron);
+		OreDictionary.registerOre("oreobsidianGold", obsidianGold);
+		OreDictionary.registerOre("oreobsidianCopper", obsidianCopper);
+		OreDictionary.registerOre("oreobsidianTin", obsidianTin);
+		OreDictionary.registerOre("oreobsidianLead", obsidianLead);
+		OreDictionary.registerOre("oreobsidianSilver", obsidianSilver);
+		OreDictionary.registerOre("oreobsidianNickel", obsidianNickel);
+		OreDictionary.registerOre("oreobsidianPlatinum", obsidianPlatinum);
+		OreDictionary.registerOre("oreobsidianZinc", obsidianZinc);
+		OreDictionary.registerOre("oreobsidianCobalt", obsidianCobalt);
+		OreDictionary.registerOre("oreobsidianChromium", obsidianChromium);
+		OreDictionary.registerOre("oreobsidianUranium", obsidianUranium);
+		OreDictionary.registerOre("oreobsidianPlutonium", obsidianPlutonium);
 
 		// Fluids
 		HotAir = new Fluid("HotAir").setLuminosity(0).setDensity(-10).setTemperature(1473).setViscosity(2000).setGaseous(true);

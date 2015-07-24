@@ -28,7 +28,7 @@ public class AchievementEvents {
 		if (event.harvester instanceof EntityPlayer) {
 			EntityPlayer miner = event.harvester;
 
-			if (event.block == RedoxiationBlocks.CopperOre) {
+			if (event.block == RedoxiationBlocks.oreCopper) {
 				RedoxiationAchievements.triggerAchievement(miner, "redoxiation.start");
 			}
 		}

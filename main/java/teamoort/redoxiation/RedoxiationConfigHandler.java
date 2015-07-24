@@ -24,15 +24,15 @@ public class RedoxiationConfigHandler {
 		// Blocks Start
     	
     	// Ores Start
-    	RedoxiationBlocks.CopperOre_cfg = config.get(CATEGORY_BLOCKS, "CopperOre", true).getBoolean();
-    	RedoxiationBlocks.TinOre_cfg = config.get(CATEGORY_BLOCKS, "TinOre", true).getBoolean();
-    	RedoxiationBlocks.LeadOre_cfg = config.get(CATEGORY_BLOCKS, "LeadOre", true).getBoolean();
-    	RedoxiationBlocks.SilverOre_cfg = config.get(CATEGORY_BLOCKS, "SilverOre", true).getBoolean();
-    	RedoxiationBlocks.NickelOre_cfg = config.get(CATEGORY_BLOCKS, "NickelOre", true).getBoolean();
-    	RedoxiationBlocks.PlatinumOre_cfg = config.get(CATEGORY_BLOCKS, "PlatinumOre", true).getBoolean();
-    	RedoxiationBlocks.ZincOre_cfg = config.get(CATEGORY_BLOCKS, "ZincOre", true).getBoolean();
-    	RedoxiationBlocks.CobaltOre_cfg = config.get(CATEGORY_BLOCKS, "CoblatOre", true).getBoolean();
-    	RedoxiationBlocks.ChromiumOre_cfg = config.get(CATEGORY_BLOCKS, "ChromiumOre", true).getBoolean();
+    	RedoxiationBlocks.oreCopper_cfg = config.get(CATEGORY_BLOCKS, "oreCopper", true).getBoolean();
+    	RedoxiationBlocks.oreTin_cfg = config.get(CATEGORY_BLOCKS, "oreTin", true).getBoolean();
+    	RedoxiationBlocks.oreLead_cfg = config.get(CATEGORY_BLOCKS, "oreLead", true).getBoolean();
+    	RedoxiationBlocks.oreSilver_cfg = config.get(CATEGORY_BLOCKS, "oreSilver", true).getBoolean();
+    	RedoxiationBlocks.oreNickel_cfg = config.get(CATEGORY_BLOCKS, "oreNickel", true).getBoolean();
+    	RedoxiationBlocks.orePlatinum_cfg = config.get(CATEGORY_BLOCKS, "orePlatinum", true).getBoolean();
+    	RedoxiationBlocks.oreZinc_cfg = config.get(CATEGORY_BLOCKS, "oreZinc", true).getBoolean();
+    	RedoxiationBlocks.oreCobalt_cfg = config.get(CATEGORY_BLOCKS, "CoblatOre", true).getBoolean();
+    	RedoxiationBlocks.oreChromium_cfg = config.get(CATEGORY_BLOCKS, "oreChromium", true).getBoolean();
     	RedoxiationBlocks.Pitchblend_cfg = config.get(CATEGORY_BLOCKS, "Pitchblend", true).getBoolean();
     	RedoxiationBlocks.Rutile_cfg = config.get(CATEGORY_BLOCKS, "Rutile", true).getBoolean();
     	RedoxiationBlocks.Scheelite_cfg = config.get(CATEGORY_BLOCKS, "Scheelite", true).getBoolean();
@@ -46,124 +46,124 @@ public class RedoxiationConfigHandler {
     	
     	// Items Start
 		//Gold
-		items.CrushedOreGold_enable = config.get(CATEGORY_ITEMS, "CrushedOreGold", true).getBoolean();
-		items.DustOreGold_enable = config.get(CATEGORY_ITEMS, "DustOreGold", true).getBoolean();
+		items.crushedOreGold_enable = config.get(CATEGORY_ITEMS, "crushedOreGold", true).getBoolean();
+		items.dustOreGold_enable = config.get(CATEGORY_ITEMS, "dustOreGold", true).getBoolean();
 
 		//Iron
-		items.NuggetIron_enable = config.get(CATEGORY_ITEMS, "NuggetIron", true).getBoolean();
-		items.CrushedOreIron_enable = config.get(CATEGORY_ITEMS, "CrushedOreIron", true).getBoolean();
-		items.DustOreIron_enable = config.get(CATEGORY_ITEMS, "DustOreIron", true).getBoolean();
+		items.nuggetIron_enable = config.get(CATEGORY_ITEMS, "nuggetIron", true).getBoolean();
+		items.crushedOreIron_enable = config.get(CATEGORY_ITEMS, "crushedOreIron", true).getBoolean();
+		items.dustOreIron_enable = config.get(CATEGORY_ITEMS, "dustOreIron", true).getBoolean();
 		
 		//Aluminum
-		items.NuggetAluminum_enable = config.get(CATEGORY_ITEMS, "NuggetAluminum", true).getBoolean();
-		items.DustBauxite_enable = config.get(CATEGORY_ITEMS, "DustBauxite", true).getBoolean();
-		items.IngotAluminum_enable = config.get(CATEGORY_ITEMS, "IngotAluminum", true).getBoolean();
+		items.nuggetAluminum_enable = config.get(CATEGORY_ITEMS, "nuggetAluminum", true).getBoolean();
+		items.dustBauxite_enable = config.get(CATEGORY_ITEMS, "dustBauxite", true).getBoolean();
+		items.ingotAluminum_enable = config.get(CATEGORY_ITEMS, "ingotAluminum", true).getBoolean();
 		items.RawBauxite_enable = config.get(CATEGORY_ITEMS, "RawBauxite", true).getBoolean();
 		
 		//Chromium
-		items.NuggetChromium_enable = config.get(CATEGORY_ITEMS, "NuggetChromium", true).getBoolean();
-		items.CrushedOreChromium_enable = config.get(CATEGORY_ITEMS, "CrushedOreChromium", true).getBoolean();
-		items.DustOreChromium_enable = config.get(CATEGORY_ITEMS, "DustOreChromium", true).getBoolean();
-		items.IngotChromium_enable = config.get(CATEGORY_ITEMS, "ChroumiumIngot", true).getBoolean();
+		items.nuggetChromium_enable = config.get(CATEGORY_ITEMS, "nuggetChromium", true).getBoolean();
+		items.crushedOreChromium_enable = config.get(CATEGORY_ITEMS, "crushedOreChromium", true).getBoolean();
+		items.dustOreChromium_enable = config.get(CATEGORY_ITEMS, "dustOreChromium", true).getBoolean();
+		items.ingotChromium_enable = config.get(CATEGORY_ITEMS, "Chroumiumingot", true).getBoolean();
 		
 		//Cobalt
-		items.DustOreCobalt_enable = config.get(CATEGORY_ITEMS, "DustOreCoblat", true).getBoolean();
-		items.IngotCobalt_enable = config.get(CATEGORY_ITEMS, "CobaltIngot", true).getBoolean();
+		items.dustOreCobalt_enable = config.get(CATEGORY_ITEMS, "dustOreCoblat", true).getBoolean();
+		items.ingotCobalt_enable = config.get(CATEGORY_ITEMS, "Cobaltingot", true).getBoolean();
 		
 		//Copper
-		items.NuggetCopper_enable = config.get(CATEGORY_ITEMS, "NuggetCopper", true).getBoolean();
-		items.CrushedOreCopper_enable = config.get(CATEGORY_ITEMS, "CrushedOreCopper", true).getBoolean();
-		items.DustOreCopper_enable = config.get(CATEGORY_ITEMS, "DustOreCopper", true).getBoolean();
-		items.IngotCopper_enable = config.get(CATEGORY_ITEMS, "CopperIngot", true).getBoolean();
+		items.nuggetCopper_enable = config.get(CATEGORY_ITEMS, "nuggetCopper", true).getBoolean();
+		items.crushedOreCopper_enable = config.get(CATEGORY_ITEMS, "crushedOreCopper", true).getBoolean();
+		items.dustOreCopper_enable = config.get(CATEGORY_ITEMS, "dustOreCopper", true).getBoolean();
+		items.ingotCopper_enable = config.get(CATEGORY_ITEMS, "Copperingot", true).getBoolean();
 		
 		//Lead
-		items.NuggetLead_enable = config.get(CATEGORY_ITEMS, "NuggetLead", true).getBoolean();
-		items.CrushedOreLead_enable = config.get(CATEGORY_ITEMS, "CrushedOreLead", true).getBoolean();
-		items.DustOreLead_enable = config.get(CATEGORY_ITEMS, "DustOreLead", true).getBoolean();
-		items.IngotLead_enable = config.get(CATEGORY_ITEMS, "LeadIngot", true).getBoolean();
+		items.nuggetLead_enable = config.get(CATEGORY_ITEMS, "nuggetLead", true).getBoolean();
+		items.crushedOreLead_enable = config.get(CATEGORY_ITEMS, "crushedOreLead", true).getBoolean();
+		items.dustOreLead_enable = config.get(CATEGORY_ITEMS, "dustOreLead", true).getBoolean();
+		items.ingotLead_enable = config.get(CATEGORY_ITEMS, "Leadingot", true).getBoolean();
 		
 		//Nickel
-		items.NuggetNickel_enable = config.get(CATEGORY_ITEMS, "NuggetNickel", true).getBoolean();
-		items.CrushedOreNickel_enable = config.get(CATEGORY_ITEMS, "CrushedOreNickel", true).getBoolean();
-		items.DustOreNickel_enable = config.get(CATEGORY_ITEMS, "DustOreNickel", true).getBoolean();
-		items.IngotNickel_enable = config.get(CATEGORY_ITEMS, "NickelIngot", true).getBoolean();
+		items.nuggetNickel_enable = config.get(CATEGORY_ITEMS, "nuggetNickel", true).getBoolean();
+		items.crushedOreNickel_enable = config.get(CATEGORY_ITEMS, "crushedOreNickel", true).getBoolean();
+		items.dustOreNickel_enable = config.get(CATEGORY_ITEMS, "dustOreNickel", true).getBoolean();
+		items.ingotNickel_enable = config.get(CATEGORY_ITEMS, "Nickelingot", true).getBoolean();
 		
 		//Platinum
-		items.NuggetPlatinum_enable = config.get(CATEGORY_ITEMS, "NuggetPlatinum", true).getBoolean();
-		items.CrushedOrePlatinum_enable = config.get(CATEGORY_ITEMS, "CrushedOrePlatinum", true).getBoolean();
-		items.DustOrePlatinum_enable = config.get(CATEGORY_ITEMS, "DustOrePlatinum", true).getBoolean();
-		items.IngotPlatinum_enable = config.get(CATEGORY_ITEMS, "PlatinumIngot", true).getBoolean();
+		items.nuggetPlatinum_enable = config.get(CATEGORY_ITEMS, "nuggetPlatinum", true).getBoolean();
+		items.crushedOrePlatinum_enable = config.get(CATEGORY_ITEMS, "crushedOrePlatinum", true).getBoolean();
+		items.dustOrePlatinum_enable = config.get(CATEGORY_ITEMS, "dustOrePlatinum", true).getBoolean();
+		items.ingotPlatinum_enable = config.get(CATEGORY_ITEMS, "Platinumingot", true).getBoolean();
 
 		//Salt
 		items.SaltChunk_enable = config.get(CATEGORY_ITEMS, "SaltChunk", true).getBoolean();
-		items.DustSalt_enable = config.get(CATEGORY_ITEMS, "DustSalt", true).getBoolean();
+		items.dustSalt_enable = config.get(CATEGORY_ITEMS, "dustSalt", true).getBoolean();
 		
 		//Sulfur
 		items.SulfurChunk_enable = config.get(CATEGORY_ITEMS, "SulfurChunk", true).getBoolean();
-		items.DustSulfur_enable = config.get(CATEGORY_ITEMS, "DustSulfur", true).getBoolean();
+		items.dustSulfur_enable = config.get(CATEGORY_ITEMS, "dustSulfur", true).getBoolean();
 		
 		//Silver
-		items.NuggetSilver_enable = config.get(CATEGORY_ITEMS, "NuggetSilver", true).getBoolean();
-		items.DustOreSilver_enable = config.get(CATEGORY_ITEMS, "DustOreSilver", true).getBoolean();
-		items.CrushedOreSilver_enable = config.get(CATEGORY_ITEMS, "CrushedOreSilver", true).getBoolean();
-		items.IngotSilver_enable = config.get(CATEGORY_ITEMS, "SilverIngot", true).getBoolean();
+		items.nuggetSilver_enable = config.get(CATEGORY_ITEMS, "nuggetSilver", true).getBoolean();
+		items.dustOreSilver_enable = config.get(CATEGORY_ITEMS, "dustOreSilver", true).getBoolean();
+		items.crushedOreSilver_enable = config.get(CATEGORY_ITEMS, "crushedOreSilver", true).getBoolean();
+		items.ingotSilver_enable = config.get(CATEGORY_ITEMS, "Silveringot", true).getBoolean();
 		
 		//Steel
-		items.NuggetSteel_enable = config.get(CATEGORY_ITEMS, "NuggetSteel", true).getBoolean();
-		items.IngotSteel_enable = config .get(CATEGORY_ITEMS, "SteelIngot", true).getBoolean();
+		items.nuggetSteel_enable = config.get(CATEGORY_ITEMS, "nuggetSteel", true).getBoolean();
+		items.ingotSteel_enable = config .get(CATEGORY_ITEMS, "Steelingot", true).getBoolean();
 		
 		//Tin
-		items.NuggetTin_enable = config.get(CATEGORY_ITEMS, "NuggetTin", true) .getBoolean();
-		items.CrushedOreTin_enable = config.get(CATEGORY_ITEMS, "CrushedOreTin", true).getBoolean();
-		items.DustOreTin_enable = config.get(CATEGORY_ITEMS, "DustOreTin", true) .getBoolean();
-		items.IngotTin_enable = config.get(CATEGORY_ITEMS, "TinIngot", true) .getBoolean();
+		items.nuggetTin_enable = config.get(CATEGORY_ITEMS, "nuggetTin", true) .getBoolean();
+		items.crushedOreTin_enable = config.get(CATEGORY_ITEMS, "crushedOreTin", true).getBoolean();
+		items.dustOreTin_enable = config.get(CATEGORY_ITEMS, "dustOreTin", true) .getBoolean();
+		items.ingotTin_enable = config.get(CATEGORY_ITEMS, "Tiningot", true) .getBoolean();
 		
 		//Titanate
-		items.NuggetTitanium_enable = config.get(CATEGORY_ITEMS, "NuggetTitanium", true).getBoolean();
-		items.DustRutile_enable = config.get(CATEGORY_ITEMS, "DustRutile", true).getBoolean();
-		items.IngotTitanium_enable = config.get(CATEGORY_ITEMS, "TitaniumIngot", true).getBoolean();
+		items.nuggetTitanium_enable = config.get(CATEGORY_ITEMS, "nuggetTitanium", true).getBoolean();
+		items.dustRutile_enable = config.get(CATEGORY_ITEMS, "dustRutile", true).getBoolean();
+		items.ingotTitanium_enable = config.get(CATEGORY_ITEMS, "Titaniumingot", true).getBoolean();
 		items.RawRutile_enable = config.get(CATEGORY_ITEMS, "RawRutile", true).getBoolean();
 		
 		//Tungstate
-		items.NuggetTungsten_enable = config.get(CATEGORY_ITEMS, "NuggetTungsten", true).getBoolean();
-		items.DustScheelite_enable = config.get(CATEGORY_ITEMS, "DustScheelite", true).getBoolean();
-		items.IngotTungsten_enable = config.get(CATEGORY_ITEMS, "TungstenIngot", true).getBoolean();
+		items.nuggetTungsten_enable = config.get(CATEGORY_ITEMS, "nuggetTungsten", true).getBoolean();
+		items.dustScheelite_enable = config.get(CATEGORY_ITEMS, "dustScheelite", true).getBoolean();
+		items.ingotTungsten_enable = config.get(CATEGORY_ITEMS, "Tungsteningot", true).getBoolean();
 		items.RawScheelite_enable = config.get(CATEGORY_ITEMS, "RawScheelite", true).getBoolean();
 		
 		//Zinc
-		items.NuggetZinc_enable = config.get(CATEGORY_ITEMS, "NuggetZinc", true).getBoolean();
-		items.CrushedOreZinc_enable = config.get(CATEGORY_ITEMS, "CrushedOreZinc", true).getBoolean();
-		items.DustOreZinc_enable = config.get(CATEGORY_ITEMS, "DustOreZinc", true).getBoolean();
-		items.IngotZinc_enable = config.get(CATEGORY_ITEMS, "ZincIngot", true).getBoolean();
+		items.nuggetZinc_enable = config.get(CATEGORY_ITEMS, "nuggetZinc", true).getBoolean();
+		items.crushedOreZinc_enable = config.get(CATEGORY_ITEMS, "crushedOreZinc", true).getBoolean();
+		items.dustOreZinc_enable = config.get(CATEGORY_ITEMS, "dustOreZinc", true).getBoolean();
+		items.ingotZinc_enable = config.get(CATEGORY_ITEMS, "Zincingot", true).getBoolean();
 		
 		
 		//Bucket
-		items.ItemHotAirBucket_enable = config.get(CATEGORY_ITEMS, "HotAirBucket", true).getBoolean();
-		items.ItemMoltenPigironBucket_enable = config.get(CATEGORY_ITEMS, "MoltenPigironBucket", true).getBoolean();
-		items.ItemSlagBucket_enable = config.get(CATEGORY_ITEMS, "SlagBucket", true).getBoolean();
+		items.itemHotAirBucket_enable = config.get(CATEGORY_ITEMS, "HotAirBucket", true).getBoolean();
+		items.itemMoltenPigironBucket_enable = config.get(CATEGORY_ITEMS, "MoltenPigironBucket", true).getBoolean();
+		items.itemSlagBucket_enable = config.get(CATEGORY_ITEMS, "SlagBucket", true).getBoolean();
 		
 		//ETC
 		//Item
 		items.Calcite_enable = config.get(CATEGORY_ITEMS, "Calcite", true).getBoolean();
 		items.ItemCryolite_enable = config.get(CATEGORY_ITEMS, "ItemCryolite", true).getBoolean();
 		
-		//OOO Ingot
-		items.PlutoniumIngot_enable = config.get(CATEGORY_ITEMS, "PlotoniumIngot", true).getBoolean();
-		items.UraniumIngot_enable = config.get(CATEGORY_ITEMS, "UraniumIngot", true).getBoolean();
+		//OOO ingot
+		items.ingotPlutonium_enable = config.get(CATEGORY_ITEMS, "ingotPlotonium", true).getBoolean();
+		items.ingotUranium_enable = config.get(CATEGORY_ITEMS, "ingotUranium", true).getBoolean();
 		
-		//Crashed OOO
-		items.CrashedNetherrack_enable = config.get(CATEGORY_ITEMS, "CrashedNetherrack", true).getBoolean();
-		items.CrashedObsidian_enable = config.get(CATEGORY_ITEMS, "CrashedObsidian", true).getBoolean();
+		//crashed OOO
+		items.crashedNetherrack_enable = config.get(CATEGORY_ITEMS, "crashedNetherrack", true).getBoolean();
+		items.crashedObsidian_enable = config.get(CATEGORY_ITEMS, "crashedObsidian", true).getBoolean();
 
   
     	//oregen
     	//Nether gen control Start
-    	oregen.FerronickelOregen = config.getBoolean("FerronickelOregen", CATEGORY_OREGEN, true, "Ferronickel Oregen Configuration [Default : true]");
-    	oregen.PseudoBronzeOregen = config.getBoolean("PseudoBronzeOregen", CATEGORY_OREGEN, true, "PseudoBronze Oregen Configuration [Default : true]");
-    	oregen.PseudoBrassOregen = config.getBoolean("PseudoBrassOregen", CATEGORY_OREGEN, true, "PseudoBrass Oregen Configuration [Default : true]");
-    	oregen.ArgentAurumOregen = config.getBoolean("ArgentAurumOregen", CATEGORY_OREGEN, true, "ArgentAurum Oregen Configuration [Default : true");
-    	oregen.PseudoSolderOregen = config.getBoolean("PseudoSolderOregen", CATEGORY_OREGEN, true, "PseudoSolder Oregen Configuration [Default : true]");
-    	oregen.PseudoStelliteOregen = config.getBoolean("PseudoStelliteOregen", CATEGORY_OREGEN, true, "PseudoStellite Oregen Configuration [Default : true]");
+    	oregen.ferroNickelOregen = config.getBoolean("oreFerroNickelgen", CATEGORY_OREGEN, true, "Ferronickel Oregen Configuration [Default : true]");
+    	oregen.pseudoBronzeOregen = config.getBoolean("orePseudoBronzegen", CATEGORY_OREGEN, true, "PseudoBronze Oregen Configuration [Default : true]");
+    	oregen.pseudoBrassOregen = config.getBoolean("orePseudoBrassOregen", CATEGORY_OREGEN, true, "PseudoBrass Oregen Configuration [Default : true]");
+    	oregen.argentAurumOregen = config.getBoolean("argentAurumOregen", CATEGORY_OREGEN, true, "argentAurum Oregen Configuration [Default : true");
+    	oregen.pseudoSolderOregen = config.getBoolean("pseudoSolderOregen", CATEGORY_OREGEN, true, "pseudoSolder Oregen Configuration [Default : true]");
+    	oregen.pseudoStelliteOregen = config.getBoolean("pseudoStelliteOregen", CATEGORY_OREGEN, true, "pseudoStellite Oregen Configuration [Default : true]");
     	oregen.TNTiumOregen = config.getBoolean("TNTiumOregen", CATEGORY_OREGEN, true, "TNTium Oregen Configuration [Default : true]");
     	//End
     	//Overworld gen control Start
