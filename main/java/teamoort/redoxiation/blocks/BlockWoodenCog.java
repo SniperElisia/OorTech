@@ -18,12 +18,11 @@ public class BlockWoodenCog extends BlockContainer {
 		super(Material.wood);
 		setCreativeTab(Redoxiation.tabRedoxiation);
 		setBlockName("WoodenCog");
-		GameRegistry.registerTileEntity(TileEntityWoodenCog.class,
-				Redoxiation.MODID + ".WoodenCog");
+		GameRegistry.registerTileEntity(TileEntityWoodenCog.class, Redoxiation.MODID + ".WoodenCog");
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World world, int i) {
+	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileEntityWoodenCog();
 	}
 
