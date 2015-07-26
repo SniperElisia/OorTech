@@ -24,7 +24,7 @@ public class TileEntityWoodenCog extends TileEntity {
 			angvel = 0;
 		}
 		if (worldObj.isRemote) {
-			rotation += 0.3141592653589793238462643383279f * angvel;
+			rotation += angvel;
 		}
 		if (rotation >= 6.283185307179586476925286766559f) {
 			rotation = rotation - 6.283185307179586476925286766559f;
