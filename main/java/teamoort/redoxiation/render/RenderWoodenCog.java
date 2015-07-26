@@ -22,7 +22,7 @@ public class RenderWoodenCog extends TileEntitySpecialRenderer {
     @Override
     public void renderTileEntityAt(TileEntity tileentity, double posX, double posY, double posZ, float timeSinceLastTick) {
         TileEntityWoodenCog te = (TileEntityWoodenCog) tileentity;
-        float rotation = te.getRotation() + (timeSinceLastTick / 2F);
+        float rotation = te.getRotation();
         float scale = te.getScale();
         bindTexture(texture);
 

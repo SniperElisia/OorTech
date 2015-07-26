@@ -6,7 +6,6 @@ import teamoort.redoxiation.blocks.tileentity.TileEntityWoodenCog;
 import teamoort.redoxiation.blocks.tileentity.TileEntityStoneCog;
 import teamoort.redoxiation.render.ItemRenderIronCog;
 import teamoort.redoxiation.render.ItemRenderStoneCog;
-import teamoort.redoxiation.render.ItemRenderExampleCog;
 import teamoort.redoxiation.render.RenderIronCog;
 import teamoort.redoxiation.render.RenderWoodenCog;
 import teamoort.redoxiation.render.RenderStoneCog;
