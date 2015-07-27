@@ -10,7 +10,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class TileEntityWoodenCog extends TileEntity {
-	private float scale = 0;
+	private float scale = 1.0f;
 	private float rotation = 0;
 	private float angvel = 0;
 	private int state;
@@ -18,19 +18,18 @@ public class TileEntityWoodenCog extends TileEntity {
 
 	@Override
 	public void updateEntity() {
+		chunknumber = ((TileEntityWoodenCog) worldObj.getTileEntity(xCoord, yCoord, zCoord)).chunknumber();
 		if (chunknumber != 0) {
-			angvel = 0.05f / ((float) chunknumber);
+			angvel = 1 / ((float) chunknumber);
 		} else {
 			angvel = 0;
 		}
+		Redoxiation.logger.info(chunknumber);
 		if (worldObj.isRemote) {
 			rotation += angvel;
 		}
-		if (rotation >= 6.283185307179586476925286766559f) {
-			rotation = rotation - 6.283185307179586476925286766559f;
-		}
-		if (worldObj.isRemote) {
-			scale = (float)1.0;
+		if (rotation >= 360) {
+			rotation = rotation - 360;
 		}
 	}
 
