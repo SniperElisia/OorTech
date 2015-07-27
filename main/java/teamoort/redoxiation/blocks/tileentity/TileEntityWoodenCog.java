@@ -18,7 +18,6 @@ public class TileEntityWoodenCog extends TileEntity {
 
 	@Override
 	public void updateEntity() {
-		chunknumber = ((TileEntityWoodenCog) worldObj.getTileEntity(xCoord, yCoord, zCoord)).chunknumber();
 		if (chunknumber != 0) {
 			angvel = 1 / ((float) chunknumber);
 		} else {
