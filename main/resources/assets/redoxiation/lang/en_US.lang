@@ -140,8 +140,8 @@ item.redoxiation.TungstenScythe.name=Tungsten Steel Scythe
 itemGroup.Redoxiation=Redoxiation Blocks
 itemGroup.RedoxiationItems=Redoxiation Items
 
-#¸®´ö½Ã¿¡ÀÌ¼ÇÀÇ µµÀü °úÁ¦
-achievement.redoxiation.start=New Start
-achievement.redoxiation.blast=Flameing Blast Furnace
-achievement.redoxiation.start.desc=Mine some copper ore!
-achievement.redoxiation.blast.desc=Make molten pigiron!
+#ë¦¬ë•ì‹œì—ì´ì…˜ì˜ ë„ì „ ê³¼ì œ
+achievement.redoxiation.start=START:DASH!!
+achievement.redoxiation.blast=Blast Burn
+achievement.redoxiation.start.desc=Mine some copper ore.
+achievement.redoxiation.blast.desc=Smelt iron ores to pig iron at the blast furnace.
